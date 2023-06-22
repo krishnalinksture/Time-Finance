@@ -125,21 +125,6 @@ if ( is_active_sidebar( 'footer-column-1' ) || ! empty( $prs_logo ) || ! empty( 
 }
 	wp_footer();
 ?>
-<script type="text/javascript" src="https://app.responseiq.com/widgetsrc.php?widget=M85IY28V87EZH2CF8R&widgetrnd=Math.random();"></script>
-<script type="text/javascript">
-        window.__lc = window.__lc || {};
-        window.__lc.license = 3409382;
-        window.__lc.group = 2;
-        window.__lc.chat_between_groups = false;
-        (function() {
-            var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
-            lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
-        })();
-    </script>
-   <script>(function(n,t,i,r){var u,f;n[i]=n[i]||{},n[i].initial={accountCode:"PINNA11115",host:"PINNA11115.pcapredict.com"},n[i].on=n[i].on||function(){(n[i].onq=n[i].onq||[]).push(arguments)},u=t.createElement("script"),u.async=!0,u.src=r,f=t.getElementsByTagName("script")[0],f.parentNode.insertBefore(u,f)})(window,document,"pca","//PINNA11115.pcapredict.com/js/sensor.js")</script>
-   <script>(function(n,t,i,r){var u,f;n[i]=n[i]||{},n[i].initial={accountCode:"PINNA11115",host:"PINNA11115.pcapredict.com"},n[i].on=n[i].on||function(){(n[i].onq=n[i].onq||[]).push(arguments)},u=t.createElement("script"),u.async=!0,u.src=r,f=t.getElementsByTagName("script")[0],f.parentNode.insertBefore(u,f)})(window,document,"pca","//PINNA11115.pcapredict.com/js/sensor.js")</script>
-   <script>(function(n,t,i,r){var u,f;n[i]=n[i]||{},n[i].initial={accountCode:"PINNA11115",host:"PINNA11115.pcapredict.com"},n[i].on=n[i].on||function(){(n[i].onq=n[i].onq||[]).push(arguments)},u=t.createElement("script"),u.async=!0,u.src=r,f=t.getElementsByTagName("script")[0],f.parentNode.insertBefore(u,f)})(window,document,"pca","//PINNA11115.pcapredict.com/js/sensor.js")</script>
-   <script>(function(n,t,i,r){var u,f;n[i]=n[i]||{},n[i].initial={accountCode:"PINNA11115",host:"PINNA11115.pcapredict.com"},n[i].on=n[i].on||function(){(n[i].onq=n[i].onq||[]).push(arguments)},u=t.createElement("script"),u.async=!0,u.src=r,f=t.getElementsByTagName("script")[0],f.parentNode.insertBefore(u,f)})(window,document,"pca","//PINNA11115.pcapredict.com/js/sensor.js")</script>
+
 </body>
 </html>
