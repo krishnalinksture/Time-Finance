@@ -1,0 +1,138 @@
+footer {
+
+    // Footer Top
+    .footer-top {
+        background-color: $green;
+        color: $white;
+        padding: 40px 0 75px;
+        position: relative;
+
+        @include responsive(mobile-big, max) {
+            padding-bottom: 30px;
+        }
+
+        &::before {
+            content: "";
+            background: url(../inc/assets/drop-shadow-20.png);
+            background-repeat: repeat-x;
+            background-position: left top;
+            width: 100%;
+            height: 18px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+
+            @include responsive(mobile-big, max) {
+                display: none;
+            }
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            column-count: 3;
+            column-gap: 28px;
+            
+            @include responsive(mobile-big, max) {
+                column-count: 1;
+                column-gap: 0;
+            }
+
+            li {
+                margin-bottom: 10px;
+
+                @include responsive(mobile-big, max) {
+                    border-bottom: 1px solid #a7a7a7;
+                    padding: 6px 0;
+                }
+
+                a {
+                    color: $white;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    // Footer Bottom
+    .footer-bottom {
+        padding: 40px 0 54px;
+
+        .prs-logo {
+            max-width: 150px;
+            margin-top: 30px;
+        }
+
+        .trustpilot-widget {
+            margin-left: 63px;
+
+            @include responsive(laptop, max) {
+                margin-left: 8px;
+            }
+        }
+
+        .footer-logo {
+            height: 35px;
+            width: auto;
+        }
+
+        .footer-social {
+            @include flex;
+            @include align-items(center);
+            @include justify-content(center);
+            margin-top: 15px;
+
+            a {
+                margin-right: 15px;
+
+                img {
+                    width: 40px;
+                    height: 40px;
+                    object-fit: contain;
+                    object-position: center;
+                }
+            }
+        }
+
+        .footer-content {
+            color: $gray;
+            font-size: 12px;
+            line-height: 20px;
+
+            @include responsive(mobile-big, max) {
+                margin-top: 50px;
+            }
+            @include responsive(mobile-small, max) {
+                margin-top: 45px;
+            }
+
+            p {
+                margin-bottom: 0;
+
+                @include responsive(mobile-big, max) {
+                    margin-bottom: 30px;
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                a {
+                    font-weight: bold;
+                    color: $dark-gray;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        .footer-address {
+            color: $extra-dark-gray;
+            margin-top: 16px;
+        }
+    }
+}

@@ -1,0 +1,55 @@
+.bcbgroups-admin-mega-menu-init { margin-top: 10px; display: inline-block; }
+.field-bcbgroups-mega-menu-item-status,
+.field-bcbgroups-mega-menu-item-title-status,
+.field-bcbgroups-mega-menu-item-sidebar{ display: none; }
+.menu-item-depth-0 .field-bcbgroups-mega-menu-item-status { display: block;}
+.menu-item-depth-0 .field-megamenu-status { display: block;}
+.menu-item-depth-0.bcbgroups-megamenu-active .field-bcbgroups-mega-submenu-position{ display: none; }
+
+.menu-item-depth-0.bcbgroups-megamenu-active .field-bcbgroups-mega-menu-item-columns,
+.menu-item-depth-1.bcbgroups-megamenu-active .field-bcbgroups-mega-menu-item-title-status,
+.menu-item-depth-1.bcbgroups-megamenu-active .field-bcbgroups-mega-menu-item-sidebar,
+.menu-item-depth-2.bcbgroups-megamenu-active .field-bcbgroups-mega-menu-item-title-status,
+.menu-item-depth-2.bcbgroups-megamenu-active .field-bcbgroups-mega-menu-item-sidebar { display: block; }
+.menu-item-depth-1 .field-bcbgroups-mega-menu-item-status, .menu-item-depth-2 .field-bcbgroups-mega-menu-item-status { display: none;}
+.d-none { display: none; }
+.menu-item-depth-1 .field-mega-menu-column-select { display: block; }
+
+.acf-field-radio[data-name="shape"] ul li:first-child label {
+    background-image: url(../../images/ShapesShape_1.jpg) !important;
+}
+.acf-field-radio[data-name="shape"] ul li:nth-child(2) label {
+    background-image: url(../../images/ShapesShape_2.jpg) !important;
+}
+.acf-field-radio[data-name="shape"] ul li:nth-child(3) label {
+    background-image: url(../../images/ShapesShape_3.jpg) !important;
+}
+.acf-field-radio[data-name="shape"] ul li:nth-child(4) label {
+    background-image: url(../../images/ShapesShape_4.jpg) !important;
+}
+.acf-field-radio[data-name="shape"] ul li:nth-child(5) label {
+    background-image: url(../../images/ShapesShape_5.jpg) !important;
+}
+.acf-field-radio[data-name="shape"] ul li:nth-child(6) label {
+    background-image: url(../../images/ShapesShape_6.jpg) !important;
+}
+.acf-field-radio[data-name="shape"] ul li:nth-child(7) label {
+    background-image: url(../../images/ShapesShape_7.jpg) !important;
+}
+.acf-field-radio[data-name="shape"] ul li label {
+    display: block !important;
+    overflow: hidden !important;
+    width: 64px !important;
+    height: 64px !important;
+    text-indent: -999px !important;
+    border: 4px solid #ddd;
+    background-size: contain;
+}
+.acf-field-radio[data-name="shape"] ul li label input {
+    position: absolute !important;
+    left: -999px !important;
+}
+.acf-field-radio[data-name="shape"] ul li label.selected {
+    border-color: #1e8cbe !important;
+    box-shadow: 0 0 6px 4px rgb(0 0 0 / 10%) !important;
+}
