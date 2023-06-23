@@ -43,26 +43,27 @@ function register_load_scripts() {
 	 */
 	wp_register_style( 'bootstrap', TIMEFINANCE_THEME_URI . '/inc/css/vendor/bootstrap.css', '', THEME_VERSION, 'screen', false );
 	wp_register_style( 'styles', TIMEFINANCE_THEME_URI . '/dist/main.min.css', '', THEME_VERSION, 'screen', false );
-	wp_register_style( 'glide', TIMEFINANCE_THEME_URI . '/inc/css/vendor/glide.core.min.css', '', THEME_VERSION, 'screen', false );
+	wp_register_style( 'timefinance-swiper', TIMEFINANCE_THEME_URI . '/inc/css/vendor/swiper-bundle.min.css', array(), '8.0.7', 'screen', false );
 	wp_register_style( 'magnific', TIMEFINANCE_THEME_URI . '/inc/css/vendor/magnific-popup.css', '', THEME_VERSION, 'screen', false );
 
 	wp_enqueue_style( 'bootstrap' );
 	wp_enqueue_style( 'styles' );
-	wp_enqueue_style( 'glide' );
+	wp_enqueue_style( 'timefinance-swiper' );
 	wp_enqueue_style( 'magnific' );
 
 	/**
-	 *  Enqueue styles
+	 *  Enqueue scripts
 	 */
 	wp_register_script( 'timefinance-vendors', TIMEFINANCE_THEME_URI . '/dist/vendors.min.js', array( 'jquery' ), THEME_VERSION, true );
 	wp_register_script( 'timefinance-scripts', TIMEFINANCE_THEME_URI . '/dist/main.min.js', array( 'timefinance-vendors' ), THEME_VERSION, true );
+	wp_register_script( 'timefinance-swiper', TIMEFINANCE_THEME_URI . '/inc/js/vendor/swiper-bundle.min.js', array( 'timefinance-scripts' ), THEME_VERSION, true );
 	wp_register_script( 'trustpilot', '//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js', array( 'jquery' ), THEME_VERSION, true );
 
 	wp_enqueue_script( 'trustpilot' );
-	wp_enqueue_script( 'timefinance-scripts' );
+	wp_enqueue_script( 'timefinance-swiper' );
 
 	wp_localize_script(
-		'timefinance-scripts',
+		'timefinance-swiper',
 		'mainAjaxurl',
 		array(
 			'ajaxurl' => admin_url( 'admin-ajax.php' ),

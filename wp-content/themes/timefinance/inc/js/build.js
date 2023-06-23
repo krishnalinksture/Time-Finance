@@ -29,247 +29,54 @@ window.Scrollanimate = () => {
 		// All pages
 		'common': {
 			init: function () {
+				let swiperObjs = [];
+				let lastScroll = 0;
 
-				$('.postcode-checker .name-field input[name="text-1"]').attr('autocomplete', 'off');
+				/****** Swiper slider using params ******/
+				$( '[data-slider-options]' ).each( function () {
+					var _this           = $( this ),
+						sliderOptions   = _this.attr( 'data-slider-options' );
 
+						if ( typeof ( sliderOptions ) !== 'undefined' && sliderOptions !== null ) {
+							sliderOptions = $.parseJSON( sliderOptions );
 
-				$('.postcode-checker .name-field input[name="text-1"]').attr('id', 'postcode-checker-input');
-				$('.we-buy-house-postcode .input-postcode input[name="text-1"]').attr('id', 'webuy-postcode-checker-input');
-				$('.blog-postcode .input-blog-postcode input[name="text-1"]').attr('id', 'blog-postcode-checker-input');
-				$('.contact-form input[name="text-1"]').attr('id', 'contact-postcode-checker-input');
-
-				//Postcode button js.
-				$(".blog-postcode button.btn-postcode").hide().css('display', 'none');
-				$('.blog-postcode .input-blog-postcode .forminator-input').on('change', function(){
-					$(".blog-postcode button.btn-postcode").show().css('display', 'block');
-				});
-
-				$(".full-with-banner-block .we-buy-house-postcode button.btn-postcode").hide().css('display', 'none');
-				$('.full-with-banner-block .we-buy-house-postcode .input-postcode .forminator-input').on('change', function(){
-					$(".full-with-banner-block .we-buy-house-postcode button.btn-postcode").show().css('display', 'block');
-				});
-
-				$(".large-postcode-cta-block .we-buy-house-postcode button.btn-postcode").hide().css('display', 'none');
-				$('.large-postcode-cta-block .we-buy-house-postcode .input-postcode .forminator-input').on('change', function(){
-					$(".large-postcode-cta-block .we-buy-house-postcode button.btn-postcode").show().css('display', 'block');
-				});
-
-				$(".content-detail-page-block .we-buy-house-postcode button.btn-postcode").hide().css('display', 'none');
-				$('.content-detail-page-block .we-buy-house-postcode .input-postcode .forminator-input').on('change', function(){
-					$(".content-detail-page-block .we-buy-house-postcode button.btn-postcode").show().css('display', 'block');
-				});
-
-				//Tab changes
-				var href = $( '.tab-content .next-step a' ).attr( 'href' );
-				$('.tab-pane .btn').click(function(e) {
-					e.preventDefault()
-					document.querySelector(`#${e.target.getAttribute("data-target")}`).querySelector(`#${e.target.getAttribute("data-id")}`)?.click()
-			  	});
-
-				$('.detailed-step-block .tab-content .tab-pane .btn:last').addClass('last-tab');
-
-				$('.detailed-step-block .tab-content .tab-pane .last-tab').click(function(e) {
-					var link = $(this).attr('href');
-					$('html, body').animate({ scrollTop: ($(link).offset().top-100)} , 500);
-					return false;
-				});
-
-				//Glide slider
-				if ( $( '.logo_glide' ).length > 0) {
-					$( '.logo_glide' ).each(function(){
-						const logo_glide = new Glide( '.logo_glide', {
-							type: 'carousel',
-							perView: 6,
-							autoplay: 2000,
-							bound: true,
-							gap: 30,
-							breakpoints: {
-								991: {
-								perView: 4
-								},
-								767: {
-								perView: 3
-								},
-								575: {
-								perView: 2
-								},
-							},
-						}).mount();
-					});
-				}
-				if ( $( '.category_glide' ).length > 0) {
-					$( '.category_glide' ).each(function(){
-						const category_glide = new Glide( '.category_glide', {
-							type: 'carousel',
-							perView: 3,
-							autoplay: 2000,
-							bound: true,
-							gap: 30,
-							breakpoints: {
-								991: {
-								perView: 3
-								},
-								767: {
-								perView: 2
-								},
-								575: {
-								perView: 1
-								},
-							},
-						}).mount();
-					});
-				}
-
-				//Blog post filter
-				searchBlogCategoriesClickHandler();
-				function searchBlogCategoriesClickHandler() {
-					$(".post-search-button").on("click", function(e) {
-						e.preventDefault();
-						var keyword = $("#blogCategoriesSearch").val();
-						var $posts = $("li.recent-post-filter.dev-pag-container");
-
-						var count = $("li.recent-post-filter.dev-pag-container").nextAll().length - 1;
-
-						if(keyword && keyword.trim().length > 0) {
-							var k = keyword.trim().toLowerCase();
-							$posts.each(function(i) {
-								var $this = $(this);
-								if($this.find(".title-filter").text().toLowerCase().indexOf(k) > -1) {
-									$this.removeClass("js-hide");
-								} else {
-									$this.addClass("js-hide");
-								}
-							});
-						} else {
-							$posts.removeClass("js-hide");
-						}
-					});
-				}
-
-
-				/****** Video magnific popup ******/
-				$( '.popup-youtube, .popup-vimeo' ).magnificPopup({
-					// disableOn: 767,
-					type: 'iframe',
-					mainClass: 'mfp-fade',
-					removalDelay: 160,
-					preloader: false,
-					fixedContentPos: true,
-					closeBtnInside: false
-				});
-
-				// search career post
-
-				function debounce(func, wait, immediate) {
-					var timeout;
-					return function() {
-						var context = this, args = arguments;
-						var later = function() {
-							timeout = null;
-							if (!immediate) func.apply(context, args);
-						};
-						var callNow = immediate && !timeout;
-						clearTimeout(timeout);
-						timeout = setTimeout(later, wait);
-						if (callNow) func.apply(context, args);
-					};
-				}
-
-				//Search jobs
-				$("#jobSearch").on("keyup", debounce(function() {
-					var keyword = $(this).val();
-
-					var $allItems = $(".careers-data .js-item");
-
-					$allItems.removeClass("js-include").addClass("js-hide");
-
-					if(keyword && keyword.trim().length > 0) {
-						var lowerCasekeyword = keyword.trim().toLocaleLowerCase();
-						$allItems.each(function() {
-							var $this = $(this);
-							var title = $this.find("h5").text();
-							if(title && title.toLocaleLowerCase().indexOf(lowerCasekeyword) > -1) {
-								$this.addClass("js-include").removeClass("js-hide");
-							}
-						});
-					} else {
-						$allItems.addClass("js-include");
-					}
-
-					$(".careers-data .js-include:lt(" + 4 + ")").removeClass("js-hide");
-
-					if($(".careers-data .js-include").length > 4) {
-						$(".load-more-btn").show();
-					} else {
-						$(".load-more-btn").hide();
-					}
-				}, 200));
-
-				// Load more jobs
-				$(".load-more-btn").on("click", function(e) {
-					e.preventDefault();
-					$(".load-more-btn-wrapper").addClass('hide');
-					var $this = $(this);
-
-					var $allIncludedItems = $(".careers-data .js-include");
-
-					var numberOfAllIncludedItems =  $allIncludedItems.length;
-					var numberOfVisibleItems = $allIncludedItems.not(".js-hide").length;
-
-					var numberOfItemsToBeVisible = numberOfVisibleItems + 4;
-
-					$(".careers-data .js-include:lt(" + numberOfItemsToBeVisible + ")").removeClass("js-hide");
-
-					if(numberOfAllIncludedItems <= numberOfItemsToBeVisible) {
-						$this.hide();
+						var swiperObj = new Swiper(_this[0], sliderOptions);
+                    	swiperObjs.push(swiperObj);
 					}
 				});
+				if( $('.homepage-hero-slider' ).length > 0 ) {
 
-				// Twitter feed
-				window.addEventListener('load', function () { GetLiveData('https://www.apteve.com/thirdparty/module/__ob0bPFR__q0=/--n__sDlSYxBg=/', '#replacemodule2bikdphm5cz7kvy8qakq-9enab0eiheh', false, '') });
-				function GetLiveData(url, id, iscached, querystring) {
-					if (typeof querystring === 'undefined') { querystring = location.search; }
-					if ($(id).length) {
-						$.ajax({
-							url: url + location.search,
-							cache: iscached,
-							crossDomain : true,
-							dataType: 'jsonp',
-							type: "GET",
-							success: function (data) {
-							if (data == "PageNotFound")
-								{
-									window.location = "page-not-found";
-								}
-							else
-								{ $(id).html(data) }
-							},
-							error: function (reponse) {
-								$(id).html("error : " + reponse.responseText);
-							}
-						});
-					}
+					var mySwiper = new Swiper('.swiper', {
+						// Optional parameters
+							  loop: true,
+							  simulateTouch: false,
+							  slidesPerView: 1,
+							  autoHeight: true,
+							  autoplay: {
+								  delay: 6000,
+							  },
+							  effect: 'fade',
+							  fadeEffect: {
+								  crossFade: true
+							  },
+							  pagination: {
+								  el: '.swiper-pagination-homepage-hero',
+								  clickable: true,
+								  type: 'bullets',
+								  progress: 1,
+								  renderProgressbar: function (progressbarFillClass) {
+									return '<span class="' + progressbarFillClass + '"></span>';
+								  }
+							  },
+							  on: {
+								slideChange: updSwiperNumericPagination
+							  }
+					  });
+					  function updSwiperNumericPagination() {
+						this.el.querySelector(".swiper-counter").innerHTML = '<span class="count">' + '0'+(this.realIndex + 1) + '</span>';
+					  }
+
 				}
-
-				//Contact Form
-				if ( $(".contact-form").find("form").find("[data-step=0]").attr("hidden") !== "hidden" ) {
-					$(document).on('click', ".forminator-pagination-footer .forminator-button-next", function(e){
-						$(".forminator-pagination-footer .forminator-button-next").addClass('step-two');
-					});
-				}
-
-				$(document).on('click', ".forminator-pagination-footer .step-two", function(e){
-					e.preventDefault();
-					$(".forminator-pagination-footer .forminator-button-submit").removeClass('step-two');
-					var value = $("[name=text-1]").val();
-					var address = $("input[type='radio'][name='radio-1']:checked").val();
-					var image = $("input[type='radio'][name='radio-1']:checked").next().next().next().find('span').css('background-image');
-					var bgimage = image.replace('url(','').replace(')','').replace(/\"/gi, "");
-					var contactform = $(".contact-form").find("form").find("[data-step=2]");
-					contactform.prepend('<div class="summary"><img src="'+ bgimage +'" ><div class="form-details"><div class="address"><b>Address</b>:'+ value +'</div><div class="property-type"><b>Property Type</b>:'+ address +'</div></div></div>');
-
-				});
-
 
 				$(".mobile-icon").on("click",function(){
 					if ( $(this).parent( '.menu-item-has-children' ).hasClass( 'show' ) ) {
@@ -281,64 +88,6 @@ window.Scrollanimate = () => {
 					  $( this ).parent( '.menu-item-has-children' ).siblings().find('.mega-menu-wrapper').slideUp();
 					  $( this ).next( '.mega-menu-wrapper' ).slideDown();
 					}
-				});
-
-				//blogpostcode cookie store.
-				$( document ).on( 'click', '.blog-postcode .forminator-button-submit', function ( e ) {
-					var  _self = $( this );
-					var name_val     = _self.parents( '.blog-postcode' ).find( '.input-blog-postcode input' ).val();
-
-					$.cookie( 'blog_postcode_val', name_val, { path: '/' } );
-
-				});
-				var blog_postcode_val     = $.cookie( 'blog_postcode_val' );
-				$('.contact-form input[name="text-1"]').val(blog_postcode_val);
-
-
-				//postcode cookie store.
-				$( document ).on( 'click', '.postcode-checker .forminator-button-submit', function ( e ) {
-					var  _self = $( this );
-					var name_val     = _self.parents( '.postcode-checker' ).find( '.name-field input' ).val();
-					$.cookie( 'cookie_data', name_val, { path: '/' } );
-					$.cookie( 'postcode_name_val', name_val, { path: '/' } );
-				});
-					var postcode_val = $.cookie( 'cookie_data' );
-					var name_val = $.cookie( 'postcode_name_val' );
-					$('.postcode-checker .name-field input[name="text-1"]').val(name_val);
-					$('.contact-form input[name="text-1"]').val(postcode_val);
-					$(window).load(function(e){
-						$.removeCookie('postcode_name_val', { path: '/' });
-					});
-
-
-				//webuy-postcode cookie store.
-				$( document ).on( 'click', '.we-buy-house-postcode .forminator-button-submit', function ( e ) {
-					var  _self = $( this );
-					var input_val     = _self.parents( '.we-buy-house-postcode' ).find( '.input-postcode input' ).val();
-					$.cookie( 'cookie_data', input_val, { path: '/' } );
-					$.cookie( 'webuy_input_val', input_val, { path: '/' } );
-				});
-				var postcode_input = $.cookie( 'cookie_data' );
-				var input_val = $.cookie( 'webuy_input_val' );
-				$('.postcode .input-postcode input[name="text-1"]').val(input_val);
-				$('.contact-form input[name="text-1"]').val(postcode_input);
-				$(window).load(function(e){
-					$.removeCookie('webuy_input_val', { path: '/' });
-				});
-
-				//blogpostcode cookie store.
-				$( document ).on( 'click', '.blog-postcode .forminator-button-submit', function ( e ) {
-					var  _self = $( this );
-					var blog_input_val     = _self.parents( '.blog-postcode' ).find( '.input-blog-postcode input' ).val();
-					$.cookie( 'cookie_data', blog_input_val, { path: '/' } );
-					$.cookie( 'blog_input_val', blog_input_val, { path: '/' } );
-				});
-				var blog_postcode_input = $.cookie( 'cookie_data' );
-				var blog_input_val = $.cookie( 'blog_input_val' );
-				$('.postcode .input-blog-postcode input[name="text-1"]').val(blog_input_val);
-				$('.contact-form input[name="text-1"]').val(blog_postcode_input);
-				$(window).load(function(e){
-					$.removeCookie('blog_input_val', { path: '/' });
 				});
 
 			},

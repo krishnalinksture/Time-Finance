@@ -26,7 +26,8 @@ if ( have_rows( 'page_builder', $_term ) ) {
 		$layout_section = get_row_layout();
 
 		switch ( $layout_section ) {
-			case 'postcode_checker':
+			case 'homepage_hero':
+			case 'inner_page_hero':
 				$template_name = str_replace( '_', '-', $layout_section );
 				get_template_part( 'template-parts/acf-flexible/' . $template_name );
 				break;

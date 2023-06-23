@@ -8,20 +8,20 @@
 ?>
 </main><!-- main content : END -->
 <?php
-$main_title    = get_field( 'title', 'options' );
-$select_tag    = get_field( 'select_tag', 'options' );
-$mail          = get_field( 'mail', 'options' );
-$pop_up_title  = get_field( 'pop_up_title', 'options' );
-$pop_up_form   = get_field( 'pop_up_form', 'options' );
-$trustpilot    = get_field( 'trustpilot', 'options' );
-$form_logo     = get_field( 'form_logo', 'options' );
-$footer_logo     = get_field( 'footer_logo', 'options' );
+$main_title         = get_field( 'title', 'options' );
+$select_tag         = get_field( 'select_tag', 'options' );
+$mail               = get_field( 'mail', 'options' );
+$pop_up_title       = get_field( 'pop_up_title', 'options' );
+$pop_up_form        = get_field( 'pop_up_form', 'options' );
+$trustpilot         = get_field( 'trustpilot', 'options' );
+$form_logo          = get_field( 'form_logo', 'options' );
+$footer_logo        = get_field( 'footer_logo', 'options' );
 $footer_address     = get_field( 'footer_address', 'options' );
-$footer_social_icon     = get_field( 'footer_social_icon', 'options' );
+$footer_social_icon = get_field( 'footer_social_icon', 'options' );
 $footer_content     = get_field( 'footer_content', 'options' );
-$footer_form   = ( ! empty( $pop_up_form ) ) ? '[forminator_form id="' . $pop_up_form . '"]' : '';
-$form_logo_alt = ( isset( $form_logo['alt'] ) && ! empty( $form_logo['alt'] ) ) ? $form_logo['alt'] : ( isset( $form_logo['title'] ) && ! empty( $form_logo['title'] ) ? $form_logo['title'] : '' );
-$footer_logo_alt = ( isset( $footer_logo['alt'] ) && ! empty( $footer_logo['alt'] ) ) ? $footer_logo['alt'] : ( isset( $footer_logo['title'] ) && ! empty( $footer_logo['title'] ) ? $footer_logo['title'] : '' );
+$footer_form        = ( ! empty( $pop_up_form ) ) ? '[forminator_form id="' . $pop_up_form . '"]' : '';
+$form_logo_alt      = ( isset( $form_logo['alt'] ) && ! empty( $form_logo['alt'] ) ) ? $form_logo['alt'] : ( isset( $form_logo['title'] ) && ! empty( $form_logo['title'] ) ? $form_logo['title'] : '' );
+$footer_logo_alt    = ( isset( $footer_logo['alt'] ) && ! empty( $footer_logo['alt'] ) ) ? $footer_logo['alt'] : ( isset( $footer_logo['title'] ) && ! empty( $footer_logo['title'] ) ? $footer_logo['title'] : '' );
 
 if ( is_active_sidebar( 'footer-column-1' ) || ! empty( $main_title ) || ! empty( $trustpilot ) || ! empty( $mail ) || ! empty( $pop_up_title ) || ! empty( $pop_up_form ) ) {
 	?>
@@ -46,7 +46,7 @@ if ( is_active_sidebar( 'footer-column-1' ) || ! empty( $main_title ) || ! empty
 						}
 						?>
 						<div class="popup-form">
-							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+							<button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#exampleModal">
 								<?php echo esc_html( $pop_up_title ); ?>
 							</button>
 							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
