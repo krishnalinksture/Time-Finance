@@ -10,16 +10,19 @@ $select_tag       = get_sub_field( 'select_tag' );
 $content          = get_sub_field( 'content' );
 $background_image = get_sub_field( 'background_image' );
 $cta_button       = get_sub_field( 'cta_button' );
-$right_image      = get_sub_field( 'right_image' );
+$left_image      = get_sub_field( 'left_image' );
 $background       = ( ! empty( $background_image ) ) ? ' style="background-image:url(' . esc_url( $background_image ) . ');"' : '';
-$right_image_alt  = ( isset( $right_image['alt'] ) && ! empty( $right_image['alt'] ) ) ? $right_image['alt'] : ( isset( $right_image['title'] ) && ! empty( $right_image['title'] ) ? $right_image['title'] : '' );
+$left_image_alt  = ( isset( $left_image['alt'] ) && ! empty( $left_image['alt'] ) ) ? $left_image['alt'] : ( isset( $left_image['title'] ) && ! empty( $left_image['title'] ) ? $left_image['title'] : '' );
 $section_id       = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'inner-page-hero-' );
 
 ?>
 <section class="inner-page-hero" id="<?php echo $section_id; //phpcs:ignore ?>"<?php echo $background; ?>>
+	<div class="section-left-image">
+		<img class="left-image" width="<?php echo $left_image['sizes']['timefinance-desktop-width']; ?>" height="<?php echo 	$left_image['sizes']['timefinance-desktop-height']; ?>" src="<?php echo $left_image['url']; ?>" srcset="<?php echo $left_image['sizes']['timefinance-small-mobile']; ?> 400w, <?php echo $left_image['sizes']['timefinance-mobile']; ?> 800w, <?php echo $left_image['sizes']['timefinance-tablet']; ?> 1200w, <?php echo $left_image['sizes']['timefinance-desktop']; ?> 2000w" sizes="50vw" alt="<?php echo $left_image_alt; //phpcs:ignore ?>">
+	</div>
 	<div class="container">
 		<div class="row">
-			<div class="col-6">
+			<div class="col">
 				<?php
 				if ( ! empty( $main_title ) ) {
 					echo '<' . esc_attr( $select_tag ) . ' class="section-title">' . esc_html( $main_title ) . '</' . esc_attr( $select_tag ) . '>';
@@ -36,9 +39,6 @@ $section_id       = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' 
 					<?php
 				}
 				?>
-			</div>
-			<div class="col-6">
-				<img class="right-image" width="<?php echo $right_image['sizes']['timefinance-desktop-width']; ?>" height="<?php echo 	$right_image['sizes']['timefinance-desktop-height']; ?>" src="<?php echo $right_image['url']; ?>" srcset="<?php echo $right_image['sizes']['timefinance-small-mobile']; ?> 400w, <?php echo $right_image['sizes']['timefinance-mobile']; ?> 800w, <?php echo $right_image['sizes']['timefinance-tablet']; ?> 1200w, <?php echo $right_image['sizes']['timefinance-desktop']; ?> 2000w" sizes="50vw" alt="<?php echo $right_image_alt; //phpcs:ignore ?>">
 			</div>
 		</div>
 	</div>
