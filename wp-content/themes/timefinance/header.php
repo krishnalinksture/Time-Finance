@@ -42,88 +42,83 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php
 		if ( ! empty( $header_logo ) || ! empty( $cta_button ) ) {
 			?>
-			<div class="header-top">
+			
+			<nav class="navbar navbar-expand-md">
 				<div class="container">
-					<div class="row">
-						<?php
-						if ( ! empty( $header_logo ) ) {
-							?>
-							<div class="col-3">
-								<a class="main-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-									<?php
-									if ( ! empty( $header_logo ) ) {
-										?>
-										<img class="skip-lazy" width="<?php echo $header_logo['sizes']['timefinance-desktop-width']; ?>" height="<?php echo $header_logo['sizes']['timefinance-desktop-height']; ?>" src="<?php echo $header_logo['url']; ?>" srcset="<?php echo $header_logo['sizes']['timefinance-small-mobile']; ?> 400w, <?php echo $header_logo['sizes']['timefinance-mobile']; ?> 800w, <?php echo $header_logo['sizes']['timefinance-tablet']; ?> 1200w, <?php echo $header_logo['sizes']['timefinance-desktop']; ?> 2000w" sizes="50vw" alt="<?php echo $header_logo_alt; //phpcs:ignore ?>">
-										<?php
-									} else {
-										echo esc_html( get_bloginfo( 'name' ) );
-									}
-									?>
-								</a>
-							</div>
-							<?php
-						}
+					<?php
+					if ( ! empty( $header_logo ) ) {
 						?>
-						<nav class="navbar navbar-expand-md">
-							<div class="container-md">
-								<div class="col-6 header-menu">
-									<button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-label="Toggle navigation" aria-expanded="false">
-										<span class="navbar-toggler-line"></span>
-									</button>
-									<div class="collapse navbar-collapse" id="navbarSupportedContent">
-										<div class="navbar-wrapper">
-											<?php
-											if ( has_nav_menu( 'primary' ) ) {
-												wp_nav_menu(
-													array(
-														'theme_location' => 'primary',
-														'menu_class'     => 'navbar-nav navigation-links',
-														'container'      => 'menu-container',
-														'container_id'   => 'navbarNav',
-														'fallback_cb'    => false,
-														'depth'          => 0,
-														'walker'         => new Timefinance_Menu_Walker(),
-													),
-												);
-											} else {
-												wp_nav_menu(
-													array(
-														'menu_class' => 'navbar-nav',
-														'menu'       => '',
-														'container'  => 'menu-container',
-													)
-												);
-											}
-											?>
-										</div>
-									</div>
-								</div>
-							</div>
-						</nav>
-						<?php
-						if ( ! empty( $cta_button ) ) {
-							?>
-							<div class="col-3">
-								<img class="search-icon" width="<?php echo $search_icon['sizes']['timefinance-desktop-width']; ?>" height="<?php echo $search_icon['sizes']['timefinance-desktop-height']; ?>" src="<?php echo $search_icon['url']; ?>" srcset="<?php echo $search_icon['sizes']['timefinance-small-mobile']; ?> 400w, <?php echo $search_icon['sizes']['timefinance-mobile']; ?> 800w, <?php echo $search_icon['sizes']['timefinance-tablet']; ?> 1200w, <?php echo $search_icon['sizes']['timefinance-desktop']; ?> 2000w" sizes="50vw" alt="<?php echo $search_icon_alt; //phpcs:ignore ?>">
+						<div class="col-3">
+							<a class="main-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
 								<?php
-								if ( $cta_button && ! empty( $cta_button['url'] ) && ! empty( $cta_button['title'] ) ) {
-									$link_url    = $cta_button['url'];
-									$link_title  = $cta_button['title'];
-									$link_target = $cta_button['target'] ? $cta_button['target'] : '_self';
+								if ( ! empty( $header_logo ) ) {
 									?>
-									<a href="<?php echo esc_url( $link_url ); ?>" class="btn" target="<?php echo esc_attr( $link_target ); ?>">
-										<?php echo esc_html( $link_title ); ?>
-									</a>
+									<img class="skip-lazy" width="<?php echo $header_logo['sizes']['timefinance-desktop-width']; ?>" height="<?php echo $header_logo['sizes']['timefinance-desktop-height']; ?>" src="<?php echo $header_logo['url']; ?>" srcset="<?php echo $header_logo['sizes']['timefinance-small-mobile']; ?> 400w, <?php echo $header_logo['sizes']['timefinance-mobile']; ?> 800w, <?php echo $header_logo['sizes']['timefinance-tablet']; ?> 1200w, <?php echo $header_logo['sizes']['timefinance-desktop']; ?> 2000w" sizes="50vw" alt="<?php echo $header_logo_alt; //phpcs:ignore ?>">
 									<?php
+								} else {
+									echo esc_html( get_bloginfo( 'name' ) );
+								}
+								?>
+							</a>
+						</div>
+						<?php
+					}
+					?>
+					<div class="col-6 header-menu">
+						<button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-label="Toggle navigation" aria-expanded="false">
+							<span class="navbar-toggler-line"></span>
+						</button>
+						<div class="collapse navbar-collapse" id="navbarSupportedContent">
+							<div class="navbar-wrapper">
+								<?php
+								if ( has_nav_menu( 'primary' ) ) {
+									wp_nav_menu(
+										array(
+											'theme_location' => 'primary',
+											'menu_class'     => 'navbar-nav navigation-links',
+											'container'      => 'menu-container',
+											'container_id'   => 'navbarNav',
+											'fallback_cb'    => false,
+											'depth'          => 0,
+											'walker'         => new Timefinance_Menu_Walker(),
+										),
+									);
+								} else {
+									wp_nav_menu(
+										array(
+											'menu_class' => 'navbar-nav',
+											'menu'       => '',
+											'container'  => 'menu-container',
+										)
+									);
 								}
 								?>
 							</div>
-							<?php
-						}
-						?>
+						</div>
 					</div>
+					<?php
+					if ( ! empty( $cta_button ) ) {
+						?>
+						<div class="col-3">
+							<img class="search-icon" width="<?php echo $search_icon['sizes']['timefinance-desktop-width']; ?>" height="<?php echo $search_icon['sizes']['timefinance-desktop-height']; ?>" src="<?php echo $search_icon['url']; ?>" srcset="<?php echo $search_icon['sizes']['timefinance-small-mobile']; ?> 400w, <?php echo $search_icon['sizes']['timefinance-mobile']; ?> 800w, <?php echo $search_icon['sizes']['timefinance-tablet']; ?> 1200w, <?php echo $search_icon['sizes']['timefinance-desktop']; ?> 2000w" sizes="50vw" alt="<?php echo $search_icon_alt; //phpcs:ignore ?>">
+							<?php
+							if ( $cta_button && ! empty( $cta_button['url'] ) && ! empty( $cta_button['title'] ) ) {
+								$link_url    = $cta_button['url'];
+								$link_title  = $cta_button['title'];
+								$link_target = $cta_button['target'] ? $cta_button['target'] : '_self';
+								?>
+								<a href="<?php echo esc_url( $link_url ); ?>" class="btn" target="<?php echo esc_attr( $link_target ); ?>">
+									<?php echo esc_html( $link_title ); ?>
+								</a>
+								<?php
+							}
+							?>
+						</div>
+						<?php
+					}
+					?>
 				</div>
-			</div>
+			</nav>
 			<?php
 		}
 		?>
