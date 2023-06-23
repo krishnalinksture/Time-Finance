@@ -129,24 +129,49 @@ button.mfp-close {
       transform: translateY(-50%) rotate(-90deg); }
 
 .btn {
-  text-transform: initial;
-  transition: all 0.2s linear !important;
-  -moz-transition: all 0.2s linear !important;
-  -webkit-transition: all 0.2s linear !important;
-  -o-transition: all 0.2s linear !important;
+  border: 2px solid #3d1050;
+  background-color: #3d1050;
+  color: #fff;
   display: inline-block !important;
-  padding: 12px 50px;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0.3px;
+  padding: 12px 32px;
   position: relative;
-  font-size: 24px;
-  line-height: 26px;
   text-decoration: none;
   text-align: center;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  border-radius: 5px; }
+  text-transform: initial;
+  transition: all 0.3s linear !important;
+  -moz-transition: all 0.3s linear !important;
+  -webkit-transition: all 0.2s linear !important;
+  -o-transition: all 0.3s linear !important;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  border-radius: 50px; }
+  .btn:hover {
+    background-color: #00a98f;
+    border-color: #00a98f;
+    color: #fff; }
   .btn:focus {
     box-shadow: none; }
+  .btn.btn-secondary {
+    background-color: transparent;
+    color: #3d1050; }
+    .btn.btn-secondary:hover {
+      background-color: #00a98f;
+      border-color: #00a98f;
+      color: #fff; }
+  .btn.btn-link {
+    background-color: transparent;
+    color: #121212;
+    border: none;
+    padding: 0; }
+    .btn.btn-link:hover {
+      color: #121212;
+      text-decoration: underline; }
 
 h1,
 h2,
@@ -190,9 +215,21 @@ h4,
   line-height: 22px; }
 
 /*================ Layouts ================*/
+body {
+  padding-top: 125px; }
+
 header {
-  position: relative;
-  z-index: 8; }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 20px -8px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 20px -8px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 0 20px -8px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 0 20px -8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 20px -8px rgba(0, 0, 0, 0.1); }
   @media (max-width: 991px) {
     header .container {
       padding: 0; } }
@@ -207,10 +244,19 @@ header {
       margin-bottom: 0; } }
   header .main-logo img {
     width: auto;
-    height: 33px; }
+    height: 67px; }
     @media (max-width: 575px) {
       header .main-logo img {
         height: 30px; } }
+  header .header-btn .search-icon {
+    width: 18px;
+    margin-left: 20px; }
+  header .header-btn .btn {
+    padding: 7px 24px;
+    font-size: 15px;
+    line-height: 16px;
+    font-weight: 400;
+    margin-left: 10px; }
   header nav.navbar {
     padding: 0; }
     @media (min-width: 768px) {
@@ -229,24 +275,17 @@ header {
           header nav.navbar .navbar-nav > .menu-item:last-child {
             border: none; } }
       header nav.navbar .navbar-nav > .menu-item > a {
-        color: #fff;
-        font-size: 17px;
-        line-height: 20px;
-        padding: 19px 34px; }
-        @media (max-width: 1199px) {
-          header nav.navbar .navbar-nav > .menu-item > a {
-            padding: 19px 15px; } }
-        @media (max-width: 991px) {
-          header nav.navbar .navbar-nav > .menu-item > a {
-            font-size: 15px;
-            line-height: 17px;
-            padding: 19px 9px; } }
-        @media (max-width: 767px) {
-          header nav.navbar .navbar-nav > .menu-item > a {
-            padding: 15px 0; } }
-      header nav.navbar .navbar-nav > .menu-item:hover .sub-menu {
+        color: #3d1050;
+        font-size: 15px;
+        line-height: 25px;
+        font-weight: 600;
+        padding: 50px 10px;
+        text-decoration: none; }
+      header nav.navbar .navbar-nav > .menu-item:hover .mega-menu-wrapper {
         opacity: 1;
         visibility: visible; }
+    header nav.navbar .navbar-nav .mega-menu-wrapper {
+      display: none; }
   header .navbar-toggler {
     width: 26px;
     height: 30px;

@@ -1,6 +1,15 @@
+body {
+    padding-top: 125px;
+}
 header {
-    position: relative;
-    z-index: 8;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: $white;
+    @include box-shadow(0 0 20px -8px rgba(0,0,0,.1))
+
     .container {
         @include responsive(ipad-portrait, max) {
             padding: 0;
@@ -25,7 +34,7 @@ header {
 
         img {
             width: auto;
-            height: 33px;
+            height: 67px;
             
             @include responsive(mobile-small, max) {
                 height: 30px;
@@ -33,7 +42,21 @@ header {
         }
     }
 
-    // Header Top
+    // Header Button
+    .header-btn {
+        .search-icon {
+            width: 18px;
+            margin-left: 20px;
+        }
+
+        .btn {
+            padding: 7px 24px;
+            font-size: 15px;
+            line-height: 16px;
+            font-weight: 400;
+            margin-left: 10px;
+        }
+    }
 
     // Navigation
     nav.navbar {
@@ -65,30 +88,25 @@ header {
                 }
 
                 > a {
-                    color: $white;
-                    font-size: 17px;
-                    line-height: 20px;
-                    padding: 19px 34px;
-
-                    @include responsive(laptop, max) {
-                        padding: 19px 15px;
-                    }
-                    @include responsive(ipad-portrait, max) {
-                        font-size: 15px;
-                        line-height: 17px;
-                        padding: 19px 9px;
-                    }
-                    @include responsive(mobile-big, max) {
-                        padding: 15px 0;
-                    }
+                    color: $purple;
+                    font-size: 15px;
+                    line-height: 25px;
+                    font-weight: 600;
+                    padding: 50px 10px;
+                    text-decoration: none;
                 }
                 
                 &:hover {
-                    .sub-menu {
+                    .mega-menu-wrapper {
                         opacity: 1;
                         visibility: visible;
                     }
                 }
+            }
+
+            // Mega Menu Wrapper
+            .mega-menu-wrapper {
+                display: none;
             }
         }
     }

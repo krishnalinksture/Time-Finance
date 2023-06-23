@@ -43,12 +43,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 		if ( ! empty( $header_logo ) || ! empty( $cta_button ) ) {
 			?>
 			
-			<nav class="navbar navbar-expand-md">
+			<nav class="navbar navbar-expand-xl">
 				<div class="container">
 					<?php
 					if ( ! empty( $header_logo ) ) {
 						?>
-						<div class="col-3">
+						<div class="col-auto">
 							<a class="main-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
 								<?php
 								if ( ! empty( $header_logo ) ) {
@@ -64,7 +64,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						<?php
 					}
 					?>
-					<div class="col-6 header-menu">
+					<div class="col-auto header-menu ms-auto">
 						<button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-label="Toggle navigation" aria-expanded="false">
 							<span class="navbar-toggler-line"></span>
 						</button>
@@ -99,7 +99,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<?php
 					if ( ! empty( $cta_button ) ) {
 						?>
-						<div class="col-3">
+						<div class="col-auto header-btn">
 							<img class="search-icon" width="<?php echo $search_icon['sizes']['timefinance-desktop-width']; ?>" height="<?php echo $search_icon['sizes']['timefinance-desktop-height']; ?>" src="<?php echo $search_icon['url']; ?>" srcset="<?php echo $search_icon['sizes']['timefinance-small-mobile']; ?> 400w, <?php echo $search_icon['sizes']['timefinance-mobile']; ?> 800w, <?php echo $search_icon['sizes']['timefinance-tablet']; ?> 1200w, <?php echo $search_icon['sizes']['timefinance-desktop']; ?> 2000w" sizes="50vw" alt="<?php echo $search_icon_alt; //phpcs:ignore ?>">
 							<?php
 							if ( $cta_button && ! empty( $cta_button['url'] ) && ! empty( $cta_button['title'] ) ) {
