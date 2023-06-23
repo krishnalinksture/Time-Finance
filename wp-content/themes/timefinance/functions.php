@@ -139,8 +139,8 @@ function widgets_init() {
 
 	register_sidebar(
 		array(
-			'name'          => __( 'Footer Column 3', 'timefinance' ),
-			'id'            => 'footer-column-3',
+			'name'          => __( 'Footer Bottom', 'timefinance' ),
+			'id'            => 'footer-bottom',
 			'before_widget' => '<div class="widget %1$s %2$s">',
 			'after_widget'  => '</div>',
 			'before_title'  => '<h6 class="title">',
