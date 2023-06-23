@@ -1,0 +1,109 @@
+# Metadata
+/.buildpath
+/.cache
+/.metadata
+/.project
+/.settings
+/atlassian*
+/node_modules
+/nbproject
+/sitemap
+/.idea
+/.gitattributes
+node_modules/
+wp-content/themes/timefinance/.netbeans.xml
+wp-content/cache/*
+wp-content/themes/timefinance/node_modules
+
+# Files re-generated through composer
+/CONTRIBUTING.md
+/package.json.sample
+/php.ini.sample
+/auth.json.sample
+/CHANGELOG.md
+/composer.json
+/composer.lock
+/COPYING.txt
+/grunt-config.json.sample
+/Gruntfile.js.sample
+/LICENSE.txt
+/LICENSE_AFL.txt
+/nginx.conf.sample
+/package.json
+/SECURITY.md
+/yarn.lock
+/.htaccess
+/.htaccess.sample
+/.php_cs.dist
+/.travis.yml.sample
+/.user.ini
+
+# ignore log files and databases
+*.log
+#*.sql
+*.sqlite
+*.tar.gz
+
+# ignore all files that start with ~
+~*
+
+# ignore OS generated files
+ehthumbs.db
+Thumbs.db
+
+# ignore Editor files
+*.sublime-project
+*.sublime-workspace
+*.komodoproject
+
+# ignore compiled files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# ignore packaged files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# ignore these plugins
+#wp-content/uploads/*
+wp-content/themes/twentytwenty/*
+wp-content/themes/twentytwentyone/*
+wp-content/themes/twentytwentytwo/*
+wp-content/themes/twentytwentythree/*
+
+
+wp-config.php
+wp-comments-post.php
+wp-config-sample.php
+wp-trackback.php
+xmlrpc.php
+index.html
+license.txt
+readme.html
+readme.md
+robots.txt
+wp-activate.php
+wp-blog-header.php
+wp-cron.php
+wp-links-opml.php
+wp-load.php
+wp-login.php
+wp-mail.php
+wp-settings.php
+wp-signup.php
+wp-admin/*
+wp-includes/*
+
+# ignore specific themes
+wp-content/vendor/*
+wp-content/wpcs/*
