@@ -107,3 +107,4 @@ wp-includes/*
 # ignore specific themes
 wp-content/vendor/*
 wp-content/wpcs/*
+wp-config.php
