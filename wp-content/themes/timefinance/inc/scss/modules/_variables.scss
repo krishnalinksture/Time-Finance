@@ -1,63 +1,14 @@
 /*================ Font Variables ================*/
-// @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
-
-// @font-face {
-// 	font-family: 'Forum';
-// 	src: url('../inc/webfonts/Forum.woff2') format('woff2'),
-// 		url('../inc/webfonts/Forum.woff') format('woff');
-// 	font-weight: normal;
-// 	font-style: normal;
-// 	font-display: swap;
-// }
-
-// @font-face {
-//   font-display: fallback;
-//   font-family: 'VAGRoundedLT-Light';
-//   src: url("../inc/webfonts/2F8CAC_0_0.woff2") format("woff2"), }
-
-// @font-face {
-//   font-display: fallback;
-//   font-family: 'VAGRoundedLT-Bold';
-//   src: url("../inc/webfonts/2F8CAC_1_0.woff2") format("woff2")
-// 	}
-
-
-@font-face {
-	font-display: fallback;
-	font-family: 'VAGRoundedLT-Light';
-	src: url("../inc/webfonts/2F8CAC_0_0.eot");
-	src: url("../inc/webfonts/2F8CAC_0_0.eot?#iefix") format("embedded-opentype"), url("../inc/webfonts/2F8CAC_0_0.woff2") format("woff2"), url("../inc/webfonts/2F8CAC_0_0.woff") format("woff"), url("../inc/webfonts/2F8CAC_0_0.ttf") format("truetype"); }
-
-@font-face {
-	font-display: fallback;
-	font-family: 'VAGRoundedLT-Bold';
-	src: url("../inc/webfonts/2F8CAC_1_0.eot");
-	src: url("../inc/webfonts/2F8CAC_1_0.eot?#iefix") format("embedded-opentype"), url("../inc/webfonts/2F8CAC_1_0.woff2") format("woff2"), url("../inc/webfonts/2F8CAC_1_0.woff") format("woff"), url("../inc/webfonts/2F8CAC_1_0.ttf") format("truetype"); }
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;600;700;800;900;1000&display=swap');
 
 // Font Family
-$primary-font-light: 'VAGRoundedLT-Light';
-$primary-font-bold: 'VAGRoundedLT-Bold';
+$primary-font: 'Nunito Sans', sans-serif;
 
 // Colors
 $white: #fff;
 $black: #080808;
-$light-gray: #F9F9F9;
-$gray: #C7C8CA;
-$dark-gray: #444444;
-$extra-dark-gray: #777777;
-$green: #20aa97;
-$green-alt: #21A997;
-$green-azure: #F4FBFA;
-$very-light-green: #89C4BA;
-$very-light-green-azure: #F9FCFC;
-$light-green: #59B8AA;
-$yellow: #F4C756;
-$floral-white: #FEFCF7;
-$blue: #11445F;
-$light-blue: #00496a;
-$dark-blue: #114460;
-$extra-dark-blue: #193B4A;
-$pink: #E25E9E;
+$purple: #3d1050;
+$green: #00a98f;
 
 
 // Device Width

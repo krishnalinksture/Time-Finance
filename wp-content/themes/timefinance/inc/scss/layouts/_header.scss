@@ -1,24 +1,6 @@
 header {
     position: relative;
     z-index: 8;
-
-    &::after {
-        content: "";
-        background: url(../inc/assets/drop-shadow-20.png);
-        background-repeat: repeat-x;
-        background-position: left top;
-        width: 100%;
-        height: 18px;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        z-index: 1;
-
-        @include responsive(mobile-big, max) {
-            display: none;
-        }
-    }
-
     .container {
         @include responsive(ipad-portrait, max) {
             padding: 0;
@@ -52,100 +34,12 @@ header {
     }
 
     // Header Top
-    .header-top {
-        padding: 30px 0;
-
-        @include responsive(ipad-portrait, max) {
-            padding: 27px 0 1px;
-        }
-        @include responsive(mobile-big, max) {
-            padding: 25px 0;
-            position: relative;
-        }
-
-        .site-contact {
-            font-size: 28px;
-            line-height: 30px;
-            margin-right: 15px;
-
-            @include responsive(ipad-portrait, max) {
-                order: 2;
-                margin: 13px 0 0;
-                font-size: 18px;
-                line-height: 22px;
-            }
-
-            .header-content {
-                color: $dark-blue;
-                display: block;
-
-                @include responsive(ipad-portrait, max) {
-                    display: inline-block;
-                }
-            }
-
-            > a {
-                color: $dark-blue;
-                font-family: $primary-font-bold;
-                font-size: 32px;
-                line-height: 32px;
-
-                @include responsive(ipad-portrait, max) {
-                    font-size: 28px;
-                    line-height: 24px;
-                }
-
-                &:hover {
-                    text-decoration: underline;
-                    text-decoration-color: $dark-gray;
-                }
-
-            }
-        }
-
-        .btn {
-            padding: 15px 36px 15px 40px;
-
-            @include responsive(ipad-portrait, max) {
-                order: 1;
-            }
-
-            &::after {
-                border-width: 28px 0 28px 27px;
-
-                @include responsive(ipad-portrait, max) {
-                    display: none;
-                }
-            }
-
-            &.mobile-hide {
-                @include responsive(mobile-big, max) {
-                    display: none !important;
-                }
-            }
-        }
-
-        .mobile-icon {
-            @include responsive(mobile-big, max) {
-                position: absolute;
-                top: 50%;
-                right: 35px;
-                @include translateY(-50%);
-            }
-
-            @include responsive(mobile-small, max) {
-                right: 20px;
-            }
-        }
-    }
 
     // Navigation
     nav.navbar {
-        background-color: $green;
         padding: 0;
 
         @include responsive(mobile-big, max) {
-            position: unset;
         }
 
         .navbar-nav {
@@ -195,84 +89,6 @@ header {
                         visibility: visible;
                     }
                 }
-                
-                @media (min-width: 768px) {
-                    .sub-menu {
-                        position: absolute;
-                        top: 100%;
-                        left: 0;
-                        background-color: $green;
-                        width: 200px;
-                        box-shadow: 0px 18px 16px 0px rgba(0,0,0,0.2);
-                        padding: 12px 16px;
-                        z-index: 100000;
-                        list-style: none;
-                        opacity: 0;
-                        visibility: hidden;
-                        @include transitionAll(0.2s ease-in-out);
-                        
-                        > li {
-                            > a {
-                                color: $white;
-                                font-size: 17px;
-                                line-height: 20px;
-                                padding: 16px;
-                            }
-                        }
-                    }
-                }
-                
-                @include responsive(mobile-big, max) {
-                    .mega-menu-wrapper {
-                        display: none;
-                    }
-                    
-                    .sub-menu {
-                        list-style: none;
-                        padding-left: 15px;
-                        margin-bottom: 15px;
-                        
-                        li {
-                            border-bottom: 1px solid $white;
-                            
-                            &:last-child {
-                                border-bottom: 0;
-                            }
-                            
-                            a {
-                                padding: 10px 0;
-                                color: $white;
-                            }
-                        }
-                    }
-                }
-            }
-
-            .menu-item {
-                &.current-menu-item,
-                &.current-menu-parent {
-                    > a {
-                        font-family: $primary-font-bold;
-                    }
-                }
-            }
-
-            .mobile-icon {
-                background: url(../inc/assets/slider-chevron-white.svg);
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: 9px;
-                position: absolute;
-                top: 0;
-                right: 0;
-                width: 48px;
-                height: 48px;
-                z-index: 1;
-                @include rotate(90deg);
-
-                @media (min-width: 768px) {
-                    display: none;
-                }
             }
         }
     }
@@ -303,7 +119,7 @@ header {
         .navbar-toggler-line {
             width: 100%;
             height: 5px;
-            background-color: $green;
+            background-color: $black;
             position: relative;
             @include borderRadius(3px);
             @include transitionAll(0.3s ease-in-out);
@@ -313,7 +129,7 @@ header {
                 content: "";
                 width: 100%;
                 height: 100%;
-                background-color: $green;
+                background-color: $black;
                 position: absolute;
                 left: 0;
                 @include borderRadius(3px);
@@ -354,7 +170,6 @@ header {
             top: 83px;
             left: 0;
             width: 60%;
-            background-color: $green;
             z-index: 9;
             height: calc(100vh - 83px);
             overflow-y: auto;
