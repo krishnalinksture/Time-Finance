@@ -1,17 +1,17 @@
 <?php
 /**
- * CARD BLOCK
+ * LARGE CARD BLOCK
  *
  * @package TIMEFINANCE
  */
 
-$card_content            = get_sub_field( 'card_content' );
-$main_title              = get_sub_field( 'title' );
-$select_tag              = get_sub_field( 'select_tag' );
-$select_background_color = get_sub_field( 'select_background_color' );
-$section_id              = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'card-block-' );
+$large_card       = get_sub_field( 'large_card' );
+$main_title       = get_sub_field( 'title' );
+$select_tag       = get_sub_field( 'select_tag' );
+$background_color = get_sub_field( 'background_color' );
+$section_id       = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'large-card-block-' );
 ?>
-<section class="card-block <?php echo $select_background_color; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
+<section class="large-card-block <?php echo $background_color; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
 	<div class="container">
 		<div class="row">
 			<div class="col">
@@ -23,11 +23,11 @@ $section_id              = get_sub_field( 'section_id' ) ? get_sub_field( 'secti
 			</div>
 		</div>
 		<?php
-		if ( have_rows( 'card_content' ) ) {
+		if ( have_rows( 'large_card' ) ) {
 			?>
 			<div class="row">
 				<?php
-				while ( have_rows( 'card_content' ) ) {
+				while ( have_rows( 'large_card' ) ) {
 					the_row();
 					$card_title = get_sub_field( 'card_title' );
 					$image      = get_sub_field( 'image' );
@@ -36,8 +36,7 @@ $section_id              = get_sub_field( 'section_id' ) ? get_sub_field( 'secti
 					$image_alt  = ( isset( $image['alt'] ) && ! empty( $image['alt'] ) ) ? $image['alt'] : ( isset( $image['title'] ) && ! empty( $image['title'] ) ? $image['title'] : '' );
 					?>
 					<div class="col">
-						<img class="card-image" width="<?php echo $image['sizes']['timefinance-desktop-width']; ?>" height="<?php echo 	$image['sizes']['timefinance-desktop-height']; ?>" src="<?php echo $image['url']; ?>" srcset="<?php echo $image['sizes']['timefinance-small-mobile']; ?> 400w, <?php echo $image['sizes']['timefinance-mobile']; ?> 800w, <?php echo $image['sizes']['timefinance-tablet']; ?> 1200w, <?php echo $image['sizes']['timefinance-desktop']; ?> 2000w" sizes="50vw" alt="<?php echo $image_alt; //phpcs:ignore ?>">
-						<div class="hover-card">
+						<img class="large-card-image" width="<?php echo $image['sizes']['timefinance-desktop-width']; ?>" height="<?php echo $image['sizes']['timefinance-desktop-height']; ?>" src="<?php echo $image['url']; ?>" srcset="<?php echo $image['sizes']['timefinance-small-mobile']; ?> 400w, <?php echo $image['sizes']['timefinance-mobile']; ?> 800w, <?php echo $image['sizes']['timefinance-tablet']; ?> 1200w, <?php echo $image['sizes']['timefinance-desktop']; ?> 2000w" sizes="50vw" alt="<?php echo $image_alt; //phpcs:ignore ?>">
 							<?php
 							if ( ! empty( $card_title ) || ! empty( $content ) ) {
 								echo esc_html( $card_title );
@@ -54,7 +53,6 @@ $section_id              = get_sub_field( 'section_id' ) ? get_sub_field( 'secti
 								<?php
 							}
 							?>
-						</div>
 					</div>
 					<?php
 				}
