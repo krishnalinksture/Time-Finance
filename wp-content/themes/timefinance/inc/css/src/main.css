@@ -75,6 +75,12 @@ img {
 .bg-white {
   background-color: #fff; }
 
+.bg-grey {
+  background-color: #F5F3F6 !important; }
+
+.bg-purple {
+  background-color: #3d1050 !important; }
+
 button.mfp-close {
   width: 35px;
   height: 35px;
@@ -409,6 +415,20 @@ header {
   .left-right-content-image .flex-sm-row-reverse .content {
     padding-left: 10.5%;
     padding-right: 7.33%; }
+
+.trustpilot-block .content {
+  padding: 0 35px; }
+  .trustpilot-block .content .section-title {
+    color: #00a98f;
+    font-weight: 600;
+    margin-bottom: 35px; }
+  .trustpilot-block .content p {
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 700; }
+
+.trustpilot-block.bg-purple p {
+  color: #fff; }
 
 footer {
   background-color: #3d1050;

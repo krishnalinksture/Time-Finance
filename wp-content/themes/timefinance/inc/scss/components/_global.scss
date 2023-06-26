@@ -50,9 +50,6 @@ a,
     padding-right: 10px;
 }
 
-section {
-}
-
 .row {
     margin-left: -10px;
     margin-right: -10px;
@@ -87,6 +84,12 @@ img {
 // Background color
 .bg-white {
     background-color: $white;
+}
+.bg-grey {
+    background-color: $gray !important;
+}
+.bg-purple {
+    background-color: $purple !important;
 }
 
 // Accordion

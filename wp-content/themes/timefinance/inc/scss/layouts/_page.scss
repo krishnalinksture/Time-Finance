@@ -35,3 +35,25 @@
         }
     } 
 }
+
+//Trustpilot block
+.trustpilot-block {
+    .content {
+        padding: 0 35px;
+        .section-title {
+            color: $green;
+            font-weight: 600;
+            margin-bottom: 35px;
+        }
+        p {
+            font-size: 40px;
+            line-height: 50px;
+            font-weight: 700;
+        }    
+    }
+    &.bg-purple {
+        p{
+            color: $white;
+        }
+    }
+}
