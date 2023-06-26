@@ -20,10 +20,10 @@ $image_alt               = ( isset( $image['alt'] ) && ! empty( $image['alt'] ) 
 <section class="left-right-content-image <?php echo $select_background_color; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
 	<div class="container">
 		<div class="row justify-content-center align-items-center<?php echo $reverse; //phpcs:ignore ?>">
-			<div class="col-6">
+			<div class="col-6 image-box">
 				<img class="left-right-image" width="<?php echo $image['sizes']['timefinance-desktop-width']; ?>" height="<?php echo 	$image['sizes']['timefinance-desktop-height']; ?>" src="<?php echo $image['url']; ?>" srcset="<?php echo $image['sizes']['timefinance-small-mobile']; ?> 400w, <?php echo $image['sizes']['timefinance-mobile']; ?> 800w, <?php echo $image['sizes']['timefinance-tablet']; ?> 1200w, <?php echo $image['sizes']['timefinance-desktop']; ?> 2000w" sizes="50vw" alt="<?php echo $image_alt; //phpcs:ignore ?>">
 			</div>
-			<div class="col-6">
+			<div class="col-6 content">
 				<?php
 				if ( ! empty( $main_title ) ) {
 					echo '<' . esc_attr( $select_tag ) . ' class="section-title h-4">' . esc_html( $main_title ) . '</' . esc_attr( $select_tag ) . '>';
