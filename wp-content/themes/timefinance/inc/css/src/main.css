@@ -219,7 +219,7 @@ h1,
 h2,
 .h-2 {
   font-size: 55px;
-  line-height: 64px; }
+  line-height: 63px; }
 
 h3,
 .h-3 {
@@ -466,6 +466,29 @@ header {
     .featured-content-image .image-box .featured-image-content {
       margin-right: -8vw; }
   .featured-content-image.bg-purple p {
+    color: #fff; }
+
+.inner-page-hero-small {
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 450px;
+  z-index: 0; }
+  .inner-page-hero-small .container, .inner-page-hero-small .row {
+    position: relative;
+    height: 100%; }
+  .inner-page-hero-small .bg-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #4AA690;
+    opacity: 0.3; }
+  .inner-page-hero-small .section-title {
+    margin-bottom: 0;
     color: #fff; }
 
 footer {

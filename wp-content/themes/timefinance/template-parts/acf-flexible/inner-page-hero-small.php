@@ -15,12 +15,13 @@ $section_id        = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id'
 
 ?>
 <section class="inner-page-hero-small <?php echo $select_background; ?>" id="<?php echo $section_id; //phpcs:ignore ?>"<?php echo $background; ?>>
+<div class="bg-overlay"></div>
 	<div class="container">
-		<div class="row">
-			<div class="col">
+		<div class="row justify-content-center align-items-center">
+			<div class="col-md-10 col-lg-8 text-center">
 				<?php
 				if ( ! empty( $main_title ) ) {
-					echo '<' . esc_attr( $select_tag ) . ' class="section-title">' . esc_html( $main_title ) . '</' . esc_attr( $select_tag ) . '>';
+					echo '<' . esc_attr( $select_tag ) . ' class="section-title h-2">' . esc_html( $main_title ) . '</' . esc_attr( $select_tag ) . '>';
 				}
 				if ( 'standard-background' === $select_background ) {
 					if ( $cta_button && ! empty( $cta_button['url'] ) && ! empty( $cta_button['title'] ) ) {
