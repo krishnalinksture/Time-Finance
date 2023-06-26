@@ -93,8 +93,8 @@ window.Scrollanimate = () => {
 				// Form Toggle.
 				$(".form").css("display", "none");
 				$( ".cta-block .send-message" ).on( "click", function() {
-					$( ".form" ).toggle();
-				  });
+					$( ".form" ).slideToggle(500);
+				});
 
 			},
 			finalize: function () {

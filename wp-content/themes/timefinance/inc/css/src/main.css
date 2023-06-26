@@ -74,12 +74,27 @@ img {
 
 .bg-white {
   background-color: #fff; }
+  .bg-white .btn-green {
+    background-color: #00a98f;
+    border-color: #00a98f; }
+    .bg-white .btn-green:hover {
+      background-color: transparent;
+      color: #3d1050;
+      border-color: #3d1050; }
 
 .bg-grey {
   background-color: #F5F3F6 !important; }
 
 .bg-purple {
   background-color: #3d1050 !important; }
+  .bg-purple .btn {
+    background-color: #fff;
+    border-color: #fff;
+    color: #3d1050; }
+    .bg-purple .btn:hover {
+      background-color: #00a98f;
+      color: #fff;
+      border-color: #00a98f; }
 
 button.mfp-close {
   width: 35px;
@@ -165,6 +180,7 @@ button.mfp-close {
     box-shadow: none; }
   .btn.btn-secondary {
     background-color: transparent;
+    border-color: #3d1050;
     color: #3d1050; }
     .btn.btn-secondary:hover {
       background-color: #00a98f;
@@ -429,6 +445,28 @@ header {
 
 .trustpilot-block.bg-purple p {
   color: #fff; }
+
+.featured-content-image {
+  padding: 150px 0 270px 0; }
+  .featured-content-image .content {
+    padding-left: 10.5%; }
+    .featured-content-image .content .section-title {
+      font-weight: 600;
+      color: #00a98f;
+      margin-bottom: 40px; }
+    .featured-content-image .content p {
+      font-size: 40px;
+      line-height: 50px;
+      font-weight: 700;
+      width: 87%; }
+    .featured-content-image .content .btn {
+      margin-top: 30px; }
+  .featured-content-image .image-box {
+    padding: 0; }
+    .featured-content-image .image-box .featured-image-content {
+      margin-right: -8vw; }
+  .featured-content-image.bg-purple p {
+    color: #fff; }
 
 footer {
   background-color: #3d1050;

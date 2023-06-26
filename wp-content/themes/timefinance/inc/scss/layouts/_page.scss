@@ -57,3 +57,36 @@
         }
     }
 }
+
+//Featured content image
+.featured-content-image {
+    padding: 150px 0 270px 0;
+    .content {
+        padding-left: 10.5%;
+        .section-title {
+            font-weight: 600;
+            color: $green;
+            margin-bottom: 40px;
+        }
+        p {
+            font-size: 40px;
+            line-height: 50px;
+            font-weight: 700;
+            width: 87%;
+        }
+        .btn {
+            margin-top: 30px;
+        }
+    }
+    .image-box {
+        padding: 0;
+        .featured-image-content {
+            margin-right: -8vw;
+        }
+    }
+    &.bg-purple {
+        p{
+            color: $white;
+        }
+    }
+}
