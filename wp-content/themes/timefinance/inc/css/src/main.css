@@ -17,7 +17,7 @@ body {
   font-family: "Nunito Sans", sans-serif;
   margin: 0;
   padding: 0;
-  font-size: 12px;
+  font-size: 15px;
   line-height: 22px;
   font-weight: 400;
   box-sizing: border-box;
@@ -387,6 +387,12 @@ header {
 
 .left-right-content-image {
   padding: 60px 0px; }
+  .left-right-content-image ul {
+    margin: 0;
+    font-size: 16px;
+    line-height: 24px; }
+  .left-right-content-image .btn {
+    margin-top: 15px; }
 
 footer {
   background-color: #3d1050;
