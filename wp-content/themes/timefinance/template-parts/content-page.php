@@ -37,6 +37,7 @@ if ( have_rows( 'page_builder', $_term ) ) {
 			case 'video_block':
 			case 'centred_content_image_gallery':
 			case 'cta_block':
+			case 'card_block':
 				$template_name = str_replace( '_', '-', $layout_section );
 				get_template_part( 'template-parts/acf-flexible/' . $template_name );
 				break;
