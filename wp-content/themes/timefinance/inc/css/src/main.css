@@ -385,6 +385,9 @@ header {
     padding: 70px 0;
     border-top: 1px solid #eeeeee; }
 
+.left-right-content-image {
+  padding: 60px 0px; }
+
 footer {
   background-color: #3d1050;
   color: #fff;
