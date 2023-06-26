@@ -90,6 +90,12 @@ window.Scrollanimate = () => {
 					}
 				});
 
+				// Form Toggle.
+				$(".form").css("display", "none");
+				$( ".cta-block .send-message" ).on( "click", function() {
+					$( ".form" ).toggle();
+				  });
+
 			},
 			finalize: function () {
 				// JavaScript to be fired on all pages, after page specific JS is fired

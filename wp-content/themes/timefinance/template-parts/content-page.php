@@ -31,6 +31,12 @@ if ( have_rows( 'page_builder', $_term ) ) {
 			case 'inner_page_hero_small':
 			case 'left_right_content_image':
 			case 'trustpilot_block':
+			case 'featured_content_image':
+			case 'usp_block':
+			case 'image_bulletpoint_groups':
+			case 'video_block':
+			case 'centred_content_image_gallery':
+			case 'cta_block':
 				$template_name = str_replace( '_', '-', $layout_section );
 				get_template_part( 'template-parts/acf-flexible/' . $template_name );
 				break;
