@@ -604,6 +604,17 @@ header {
             width: 45%;
             margin-left: 10px; }
 
+.video-block {
+  padding: 110px 0; }
+  .video-block .section-title {
+    margin-bottom: 35px; }
+  .video-block .youtube-video iframe {
+    width: 100%;
+    height: 500px; }
+  .video-block video {
+    width: 100%;
+    height: 100%; }
+
 footer {
   background-color: #3d1050;
   color: #fff;

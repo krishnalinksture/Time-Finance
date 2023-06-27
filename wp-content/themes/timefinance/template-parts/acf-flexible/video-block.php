@@ -16,16 +16,16 @@ $section_id        = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id'
 ?>
 <section class="video-block" id="<?php echo $section_id; //phpcs:ignore ?>">
 	<div class="container">
-		<div class="row">
+		<div class="row justify-content-center text-center">
 			<div class="col">
 				<?php
 				if ( ! empty( $main_title ) ) {
-					echo '<' . esc_attr( $select_tag ) . ' class="section-title">' . esc_html( $main_title ) . '</' . esc_attr( $select_tag ) . '>';
+					echo '<' . esc_attr( $select_tag ) . ' class="section-title h-3">' . esc_html( $main_title ) . '</' . esc_attr( $select_tag ) . '>';
 				}
 				?>
 			</div>
 		</div>
-		<div class="row">
+		<div class="row justify-content-center text-center">
 			<div class="col">
 				<?php
 				if ( 'youtube' === $select_video_type ) {
