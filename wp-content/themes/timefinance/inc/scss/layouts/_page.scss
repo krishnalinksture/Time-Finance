@@ -3,19 +3,28 @@
 //Inner page hero
 .inner-page-hero {
     overflow: hidden;
-    background-size: cover;
+    background-size: auto 125%;
     background-position: right;
     background-repeat: no-repeat;
     position: relative;
     height: 550px;
     z-index: 0;
     .section-left-image {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
         position: absolute;
         height: 100%;
         width: 100%;
         top: 0;
         left: 0;
     }
+
+    .container, .row {
+        position: relative;
+        height: 100%;
+    }
+
     .section-title {
         color: $white;
         font-weight: 800;
@@ -26,6 +35,7 @@
         color: $white;
         font-size: 18px;
         font-weight: 600;
+        width: 35%;
     }
 
     .btn-link {

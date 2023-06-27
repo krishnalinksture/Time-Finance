@@ -20,7 +20,7 @@ $section_id       = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' 
 	<div class="section-left-image" <?php echo $left_image_background; ?>>
 	</div>
 	<div class="container">
-		<div class="row">
+		<div class="row justify-content-center align-items-center">
 			<div class="col">
 				<?php
 				if ( ! empty( $main_title ) ) {
