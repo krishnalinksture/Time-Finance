@@ -618,6 +618,20 @@ header {
     width: 100%;
     height: 100%; }
 
+.centred-content-image-gallery {
+  padding: 80px 0; }
+  .centred-content-image-gallery .section-title {
+    color: #00a98f;
+    margin-top: 25px;
+    margin-bottom: 20px; }
+  .centred-content-image-gallery p {
+    font-size: 16px;
+    line-height: 23px;
+    font-weight: 600;
+    margin-bottom: 60px; }
+  .centred-content-image-gallery .logo {
+    margin: 38px auto; }
+
 footer {
   background-color: #3d1050;
   color: #fff;

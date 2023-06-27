@@ -310,3 +310,24 @@
         height: 100%;
     }
 }
+
+//Centred content image gallery
+.centred-content-image-gallery {
+    padding: 80px 0;
+    .section-title {
+        color: $green;
+        margin-top: 25px;
+        margin-bottom: 20px;
+    }
+    
+    p {
+        font-size: 16px;
+        line-height: 23px;
+        font-weight: 600;
+        margin-bottom: 60px;
+    }
+
+    .logo {
+        margin: 38px auto;
+    }
+}
