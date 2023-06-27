@@ -15,7 +15,13 @@ $section_id        = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id'
 
 ?>
 <section class="inner-page-hero-small <?php echo $select_background; ?>" id="<?php echo $section_id; //phpcs:ignore ?>"<?php echo $background; ?>>
-<div class="bg-overlay"></div>
+	<?php
+	if ( 'image' === $select_background ) {
+		?>
+		<div class="bg-overlay"></div>
+		<?php
+	}
+	?>
 	<div class="container">
 		<div class="row justify-content-center align-items-center">
 			<div class="col-md-10 col-lg-8 text-center">

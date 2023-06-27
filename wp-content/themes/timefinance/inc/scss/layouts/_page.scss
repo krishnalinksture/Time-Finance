@@ -1,5 +1,44 @@
 //Homepage hero
 
+//Inner page hero small image
+.inner-page-hero-small {
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 450px;
+    z-index: 0;
+    .container, .row {
+        position: relative;
+        height: 100%;
+    }
+    .bg-overlay {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: #4AA690;
+        opacity: 0.3;
+    }
+    .section-title {
+        font-weight: 800;
+        color: $white;
+    }
+    &.standard-background {
+        .btn-link {
+            background-color: transparent;
+            color: $white;
+        
+            &:hover {
+                color: $white;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
 //Left right content image
 .left-right-content-image {
     padding: 60px 0px;
@@ -88,33 +127,5 @@
         p{
             color: $white;
         }
-    }
-}
-
-//Inner page hero small image
-.inner-page-hero-small {
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    height: 450px;
-    z-index: 0;
-    .container, .row {
-        position: relative;
-        height: 100%;
-    }
-    .bg-overlay {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        top: 0;
-        left: 0;
-        background: #4AA690;
-        opacity: 0.3;
-    }
-    .section-title {
-        margin-bottom: 0;
-        color: $white;
     }
 }
