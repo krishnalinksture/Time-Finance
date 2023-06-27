@@ -331,3 +331,32 @@
         margin: 38px auto;
     }
 }
+
+//Cta block
+.cta-block {
+    .container {
+        padding: 0 20px;
+        .image {
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 415px;
+            padding: 74px 80px 85px 80px;
+        }
+
+        .section-title {
+            font-weight: 600;
+            margin-bottom: 75px;
+        }
+        
+        .btn {
+            display: table !important;
+            margin-top: 75px;
+            &:hover {
+                background-color: $white;
+                border-color: $white;
+                color: $purple;
+            }
+        }
+    }
+}

@@ -15,13 +15,13 @@ $form             = ( ! empty( $select_form ) ) ? '[forminator_form id="' . $sel
 $background       = ( ! empty( $background_image ) ) ? ' style="background-image:url(' . esc_url( $background_image ) . ');"' : '';
 $section_id       = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'cta-block-' );
 ?>
-<section class="cta-block" id="<?php echo $section_id; //phpcs:ignore ?>" <?php echo $background; ?>>
+<section class="cta-block" id="<?php echo $section_id; //phpcs:ignore ?>">
 	<div class="container">
-		<div class="row">
-			<div class="col">
+		<div class="row justify-content-center">
+			<div class="col image" <?php echo $background; ?>>
 				<?php
 				if ( ! empty( $main_title ) ) {
-					echo '<' . esc_attr( $select_tag ) . ' class="section-title">' . esc_html( $main_title ) . '</' . esc_attr( $select_tag ) . '>';
+					echo '<' . esc_attr( $select_tag ) . ' class="section-title h-4">' . esc_html( $main_title ) . '</' . esc_attr( $select_tag ) . '>';
 				}
 				echo esc_html( $subtitle );
 				?>

@@ -632,6 +632,25 @@ header {
   .centred-content-image-gallery .logo {
     margin: 38px auto; }
 
+.cta-block .container {
+  padding: 0 20px; }
+  .cta-block .container .image {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 415px;
+    padding: 74px 80px 85px 80px; }
+  .cta-block .container .section-title {
+    font-weight: 600;
+    margin-bottom: 75px; }
+  .cta-block .container .btn {
+    display: table !important;
+    margin-top: 75px; }
+    .cta-block .container .btn:hover {
+      background-color: #fff;
+      border-color: #fff;
+      color: #3d1050; }
+
 footer {
   background-color: #3d1050;
   color: #fff;
