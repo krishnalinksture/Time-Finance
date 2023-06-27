@@ -1,6 +1,6 @@
 <?php
 /**
- * SINGLE CAREERS
+ * SINGLE PRESS RELEASE
  *
  * @package TIMEFINANCE
  */

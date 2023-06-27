@@ -12,7 +12,7 @@ $select_form = get_sub_field( 'select_form' );
 $form        = ( ! empty( $select_form ) ) ? '[forminator_form id="' . $select_form . '"]' : '';
 $section_id  = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'contact-block-' );
 ?>
-<section class="contact-block" id="<?php echo $section_id; //phpcs:ignore ?>" <?php echo $background; ?>>
+<section class="contact-block" id="<?php echo $section_id; //phpcs:ignore ?>">
 	<div class="container">
 		<div class="row">
 			<div class="col">

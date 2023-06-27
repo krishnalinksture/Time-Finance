@@ -5,20 +5,19 @@
  * @package TIMEFINANCE
  */
 
-$main_title       = get_sub_field( 'title' );
-$select_tag       = get_sub_field( 'select_tag' );
-$content          = get_sub_field( 'content' );
-$background_image = get_sub_field( 'background_image' );
-$cta_button       = get_sub_field( 'cta_button' );
-$left_image      = get_sub_field( 'left_image' );
-$background       = ( ! empty( $background_image ) ) ? ' style="background-image:url(' . esc_url( $background_image ) . ');"' : '';
-$left_image_background       = ( ! empty( $left_image ) ) ? ' style="background-image:url(' . esc_url( $left_image ) . ');"' : '';
-$section_id       = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'inner-page-hero-' );
+$main_title            = get_sub_field( 'title' );
+$select_tag            = get_sub_field( 'select_tag' );
+$content               = get_sub_field( 'content' );
+$background_image      = get_sub_field( 'background_image' );
+$cta_button            = get_sub_field( 'cta_button' );
+$left_image            = get_sub_field( 'left_image' );
+$background            = ( ! empty( $background_image ) ) ? ' style="background-image:url(' . esc_url( $background_image ) . ');"' : '';
+$left_image_background = ( ! empty( $left_image ) ) ? ' style="background-image:url(' . esc_url( $left_image ) . ');"' : '';
+$section_id            = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'inner-page-hero-' );
 
 ?>
 <section class="inner-page-hero" id="<?php echo $section_id; //phpcs:ignore ?>"<?php echo $background; ?>>
-	<div class="section-left-image" <?php echo $left_image_background; ?>>
-	</div>
+	<div class="section-left-image" <?php echo $left_image_background; //phpcs:ignore ?>></div>
 	<div class="container">
 		<div class="row justify-content-center align-items-center">
 			<div class="col">

@@ -43,6 +43,7 @@ if ( have_rows( 'page_builder', $_term ) ) {
 			case 'faqs_block':
 			case 'office_locations_block':
 			case 'contact_block':
+			case 'latest_news_block':
 				$template_name = str_replace( '_', '-', $layout_section );
 				get_template_part( 'template-parts/acf-flexible/' . $template_name );
 				break;

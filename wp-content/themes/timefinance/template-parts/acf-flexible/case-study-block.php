@@ -43,8 +43,8 @@ $section_id       = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' 
 						</div>
 					</div>
 					<?php
+					wp_reset_postdata();
 				}
-				wp_reset_postdata();
 				?>
 			</div>
 			<div class="swiper-pagination swiper-pagination-case-study"></div>
