@@ -206,34 +206,38 @@
 //Usp block
 .usp-block {
     padding: 113px 0;
-    .section-title {
-        color: $white;
-        margin-bottom: 80px;
-    }
-
-    img {
-        width: auto;
-        height: 160px;
-        margin-bottom: 25px;
-    }
-
-    p {
-        color: $white;
-        line-height: 21px;
-        font-weight: 600;
-        width: 90%;
-        margin: 0 auto;
-    }
-
-    &.bg-white, &.bg-grey {
+    .container {
+        padding: 0 75px;
         .section-title {
-            color: $green;
+            color: $white;
+            line-height: 30px;
+            margin-bottom: 80px;
         }
-
+    
+        img {
+            width: auto;
+            height: 179px;
+            margin-bottom: 30px;
+        }
+    
         p {
-            color: $green;
+            color: $white;
+            line-height: 21px;
+            font-weight: 600;
+            width: 91%;
+            margin: 0 auto;
         }
-    }
+    
+        &.bg-white, &.bg-grey {
+            .section-title {
+                color: $green;
+            }
+    
+            p {
+                color: $green;
+            }
+        }
+    } 
 }
 
 //Image bulletpoint groups

@@ -18,7 +18,7 @@ $section_id              = get_sub_field( 'section_id' ) ? get_sub_field( 'secti
 			<div class="col">
 				<?php
 				if ( ! empty( $main_title ) ) {
-					echo '<' . esc_attr( $select_tag ) . ' class="section-title h-3">' . esc_html( $main_title ) . '</' . esc_attr( $select_tag ) . '>';
+					echo '<' . esc_attr( $select_tag ) . ' class="section-title h-4">' . esc_html( $main_title ) . '</' . esc_attr( $select_tag ) . '>';
 				}
 				?>
 			</div>
