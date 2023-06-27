@@ -1,0 +1,90 @@
+<?php
+/**
+ * OFFICE LOCATIONS BLOCK
+ *
+ * @package TIMEFINANCE
+ */
+
+$location_cards            = get_sub_field( 'location_cards' );
+$main_title              = get_sub_field( 'main_title' );
+$select_tag              = get_sub_field( 'select_tag' );
+$background_color = get_sub_field( 'background_color' );
+$section_id              = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'office-locations-block-' );
+?>
+<section class="office-locations-block <?php echo $background_color; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<?php
+				if ( ! empty( $main_title ) ) {
+					echo '<' . esc_attr( $select_tag ) . ' class="section-title">' . esc_html( $main_title ) . '</' . esc_attr( $select_tag ) . '>';
+				}
+				?>
+			</div>
+		</div>
+		<?php
+		if ( have_rows( 'location_cards' ) ) {
+			?>
+			<div class="row">
+				<?php
+				while ( have_rows( 'location_cards' ) ) {
+					the_row();
+					$map_image      = get_sub_field( 'map_image' );
+					$location_title = get_sub_field( 'title' );
+					$email          = get_sub_field( 'email' );
+					$phone_number   = get_sub_field( 'phone_number' );
+					$address        = get_sub_field( 'address' );
+					$map_image_alt  = ( isset( $map_image['alt'] ) && ! empty( $map_image['alt'] ) ) ? $map_image['alt'] : ( isset( $map_image['title'] ) && ! empty( $map_image['title'] ) ? $map_image['title'] : '' );
+					?>
+					<div class="col">
+						<div class="location-card-image">
+							<img width="<?php echo $map_image['sizes']['timefinance-desktop-width']; ?>" height="<?php echo $map_image['sizes']['timefinance-desktop-height']; ?>" src="<?php echo $map_image['url']; ?>" srcset="<?php echo $map_image['sizes']['timefinance-small-mobile']; ?> 400w, <?php echo $map_image['sizes']['timefinance-mobile']; ?> 800w, <?php echo $map_image['sizes']['timefinance-tablet']; ?> 1200w, <?php echo $map_image['sizes']['timefinance-desktop']; ?> 2000w" sizes="50vw" alt="<?php echo $map_image_alt; //phpcs:ignore ?>">
+						</div>
+						<div class="location-card">
+							<?php
+							if ( ! empty( $location_title ) ) {
+								echo esc_html( $location_title );
+							}
+							?>
+							<div class="email">
+								<?php
+								if ( $email && ! empty( $email['url'] ) && ! empty( $email['title'] ) ) {
+									$link_url    = $email['url'];
+									$link_title  = $email['title'];
+									$link_target = $email['target'] ? $email['target'] : '_self';
+									echo esc_html( 'E:' );
+									?>
+									<a href="<?php echo esc_url( $link_url ); ?>" class="btn btn-link" target="<?php echo esc_attr( $link_target ); ?>">
+										<?php echo esc_html( $link_title ); ?>
+									</a>
+									<?php
+								}
+								?>
+							</div>
+							<div class="phone-number">
+								<?php
+								if ( $phone_number && ! empty( $phone_number['url'] ) && ! empty( $phone_number['title'] ) ) {
+									$link_url    = $phone_number['url'];
+									$link_title  = $phone_number['title'];
+									$link_target = $phone_number['target'] ? $phone_number['target'] : '_self';
+									echo esc_html( 'T: ' );
+									?>
+									<a href="<?php echo esc_url( $link_url ); ?>" class="btn btn-link" target="<?php echo esc_attr( $link_target ); ?>">
+										<?php echo esc_html( $link_title ); ?>
+									</a>
+									<?php
+								}
+								?>
+							</div>
+							<?php echo $address; //phpcs:ignore ?>
+						</div>
+					</div>
+					<?php
+				}
+				?>
+			</div>
+			<?php
+		}
+		?>
+	</div>
+</section>

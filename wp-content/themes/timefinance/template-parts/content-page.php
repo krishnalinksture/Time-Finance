@@ -40,6 +40,9 @@ if ( have_rows( 'page_builder', $_term ) ) {
 			case 'card_block':
 			case 'large_card_block':
 			case 'case_study_block':
+			case 'faqs_block':
+			case 'office_locations_block':
+			case 'contact_block':
 				$template_name = str_replace( '_', '-', $layout_section );
 				get_template_part( 'template-parts/acf-flexible/' . $template_name );
 				break;
