@@ -538,6 +538,26 @@ header {
   .featured-content-image.bg-purple p {
     color: #fff; }
 
+.usp-block {
+  padding: 113px 0; }
+  .usp-block .section-title {
+    color: #fff;
+    margin-bottom: 80px; }
+  .usp-block img {
+    width: auto;
+    height: 160px;
+    margin-bottom: 25px; }
+  .usp-block p {
+    color: #fff;
+    line-height: 21px;
+    font-weight: 600;
+    width: 90%;
+    margin: 0 auto; }
+  .usp-block.bg-white .section-title, .usp-block.bg-grey .section-title {
+    color: #00a98f; }
+  .usp-block.bg-white p, .usp-block.bg-grey p {
+    color: #00a98f; }
+
 footer {
   background-color: #3d1050;
   color: #fff;
