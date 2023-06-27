@@ -110,16 +110,6 @@ img {
             color: $white;
             border-color: $green;
         }
-        
-        &.btn-link {
-            background-color: transparent;
-            color: $white;
-        
-            &:hover {
-                color: $white;
-                text-decoration: underline;
-            }
-        }
     }
 }
 
