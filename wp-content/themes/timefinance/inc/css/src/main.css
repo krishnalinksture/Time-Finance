@@ -558,6 +558,52 @@ header {
   .usp-block.bg-white p, .usp-block.bg-grey p {
     color: #00a98f; }
 
+.image-bulletpoint-groups {
+  padding: 140px 0;
+  background-color: #F5F3F6; }
+  .image-bulletpoint-groups .container {
+    padding-left: 0; }
+    .image-bulletpoint-groups .container .image-box {
+      padding: 0; }
+      .image-bulletpoint-groups .container .image-box img {
+        height: 100%; }
+    .image-bulletpoint-groups .container .content-box {
+      padding: 90px 7.3% 55px;
+      background-color: #fff; }
+      .image-bulletpoint-groups .container .content-box p {
+        color: #00a98f;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 1.1px;
+        line-height: 24px;
+        width: 90%; }
+      .image-bulletpoint-groups .container .content-box .bulletpoint-group {
+        margin-top: 60px;
+        border-bottom: 1px solid #f0f0f0; }
+        .image-bulletpoint-groups .container .content-box .bulletpoint-group .section-title {
+          font-weight: 600; }
+        .image-bulletpoint-groups .container .content-box .bulletpoint-group .bulletpoints {
+          padding: 0 15px 35px;
+          margin: 0;
+          display: -webkit-box;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          -webkit-box-pack: justify;
+          -moz-box-pack: justify;
+          -ms-flex-pack: justify;
+          -webkit-justify-content: space-between;
+          justify-content: space-between; }
+          .image-bulletpoint-groups .container .content-box .bulletpoint-group .bulletpoints li {
+            font-size: 16px;
+            line-height: 28px;
+            font-weight: 600;
+            width: 45%;
+            margin-left: 10px; }
+
 footer {
   background-color: #3d1050;
   color: #fff;

@@ -29,6 +29,8 @@ window.Scrollanimate = () => {
 		// All pages
 		'common': {
 			init: function () {
+
+
 				let swiperObjs = [];
 				let lastScroll = 0;
 
@@ -73,7 +75,7 @@ window.Scrollanimate = () => {
 							  }
 					  });
 					  function updSwiperNumericPagination() {
-						this.el.querySelector(".swiper-counter").innerHTML = '<span class="count">' + '0'+(this.realIndex + 1) + '</span>';
+						this.el.querySelector(".swiper-counter").innerHTML = '<span class="count">' + '0' + (this.realIndex + 1) + '</span>';
 					  }
 
 				}

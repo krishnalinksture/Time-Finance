@@ -18,10 +18,10 @@ $image_alt               = ( isset( $image['alt'] ) && ! empty( $image['alt'] ) 
 <section class="image-bulletpoint-groups" id="<?php echo $section_id; //phpcs:ignore ?>">
 	<div class="container">
 		<div class="row<?php echo $reverse; //phpcs:ignore ?>">
-			<div class="col-6">
+			<div class="col-6 image-box">
 				<img class="image-bulletpoint" width="<?php echo $image['sizes']['timefinance-desktop-width']; ?>" height="<?php echo 	$image['sizes']['timefinance-desktop-height']; ?>" src="<?php echo $image['url']; ?>" srcset="<?php echo $image['sizes']['timefinance-small-mobile']; ?> 400w, <?php echo $image['sizes']['timefinance-mobile']; ?> 800w, <?php echo $image['sizes']['timefinance-tablet']; ?> 1200w, <?php echo $image['sizes']['timefinance-desktop']; ?> 2000w" sizes="50vw" alt="<?php echo $image_alt; //phpcs:ignore ?>">
 			</div>
-			<div class="col-6">
+			<div class="col-6 content-box">
 				<?php
 				echo $content; //phpcs:ignore
 				if ( have_rows( 'bulletpoint_group' ) ) {
@@ -34,7 +34,7 @@ $image_alt               = ( isset( $image['alt'] ) && ! empty( $image['alt'] ) 
 						<div class="bulletpoint-group">
 							<?php
 							if ( ! empty( $bulletpoints_title ) ) {
-								echo '<' . esc_attr( $select_tag ) . ' class="section-title">' . esc_html( $bulletpoints_title ) . '</' . esc_attr( $select_tag ) . '>';
+								echo '<' . esc_attr( $select_tag ) . ' class="section-title h-4">' . esc_html( $bulletpoints_title ) . '</' . esc_attr( $select_tag ) . '>';
 							}
 							if ( have_rows( 'bulletpoints' ) ) {
 								?>

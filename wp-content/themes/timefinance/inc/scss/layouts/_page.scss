@@ -235,3 +235,54 @@
         }
     }
 }
+
+//Image bulletpoint groups
+.image-bulletpoint-groups {
+    padding: 140px 0;
+    background-color: $gray;
+    .container {
+        padding-left: 0;
+        .image-box {
+            padding: 0;
+            img {
+                height: 100%;
+            }
+        }
+        .content-box {
+            padding: 90px 7.3% 55px;
+            background-color: $white;
+            p {
+                color: $green;
+                font-size: 11px;
+                font-weight: 700;
+                letter-spacing: 1.1px;
+                line-height: 24px;
+                width: 90%;
+            }
+
+            .bulletpoint-group {
+                margin-top: 60px;
+                border-bottom: 1px solid rgb(240,240,240);
+                .section-title {
+                    font-weight: 600;
+                }
+
+                .bulletpoints {
+                    padding: 0 15px 35px;
+                    margin: 0;
+                    @include flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    @include justify-content(space-between);
+                    li {
+                        font-size: 16px;
+                        line-height: 28px;
+                        font-weight: 600;
+                        width: 45%;
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
