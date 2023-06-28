@@ -25,7 +25,7 @@ $section_id              = get_sub_field( 'section_id' ) ? get_sub_field( 'secti
 		<?php
 		if ( have_rows( 'card_content' ) ) {
 			?>
-			<div class="row">
+			<div class="row row-cols-1 row-cols-lg-4">
 				<?php
 				while ( have_rows( 'card_content' ) ) {
 					the_row();

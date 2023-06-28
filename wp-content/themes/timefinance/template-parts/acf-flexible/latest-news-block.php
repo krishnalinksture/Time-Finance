@@ -17,12 +17,12 @@ $section_id  = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : u
 			<div class="col">
 				<?php
 				if ( ! empty( $main_title ) ) {
-					echo '<' . esc_attr( $select_tag ) . ' class="section-title h-2">' . esc_html( $main_title ) . '</' . esc_attr( $select_tag ) . '>';
+					echo '<' . esc_attr( $select_tag ) . ' class="section-title h-4">' . esc_html( $main_title ) . '</' . esc_attr( $select_tag ) . '>';
 				}
 				?>
 			</div>
 		</div>
-		<div class="row">
+		<div class="row row-cols-1 row-cols-lg-3">
 			<?php
 			$args = array(
 				'post_type'      => $select_post,
@@ -39,14 +39,14 @@ $section_id  = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : u
 					<div class="latest-news-image">
 						<?php the_post_thumbnail(); ?>
 					</div>
-					<div class="latest-new-title">
-						<?php echo get_the_title(); //phpcs:ignore ?>
-					</div>
-					<div class="latest-new-content">
-						<?php echo get_the_content(); //phpcs:ignore ?>
-					</div>
-					<div class="read-more btn">
-						<a href="<?php echo get_the_permalink(); //phpcs:ignore ?>"><?php echo esc_html( $read_more_button ); ?></a>
+					<div class="latest-news-content-box">
+						<div class="latest-news-title">
+							<?php echo get_the_title(); //phpcs:ignore ?>
+						</div>
+							<?php echo get_the_content(); //phpcs:ignore ?>
+						<div class="read-more btn">
+							<a href="<?php echo get_the_permalink(); //phpcs:ignore ?>"><?php echo esc_html( $read_more_button ); ?></a>
+						</div>
 					</div>
 				</div>
 				<?php

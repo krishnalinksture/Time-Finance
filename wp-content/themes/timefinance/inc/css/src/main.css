@@ -804,6 +804,32 @@ header {
           margin: 0;
           padding-left: 40px; }
 
+.latest-news-block {
+  padding: 75px 0; }
+  .latest-news-block .latest-news-image {
+    height: 380px;
+    overflow: hidden; }
+    .latest-news-block .latest-news-image img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover; }
+  .latest-news-block .latest-news-content-box {
+    padding: 25px 0; }
+    .latest-news-block .latest-news-content-box .latest-news-title {
+      font-size: 25px;
+      line-height: 33px;
+      font-weight: 600;
+      margin-bottom: 10px; }
+    .latest-news-block .latest-news-content-box p {
+      font-size: 16px;
+      line-height: 23px;
+      font-weight: 600;
+      min-height: 95px; }
+    .latest-news-block .latest-news-content-box .btn {
+      margin-top: 15px; }
+      .latest-news-block .latest-news-content-box .btn a {
+        color: #fff; }
+
 footer {
   background-color: #3d1050;
   color: #fff;

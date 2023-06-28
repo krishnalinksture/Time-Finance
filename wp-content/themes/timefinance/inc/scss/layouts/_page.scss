@@ -578,3 +578,41 @@
         }
     }
 }
+
+//Latest news block
+.latest-news-block {
+    padding: 75px 0;
+    .latest-news-image {
+        height: 380px;
+        overflow: hidden;
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .latest-news-content-box {
+        padding: 25px 0;
+        .latest-news-title {
+            font-size: 25px;
+            line-height: 33px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 23px;
+            font-weight: 600;
+            min-height: 95px;
+        }
+
+        .btn {
+            margin-top: 15px;
+            a {
+                color: $white;
+            }
+        }
+    }
+}
