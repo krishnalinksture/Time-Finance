@@ -12,11 +12,11 @@ $section_id              = get_sub_field( 'section_id' ) ? get_sub_field( 'secti
 ?>
 <section class="faq-block <?php echo $select_background_color; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
 	<div class="container">
-		<div class="row">
-			<div class="col">
+		<div class="row justify-content-center text-center">
+			<div class="col-9">
 				<?php
 				if ( ! empty( $main_title ) ) {
-					echo '<' . esc_attr( $select_tag ) . ' class="section-title">' . esc_html( $main_title ) . '</' . esc_attr( $select_tag ) . '>';
+					echo '<' . esc_attr( $select_tag ) . ' class="section-title h-4">' . esc_html( $main_title ) . '</' . esc_attr( $select_tag ) . '>';
 				}
 				?>
 			</div>
@@ -24,8 +24,8 @@ $section_id              = get_sub_field( 'section_id' ) ? get_sub_field( 'secti
 		<?php
 		if ( have_rows( 'faqs' ) ) {
 			?>
-			<div class="row">
-				<div class="col">
+			<div class="row justify-content-center text-center">
+				<div class="col-9">
 					<?php
 					$i = 1;
 					?>

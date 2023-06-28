@@ -17,7 +17,7 @@ $section_id              = get_sub_field( 'section_id' ) ? get_sub_field( 'secti
 			<div class="col">
 				<?php
 				if ( ! empty( $main_title ) ) {
-					echo '<' . esc_attr( $select_tag ) . ' class="section-title">' . esc_html( $main_title ) . '</' . esc_attr( $select_tag ) . '>';
+					echo '<' . esc_attr( $select_tag ) . ' class="section-title h-4">' . esc_html( $main_title ) . '</' . esc_attr( $select_tag ) . '>';
 				}
 				?>
 			</div>
@@ -36,24 +36,34 @@ $section_id              = get_sub_field( 'section_id' ) ? get_sub_field( 'secti
 					$image_alt  = ( isset( $image['alt'] ) && ! empty( $image['alt'] ) ) ? $image['alt'] : ( isset( $image['title'] ) && ! empty( $image['title'] ) ? $image['title'] : '' );
 					?>
 					<div class="col">
-						<img class="card-image" width="<?php echo $image['sizes']['timefinance-desktop-width']; ?>" height="<?php echo 	$image['sizes']['timefinance-desktop-height']; ?>" src="<?php echo $image['url']; ?>" srcset="<?php echo $image['sizes']['timefinance-small-mobile']; ?> 400w, <?php echo $image['sizes']['timefinance-mobile']; ?> 800w, <?php echo $image['sizes']['timefinance-tablet']; ?> 1200w, <?php echo $image['sizes']['timefinance-desktop']; ?> 2000w" sizes="50vw" alt="<?php echo $image_alt; //phpcs:ignore ?>">
-						<div class="hover-card">
-							<?php
-							if ( ! empty( $card_title ) || ! empty( $content ) ) {
-								echo esc_html( $card_title );
-								echo $content; //phpcs:ignore
-							}
-							if ( $cta_button && ! empty( $cta_button['url'] ) && ! empty( $cta_button['title'] ) ) {
-								$link_url    = $cta_button['url'];
-								$link_title  = $cta_button['title'];
-								$link_target = $cta_button['target'] ? $link['target'] : '_self';
-								?>
-								<a href="<?php echo esc_url( $link_url ); ?>" class="btn" target="<?php echo esc_attr( $link_target ); ?>">
-									<?php echo esc_html( $link_title ); ?>
-								</a>
-								<?php
-							}
-							?>
+						<div class="card-box">
+							<div class="card-image">
+								<img width="<?php echo $image['sizes']['timefinance-desktop-width']; ?>" height="<?php echo 	$image['sizes']['timefinance-desktop-height']; ?>" src="<?php echo $image['url']; ?>" srcset="<?php echo $image['sizes']['timefinance-small-mobile']; ?> 400w, <?php echo $image['sizes']['timefinance-mobile']; ?> 800w, <?php echo $image['sizes']['timefinance-tablet']; ?> 1200w, <?php echo $image['sizes']['timefinance-desktop']; ?> 2000w" sizes="50vw" alt="<?php echo $image_alt; //phpcs:ignore ?>">
+							</div>
+							<div class="hover-card">
+								<div class="hover-card-content">
+									<?php
+									if ( ! empty( $card_title ) ) {
+										?>
+										<div class="card-title">
+											<?php echo esc_html( $card_title ); ?>
+										</div>
+										<?php
+									}
+									echo $content; //phpcs:ignore
+									if ( $cta_button && ! empty( $cta_button['url'] ) && ! empty( $cta_button['title'] ) ) {
+										$link_url    = $cta_button['url'];
+										$link_title  = $cta_button['title'];
+										$link_target = $cta_button['target'] ? $link['target'] : '_self';
+										?>
+										<a href="<?php echo esc_url( $link_url ); ?>" class="btn" target="<?php echo esc_attr( $link_target ); ?>">
+											<?php echo esc_html( $link_title ); ?>
+										</a>
+										<?php
+									}
+									?>
+								</div>
+							</div>
 						</div>
 					</div>
 					<?php
