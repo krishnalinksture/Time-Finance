@@ -638,11 +638,15 @@ header {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 415px;
     padding: 74px 80px 85px 80px; }
   .cta-block .container .section-title {
     font-weight: 600;
-    margin-bottom: 75px; }
+    margin-bottom: 60px; }
+  .cta-block .container .subtitle {
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 700;
+    color: #fff; }
   .cta-block .container .btn {
     display: table !important;
     margin-top: 75px; }
@@ -650,6 +654,39 @@ header {
       background-color: #fff;
       border-color: #fff;
       color: #3d1050; }
+
+.large-card-block {
+  padding: 110px 0; }
+  .large-card-block .section-title {
+    font-weight: 600;
+    margin-bottom: 20px; }
+  .large-card-block .large-card-image {
+    width: 100%;
+    height: 345px;
+    overflow: hidden; }
+    .large-card-block .large-card-image img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+  .large-card-block .large-card-content {
+    padding: 32px 15%;
+    background-color: #fff; }
+    .large-card-block .large-card-content .large-card-title {
+      font-size: 25px;
+      line-height: 33px;
+      font-weight: 600;
+      margin-bottom: 10px; }
+    .large-card-block .large-card-content p {
+      font-weight: 600; }
+    .large-card-block .large-card-content .btn {
+      margin-top: 20px; }
+  .large-card-block.bg-white .large-card-content {
+    background-color: #F5F3F6; }
+  .large-card-block.bg-purple .large-card-content .btn {
+    border-color: #3d1050; }
+    .large-card-block.bg-purple .large-card-content .btn:hover {
+      border-color: #00a98f; }
 
 footer {
   background-color: #3d1050;

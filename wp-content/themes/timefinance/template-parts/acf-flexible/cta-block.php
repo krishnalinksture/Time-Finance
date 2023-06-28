@@ -23,8 +23,10 @@ $section_id       = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' 
 				if ( ! empty( $main_title ) ) {
 					echo '<' . esc_attr( $select_tag ) . ' class="section-title h-4">' . esc_html( $main_title ) . '</' . esc_attr( $select_tag ) . '>';
 				}
-				echo esc_html( $subtitle );
 				?>
+				<div class="subtitle">
+					<?php echo esc_html( $subtitle ); ?>
+				</div>
 				<button class="send-message btn"><?php echo esc_html( $send_message ); ?></button>
 			</div>
 		</div>

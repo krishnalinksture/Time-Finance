@@ -340,13 +340,19 @@
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
-            height: 415px;
             padding: 74px 80px 85px 80px;
         }
 
         .section-title {
             font-weight: 600;
-            margin-bottom: 75px;
+            margin-bottom: 60px;
+        }
+
+        .subtitle {
+            font-size: 40px;
+            line-height: 50px;
+            font-weight: 700;
+            color: $white;
         }
         
         .btn {
@@ -356,6 +362,64 @@
                 background-color: $white;
                 border-color: $white;
                 color: $purple;
+            }
+        }
+    }
+}
+
+//Large card block
+.large-card-block {
+    padding: 110px 0;
+    .section-title {
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    .large-card-image {
+        width: 100%;
+        height: 345px;
+        overflow: hidden;
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .large-card-content {
+        padding: 32px 15%;
+        background-color: $white;
+        .large-card-title {
+            font-size: 25px;
+            line-height: 33px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-weight: 600;
+        }
+
+        .btn {
+            margin-top: 20px;
+        }
+    }
+
+    &.bg-white {
+        .large-card-content {
+            background-color: $gray;
+        }
+    }
+
+    &.bg-purple {
+        .large-card-content {
+            .btn {
+                border-color: $purple;
+
+                &:hover {
+                    border-color: $green;
+                }
             }
         }
     }
