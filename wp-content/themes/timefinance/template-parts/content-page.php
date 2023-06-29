@@ -52,6 +52,7 @@ if ( have_rows( 'page_builder', $_term ) ) {
 			case 'our_team_block':
 			case 'bdt_block':
 			case 'career_details_block':
+			case 'content_block':
 				$template_name = str_replace( '_', '-', $layout_section );
 				get_template_part( 'template-parts/acf-flexible/' . $template_name );
 				break;

@@ -1,6 +1,6 @@
 <?php
 /**
- * SINGLE PRESS RELEASE
+ * SINGLE CASE STUDY
  *
  * @package TIMEFINANCE
  */
@@ -10,14 +10,14 @@ $all_articles_button = get_field( 'all_articles_button' );
 $image_alt = ( isset( $image['alt'] ) && ! empty( $image['alt'] ) ) ? $image['alt'] : ( isset( $image['title'] ) && ! empty( $image['title'] ) ? $image['title'] : '' );
 
 ?>
-<section class="press-release-detail">
+<section class="case-study-detail">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col">
 				<?php
 				if ( $image ) {
 					?>
-					<img class="press-release-images" width="<?php echo $image['sizes']['timefinance-desktop-width']; ?>" height="<?php echo 	$image['sizes']['timefinance-desktop-height']; ?>" src="<?php echo $image['url']; ?>" srcset="<?php echo $image['sizes']['timefinance-small-mobile']; ?> 400w, <?php echo $image['sizes']['timefinance-mobile']; ?> 800w, <?php echo $image['sizes']['timefinance-tablet']; ?> 1200w, <?php echo $image['sizes']['timefinance-desktop']; ?> 2000w" sizes="50vw" alt="<?php echo $image_alt; //phpcs:ignore ?>">
+					<img class="case-study-images" width="<?php echo $image['sizes']['timefinance-desktop-width']; ?>" height="<?php echo 	$image['sizes']['timefinance-desktop-height']; ?>" src="<?php echo $image['url']; ?>" srcset="<?php echo $image['sizes']['timefinance-small-mobile']; ?> 400w, <?php echo $image['sizes']['timefinance-mobile']; ?> 800w, <?php echo $image['sizes']['timefinance-tablet']; ?> 1200w, <?php echo $image['sizes']['timefinance-desktop']; ?> 2000w" sizes="50vw" alt="<?php echo $image_alt; //phpcs:ignore ?>">
 					<?php
 				} else {
 					the_post_thumbnail(); //phpcs:ignore
@@ -29,14 +29,14 @@ $image_alt = ( isset( $image['alt'] ) && ! empty( $image['alt'] ) ) ? $image['al
 	<div class="container">
 		<div class="row">
 			<div class="col-4">
-				<div class="press-release-detail-conent sticky-top">
-					<div class="press-release-date">
+				<div class="case-study-detail-conent sticky-top">
+					<div class="case-study-date">
 						<?php
 						echo get_the_date( 'm F Y', get_the_ID() );
-						echo wp_strip_all_tags( get_the_term_list( get_the_ID(), 'press-release-categories', ' ', ', ', ' ' ) ); //phpcs:ignore
+						echo wp_strip_all_tags( get_the_term_list( get_the_ID(), 'case-study-categories', ' ', ', ', ' ' ) ); //phpcs:ignore
 						?>
 					</div>
-					<div class="press-release-title">
+					<div class="case-study-title">
 						<?php echo get_the_title(); //phpcs:ignore ?>
 					</div>
 					<div class="social-icon">

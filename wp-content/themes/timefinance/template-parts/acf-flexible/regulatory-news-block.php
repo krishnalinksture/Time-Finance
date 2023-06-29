@@ -83,7 +83,7 @@ $section_id = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : un
 										?>
 									</div>
 									<div class="regulatory-news-title">
-										<?php echo get_the_title(); //phpcs:ignore ?>
+										<a href="<?php echo get_the_permalink(); ?>"><?php echo get_the_title(); //phpcs:ignore ?></a>
 									</div>
 									<?php
 									if ( ! empty( $read_more ) ) {
