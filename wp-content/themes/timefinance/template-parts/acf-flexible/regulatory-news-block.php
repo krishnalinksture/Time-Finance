@@ -79,7 +79,7 @@ $section_id = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : un
 								<div class="regulatory-news-conent">
 									<div class="regulatory-news-date">
 										<?php
-										echo get_the_date();
+										echo get_the_date( 'm F Y', get_the_ID() );
 										?>
 									</div>
 									<div class="regulatory-news-title">
