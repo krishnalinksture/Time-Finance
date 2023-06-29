@@ -5,10 +5,10 @@
  * @package TIMEFINANCE
  */
 
-$faqs            = get_sub_field( 'faqs' );
-$main_title              = get_sub_field( 'title' );
-$select_tag              = get_sub_field( 'select_tag' );
-$section_id              = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'faq-block-' );
+$faqs       = get_sub_field( 'faqs' );
+$main_title = get_sub_field( 'title' );
+$select_tag = get_sub_field( 'select_tag' );
+$section_id = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'faq-block-' );
 ?>
 <section class="faq-block <?php echo $select_background_color; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
 	<div class="container">

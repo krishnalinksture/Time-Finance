@@ -1,25 +1,24 @@
 <?php
 /**
- * ARCHIVE PAGE
+ * CASE STUDIES CATEGORY PAGE
  *
  * @package TIMEFINANCE
  */
 
-$time_blog_title = get_field( 'time_blog_title', 'option' );
-$time_blog_select_tag = get_field( 'time_blog_select_tag', 'option' );
-$time_blog_content    = get_field( 'time_blog_content', 'option' );
-$time_blog_view_all_button    = get_field( 'time_blog_view_all_button', 'option' );
-
+$case_studies_title = get_field( 'case_studies_title', 'option' );
+$case_studies_select_tag = get_field( 'case_studies_select_tag', 'option' );
+$case_studies_content    = get_field( 'case_studies_content', 'option' );
+$case_studies_view_all_button    = get_field( 'case_studies_view_all_button', 'option' );
 ?>
-<section class="time-blog-category">
+<section class="case-studies-category">
 	<div class="container">
 		<div class="row">
 			<div class="col">
 				<?php
-				if ( ! empty( $time_blog_title ) ) {
-					echo '<' . esc_attr( $time_blog_select_tag ) . ' class="section-title h-2">' . esc_html( $time_blog_title ) . '</' . esc_attr( $time_blog_select_tag ) . '>';
+				if ( ! empty( $case_studies_title ) ) {
+					echo '<' . esc_attr( $case_studies_select_tag ) . ' class="section-title h-2">' . esc_html( $case_studies_title ) . '</' . esc_attr( $case_studies_select_tag ) . '>';
 				}
-				echo $time_blog_content; //phpcs:ignore
+				echo $case_studies_content; //phpcs:ignore
 				?>
 			</div>
 		</div>
@@ -31,24 +30,24 @@ $time_blog_view_all_button    = get_field( 'time_blog_view_all_button', 'option'
 				<ul>
 					<?php
 					$args       = array(
-						'taxonomy' => 'category',
+						'taxonomy' => 'case-study-categories',
 					);
 					$categories = get_categories( $args );
 
 					foreach ( $categories as $category ) {
 						?>
-						<li class="time-blog-cat-list">
+						<li class="case-study-cat-list">
 							<a href="<?php echo get_category_link( $category->term_id ); //phpcs:ignore ?>"><?php echo $category->name; ?> </a>
 						</li>
 						<?php
 					}
 					?>
-					<li class="time-blog-cat-list">
+					<li class="case-study-cat-list">
 						<?php
-						if ( $time_blog_view_all_button && ! empty( $time_blog_view_all_button['url'] ) && ! empty( $time_blog_view_all_button['title'] ) ) {
-							$link_url    = $time_blog_view_all_button['url'];
-							$link_title  = $time_blog_view_all_button['title'];
-							$link_target = $time_blog_view_all_button['target'] ? $time_blog_view_all_button['target'] : '_self';
+						if ( $case_studies_view_all_button && ! empty( $case_studies_view_all_button['url'] ) && ! empty( $case_studies_view_all_button['title'] ) ) {
+							$link_url    = $case_studies_view_all_button['url'];
+							$link_title  = $case_studies_view_all_button['title'];
+							$link_target = $case_studies_view_all_button['target'] ? $case_studies_view_all_button['target'] : '_self';
 							?>
 							<a href="<?php echo esc_url( $link_url ); ?>" class="btn btn-link" target="<?php echo esc_attr( $link_target ); ?>">
 								<?php echo esc_html( $link_title ); ?>
@@ -65,21 +64,21 @@ $time_blog_view_all_button    = get_field( 'time_blog_view_all_button', 'option'
 					the_post();
 					$read_more_button = get_field( 'read_more_button' );
 					?>
-					<div class="time-blog-box">
-						<div class="time-blog-image">
+					<div class="case-study-box">
+						<div class="case-study-image">
 							<?php the_post_thumbnail(); ?>
 						</div>
-						<div class="time-blog-conent">
-							<div class="time-blog-date">
+						<div class="case-study-conent">
+							<div class="case-study-date">
 								<?php
 								echo get_the_date();
-								echo wp_strip_all_tags( get_the_term_list( get_the_ID(), 'category', ' ', ', ', ' ' ) ); //phpcs:ignore
+								echo wp_strip_all_tags( get_the_term_list( get_the_ID(), 'case-study-categories', ' ', ', ', ' ' ) ); //phpcs:ignore
 								?>
 							</div>
-							<div class="time-blog-title">
+							<div class="case-study-title">
 								<?php echo get_the_title(); //phpcs:ignore ?>
 							</div>
-							<div class="time-blog-content">
+							<div class="case-study-content">
 								<?php echo get_the_content(); //phpcs:ignore ?>
 							</div>
 							<div class="read-more btn">

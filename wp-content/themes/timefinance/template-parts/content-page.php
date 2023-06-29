@@ -44,6 +44,12 @@ if ( have_rows( 'page_builder', $_term ) ) {
 			case 'office_locations_block':
 			case 'contact_block':
 			case 'latest_news_block':
+			case 'press_releases_block':
+			case 'time_blog_block':
+			case 'regulatory_news_block':
+			case 'case_studies_custom_post_block':
+			case 'resources_block':
+			case 'our_team_block':
 				$template_name = str_replace( '_', '-', $layout_section );
 				get_template_part( 'template-parts/acf-flexible/' . $template_name );
 				break;

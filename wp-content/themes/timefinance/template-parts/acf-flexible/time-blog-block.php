@@ -1,25 +1,26 @@
 <?php
 /**
- * ARCHIVE PAGE
+ * TIME BLOG BLOCK
  *
  * @package TIMEFINANCE
  */
 
-$time_blog_title = get_field( 'time_blog_title', 'option' );
-$time_blog_select_tag = get_field( 'time_blog_select_tag', 'option' );
-$time_blog_content    = get_field( 'time_blog_content', 'option' );
+$main_title = get_sub_field( 'title' );
+$select_tag = get_sub_field( 'select_tag' );
+$content    = get_sub_field( 'content' );
 $time_blog_view_all_button    = get_field( 'time_blog_view_all_button', 'option' );
+$section_id = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'time-blog-block-' );
 
 ?>
-<section class="time-blog-category">
+<section class="time-blog-block" id="<?php echo $section_id; //phpcs:ignore ?>">
 	<div class="container">
 		<div class="row">
 			<div class="col">
 				<?php
-				if ( ! empty( $time_blog_title ) ) {
-					echo '<' . esc_attr( $time_blog_select_tag ) . ' class="section-title h-2">' . esc_html( $time_blog_title ) . '</' . esc_attr( $time_blog_select_tag ) . '>';
+				if ( ! empty( $main_title ) ) {
+					echo '<' . esc_attr( $select_tag ) . ' class="section-title h-2">' . esc_html( $main_title ) . '</' . esc_attr( $select_tag ) . '>';
 				}
-				echo $time_blog_content; //phpcs:ignore
+				echo $content; //phpcs:ignore
 				?>
 			</div>
 		</div>
@@ -61,8 +62,14 @@ $time_blog_view_all_button    = get_field( 'time_blog_view_all_button', 'option'
 			</div>
 			<div class="col-6">
 				<?php
-				while ( have_posts() ) {
-					the_post();
+				$args = array(
+					'post_type'   => 'post',
+					'post_status' => 'publish',
+					'orderby'     => 'post_date',
+				);
+				$loop = new WP_Query( $args );
+				while ( $loop->have_posts() ) {
+					$loop->the_post();
 					$read_more_button = get_field( 'read_more_button' );
 					?>
 					<div class="time-blog-box">

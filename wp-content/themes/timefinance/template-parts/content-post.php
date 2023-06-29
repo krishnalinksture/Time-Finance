@@ -1,6 +1,6 @@
 <?php
 /**
- * Single Post Template.
+ * SINGLE POST TEMPLATE.
  *
  * @package TIMEFINANCE
  */
