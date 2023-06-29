@@ -12,12 +12,12 @@ $background_color = get_sub_field( 'background_color' );
 $section_id              = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'office-locations-block-' );
 ?>
 <section class="office-locations-block <?php echo $background_color; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
-	<div class="container">
-		<div class="row">
+	<div class="container-fluid">
+		<div class="row justify-content-center text-center">
 			<div class="col">
 				<?php
 				if ( ! empty( $main_title ) ) {
-					echo '<' . esc_attr( $select_tag ) . ' class="section-title">' . esc_html( $main_title ) . '</' . esc_attr( $select_tag ) . '>';
+					echo '<' . esc_attr( $select_tag ) . ' class="section-title h-3">' . esc_html( $main_title ) . '</' . esc_attr( $select_tag ) . '>';
 				}
 				?>
 			</div>
@@ -25,7 +25,7 @@ $section_id              = get_sub_field( 'section_id' ) ? get_sub_field( 'secti
 		<?php
 		if ( have_rows( 'location_cards' ) ) {
 			?>
-			<div class="row">
+			<div class="row row-cols-1 row-cols-lg-4">
 				<?php
 				while ( have_rows( 'location_cards' ) ) {
 					the_row();
@@ -36,16 +36,18 @@ $section_id              = get_sub_field( 'section_id' ) ? get_sub_field( 'secti
 					$address        = get_sub_field( 'address' );
 					$map_image_alt  = ( isset( $map_image['alt'] ) && ! empty( $map_image['alt'] ) ) ? $map_image['alt'] : ( isset( $map_image['title'] ) && ! empty( $map_image['title'] ) ? $map_image['title'] : '' );
 					?>
-					<div class="col">
+					<div class="col location-card">
 						<div class="location-card-image">
 							<img width="<?php echo $map_image['sizes']['timefinance-desktop-width']; ?>" height="<?php echo $map_image['sizes']['timefinance-desktop-height']; ?>" src="<?php echo $map_image['url']; ?>" srcset="<?php echo $map_image['sizes']['timefinance-small-mobile']; ?> 400w, <?php echo $map_image['sizes']['timefinance-mobile']; ?> 800w, <?php echo $map_image['sizes']['timefinance-tablet']; ?> 1200w, <?php echo $map_image['sizes']['timefinance-desktop']; ?> 2000w" sizes="50vw" alt="<?php echo $map_image_alt; //phpcs:ignore ?>">
 						</div>
-						<div class="location-card">
-							<?php
-							if ( ! empty( $location_title ) ) {
-								echo esc_html( $location_title );
-							}
-							?>
+						<div class="location-card-content">
+							<div class="card-title">
+								<?php
+								if ( ! empty( $location_title ) ) {
+									echo esc_html( $location_title );
+								}
+								?>
+							</div>
 							<div class="email">
 								<?php
 								if ( $email && ! empty( $email['url'] ) && ! empty( $email['title'] ) ) {

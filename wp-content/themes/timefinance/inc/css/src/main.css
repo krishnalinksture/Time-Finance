@@ -830,6 +830,48 @@ header {
       .latest-news-block .latest-news-content-box .btn a {
         color: #fff; }
 
+.office-locations-block {
+  padding: 50px 0 30px; }
+  .office-locations-block .section-title {
+    font-weight: 400;
+    margin-bottom: 48px; }
+  .office-locations-block .location-card {
+    margin-bottom: 20px; }
+    .office-locations-block .location-card .location-card-content {
+      padding: 20px;
+      background-color: #F5F3F6; }
+      .office-locations-block .location-card .location-card-content .card-title {
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 400;
+        margin-bottom: 20px; }
+      .office-locations-block .location-card .location-card-content .email {
+        font-weight: 700; }
+        .office-locations-block .location-card .location-card-content .email a {
+          font-size: 15px;
+          color: #00a98f;
+          text-decoration: underline;
+          letter-spacing: normal; }
+          .office-locations-block .location-card .location-card-content .email a:hover {
+            color: #3d1050; }
+      .office-locations-block .location-card .location-card-content .phone-number {
+        font-weight: 700;
+        margin-bottom: 16px; }
+        .office-locations-block .location-card .location-card-content .phone-number a {
+          font-size: 15px;
+          color: #00a98f;
+          text-decoration: underline;
+          letter-spacing: normal; }
+          .office-locations-block .location-card .location-card-content .phone-number a:hover {
+            color: #3d1050; }
+  .office-locations-block.bg-grey .location-card .location-card-content {
+    background-color: #fff; }
+  .office-locations-block.bg-purple .section-title {
+    color: #fff; }
+  .office-locations-block.bg-purple .btn:hover {
+    background-color: transparent;
+    border-color: transparent; }
+
 footer {
   background-color: #3d1050;
   color: #fff;
