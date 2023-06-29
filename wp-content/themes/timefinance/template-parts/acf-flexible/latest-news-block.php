@@ -5,10 +5,11 @@
  * @package TIMEFINANCE
  */
 
-$main_title  = get_sub_field( 'title' );
-$select_tag  = get_sub_field( 'select_tag' );
-$select_post = get_sub_field( 'select_post' );
-$section_id  = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'latest-news-block-' );
+$main_title         = get_sub_field( 'title' );
+$select_tag         = get_sub_field( 'select_tag' );
+$select_post        = get_sub_field( 'select_post' );
+$select_title_align = get_sub_field( 'select_title_align' );
+$section_id         = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'latest-news-block-' );
 
 ?>
 <section class="latest-news-block" id="<?php echo $section_id; //phpcs:ignore ?>">
@@ -17,7 +18,7 @@ $section_id  = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : u
 			<div class="col">
 				<?php
 				if ( ! empty( $main_title ) ) {
-					echo '<' . esc_attr( $select_tag ) . ' class="section-title h-4">' . esc_html( $main_title ) . '</' . esc_attr( $select_tag ) . '>';
+					echo '<' . esc_attr( $select_tag ) . ' class="section-title h-4 ' . $select_title_align . '">' . esc_html( $main_title ) . '</' . esc_attr( $select_tag ) . '>'; //phpcs:ignore
 				}
 				?>
 			</div>

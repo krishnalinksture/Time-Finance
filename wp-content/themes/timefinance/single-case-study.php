@@ -5,9 +5,9 @@
  * @package TIMEFINANCE
  */
 
-$image = get_field( 'image' );
+$image               = get_field( 'image' );
 $all_articles_button = get_field( 'all_articles_button' );
-$image_alt = ( isset( $image['alt'] ) && ! empty( $image['alt'] ) ) ? $image['alt'] : ( isset( $image['title'] ) && ! empty( $image['title'] ) ? $image['title'] : '' );
+$image_alt           = ( isset( $image['alt'] ) && ! empty( $image['alt'] ) ) ? $image['alt'] : ( isset( $image['title'] ) && ! empty( $image['title'] ) ? $image['title'] : '' );
 
 ?>
 <section class="case-study-detail">
