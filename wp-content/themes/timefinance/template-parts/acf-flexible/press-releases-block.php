@@ -86,7 +86,7 @@ $section_id = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : un
 										?>
 									</div>
 									<div class="press-release-title">
-										<?php echo get_the_title(); //phpcs:ignore ?>
+									<a href="<?php echo get_the_permalink(); //phpcs:ignore ?>"><?php echo get_the_title(); //phpcs:ignore ?></a>
 									</div>
 										<?php echo get_the_content(); //phpcs:ignore ?>
 									<div class="read-more btn">
