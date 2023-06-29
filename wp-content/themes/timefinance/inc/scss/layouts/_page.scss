@@ -689,3 +689,141 @@
         }
     }
 }
+
+//Our team block
+.our-team-block {
+    padding: 125px 0 80px;
+    background-color: $gray;
+    position: relative;
+    overflow: hidden;
+    &::before {
+        content: "";
+        background-color: $purple;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 137vh;
+        width: 100%;
+    }
+
+    .container {
+        position: relative;
+    }
+    
+    .section-title {
+        color: $green;
+        line-height: 30px;
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+
+    p {
+        color: $white;
+        font-size: 40px;
+        line-height: 50px;
+        font-weight: 700;
+        width: 94%;
+        margin-bottom: 80px;
+    }
+
+    .cat-filter {
+        font-size: 12px;
+        line-height: 15px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $green;
+        margin-top: 5px;
+        margin-bottom: 25px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font-size: 18px;
+        line-height: 18px;
+        font-weight: 600;
+
+        .our-team-cat-list {
+            margin-bottom: 15px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            a {
+                color: $white;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+
+                &.btn {
+                    &.btn-link {
+                        &:hover {
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .our-team-wrapper {
+        padding-left: 50px;
+        padding-right: 20px;
+        .our-team-box {
+            cursor: pointer;
+            margin-bottom: 20px;
+            .our-team-conent-box {
+                background-color: $white;
+                padding: 23px;
+                .our-team-title {
+                    font-size: 24px;
+                    line-height: 32px;
+                    font-weight: 700;
+                    margin-bottom: 8px;
+                }
+    
+                .role {
+                    color: $green;
+                    font-size: 12px;
+                    line-height: 12px;
+                    font-weight: 700;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    margin-bottom: 43px;
+                }
+    
+                p {
+                    color: $purple;
+                    font-size: 15px;
+                    line-height: 21px;
+                    font-weight: 600;
+                    width: 100%;
+                    margin-bottom: 0;
+                }
+    
+                a {
+                    color: $green;
+                    margin-top: 20px;
+                    letter-spacing: normal;
+                    +a {
+                        margin-top: 0;
+                    }
+                    &:hover {
+                        text-decoration: underline;
+                    }
+    
+                    &.btn {
+                        &.btn-link {
+                            &:hover {
+                                color: $purple;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

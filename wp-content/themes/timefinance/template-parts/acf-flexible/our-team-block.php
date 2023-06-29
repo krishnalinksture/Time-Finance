@@ -16,17 +16,17 @@ $section_id = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : un
 <section class="our-team-block" id="<?php echo $section_id; //phpcs:ignore ?>">
 	<div class="container">
 		<div class="row">
-			<div class="col">
+			<div class="col-9">
 				<?php
 				if ( ! empty( $main_title ) ) {
-					echo '<' . esc_attr( $select_tag ) . ' class="section-title h-2">' . esc_html( $main_title ) . '</' . esc_attr( $select_tag ) . '>';
+					echo '<' . esc_attr( $select_tag ) . ' class="section-title h-4">' . esc_html( $main_title ) . '</' . esc_attr( $select_tag ) . '>';
 				}
 				echo $content; //phpcs:ignore
 				?>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-4">
+			<div class="col-3">
 				<div class="cat-filter">
 					<?php echo esc_html( 'FILTER POSTS:' ); ?>
 				</div>
@@ -61,8 +61,8 @@ $section_id = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : un
 					</li>
 				</ul>
 			</div>
-			<div class="col-8">
-				<div class="row">
+			<div class="col-9 our-team-wrapper">
+				<div class="row row-cols-1 row-cols-lg-2">
 					<?php
 					$args = array(
 						'post_type'   => 'our-teams',
@@ -76,21 +76,19 @@ $section_id = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : un
 						$mail      = get_field( 'mail' );
 						$linked_in = get_field( 'linked_in' );
 						?>
-						<div class="col">
+						<div class="col text-center">
 						<div class="our-team-box">
 							<div class="our-team-image">
 								<?php the_post_thumbnail(); ?>
 							</div>
-								<div class="our-team-conent">
+								<div class="our-team-conent-box">
 									<div class="our-team-title">
 										<?php echo get_the_title(); //phpcs:ignore ?>
 									</div>
 									<div class="role">
 										<?php echo esc_html( $team_role ); ?>
 									</div>
-									<div class="our-team-content">
 										<?php echo get_the_content(); //phpcs:ignore ?>
-									</div>
 									<?php
 									if ( $mail && ! empty( $mail['url'] ) && ! empty( $mail['title'] ) ) {
 										$link_url    = $mail['url'];

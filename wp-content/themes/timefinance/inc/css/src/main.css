@@ -872,6 +872,100 @@ header {
     background-color: transparent;
     border-color: transparent; }
 
+.our-team-block {
+  padding: 125px 0 80px;
+  background-color: #F5F3F6;
+  position: relative;
+  overflow: hidden; }
+  .our-team-block::before {
+    content: "";
+    background-color: #3d1050;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 137vh;
+    width: 100%; }
+  .our-team-block .container {
+    position: relative; }
+  .our-team-block .section-title {
+    color: #00a98f;
+    line-height: 30px;
+    font-weight: 600;
+    margin-bottom: 30px; }
+  .our-team-block p {
+    color: #fff;
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 700;
+    width: 94%;
+    margin-bottom: 80px; }
+  .our-team-block .cat-filter {
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #00a98f;
+    margin-top: 5px;
+    margin-bottom: 25px; }
+  .our-team-block ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 600; }
+    .our-team-block ul .our-team-cat-list {
+      margin-bottom: 15px; }
+      .our-team-block ul .our-team-cat-list:last-child {
+        margin-bottom: 0; }
+      .our-team-block ul .our-team-cat-list a {
+        color: #fff;
+        text-decoration: none; }
+        .our-team-block ul .our-team-cat-list a:hover {
+          text-decoration: underline; }
+        .our-team-block ul .our-team-cat-list a.btn.btn-link:hover {
+          color: #fff; }
+  .our-team-block .our-team-wrapper {
+    padding-left: 50px;
+    padding-right: 20px; }
+    .our-team-block .our-team-wrapper .our-team-box {
+      cursor: pointer;
+      margin-bottom: 20px; }
+      .our-team-block .our-team-wrapper .our-team-box .our-team-conent-box {
+        background-color: #fff;
+        padding: 23px; }
+        .our-team-block .our-team-wrapper .our-team-box .our-team-conent-box .our-team-title {
+          font-size: 24px;
+          line-height: 32px;
+          font-weight: 700;
+          margin-bottom: 8px; }
+        .our-team-block .our-team-wrapper .our-team-box .our-team-conent-box .role {
+          color: #00a98f;
+          font-size: 12px;
+          line-height: 12px;
+          font-weight: 700;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          margin-bottom: 43px; }
+        .our-team-block .our-team-wrapper .our-team-box .our-team-conent-box p {
+          color: #3d1050;
+          font-size: 15px;
+          line-height: 21px;
+          font-weight: 600;
+          width: 100%;
+          margin-bottom: 0; }
+        .our-team-block .our-team-wrapper .our-team-box .our-team-conent-box a {
+          color: #00a98f;
+          margin-top: 20px;
+          letter-spacing: normal; }
+          .our-team-block .our-team-wrapper .our-team-box .our-team-conent-box a + a {
+            margin-top: 0; }
+          .our-team-block .our-team-wrapper .our-team-box .our-team-conent-box a:hover {
+            text-decoration: underline; }
+          .our-team-block .our-team-wrapper .our-team-box .our-team-conent-box a.btn.btn-link:hover {
+            color: #3d1050; }
+
 footer {
   background-color: #3d1050;
   color: #fff;
