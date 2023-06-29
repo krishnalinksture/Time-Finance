@@ -25,7 +25,7 @@ $section_id = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : un
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-6">
+			<div class="col-4">
 				<div class="cat-filter">
 					<?php echo esc_html( 'FILTER POSTS:' ); ?>
 				</div>
@@ -60,42 +60,46 @@ $section_id = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : un
 					</li>
 				</ul>
 			</div>
-			<div class="col-6">
-				<?php
-				$args = array(
-					'post_type'   => 'regulatory-news',
-					'post_status' => 'publish',
-					'orderby'     => 'post_date',
-				);
-				$loop = new WP_Query( $args );
-				while ( $loop->have_posts() ) {
-					$loop->the_post();
-					$read_more   = get_field( 'read_more' );
-					$upload_file = get_field( 'upload_file' );
-					?>
-					<div class="regulatory-news-box">
-						<div class="regulatory-news-conent">
-							<div class="regulatory-news-date">
-								<?php
-								echo get_the_date();
-								?>
-							</div>
-							<div class="regulatory-news-title">
-								<?php echo get_the_title(); //phpcs:ignore ?>
-							</div>
-							<?php
-							if ( ! empty( $read_more ) ) {
-								?>
-								<a class="read-more btn" href="<?php echo $upload_file['url']; //phpcs:ignore ?>"><?php echo esc_html( $read_more ); ?></a>
-								<?php
-							}
-							?>
-						</div>
-					</div>
+			<div class="col-8">
+				<div class="row">
 					<?php
-					wp_reset_postdata();
-				}
-				?>
+					$args = array(
+						'post_type'   => 'regulatory-news',
+						'post_status' => 'publish',
+						'orderby'     => 'post_date',
+					);
+					$loop = new WP_Query( $args );
+					while ( $loop->have_posts() ) {
+						$loop->the_post();
+						$read_more   = get_field( 'read_more' );
+						$upload_file = get_field( 'upload_file' );
+						?>
+						<div class="col">
+							<div class="regulatory-news-box">
+								<div class="regulatory-news-conent">
+									<div class="regulatory-news-date">
+										<?php
+										echo get_the_date();
+										?>
+									</div>
+									<div class="regulatory-news-title">
+										<?php echo get_the_title(); //phpcs:ignore ?>
+									</div>
+									<?php
+									if ( ! empty( $read_more ) ) {
+										?>
+										<a class="read-more btn" href="<?php echo $upload_file['url']; //phpcs:ignore ?>"><?php echo esc_html( $read_more ); ?></a>
+										<?php
+									}
+									?>
+								</div>
+							</div>
+						</div>
+						<?php
+						wp_reset_postdata();
+					}
+					?>
+				</div>
 			</div>
 		</div>
 	</div>

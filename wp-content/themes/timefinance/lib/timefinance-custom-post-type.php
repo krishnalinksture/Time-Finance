@@ -501,3 +501,85 @@ if ( ! function_exists( 'timefinance_resource_custom_post_type' ) ) {
 	}
 }
 add_action( 'init', 'timefinance_resource_custom_post_type' ); //phpcs:ignore
+
+if ( ! function_exists( 'timefinance_bdt_custom_post_type' ) ) {
+	/**
+	 * Create Resources Custom Post Type
+	 */
+	function timefinance_bdt_custom_post_type() {
+
+		// Set UI labels for Custom Post Type.
+		$labels = array(
+			'name'               => _x( 'Business Development Team', 'Post Type General Name', 'timefinance' ),
+			'singular_name'      => _x( 'Business Development Team', 'Post Type Singular Name', 'timefinance' ),
+			'menu_name'          => __( 'Business Development Teams', 'timefinance' ),
+			'parent_item_colon'  => __( 'Parent Business Development Team', 'timefinance' ),
+			'all_items'          => __( 'All Business Development Teams', 'timefinance' ),
+			'add_new_item'       => __( 'Add New Business Development Team', 'timefinance' ),
+			'add_new'            => __( 'Add New', 'timefinance' ),
+			'edit_item'          => __( 'Edit Business Development Team', 'timefinance' ),
+			'update_item'        => __( 'Update Business Development Team', 'timefinance' ),
+			'search_items'       => __( 'Search Business Development Team', 'timefinance' ),
+			'not_found'          => __( 'Not Found', 'timefinance' ),
+			'not_found_in_trash' => __( 'Not found in Trash', 'timefinance' ),
+		);
+
+		// Set other options for Custom Post Type.
+
+		$args = array(
+			'label'               => __( 'Business Development Teams', 'timefinance' ),
+			'description'         => __( 'Business Development Team', 'timefinance' ),
+			'labels'              => $labels,
+			'supports'            => array( 'title', 'thumbnail', 'revisions', 'custom-fields', 'editor', 'excerpt' ),
+			'menu_icon'           => 'dashicons-welcome-learn-more',
+			'hierarchical'        => false,
+			'public'              => true,
+			'show_ui'             => true,
+			'show_in_menu'        => true,
+			'show_in_nav_menus'   => true,
+			'show_in_admin_bar'   => true,
+			'menu_position'       => 20,
+			'can_export'          => true,
+			'has_archive'         => false,
+			'exclude_from_search' => false,
+			'publicly_queryable'  => true,
+			'capability_type'     => 'post',
+			'show_in_rest'        => true,
+
+		);
+
+		// Registering your Custom Post Type.
+		register_post_type( 'bdts', $args );
+
+		/**
+		* Categories
+		*/
+		$labels = array(
+			'name'              => _x( 'Categories', 'taxonomy general name', 'timefinance' ),
+			'singular_name'     => _x( 'Category', 'taxonomy singular name', 'timefinance' ),
+			'search_items'      => __( 'Search Categories', 'timefinance' ),
+			'all_items'         => __( 'All Categories', 'timefinance' ),
+			'parent_item'       => __( 'Parent Category', 'timefinance' ),
+			'parent_item_colon' => __( 'Parent Category:', 'timefinance' ),
+			'edit_item'         => __( 'Edit Category', 'timefinance' ),
+			'update_item'       => __( 'Update Category', 'timefinance' ),
+			'add_new_item'      => __( 'Add New Category', 'timefinance' ),
+			'new_item_name'     => __( 'New Category Name', 'timefinance' ),
+			'menu_name'         => __( 'Categories', 'timefinance' ),
+		);
+
+		$args = array(
+			'labels'            => $labels,
+			'public'            => true,
+			'show_ui'           => true,
+			'hierarchical'      => true,
+			'show_admin_column' => true,
+			'show_in_nav_menus' => true,
+			'show_in_rest'      => true,
+		);
+
+		// Registering your Custom Taxonomy.
+		register_taxonomy( 'bdts-categories', array( 'bdts' ), $args );
+	}
+}
+add_action( 'init', 'timefinance_bdt_custom_post_type' ); //phpcs:ignore
