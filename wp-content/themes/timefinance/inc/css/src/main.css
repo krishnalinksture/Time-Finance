@@ -1214,6 +1214,102 @@ header {
         font-weight: 700;
         margin-bottom: 48px; }
 
+.time-blog-block {
+  padding: 125px 0 80px;
+  background-color: #F5F3F6;
+  position: relative;
+  overflow: hidden; }
+  .time-blog-block::before {
+    content: "";
+    background-color: #3d1050;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 66vh;
+    width: 100%; }
+  .time-blog-block .container {
+    position: relative; }
+  .time-blog-block .section-title {
+    color: #00a98f;
+    line-height: 30px;
+    font-weight: 600;
+    margin-bottom: 30px; }
+  .time-blog-block p {
+    color: #fff;
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 700;
+    width: 94%;
+    margin-bottom: 80px; }
+  .time-blog-block .cat-filter {
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #00a98f;
+    margin-top: 5px;
+    margin-bottom: 25px; }
+  .time-blog-block ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 600; }
+    .time-blog-block ul .time-blog-cat-list {
+      margin-bottom: 15px; }
+      .time-blog-block ul .time-blog-cat-list:last-child {
+        margin-bottom: 0; }
+      .time-blog-block ul .time-blog-cat-list a {
+        color: #fff;
+        text-decoration: none; }
+        .time-blog-block ul .time-blog-cat-list a:hover {
+          text-decoration: underline; }
+        .time-blog-block ul .time-blog-cat-list a.btn.btn-link:hover {
+          color: #fff; }
+  .time-blog-block .time-blog-wrapper {
+    padding-left: 50px;
+    padding-right: 20px; }
+    .time-blog-block .time-blog-wrapper .time-blog-image {
+      height: 305px;
+      overflow: hidden; }
+      .time-blog-block .time-blog-wrapper .time-blog-image img {
+        display: block;
+        height: 100%;
+        width: 100%;
+        object-fit: cover; }
+    .time-blog-block .time-blog-wrapper .time-blog-content {
+      background-color: #fff;
+      padding: 35px 24px; }
+      .time-blog-block .time-blog-wrapper .time-blog-content .time-blog-date {
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: 1.1px;
+        font-weight: 600;
+        color: #00a98f;
+        text-transform: uppercase;
+        margin-bottom: 28px; }
+      .time-blog-block .time-blog-wrapper .time-blog-content .time-blog-title {
+        font-size: 25px;
+        line-height: 33px;
+        font-weight: 600;
+        padding: 0 15px;
+        margin-bottom: 12px;
+        color: #3d1050;
+        text-decoration: none; }
+      .time-blog-block .time-blog-wrapper .time-blog-content p {
+        color: #3d1050;
+        font-size: 15px;
+        line-height: 21px;
+        font-weight: 600;
+        width: 100%;
+        margin-bottom: 0; }
+      .time-blog-block .time-blog-wrapper .time-blog-content .read-more {
+        margin-top: 48px; }
+        .time-blog-block .time-blog-wrapper .time-blog-content .read-more a {
+          color: #fff; }
+
 footer {
   background-color: #3d1050;
   color: #fff;
