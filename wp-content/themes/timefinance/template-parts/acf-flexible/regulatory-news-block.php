@@ -15,17 +15,17 @@ $section_id = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : un
 <section class="regulatory-news-block" id="<?php echo $section_id; //phpcs:ignore ?>">
 	<div class="container">
 		<div class="row">
-			<div class="col">
+			<div class="col-9">
 				<?php
 				if ( ! empty( $main_title ) ) {
-					echo '<' . esc_attr( $select_tag ) . ' class="section-title h-2">' . esc_html( $main_title ) . '</' . esc_attr( $select_tag ) . '>';
+					echo '<' . esc_attr( $select_tag ) . ' class="section-title h-4">' . esc_html( $main_title ) . '</' . esc_attr( $select_tag ) . '>';
 				}
 				echo $content; //phpcs:ignore
 				?>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-4">
+			<div class="col-3">
 				<div class="cat-filter">
 					<?php echo esc_html( 'FILTER POSTS:' ); ?>
 				</div>
@@ -60,8 +60,8 @@ $section_id = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : un
 					</li>
 				</ul>
 			</div>
-			<div class="col-8">
-				<div class="row">
+			<div class="col-9 regulatory-news-wrapper">
+				<div class="row row-cols-1 row-cols-lg-2">
 					<?php
 					$args = array(
 						'post_type'   => 'regulatory-news',
@@ -74,11 +74,13 @@ $section_id = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : un
 						$read_more   = get_field( 'read_more' );
 						$upload_file = get_field( 'upload_file' );
 						?>
-						<div class="col">
+						<div class="col text-center">
 							<div class="regulatory-news-box">
 								<div class="regulatory-news-conent">
 									<div class="regulatory-news-date">
-										<?php echo get_the_date( 'm F Y', get_the_ID() ); ?>
+										<?php
+										echo get_the_date();
+										?>
 									</div>
 									<div class="regulatory-news-title">
 										<?php echo get_the_title(); //phpcs:ignore ?>

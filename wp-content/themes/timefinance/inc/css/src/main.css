@@ -977,7 +977,7 @@ header {
     position: absolute;
     top: 0;
     left: 0;
-    height: 100vh;
+    height: 93vh;
     width: 100%; }
   .press-releases-block .container {
     position: relative; }
@@ -1037,11 +1037,14 @@ header {
           color: #00a98f;
           text-transform: uppercase;
           margin-bottom: 28px; }
-        .press-releases-block .press-releases-wrapper .press-release-box .press-release-content .press-release-title {
+        .press-releases-block .press-releases-wrapper .press-release-box .press-release-content .press-release-title a {
           font-size: 25px;
           line-height: 33px;
           font-weight: 600;
-          margin-bottom: 12px; }
+          padding: 0 15px;
+          margin-bottom: 12px;
+          color: #3d1050;
+          text-decoration: none; }
         .press-releases-block .press-releases-wrapper .press-release-box .press-release-content p {
           color: #3d1050;
           font-size: 15px;
@@ -1053,6 +1056,89 @@ header {
           margin-top: 48px; }
           .press-releases-block .press-releases-wrapper .press-release-box .press-release-content .read-more a {
             color: #fff; }
+
+.regulatory-news-block {
+  padding: 125px 0 80px;
+  background-color: #F5F3F6;
+  position: relative;
+  overflow: hidden; }
+  .regulatory-news-block::before {
+    content: "";
+    background-color: #3d1050;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 97vh;
+    width: 100%; }
+  .regulatory-news-block .container {
+    position: relative; }
+  .regulatory-news-block .section-title {
+    color: #00a98f;
+    line-height: 30px;
+    font-weight: 600;
+    margin-bottom: 30px; }
+  .regulatory-news-block p {
+    color: #fff;
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 700;
+    width: 94%;
+    margin-bottom: 80px; }
+  .regulatory-news-block .cat-filter {
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #00a98f;
+    margin-top: 5px;
+    margin-bottom: 25px; }
+  .regulatory-news-block ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 600; }
+    .regulatory-news-block ul .regulatory-news-cat-list {
+      margin-bottom: 15px; }
+      .regulatory-news-block ul .regulatory-news-cat-list:last-child {
+        margin-bottom: 0; }
+      .regulatory-news-block ul .regulatory-news-cat-list a {
+        color: #fff;
+        text-decoration: none; }
+        .regulatory-news-block ul .regulatory-news-cat-list a:hover {
+          text-decoration: underline; }
+        .regulatory-news-block ul .regulatory-news-cat-list a.btn.btn-link:hover {
+          color: #fff; }
+  .regulatory-news-block .regulatory-news-wrapper {
+    padding-left: 50px;
+    padding-right: 20px; }
+    .regulatory-news-block .regulatory-news-wrapper .row .col {
+      margin-bottom: 20px; }
+    .regulatory-news-block .regulatory-news-wrapper .regulatory-news-box {
+      height: 100%;
+      cursor: pointer; }
+      .regulatory-news-block .regulatory-news-wrapper .regulatory-news-box .regulatory-news-conent {
+        padding: 35px 24px;
+        background-color: #fff;
+        height: 100%; }
+        .regulatory-news-block .regulatory-news-wrapper .regulatory-news-box .regulatory-news-conent .regulatory-news-date {
+          font-size: 12px;
+          line-height: 15px;
+          font-weight: 600;
+          letter-spacing: 1.1px;
+          text-transform: uppercase;
+          color: #00a98f;
+          margin-bottom: 28px; }
+        .regulatory-news-block .regulatory-news-wrapper .regulatory-news-box .regulatory-news-conent .regulatory-news-title a {
+          font-size: 25px;
+          line-height: 33px;
+          font-weight: 600;
+          padding: 0 15px;
+          margin-bottom: 32px;
+          color: #3d1050;
+          text-decoration: none; }
 
 footer {
   background-color: #3d1050;
