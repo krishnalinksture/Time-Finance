@@ -26,7 +26,7 @@ $section_id = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : un
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-6">
+			<div class="col-4">
 				<div class="cat-filter">
 					<?php echo esc_html( 'FILTER POSTS:' ); ?>
 				</div>
@@ -61,62 +61,66 @@ $section_id = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : un
 					</li>
 				</ul>
 			</div>
-			<div class="col-6">
-				<?php
-				$args = array(
-					'post_type'   => 'our-teams',
-					'post_status' => 'publish',
-					'orderby'     => 'post_date',
-				);
-				$loop = new WP_Query( $args );
-				while ( $loop->have_posts() ) {
-					$loop->the_post();
-					$team_role = get_field( 'role' );
-					$mail      = get_field( 'mail' );
-					$linked_in = get_field( 'linked_in' );
-					?>
-					<div class="our-team-box">
-						<div class="our-team-image">
-							<?php the_post_thumbnail(); ?>
-						</div>
-						<div class="our-team-conent">
-							<div class="our-team-title">
-								<?php echo get_the_title(); //phpcs:ignore ?>
-							</div>
-							<div class="role">
-								<?php echo esc_html( $team_role ); ?>
-							</div>
-							<div class="our-team-content">
-								<?php echo get_the_content(); //phpcs:ignore ?>
-							</div>
-							<?php
-							if ( $mail && ! empty( $mail['url'] ) && ! empty( $mail['title'] ) ) {
-								$link_url    = $mail['url'];
-								$link_title  = $mail['title'];
-								$link_target = $mail['target'] ? $mail['target'] : '_self';
-								?>
-								<a href="<?php echo esc_url( $link_url ); ?>" class="btn btn-link" target="<?php echo esc_attr( $link_target ); ?>">
-									<?php echo esc_html( $link_title ); ?>
-								</a>
-								<?php
-							}
-							if ( $linked_in && ! empty( $linked_in['url'] ) && ! empty( $linked_in['title'] ) ) {
-								$link_url    = $linked_in['url'];
-								$link_title  = $linked_in['title'];
-								$link_target = $linked_in['target'] ? $linked_in['target'] : '_self';
-								?>
-								<a href="<?php echo esc_url( $link_url ); ?>" class="btn btn-link" target="<?php echo esc_attr( $link_target ); ?>">
-									<?php echo esc_html( $link_title ); ?>
-								</a>
-								<?php
-							}
-							?>
-						</div>
-					</div>
+			<div class="col-8">
+				<div class="row">
 					<?php
-					wp_reset_postdata();
-				}
-				?>
+					$args = array(
+						'post_type'   => 'our-teams',
+						'post_status' => 'publish',
+						'orderby'     => 'post_date',
+					);
+					$loop = new WP_Query( $args );
+					while ( $loop->have_posts() ) {
+						$loop->the_post();
+						$team_role = get_field( 'role' );
+						$mail      = get_field( 'mail' );
+						$linked_in = get_field( 'linked_in' );
+						?>
+						<div class="col">
+						<div class="our-team-box">
+							<div class="our-team-image">
+								<?php the_post_thumbnail(); ?>
+							</div>
+								<div class="our-team-conent">
+									<div class="our-team-title">
+										<?php echo get_the_title(); //phpcs:ignore ?>
+									</div>
+									<div class="role">
+										<?php echo esc_html( $team_role ); ?>
+									</div>
+									<div class="our-team-content">
+										<?php echo get_the_content(); //phpcs:ignore ?>
+									</div>
+									<?php
+									if ( $mail && ! empty( $mail['url'] ) && ! empty( $mail['title'] ) ) {
+										$link_url    = $mail['url'];
+										$link_title  = $mail['title'];
+										$link_target = $mail['target'] ? $mail['target'] : '_self';
+										?>
+										<a href="<?php echo esc_url( $link_url ); ?>" class="btn btn-link" target="<?php echo esc_attr( $link_target ); ?>">
+											<?php echo esc_html( $link_title ); ?>
+										</a>
+										<?php
+									}
+									if ( $linked_in && ! empty( $linked_in['url'] ) && ! empty( $linked_in['title'] ) ) {
+										$link_url    = $linked_in['url'];
+										$link_title  = $linked_in['title'];
+										$link_target = $linked_in['target'] ? $linked_in['target'] : '_self';
+										?>
+										<a href="<?php echo esc_url( $link_url ); ?>" class="btn btn-link" target="<?php echo esc_attr( $link_target ); ?>">
+											<?php echo esc_html( $link_title ); ?>
+										</a>
+										<?php
+									}
+									?>
+								</div>
+							</div>
+						</div>
+						<?php
+						wp_reset_postdata();
+					}
+					?>
+				</div>
 			</div>
 		</div>
 	</div>
