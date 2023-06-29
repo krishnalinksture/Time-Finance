@@ -75,7 +75,7 @@ $resources_form             = ( ! empty( $resources_select_form ) ) ? '[forminat
 								<div class="resources-conent">
 									<div class="resources-date">
 										<?php
-										echo get_the_date();
+										echo get_the_date( 'm F Y', get_the_ID() );
 										echo wp_strip_all_tags( get_the_term_list( get_the_ID(), 'resources-categories', ' ', ', ', ' ' ) ); //phpcs:ignore
 										?>
 									</div>

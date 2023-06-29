@@ -73,7 +73,7 @@ $press_release_view_all_button    = get_field( 'press_release_view_all_button', 
 								<div class="press-release-conent">
 									<div class="press-release-date">
 										<?php
-										echo get_the_date();
+										echo get_the_date( 'm F Y', get_the_ID() );
 										echo wp_strip_all_tags( get_the_term_list( get_the_ID(), 'press-release-categories', ' ', ', ', ' ' ) ); //phpcs:ignore
 										?>
 									</div>
