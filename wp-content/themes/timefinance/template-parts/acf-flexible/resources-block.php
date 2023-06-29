@@ -91,10 +91,10 @@ $section_id                = get_sub_field( 'section_id' ) ? get_sub_field( 'sec
 										<?php echo get_the_title(); //phpcs:ignore ?>
 									</div>
 									<div class="popup-form">
-										<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+										<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#resourseModal">
 											<?php echo esc_html( $read_more_button ); ?>
 										</button>
-										<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+										<div class="modal fade" id="resourseModal" tabindex="-1" aria-labelledby="resourseModalLabel" aria-hidden="true">
 											<div class="modal-dialog">
 												<div class="modal-content">
 													<div class="modal-body">
