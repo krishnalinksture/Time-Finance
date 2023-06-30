@@ -1626,3 +1626,26 @@
 .content-block {
     padding: 60px 0;
 }
+
+//Calculator block
+.calculator-block {
+    padding: 150px 0;
+    .content-wrapper {
+        background-color: bisque;
+        .section-title {
+            font-size: 32px;
+            line-height: 32px;
+            margin-bottom: 30px;
+            color: $white;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 25px;
+            font-weight: 600;
+            color: $white;
+            margin: 0 auto;
+            width: 55%;
+        }
+    }
+}

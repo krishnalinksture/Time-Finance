@@ -15,8 +15,8 @@ $section_id     = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) 
 ?>
 <section class="calculator-block" id="<?php echo $section_id; //phpcs:ignore ?>">
 	<div class="container">
-		<div class="row">
-			<div class="col">
+		<div class="row justify-content-center text-center">
+			<div class="col content-wrapper">
 				<?php
 				if ( ! empty( $main_title ) ) {
 					echo '<' . esc_attr( $select_tag ) . ' class="section-title h-4">' . esc_html( $main_title ) . '</' . esc_attr( $select_tag ) . '>';

@@ -1529,6 +1529,23 @@ header {
 .content-block {
   padding: 60px 0; }
 
+.calculator-block {
+  padding: 150px 0; }
+  .calculator-block .content-wrapper {
+    background-color: bisque; }
+    .calculator-block .content-wrapper .section-title {
+      font-size: 32px;
+      line-height: 32px;
+      margin-bottom: 30px;
+      color: #fff; }
+    .calculator-block .content-wrapper p {
+      font-size: 18px;
+      line-height: 25px;
+      font-weight: 600;
+      color: #fff;
+      margin: 0 auto;
+      width: 55%; }
+
 footer {
   background-color: #3d1050;
   color: #fff;
