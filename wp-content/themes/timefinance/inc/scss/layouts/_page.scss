@@ -1423,6 +1423,165 @@
     
                 .read-more {
                     margin-top: 48px;
+                    font-size: 15px;
+                    line-height: 15px;
+                    letter-spacing: normal;
+                    padding: 8px 19px; 
+                    font-weight: 400;
+                    a {
+                        color: $white;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//Case studies custom post block
+.case-studies-custom-post-block {
+    padding: 125px 0 80px;
+    background-color: $gray;
+    position: relative;
+    overflow: hidden;
+    &::before {
+        content: "";
+        background-color: $purple;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 95vh;
+        width: 100%;
+    }
+
+    .container {
+        position: relative;
+    }
+
+    .section-title {
+        color: $green;
+        line-height: 30px;
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+
+    p {
+        color: $white;
+        font-size: 40px;
+        line-height: 50px;
+        font-weight: 700;
+        width: 94%;
+        margin-bottom: 80px;
+    }
+
+    .cat-filter {
+        font-size: 12px;
+        line-height: 15px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $green;
+        margin-top: 5px;
+        margin-bottom: 25px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font-size: 18px;
+        line-height: 18px;
+        font-weight: 600;
+
+        .case-study-cat-list {
+            margin-bottom: 15px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            a {
+                color: $white;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+
+                &.btn {
+                    &.btn-link {
+                        &:hover {
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .case-studies-wrapper {
+        padding-left: 50px;
+        padding-right: 20px;
+        .row {
+            .col {
+                margin-bottom: 20px;
+                overflow: hidden;
+            }
+        }
+        .case-study-box {
+            height: 100%;
+            .case-study-image {
+                height: 270px;
+                overflow: hidden;
+                img {
+                    display: block;
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            
+            .case-study-conent {
+                background-color: $white;
+                padding: 35px 24px;
+                height: 100%;
+                
+                .case-study-date {
+                    font-size: 12px;
+                    line-height: 15px;
+                    letter-spacing: 1.1px;
+                    font-weight: 600;
+                    color: $green;
+                    text-transform: uppercase;
+                    margin-bottom: 28px;
+                }
+    
+                .case-study-title {
+                    a {
+                        font-size: 25px;
+                        line-height: 33px;
+                        font-weight: 600;
+                        padding: 0 15px;
+                        margin-bottom: 12px;
+                        color: $purple;
+                        text-decoration: none;
+                    }
+                }
+    
+                p {
+                    color: $purple;
+                    font-size: 15px;
+                    line-height: 21px;
+                    font-weight: 600;
+                    width: 92%;
+                    margin: 0 auto;
+                }
+    
+                .read-more {
+                    margin-top: 48px;
+                    font-size: 15px;
+                    line-height: 15px;
+                    letter-spacing: normal;
+                    padding: 8px 19px; 
+                    font-weight: 400;
                     a {
                         color: $white;
                         text-decoration: none;

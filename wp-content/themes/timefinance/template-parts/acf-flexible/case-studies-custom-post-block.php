@@ -15,17 +15,17 @@ $section_id = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : un
 <section class="case-studies-custom-post-block" id="<?php echo $section_id; //phpcs:ignore ?>">
 	<div class="container">
 		<div class="row">
-			<div class="col">
+			<div class="col-9">
 				<?php
 				if ( ! empty( $main_title ) ) {
-					echo '<' . esc_attr( $select_tag ) . ' class="section-title h-2">' . esc_html( $main_title ) . '</' . esc_attr( $select_tag ) . '>';
+					echo '<' . esc_attr( $select_tag ) . ' class="section-title h-4">' . esc_html( $main_title ) . '</' . esc_attr( $select_tag ) . '>';
 				}
 				echo $content; //phpcs:ignore
 				?>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-4">
+			<div class="col-3">
 				<div class="cat-filter">
 					<?php echo esc_html( 'FILTER POSTS:' ); ?>
 				</div>
@@ -60,8 +60,8 @@ $section_id = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : un
 					</li>
 				</ul>
 			</div>
-			<div class="col-8">
-				<div class="row">
+			<div class="col-9 case-studies-wrapper">
+				<div class="row row-cols-1 row-cols-lg-2">
 					<?php
 					$args = array(
 						'post_type'   => 'case-study',
@@ -73,7 +73,7 @@ $section_id = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : un
 						$loop->the_post();
 						$read_more_button = get_field( 'read_more_button' );
 						?>
-						<div class="col">
+						<div class="col text-center">
 							<div class="case-study-box">
 								<div class="case-study-image">
 									<?php the_post_thumbnail(); ?>
@@ -88,9 +88,7 @@ $section_id = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : un
 									<div class="case-study-title">
 										<a href="<?php echo get_the_permalink(); //phpcs:ignore ?>"><?php echo get_the_title(); //phpcs:ignore ?></a>
 									</div>
-									<div class="case-study-content">
 										<?php echo get_the_content(); //phpcs:ignore ?>
-									</div>
 									<div class="read-more btn">
 										<a href="<?php echo get_the_permalink(); //phpcs:ignore ?>"><?php echo esc_html( $read_more_button ); ?></a>
 									</div>
