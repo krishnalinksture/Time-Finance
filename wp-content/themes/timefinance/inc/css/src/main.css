@@ -1505,6 +1505,30 @@ header {
             color: #fff;
             text-decoration: none; }
 
+.our-history-block {
+  padding: 120px 0; }
+  .our-history-block .section-title {
+    font-size: 32px;
+    line-height: 42px;
+    margin-bottom: 133px; }
+  .our-history-block .history-card .card-content {
+    padding: 25px 0 35px; }
+    .our-history-block .history-card .card-content .card-title {
+      text-transform: uppercase;
+      font-size: 11px;
+      line-height: 11px;
+      letter-spacing: 1.1px;
+      font-weight: 700;
+      color: #00a98f;
+      margin-bottom: 28px; }
+    .our-history-block .history-card .card-content .card-text {
+      font-size: 25px;
+      line-height: 33px;
+      font-weight: 600; }
+
+.content-block {
+  padding: 60px 0; }
+
 footer {
   background-color: #3d1050;
   color: #fff;

@@ -10,7 +10,7 @@ $section_id = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : un
 ?>
 <section class="content-block" id="<?php echo $section_id; //phpcs:ignore ?>">
 	<div class="container">
-		<div class="row">
+		<div class="row justify-content-center text-center">
 			<div class="col">
 				<?php echo $content; //phpcs:ignore ?>
 			</div>

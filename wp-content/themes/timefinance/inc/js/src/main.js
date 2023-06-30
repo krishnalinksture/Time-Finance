@@ -98,6 +98,19 @@ window.Scrollanimate = () => {
 					$( ".form" ).slideToggle(500);
 				});
 
+				// Calculator Form
+				$(".calculator-block .submit").on("click",function(e){
+					e.preventDefault();
+					var value = $('.calculator-block input[name="amount_value"]').val(),
+					replace_value = value.replace( ',', ''),
+					calculate_value = ( parseInt( replace_value ) * 9 ) / 10,
+					calculatorform = $(".calculator-block").find(".result");
+					calculatorform.text( '£' + calculate_value + '*' );
+					setTimeout(function(){
+						$('.calculator-block input[name="amount_value"]').val(value);
+					}, 600);
+				});
+
 			},
 			finalize: function () {
 				// JavaScript to be fired on all pages, after page specific JS is fired
