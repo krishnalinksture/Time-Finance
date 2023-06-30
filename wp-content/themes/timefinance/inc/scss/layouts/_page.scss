@@ -355,13 +355,18 @@
             color: $white;
         }
         
-        .btn {
-            display: table !important;
+        .apply-send-button {
             margin-top: 75px;
-            &:hover {
-                background-color: $white;
-                border-color: $white;
-                color: $purple;
+            a {
+                margin-right: 10px;
+            }
+
+            .btn {
+                &:hover {
+                    background-color: $white;
+                    border-color: $white;
+                    color: $purple;
+                }
             }
         }
     }
@@ -426,10 +431,13 @@
                 }
         
                 .btn {
-                    margin-top: 20px;
+                    margin-top: 45px;
                     opacity: 0;
+                    font-size: 15px;
                     line-height: 15px;
-                    padding: 10px 0; 
+                    letter-spacing: normal;
+                    padding: 8px 22px; 
+                    font-weight: 400;
                     @include translateY(40px);
                     transition: 0.8s !important; 
                     transition-delay: 0.4s !important;  
@@ -492,6 +500,11 @@
 
         .btn {
             margin-top: 20px;
+            font-size: 15px;
+            line-height: 15px;
+            letter-spacing: normal;
+            padding: 8px 15px; 
+            font-weight: 400;
         }
     }
 
@@ -639,6 +652,11 @@
 
         .btn {
             margin-top: 15px;
+            font-size: 15px;
+            line-height: 15px;
+            letter-spacing: normal;
+            padding: 8px 18px; 
+            font-weight: 400;
             a {
                 color: $white;
                 text-decoration: none;
@@ -938,12 +956,29 @@
     .press-releases-wrapper {
         padding-left: 50px;
         padding-right: 20px;
+        .row {
+            .col {
+                margin-bottom: 20px;
+                overflow: hidden;
+            }
+        }
         .press-release-box {
             cursor: pointer;
-            margin-bottom: 20px;
+            height: 100%;
+            .press-release-image {
+                height: 270px;
+                overflow: hidden;
+                img {
+                    display: block;
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
             .press-release-content {
                 background-color: $white;
                 padding: 35px 24px;
+                height: 100%;
                 .press-release-date {
                     font-size: 12px;
                     line-height: 15px;
@@ -977,6 +1012,11 @@
 
                 .read-more {
                     margin-top: 48px;
+                    font-size: 15px;
+                    line-height: 15px;
+                    letter-spacing: normal;
+                    padding: 8px 20px; 
+                    font-weight: 400;
                     a {
                         color: $white;
                         text-decoration: none;
@@ -1102,6 +1142,14 @@
                         text-decoration: none ;
                     }     
                 }
+
+                .btn {
+                    font-size: 15px;
+                    line-height: 15px;
+                    letter-spacing: normal;
+                    padding: 8px 20px; 
+                    font-weight: 400;
+                }
             }
         }
     }
@@ -1189,6 +1237,20 @@
     .resources-wrapper {
         padding-left: 50px;
         padding-right: 20px;
+        .row {
+            .col {
+                margin-bottom: 20px;
+            }
+        }
+        .resources-image {
+            height: 272px;
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
         .resources-conent {
             padding: 25px;
             background-color: $white;
@@ -1206,7 +1268,17 @@
                 font-size: 24px;
                 line-height: 32px;
                 font-weight: 700;
-                margin-bottom: 48px;
+                margin-bottom: 58px;
+            }
+
+            .popup-form {
+                .btn {
+                    font-size: 15px;
+                    line-height: 15px;
+                    letter-spacing: normal;
+                    padding: 8px 20px; 
+                    font-weight: 400;
+                }
             }
         }
     }

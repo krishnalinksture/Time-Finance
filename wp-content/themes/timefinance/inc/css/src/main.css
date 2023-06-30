@@ -647,10 +647,11 @@ header {
     line-height: 50px;
     font-weight: 700;
     color: #fff; }
-  .cta-block .container .btn {
-    display: table !important;
+  .cta-block .container .apply-send-button {
     margin-top: 75px; }
-    .cta-block .container .btn:hover {
+    .cta-block .container .apply-send-button a {
+      margin-right: 10px; }
+    .cta-block .container .apply-send-button .btn:hover {
       background-color: #fff;
       border-color: #fff;
       color: #3d1050; }
@@ -711,10 +712,13 @@ header {
           transition: 0.8s;
           transition-delay: 0.3s; }
         .card-block .container .card-box .hover-card .btn {
-          margin-top: 20px;
+          margin-top: 45px;
           opacity: 0;
+          font-size: 15px;
           line-height: 15px;
-          padding: 10px 0;
+          letter-spacing: normal;
+          padding: 8px 22px;
+          font-weight: 400;
           -webkit-transform: translateY(40px);
           -moz-transform: translateY(40px);
           -ms-transform: translateY(40px);
@@ -752,7 +756,12 @@ header {
     .large-card-block .large-card-content p {
       font-weight: 600; }
     .large-card-block .large-card-content .btn {
-      margin-top: 20px; }
+      margin-top: 20px;
+      font-size: 15px;
+      line-height: 15px;
+      letter-spacing: normal;
+      padding: 8px 15px;
+      font-weight: 400; }
   .large-card-block.bg-white .large-card-content {
     background-color: #F5F3F6; }
   .large-card-block.bg-purple .large-card-content .btn {
@@ -848,7 +857,12 @@ header {
       font-weight: 600;
       min-height: 95px; }
     .latest-news-block .latest-news-content-box .btn {
-      margin-top: 15px; }
+      margin-top: 15px;
+      font-size: 15px;
+      line-height: 15px;
+      letter-spacing: normal;
+      padding: 8px 18px;
+      font-weight: 400; }
       .latest-news-block .latest-news-content-box .btn a {
         color: #fff;
         text-decoration: none; }
@@ -1045,12 +1059,24 @@ header {
   .press-releases-block .press-releases-wrapper {
     padding-left: 50px;
     padding-right: 20px; }
+    .press-releases-block .press-releases-wrapper .row .col {
+      margin-bottom: 20px;
+      overflow: hidden; }
     .press-releases-block .press-releases-wrapper .press-release-box {
       cursor: pointer;
-      margin-bottom: 20px; }
+      height: 100%; }
+      .press-releases-block .press-releases-wrapper .press-release-box .press-release-image {
+        height: 270px;
+        overflow: hidden; }
+        .press-releases-block .press-releases-wrapper .press-release-box .press-release-image img {
+          display: block;
+          height: 100%;
+          width: 100%;
+          object-fit: cover; }
       .press-releases-block .press-releases-wrapper .press-release-box .press-release-content {
         background-color: #fff;
-        padding: 35px 24px; }
+        padding: 35px 24px;
+        height: 100%; }
         .press-releases-block .press-releases-wrapper .press-release-box .press-release-content .press-release-date {
           font-size: 12px;
           line-height: 15px;
@@ -1075,7 +1101,12 @@ header {
           width: 100%;
           margin-bottom: 0; }
         .press-releases-block .press-releases-wrapper .press-release-box .press-release-content .read-more {
-          margin-top: 48px; }
+          margin-top: 48px;
+          font-size: 15px;
+          line-height: 15px;
+          letter-spacing: normal;
+          padding: 8px 20px;
+          font-weight: 400; }
           .press-releases-block .press-releases-wrapper .press-release-box .press-release-content .read-more a {
             color: #fff;
             text-decoration: none; }
@@ -1162,6 +1193,12 @@ header {
           margin-bottom: 32px;
           color: #3d1050;
           text-decoration: none; }
+        .regulatory-news-block .regulatory-news-wrapper .regulatory-news-box .regulatory-news-conent .btn {
+          font-size: 15px;
+          line-height: 15px;
+          letter-spacing: normal;
+          padding: 8px 20px;
+          font-weight: 400; }
 
 .resources-block {
   padding: 125px 0 80px;
@@ -1220,6 +1257,15 @@ header {
   .resources-block .resources-wrapper {
     padding-left: 50px;
     padding-right: 20px; }
+    .resources-block .resources-wrapper .row .col {
+      margin-bottom: 20px; }
+    .resources-block .resources-wrapper .resources-image {
+      height: 272px; }
+      .resources-block .resources-wrapper .resources-image img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; }
     .resources-block .resources-wrapper .resources-conent {
       padding: 25px;
       background-color: #fff; }
@@ -1235,7 +1281,13 @@ header {
         font-size: 24px;
         line-height: 32px;
         font-weight: 700;
-        margin-bottom: 48px; }
+        margin-bottom: 58px; }
+      .resources-block .resources-wrapper .resources-conent .popup-form .btn {
+        font-size: 15px;
+        line-height: 15px;
+        letter-spacing: normal;
+        padding: 8px 20px;
+        font-weight: 400; }
 
 .time-blog-block {
   padding: 125px 0 80px;
