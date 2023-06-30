@@ -713,6 +713,8 @@ header {
         .card-block .container .card-box .hover-card .btn {
           margin-top: 20px;
           opacity: 0;
+          line-height: 15px;
+          padding: 10px 0;
           -webkit-transform: translateY(40px);
           -moz-transform: translateY(40px);
           -ms-transform: translateY(40px);
@@ -770,28 +772,48 @@ header {
       -ms-border-radius: 0;
       border-radius: 0;
       border: none; }
-      .faq-block .accordion .accordion-item .accordion-header .accordion-button {
-        background-color: #fff;
-        border-bottom: 2px solid #3d1050;
-        cursor: pointer;
-        padding: 29px 0; }
-        .faq-block .accordion .accordion-item .accordion-header .accordion-button .faq-title {
-          color: #3d1050;
-          font-size: 18px;
-          font-weight: 700; }
-        .faq-block .accordion .accordion-item .accordion-header .accordion-button::after {
-          flex-shrink: 0;
-          width: 1.25rem;
-          height: 1.25rem;
-          margin-left: auto;
-          content: "";
-          background-image: url();
-          background-repeat: no-repeat;
-          transition: transform .2s ease-in-out; }
-        .faq-block .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) {
-          border-bottom: 2px solid #00a98f; }
-          .faq-block .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) .faq-title {
-            color: #00a98f; }
+      .faq-block .accordion .accordion-item .accordion-header {
+        position: relative; }
+        .faq-block .accordion .accordion-item .accordion-header .accordion-button {
+          background-color: #fff;
+          border-bottom: 2px solid #3d1050;
+          cursor: pointer;
+          padding: 29px 0; }
+          .faq-block .accordion .accordion-item .accordion-header .accordion-button .faq-title {
+            color: #3d1050;
+            font-size: 18px;
+            font-weight: 700; }
+          .faq-block .accordion .accordion-item .accordion-header .accordion-button::before {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: 0;
+            content: "";
+            background-image: url(../inc/assets/minus-icon.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0;
+            transform: rotate(0deg); }
+          .faq-block .accordion .accordion-item .accordion-header .accordion-button::after {
+            width: 20px;
+            height: 20px;
+            content: "";
+            background-image: url(../inc/assets/plus-icon.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            transform: rotate(450deg); }
+          .faq-block .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) {
+            border-bottom: 2px solid #00a98f; }
+            .faq-block .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) .faq-title {
+              color: #00a98f; }
+            .faq-block .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed)::after {
+              background-image: url(../inc/assets/plus-icon.svg);
+              opacity: 0;
+              transform: rotate(90deg); }
+            .faq-block .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed)::before {
+              background-image: url(../inc/assets/minus-icon.svg);
+              opacity: 1;
+              transform: rotate(180deg); }
       .faq-block .accordion .accordion-item .accordion-collapse .accordion-body {
         padding: 40px 0 56px 0; }
         .faq-block .accordion .accordion-item .accordion-collapse .accordion-body p {
@@ -828,7 +850,8 @@ header {
     .latest-news-block .latest-news-content-box .btn {
       margin-top: 15px; }
       .latest-news-block .latest-news-content-box .btn a {
-        color: #fff; }
+        color: #fff;
+        text-decoration: none; }
 
 .office-locations-block {
   padding: 50px 0 30px; }
@@ -958,11 +981,10 @@ header {
         .our-team-block .our-team-wrapper .our-team-box .our-team-conent-box a {
           color: #00a98f;
           margin-top: 20px;
-          letter-spacing: normal; }
+          letter-spacing: normal;
+          text-decoration: underline; }
           .our-team-block .our-team-wrapper .our-team-box .our-team-conent-box a + a {
             margin-top: 0; }
-          .our-team-block .our-team-wrapper .our-team-box .our-team-conent-box a:hover {
-            text-decoration: underline; }
           .our-team-block .our-team-wrapper .our-team-box .our-team-conent-box a.btn.btn-link:hover {
             color: #3d1050; }
 
@@ -1055,7 +1077,8 @@ header {
         .press-releases-block .press-releases-wrapper .press-release-box .press-release-content .read-more {
           margin-top: 48px; }
           .press-releases-block .press-releases-wrapper .press-release-box .press-release-content .read-more a {
-            color: #fff; }
+            color: #fff;
+            text-decoration: none; }
 
 .regulatory-news-block {
   padding: 125px 0 80px;
@@ -1296,7 +1319,7 @@ header {
           color: #00a98f;
           text-transform: uppercase;
           margin-bottom: 28px; }
-        .time-blog-block .time-blog-wrapper .time-blog-box .time-blog-content .time-blog-title {
+        .time-blog-block .time-blog-wrapper .time-blog-box .time-blog-content .time-blog-title a {
           font-size: 25px;
           line-height: 33px;
           font-weight: 600;
@@ -1314,7 +1337,8 @@ header {
         .time-blog-block .time-blog-wrapper .time-blog-box .time-blog-content .read-more {
           margin-top: 48px; }
           .time-blog-block .time-blog-wrapper .time-blog-box .time-blog-content .read-more a {
-            color: #fff; }
+            color: #fff;
+            text-decoration: none; }
 
 footer {
   background-color: #3d1050;

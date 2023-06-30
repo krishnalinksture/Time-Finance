@@ -427,7 +427,9 @@
         
                 .btn {
                     margin-top: 20px;
-                    opacity: 0; 
+                    opacity: 0;
+                    line-height: 15px;
+                    padding: 10px 0; 
                     @include translateY(40px);
                     transition: 0.8s !important; 
                     transition-delay: 0.4s !important;  
@@ -525,6 +527,7 @@
             @include borderRadius(0);
             border: none;
             .accordion-header {
+                position: relative;
                 .accordion-button {
                     background-color: $white;
                     border-bottom: 2px solid $purple;
@@ -536,21 +539,47 @@
                         font-weight: 700;
                     }
 
-                    &::after {
-                        flex-shrink: 0;
-                        width: 1.25rem;
-                        height: 1.25rem;
-                        margin-left: auto;
+                    &::before {
+                        position: absolute;
+                        width: 20px;
+                        height: 20px;
+                        right: 0;
                         content: "";
-                        background-image: url();
+                        background-image: url(../inc/assets/minus-icon.svg);
                         background-repeat: no-repeat;
-                        transition: transform .2s ease-in-out;
+                        background-position: center;
+                        opacity: 0;
+                        transform: rotate(0deg);
+                       
+                    }
+
+                    &::after {
+                        width: 20px;
+                        height: 20px;
+                        content: "";
+                        background-image: url(../inc/assets/plus-icon.svg);
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        transform: rotate(450deg);
+                       
                     }
 
                     &:not(.collapsed) {
                             border-bottom: 2px solid $green;
                             .faq-title {
                                 color: $green;
+                            }
+
+                            &::after {
+                                background-image: url(../inc/assets/plus-icon.svg);
+                                opacity: 0;
+                                transform: rotate(90deg);
+                            }
+
+                            &::before {
+                                background-image: url(../inc/assets/minus-icon.svg);
+                                opacity: 1;
+                                transform: rotate(180deg);
                             }
                         }
                 }
@@ -612,6 +641,7 @@
             margin-top: 15px;
             a {
                 color: $white;
+                text-decoration: none;
             }
         }
     }
@@ -808,11 +838,9 @@
                     color: $green;
                     margin-top: 20px;
                     letter-spacing: normal;
+                    text-decoration: underline;
                     +a {
                         margin-top: 0;
-                    }
-                    &:hover {
-                        text-decoration: underline;
                     }
     
                     &.btn {
@@ -951,6 +979,7 @@
                     margin-top: 48px;
                     a {
                         color: $white;
+                        text-decoration: none;
                     }
                 }
             }
@@ -1300,13 +1329,15 @@
                 }
     
                 .time-blog-title {
-                    font-size: 25px;
-                    line-height: 33px;
-                    font-weight: 600;
-                    padding: 0 15px;
-                    margin-bottom: 12px;
-                    color: $purple;
-                    text-decoration: none;
+                    a {
+                        font-size: 25px;
+                        line-height: 33px;
+                        font-weight: 600;
+                        padding: 0 15px;
+                        margin-bottom: 12px;
+                        color: $purple;
+                        text-decoration: none;
+                    }
                 }
     
                 p {
@@ -1322,6 +1353,7 @@
                     margin-top: 48px;
                     a {
                         color: $white;
+                        text-decoration: none;
                     }
                 }
             }
