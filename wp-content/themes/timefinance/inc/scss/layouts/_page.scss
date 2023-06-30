@@ -1195,7 +1195,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        height: 66vh;
+        height: 97vh;
         width: 100%;
     }
 
@@ -1265,54 +1265,64 @@
     .time-blog-wrapper {
         padding-left: 50px;
         padding-right: 20px;
-        .time-blog-image {
-            height: 305px;
-            overflow: hidden;
-            img {
-                display: block;
-                height: 100%;
-                width: 100%;
-                object-fit: cover;
+        .row {
+            .col {
+                margin-bottom: 20px;
+                overflow: hidden;
             }
         }
-        
-        .time-blog-content {
-            background-color: $white;
-            padding: 35px 24px;
+        .time-blog-box {
+            height: 100%;
+            .time-blog-image {
+                height: 270px;
+                overflow: hidden;
+                img {
+                    display: block;
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
             
-            .time-blog-date {
-                font-size: 12px;
-                line-height: 15px;
-                letter-spacing: 1.1px;
-                font-weight: 600;
-                color: $green;
-                text-transform: uppercase;
-                margin-bottom: 28px;
-            }
-
-            .time-blog-title {
-                font-size: 25px;
-                line-height: 33px;
-                font-weight: 600;
-                padding: 0 15px;
-                margin-bottom: 12px;
-                color: $purple;
-                text-decoration: none;
-            }
-
-            p {
-                color: $purple;
-                font-size: 15px;
-                line-height: 21px;
-                font-weight: 600;
-                width: 100%;
-                margin-bottom: 0;
-            }
-
-            .read-more {
-                margin-top: 48px;
-                a {
-                    color: $white;
+            .time-blog-content {
+                background-color: $white;
+                padding: 35px 24px;
+                height: 100%;
+                
+                .time-blog-date {
+                    font-size: 12px;
+                    line-height: 15px;
+                    letter-spacing: 1.1px;
+                    font-weight: 600;
+                    color: $green;
+                    text-transform: uppercase;
+                    margin-bottom: 28px;
+                }
+    
+                .time-blog-title {
+                    font-size: 25px;
+                    line-height: 33px;
+                    font-weight: 600;
+                    padding: 0 15px;
+                    margin-bottom: 12px;
+                    color: $purple;
+                    text-decoration: none;
+                }
+    
+                p {
+                    color: $purple;
+                    font-size: 15px;
+                    line-height: 21px;
+                    font-weight: 600;
+                    width: 92%;
+                    margin: 0 auto;
+                }
+    
+                .read-more {
+                    margin-top: 48px;
+                    a {
+                        color: $white;
+                    }
                 }
             }
         }
