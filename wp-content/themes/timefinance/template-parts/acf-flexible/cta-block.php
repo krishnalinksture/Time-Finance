@@ -28,19 +28,21 @@ $section_id       = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' 
 				<div class="subtitle">
 					<?php echo esc_html( $subtitle ); ?>
 				</div>
-				<?php
-				if ( $apply_now && ! empty( $apply_now['url'] ) && ! empty( $apply_now['title'] ) ) {
-					$link_url    = $apply_now['url'];
-					$link_title  = $apply_now['title'];
-					$link_target = $apply_now['target'] ? $apply_now['target'] : '_self';
-					?>
-					<a href="<?php echo esc_url( $link_url ); ?>" class="btn" target="<?php echo esc_attr( $link_target ); ?>">
-						<?php echo esc_html( $link_title ); ?>
-					</a>
+				<div class="apply-send-button">
 					<?php
-				}
-				?>
-				<button class="send-message btn"><?php echo esc_html( $send_message ); ?></button>
+					if ( $apply_now && ! empty( $apply_now['url'] ) && ! empty( $apply_now['title'] ) ) {
+						$link_url    = $apply_now['url'];
+						$link_title  = $apply_now['title'];
+						$link_target = $apply_now['target'] ? $apply_now['target'] : '_self';
+						?>
+						<a href="<?php echo esc_url( $link_url ); ?>" class="btn" target="<?php echo esc_attr( $link_target ); ?>">
+							<?php echo esc_html( $link_title ); ?>
+						</a>
+						<?php
+					}
+					?>
+					<button class="send-message btn"><?php echo esc_html( $send_message ); ?></button>
+				</div>
 			</div>
 		</div>
 	</div>
