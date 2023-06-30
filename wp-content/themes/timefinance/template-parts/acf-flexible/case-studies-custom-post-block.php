@@ -86,7 +86,7 @@ $section_id = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : un
 										?>
 									</div>
 									<div class="case-study-title">
-										<?php echo get_the_title(); //phpcs:ignore ?>
+										<a href="<?php echo get_the_permalink(); //phpcs:ignore ?>"><?php echo get_the_title(); //phpcs:ignore ?></a>
 									</div>
 									<div class="case-study-content">
 										<?php echo get_the_content(); //phpcs:ignore ?>
