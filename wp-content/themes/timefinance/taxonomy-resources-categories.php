@@ -15,17 +15,17 @@ $resources_form             = ( ! empty( $resources_select_form ) ) ? '[forminat
 <section class="resources-category">
 	<div class="container">
 		<div class="row">
-			<div class="col">
+			<div class="col-9">
 				<?php
 				if ( ! empty( $resources_title ) ) {
-					echo '<' . esc_attr( $resources_select_tag ) . ' class="section-title h-2">' . esc_html( $resources_title ) . '</' . esc_attr( $resources_select_tag ) . '>';
+					echo '<' . esc_attr( $resources_select_tag ) . ' class="section-title h-4">' . esc_html( $resources_title ) . '</' . esc_attr( $resources_select_tag ) . '>';
 				}
 				echo $resources_content; //phpcs:ignore
 				?>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-4">
+			<div class="col-3">
 				<div class="cat-filter">
 					<?php echo esc_html( 'FILTER POSTS:' ); ?>
 				</div>
@@ -60,19 +60,19 @@ $resources_form             = ( ! empty( $resources_select_form ) ) ? '[forminat
 					</li>
 				</ul>
 			</div>
-			<div class="col-8">
-				<div class="row">
+			<div class="col-9 resources-wrapper">
+				<div class="row row-cols-1 row-cols-lg-2">
 					<?php
 					while ( have_posts() ) {
 						the_post();
 						$read_more_button = get_field( 'read_more_button' );
 						?>
-						<div class="col">
+						<div class="col text-center">
 							<div class="resources-box">
 								<div class="resources-image">
 									<?php the_post_thumbnail(); ?>
 								</div>
-								<div class="resources-conent">
+								<div class="resources-content">
 									<div class="resources-date">
 										<?php
 										echo get_the_date( 'm F Y', get_the_ID() );
@@ -82,11 +82,9 @@ $resources_form             = ( ! empty( $resources_select_form ) ) ? '[forminat
 									<div class="resources-title">
 										<?php echo get_the_title(); //phpcs:ignore ?>
 									</div>
-									<div class="resources-content">
 										<?php echo get_the_content(); //phpcs:ignore ?>
-									</div>
 									<div class="popup-form">
-										<button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#exampleModal">
+										<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
 											<?php echo esc_html( $read_more_button ); ?>
 										</button>
 										<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

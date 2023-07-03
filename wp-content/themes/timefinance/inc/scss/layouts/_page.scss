@@ -784,7 +784,7 @@
 }
 
 //Our team block
-.our-team-block {
+.our-team-block, .our-teams-category {
     padding: 125px 0 80px;
     background-color: $gray;
     position: relative;
@@ -865,12 +865,17 @@
     .our-team-wrapper {
         padding-left: 50px;
         padding-right: 20px;
+        .row .col {
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
         .our-team-box {
             cursor: pointer;
-            margin-bottom: 20px;
+            height: 100%;
             .our-team-conent-box {
                 background-color: $white;
                 padding: 23px;
+                height: 100%;
                 .our-team-title {
                     font-size: 24px;
                     line-height: 32px;
@@ -1073,7 +1078,7 @@
 }
 
 //Regulatory news block
-.regulatory-news-block {
+.regulatory-news-block, .regulatory-news-category {
     padding: 125px 0 80px;
     background-color: $gray;
     position: relative;
@@ -1157,12 +1162,22 @@
         .row {
             .col {
                 margin-bottom: 20px;
+                overflow: hidden;
             }
         }
         .regulatory-news-box {
             height: 100%;
             cursor: pointer;
-            .regulatory-news-conent {
+            .regulatory-news-image {
+                height: 270px;
+                img {
+                    display: block;
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            .regulatory-news-content {
                 padding: 35px 24px;
                 background-color: $white;
                 height: 100%;
@@ -1201,7 +1216,7 @@
 }
 
 //Resources block
-.resources-block {
+.resources-block, .resources-category {
     padding: 125px 0 80px;
     background-color: $gray;
     position: relative;
@@ -1296,7 +1311,7 @@
                 object-fit: cover;
             }
         }
-        .resources-conent {
+        .resources-content {
             padding: 25px;
             background-color: $white;
             .resources-date {
@@ -1701,7 +1716,7 @@
 }
 
 //Bdt block
-.bdt-block {
+.bdt-block, .bdt-category {
     padding: 125px 0 80px;
     background-color: $gray;
     position: relative;

@@ -80,7 +80,7 @@ $section_id                = get_sub_field( 'section_id' ) ? get_sub_field( 'sec
 								<div class="resources-image">
 									<?php the_post_thumbnail(); ?>
 								</div>
-								<div class="resources-conent">
+								<div class="resources-content">
 									<div class="resources-date">
 										<?php
 										echo get_the_date( 'm F Y', get_the_ID() );

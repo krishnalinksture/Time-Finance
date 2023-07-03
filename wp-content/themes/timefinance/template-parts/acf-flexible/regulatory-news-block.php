@@ -76,10 +76,10 @@ $section_id = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : un
 						?>
 						<div class="col text-center">
 							<div class="regulatory-news-box">
-								<div class="regulatory-news-conent">
-									<div class="regulatory-news-image">
-										<?php the_post_thumbnail(); ?>
-									</div>
+								<div class="regulatory-news-image">
+									<?php the_post_thumbnail(); ?>
+								</div>
+								<div class="regulatory-news-content">
 									<div class="regulatory-news-date">
 										<?php
 										echo get_the_date( 'm F Y', get_the_ID() );
