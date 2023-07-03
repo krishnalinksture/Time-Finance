@@ -84,10 +84,10 @@ $resources_form             = ( ! empty( $resources_select_form ) ) ? '[forminat
 									</div>
 										<?php echo get_the_content(); //phpcs:ignore ?>
 									<div class="popup-form">
-										<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+										<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#resourcesModal">
 											<?php echo esc_html( $read_more_button ); ?>
 										</button>
-										<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+										<div class="modal fade" id="resourcesModal" tabindex="-1" aria-labelledby="resourcesModalLabel" aria-hidden="true">
 											<div class="modal-dialog">
 												<div class="modal-content">
 													<div class="modal-body">

@@ -40,7 +40,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	?>
 	<header>
 		<?php
-		if ( ! empty( $header_logo ) || ! empty( $cta_button ) ) {
+		if ( ! empty( $header_logo ) || ! empty( $cta_button ) || ! empty( $search_icon ) ) {
 			?>
 			<nav class="navbar navbar-expand-xl">
 				<div class="container">
@@ -74,12 +74,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 									wp_nav_menu(
 										array(
 											'theme_location' => 'primary',
-											'menu_class'     => 'navbar-nav navigation-links',
-											'container'      => 'menu-container',
-											'container_id'   => 'navbarNav',
-											'fallback_cb'    => false,
-											'depth'          => 0,
-											'walker'         => new Timefinance_Menu_Walker(),
+											'menu_class'   => 'navbar-nav navigation-links',
+											'container'    => 'menu-container',
+											'container_id' => 'navbarNav',
+											'fallback_cb'  => false,
+											'depth'        => 0,
+											'walker'       => new Timefinance_Menu_Walker(),
 										),
 									);
 								} else {
@@ -96,7 +96,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						</div>
 					</div>
 					<?php
-					if ( ! empty( $cta_button ) ) {
+					if ( ! empty( $cta_button ) || ! empty( $search_icon ) ) {
 						?>
 						<div class="col-auto header-btn">
 							<div class="header-searchbar">
@@ -112,7 +112,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 									</div>
 								</form>
 							</div>
-
 							<?php
 							if ( $cta_button && ! empty( $cta_button['url'] ) && ! empty( $cta_button['title'] ) ) {
 								$link_url    = $cta_button['url'];

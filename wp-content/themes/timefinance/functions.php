@@ -178,5 +178,3 @@ function timefinance_add_page_slug_body_class( $classes ) { //phpcs:ignore
 	return $classes;
 }
 add_filter( 'body_class', 'timefinance_add_page_slug_body_class' );
-
-add_post_type_support( 'page', 'excerpt' );
