@@ -1906,3 +1906,177 @@
         }
     }
 }
+
+//Career details block
+.career-details-block {
+    padding-top: 95px;
+    .career-wrapper {
+        padding-left: 35px;
+        padding-right: 35px;
+        .careers-box {
+            margin-bottom: 138px;
+            .careers-title {
+                font-size: 18px;
+                font-weight: 700;
+                padding-bottom: 16px;
+                margin-bottom: 24px;
+                border-bottom: 2px solid $purple;
+            }
+
+            .careers-content {
+                .careers-area, .careers-salary, .careers-job_type {
+                    margin-bottom: 16px;
+                    span {
+                        font-weight: 700;
+                    }
+                }
+
+                .careers-job_type {
+                    margin-bottom: 0;
+                }
+
+                .btn {
+                    margin-top: 64px;
+                    font-size: 15px;
+                    line-height: 15px;
+                    letter-spacing: normal;
+                    padding: 10px 45px;
+                    font-weight: 700;
+                    background-color: $green;
+                    border-color: $green;
+                    &:hover {
+                        background-color: $purple;
+                        border-color: $purple;
+                    }
+                }
+
+                .text-wrapper {
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+
+    &.style-2 {
+        background-color: $gray;
+        padding: 115px 0;
+        .section-title {
+            margin-bottom: 88px;
+        }
+
+        .accordion-item {
+            @include borderRadius(0);
+            background-color: $gray;
+            border: none;
+            .accordion-header {
+                position: relative;
+                .accordion-button {
+                    background-color: $gray;
+                    border-bottom: 2px solid $purple;
+                    cursor: pointer;
+                    padding: 29px 0;
+                    .careers-title {
+                        color: $purple;
+                        font-size: 18px;
+                        font-weight: 700;
+                    }
+
+                    &::before {
+                        position: absolute;
+                        width: 20px;
+                        height: 20px;
+                        right: 0;
+                        content: "";
+                        background-image: url(../inc/assets/minus-icon.svg);
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        opacity: 0;
+                        transform: rotate(0deg);
+                       
+                    }
+
+                    &::after {
+                        width: 20px;
+                        height: 20px;
+                        content: "";
+                        background-image: url(../inc/assets/plus-icon.svg);
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        transform: rotate(450deg);
+                       
+                    }
+
+                    &:not(.collapsed) {
+                        border-bottom: 2px solid $green;
+                        .faq-title {
+                            color: $green;
+                        }
+
+                        &::after {
+                            background-image: url(../inc/assets/plus-icon.svg);
+                            opacity: 0;
+                            transform: rotate(90deg);
+                        }
+
+                        &::before {
+                            background-image: url(../inc/assets/minus-icon.svg);
+                            opacity: 1;
+                            transform: rotate(180deg);
+                        }
+                    }
+                } 
+            }
+
+            .accordion-collapse {
+                .accordion-body {
+                    padding: 40px 0 56px 0;
+                    .careers-conent {
+                        .careers-area, .careers-salary, .careers-job_type {
+                            margin-bottom: 16px;
+                            span {
+                                font-weight: 700;
+                            }
+                        }
+        
+                        .careers-job_type {
+                            margin-bottom: 0;
+                        }
+        
+                        .btn {
+                            margin-top: 64px;
+                            font-size: 15px;
+                            line-height: 15px;
+                            letter-spacing: normal;
+                            padding: 10px 45px;
+                            font-weight: 700;
+                            background-color: $green;
+                            border-color: $green;
+                            &:hover {
+                                background-color: $purple;
+                                border-color: $purple;
+                            }
+                        }
+
+                        .text-wrapper {
+                            p {
+                                font-size: 16px;
+                                line-height: 23px;
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .btn {
+            margin-top: 88px;
+            margin-top: 64px;
+            font-size: 15px;
+            line-height: 15px;
+            letter-spacing: normal;
+            padding: 10px 45px;
+            font-weight: 700;
+        }
+    }
+}

@@ -17,7 +17,7 @@ $section_id = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : un
 		<?php
 		if ( 'style-1' === $select_style ) {
 			?>
-			<div class="row">
+			<div class="row row-cols-1 justify-content-center">
 				<?php
 				$args = array(
 					'post_type'   => 'careers',
@@ -32,22 +32,25 @@ $section_id = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : un
 					$job_type             = get_field( 'job_type' );
 					$find_out_more_button = get_field( 'find_out_more_button' );
 					?>
-					<div class="col">
+					<div class="col-11 career-wrapper">
 						<div class="careers-box">
 							<div class="careers-title">
 								<?php echo get_the_title(); //phpcs:ignore ?>
 							</div>
-							<div class="careers-conent">
+							<div class="careers-content">
 								<div class="row">
 									<div class="col-5">
 										<div class="careers-area">
-											<?php echo esc_html( 'Area: ' . $area ); ?>
+											<span>Area:</span>
+											<?php echo esc_html( $area ); ?>
 										</div>
 										<div class="careers-salary">
-											<?php echo esc_html( 'Salary: ' . $salary ); ?>
+											<span>Salary:</span>
+											<?php echo esc_html( $salary ); ?>
 										</div>
 										<div class="careers-job_type">
-											<?php echo esc_html( 'Job type: ' . $job_type ); ?>
+											<span>Job type:</span>
+											<?php echo esc_html( $job_type ); ?>
 										</div>
 										<?php
 										if ( $find_out_more_button && ! empty( $find_out_more_button['url'] ) && ! empty( $find_out_more_button['title'] ) ) {
@@ -62,10 +65,8 @@ $section_id = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : un
 										}
 										?>
 									</div>
-									<div class="col-7">
-										<div class="careers-content">
+									<div class="col-7 text-wrapper">
 											<?php echo get_the_content(); //phpcs:ignore ?>
-										</div>
 									</div>
 								</div>
 							</div>
@@ -79,17 +80,17 @@ $section_id = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : un
 			<?php
 		} else {
 			?>
-			<div class="row">
-				<div class="col">
+			<div class="row justify-content-center text-center">
+				<div class="col-9">
 					<?php
 					if ( ! empty( $accordion_title ) ) {
-						echo '<' . esc_attr( $select_tag ) . ' class="section-title h-2">' . esc_html( $accordion_title ) . '</' . esc_attr( $select_tag ) . '>';
+						echo '<' . esc_attr( $select_tag ) . ' class="section-title h-3">' . esc_html( $accordion_title ) . '</' . esc_attr( $select_tag ) . '>';
 					}
 					?>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col">
+			<div class="row justify-content-center">
+				<div class="col-9 career-wrapper">
 					<?php
 					$i = 1;
 					?>
@@ -126,13 +127,16 @@ $section_id = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : un
 												<div class="row">
 													<div class="col-5">
 														<div class="careers-area">
-															<?php echo esc_html( 'Area: ' . $area ); ?>
+															<span>Area:</span>
+															<?php echo esc_html( $area ); ?>
 														</div>
 														<div class="careers-salary">
-															<?php echo esc_html( 'Salary: ' . $salary ); ?>
+															<span>Salary:</span>
+															<?php echo esc_html( $salary ); ?>
 														</div>
 														<div class="careers-job_type">
-															<?php echo esc_html( 'Job type: ' . $job_type ); ?>
+															<span>Job type:</span>
+															<?php echo esc_html( $job_type ); ?>
 														</div>
 														<?php
 														if ( $find_out_more_button && ! empty( $find_out_more_button['url'] ) && ! empty( $find_out_more_button['title'] ) ) {
@@ -147,10 +151,8 @@ $section_id = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : un
 														}
 														?>
 													</div>
-													<div class="col-7">
-														<div class="careers-content">
+													<div class="col-7 text-wrapper">
 															<?php echo get_the_content(); //phpcs:ignore ?>
-														</div>
 													</div>
 												</div>
 											</div>
@@ -168,8 +170,8 @@ $section_id = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : un
 					</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col">
+			<div class="row justify-content-center text-center">
+				<div class="col-9">
 					<?php
 					if ( $all_vacancies_button && ! empty( $all_vacancies_button['url'] ) && ! empty( $all_vacancies_button['title'] ) ) {
 						$link_url    = $all_vacancies_button['url'];
