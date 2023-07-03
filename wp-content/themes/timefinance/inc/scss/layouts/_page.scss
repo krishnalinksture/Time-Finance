@@ -238,6 +238,51 @@
             }
         }
     } 
+
+    &.style-2 {
+        .section-title {
+            color: $purple;
+            font-size: 32px;
+            line-height: 45px;
+        }
+
+        img {
+            height: 201px;
+            margin-bottom: 25px;
+        }
+
+        .usp-title {
+            line-height: 21px;
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+
+        p {
+            color: $purple;
+            width: 80%;
+        }
+    }
+
+    &.bg-green {
+        .section-title {
+            color: $white;
+            font-size: 50px;
+            line-height: 40px;
+        }
+
+        img {
+            height: 160px;
+        }
+
+        .usp-title {
+            color: $white;
+        }
+
+        p {
+            color: $white;
+            width: 70%;
+        }
+    }
 }
 
 //Image bulletpoint groups
@@ -1595,6 +1640,11 @@
 //Our history block
 .our-history-block {
     padding: 120px 0;
+    .history-wrapper {
+        padding-left: 35px;
+        padding-right: 75px;
+    }
+
     .section-title {
         font-size: 32px;
         line-height: 42px;

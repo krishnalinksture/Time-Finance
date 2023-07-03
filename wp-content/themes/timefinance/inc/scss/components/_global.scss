@@ -95,9 +95,15 @@ img {
         }
     }
 }
+
 .bg-grey {
     background-color: $gray !important;
 }
+
+.bg-green {
+    background-color: $green;
+}
+
 .bg-purple {
     background-color: $purple !important;
     .btn {

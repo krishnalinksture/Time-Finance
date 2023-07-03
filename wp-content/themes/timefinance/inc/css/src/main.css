@@ -85,6 +85,9 @@ img {
 .bg-grey {
   background-color: #F5F3F6 !important; }
 
+.bg-green {
+  background-color: #00a98f; }
+
 .bg-purple {
   background-color: #3d1050 !important; }
   .bg-purple .btn {
@@ -560,6 +563,31 @@ header {
       color: #00a98f; }
     .usp-block .container.bg-white p, .usp-block .container.bg-grey p {
       color: #00a98f; }
+  .usp-block.style-2 .section-title {
+    color: #3d1050;
+    font-size: 32px;
+    line-height: 45px; }
+  .usp-block.style-2 img {
+    height: 201px;
+    margin-bottom: 25px; }
+  .usp-block.style-2 .usp-title {
+    line-height: 21px;
+    font-weight: 700;
+    margin-bottom: 25px; }
+  .usp-block.style-2 p {
+    color: #3d1050;
+    width: 80%; }
+  .usp-block.bg-green .section-title {
+    color: #fff;
+    font-size: 50px;
+    line-height: 40px; }
+  .usp-block.bg-green img {
+    height: 160px; }
+  .usp-block.bg-green .usp-title {
+    color: #fff; }
+  .usp-block.bg-green p {
+    color: #fff;
+    width: 70%; }
 
 .image-bulletpoint-groups {
   padding: 140px 0;
@@ -1507,6 +1535,9 @@ header {
 
 .our-history-block {
   padding: 120px 0; }
+  .our-history-block .history-wrapper {
+    padding-left: 35px;
+    padding-right: 75px; }
   .our-history-block .section-title {
     font-size: 32px;
     line-height: 42px;

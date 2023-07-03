@@ -16,7 +16,7 @@ $section_id                     = get_sub_field( 'section_id' ) ? get_sub_field(
 switch ( $select_style ) {
 	case 'style-1':
 		?>
-		<section class="usp-block <?php $select_style . $default_style_background_color; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
+		<section class="usp-block <?php echo $select_style . ' ' . $default_style_background_color; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
 			<div class="container">
 				<div class="row justify-content-center text-center">
 					<div class="col">
@@ -64,13 +64,13 @@ switch ( $select_style ) {
 		break;
 	case 'style-2':
 		?>
-		<section class="usp-block <?php $select_style . $style_2_background_color; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
+		<section class="usp-block <?php echo $select_style . ' ' . $style_2_background_color; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
 			<div class="container">
 				<div class="row justify-content-center text-center">
 					<div class="col">
 						<?php
 						if ( ! empty( $main_title ) ) {
-							echo '<' . esc_attr( $select_tag ) . ' class="section-title h-4">' . esc_html( $main_title ) . '</' . esc_attr( $select_tag ) . '>';
+							echo '<' . esc_attr( $select_tag ) . ' class="section-title h-3">' . esc_html( $main_title ) . '</' . esc_attr( $select_tag ) . '>';
 						}
 						?>
 					</div>
@@ -78,7 +78,7 @@ switch ( $select_style ) {
 				<?php
 				if ( have_rows( 'icon_content' ) ) {
 					?>
-					<div class="row row-cols-1 row-cols-lg-5 row-cols-md-3 justify-content-center text-center">
+					<div class="row row-cols-1 row-cols-lg-3 justify-content-center text-center">
 						<?php
 						while ( have_rows( 'icon_content' ) ) {
 							the_row();
