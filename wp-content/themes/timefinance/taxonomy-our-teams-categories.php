@@ -1,6 +1,6 @@
 <?php
 /**
- * RESOURCES CATEGORY PAGE
+ * OUR TEAM CATEGORY PAGE
  *
  * @package TIMEFINANCE
  */
@@ -46,14 +46,8 @@ $our_team_content    = get_field( 'our_team_content', 'option' );
 			<div class="col-9 our-team-wrapper">
 				<div class="row row-cols-1 row-cols-lg-2">
 					<?php
-					$args = array(
-						'post_type'   => 'our-teams',
-						'post_status' => 'publish',
-						'orderby'     => 'post_date',
-					);
-					$loop = new WP_Query( $args );
-					while ( $loop->have_posts() ) {
-						$loop->the_post();
+					while ( have_posts() ) {
+						the_post();
 						$team_role = get_field( 'role' );
 						$mail      = get_field( 'mail' );
 						$linked_in = get_field( 'linked_in' );

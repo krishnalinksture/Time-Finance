@@ -61,14 +61,8 @@ $regulatory_news_view_all_button    = get_field( 'regulatory_news_view_all_butto
 			<div class="col-9 regulatory-news-wrapper">
 				<div class="row row-cols-1 row-cols-lg-2">
 					<?php
-					$args = array(
-						'post_type'   => 'regulatory-news',
-						'post_status' => 'publish',
-						'orderby'     => 'post_date',
-					);
-					$loop = new WP_Query( $args );
-					while ( $loop->have_posts() ) {
-						$loop->the_post();
+					while ( have_posts() ) {
+						the_post();
 						$read_more   = get_field( 'read_more' );
 						$upload_file = get_field( 'upload_file' );
 						?>
