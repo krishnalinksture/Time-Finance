@@ -1699,3 +1699,195 @@
         }
     }
 }
+
+//Bdt block
+.bdt-block {
+    padding: 125px 0 80px;
+    background-color: $gray;
+    position: relative;
+    overflow: hidden;
+    &::before {
+        content: "";
+        background-color: $purple;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 88vh;
+        width: 100%;
+    }
+
+    .container {
+        position: relative;
+    }
+
+    .section-title {
+        color: $green;
+        line-height: 30px;
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+
+    p {
+        color: $white;
+        font-size: 40px;
+        line-height: 50px;
+        font-weight: 700;
+        width: 94%;
+        margin-bottom: 80px;
+    }
+
+    .cat-filter {
+        font-size: 12px;
+        line-height: 15px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $green;
+        margin-top: 5px;
+        margin-bottom: 25px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font-size: 18px;
+        line-height: 18px;
+        font-weight: 600;
+
+        .bdts-cat-list {
+            margin-bottom: 15px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            a {
+                color: $white;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+
+                &.btn {
+                    &.btn-link {
+                        &:hover {
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .bdt-wrapper {
+        padding-left: 50px;
+        padding-right: 20px;
+        .row {
+            .col {
+                margin-bottom: 20px;
+                overflow: hidden;
+            }
+        }
+        .bdts-box {
+            height: 100%;
+            .bdts-image {
+                height: 272px;
+                overflow: hidden;
+                img {
+                    display: block;
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            
+            .bdts-content {
+                background-color: $white;
+                padding: 23px 28px;
+                height: 100%;
+    
+                .bdts-title {
+                        font-size: 25px;
+                        line-height: 33px;
+                        font-weight: 600;
+                        padding: 0 15px;
+                        margin-bottom: 8px;
+                        color: $purple;
+                        text-decoration: none;
+                }
+
+                .bdts-role {
+                    font-size: 12px;
+                    line-height: 12px;
+                    font-weight: 700;
+                    letter-spacing: 2px;
+                    color: $green;
+                    text-transform: uppercase;
+                    margin-bottom: 16px;
+                }
+                
+                .bdts-category {
+                    font-size: 12px;
+                    line-height: 12px;
+                    font-weight: 700;
+                    letter-spacing: 2px;
+                    color: $green;
+                    text-transform: uppercase;
+                    margin-bottom: 44px;
+                }
+
+                .bdts-location {
+                    line-height: 21px;
+                    font-weight: 600;
+                    margin-bottom: 16px;
+                    &::before {
+                        width: 20px;
+                        height: 20px;
+                        left: 0;
+                        content: "";
+                        background-image: url(../inc/assets/location-icon.svg);
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+                }
+
+                p {
+                    color: $purple;
+                    font-size: 15px;
+                    line-height: 21px;
+                    font-weight: 600;
+                    width: 100%;
+                    margin: 0 auto;
+                }
+
+                .contact {
+                    margin-top: 18px;
+                    a {
+                        font-size: 16px;
+                        color: $green;
+                        letter-spacing: normal;
+                        text-decoration: underline;
+                        display: table !important;
+                        margin: 0 auto;
+                        &:hover {
+                            color: $purple;
+                        }
+                    }
+                }
+    
+                .popup-form {
+                    .btn {
+                        margin-top: 32px;
+                        font-size: 15px;
+                        line-height: 15px;
+                        letter-spacing: normal;
+                        padding: 8px 19px; 
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+}

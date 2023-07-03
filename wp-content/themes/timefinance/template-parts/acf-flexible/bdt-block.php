@@ -15,17 +15,17 @@ $section_id = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : un
 <section class="bdt-block" id="<?php echo $section_id; //phpcs:ignore ?>">
 	<div class="container">
 		<div class="row">
-			<div class="col">
+			<div class="col-9">
 				<?php
 				if ( ! empty( $main_title ) ) {
-					echo '<' . esc_attr( $select_tag ) . ' class="section-title h-2">' . esc_html( $main_title ) . '</' . esc_attr( $select_tag ) . '>';
+					echo '<' . esc_attr( $select_tag ) . ' class="section-title h-4">' . esc_html( $main_title ) . '</' . esc_attr( $select_tag ) . '>';
 				}
 				echo $content; //phpcs:ignore
 				?>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-4">
+			<div class="col-3">
 				<div class="cat-filter">
 					<?php echo esc_html( 'FILTER POSTS:' ); ?>
 				</div>
@@ -60,8 +60,8 @@ $section_id = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : un
 					</li>
 				</ul>
 			</div>
-			<div class="col-8">
-				<div class="row">
+			<div class="col-9 bdt-wrapper">
+				<div class="row row-cols-1 row-cols-lg-2">
 					<?php
 					$args = array(
 						'post_type'   => 'bdts',
@@ -79,12 +79,12 @@ $section_id = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : un
 						$select_form         = get_sub_field( 'select_form' );
 						$form                = ( ! empty( $select_form ) ) ? '[forminator_form id="' . $select_form . '"]' : '';
 						?>
-						<div class="col">
+						<div class="col text-center">
 							<div class="bdts-box">
 								<div class="bdts-image">
 									<?php the_post_thumbnail(); ?>
 								</div>
-								<div class="bdts-conent">
+								<div class="bdts-content">
 									<div class="bdts-title">
 										<?php echo get_the_title(); //phpcs:ignore ?>
 									</div>
@@ -99,32 +99,34 @@ $section_id = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : un
 									<div class="bdts-location">
 										<?php echo esc_html( $location ); ?>
 									</div>
-									<div class="bdts-content">
 										<?php echo get_the_content(); //phpcs:ignore ?>
+									<div class="contact">
+										<?php
+										if ( $phone_number && ! empty( $phone_number['url'] ) && ! empty( $phone_number['title'] ) ) {
+											$phone_number_link_url    = $phone_number['url'];
+											$phone_number_link_title  = $phone_number['title'];
+											$phone_number_link_target = $phone_number['target'] ? $phone_number['target'] : '_self';
+											?>
+											<a href="<?php echo esc_url( $phone_number_link_url ); ?>" class="btn btn-link" target="<?php echo esc_attr( $phone_number_link_target ); ?>">
+												<?php echo esc_html( $phone_number_link_title ); ?>
+											</a>
+											<?php
+										}
+										?>
+										<?php
+										if ( $linked_in && ! empty( $linked_in['url'] ) && ! empty( $linked_in['title'] ) ) {
+											$link_url    = $linked_in['url'];
+											$link_title  = $linked_in['title'];
+											$link_target = $linked_in['target'] ? $linked_in['target'] : '_self';
+											?>
+											<a href="<?php echo esc_url( $link_url ); ?>" class="btn btn-link" target="<?php echo esc_attr( $link_target ); ?>">
+												<?php echo esc_html( $link_title ); ?>
+											</a>
+											<?php
+										}
+										?>
 									</div>
 									<?php
-									if ( $phone_number && ! empty( $phone_number['url'] ) && ! empty( $phone_number['title'] ) ) {
-										$phone_number_link_url    = $phone_number['url'];
-										$phone_number_link_title  = $phone_number['title'];
-										$phone_number_link_target = $phone_number['target'] ? $phone_number['target'] : '_self';
-										?>
-										<a href="<?php echo esc_url( $phone_number_link_url ); ?>" class="btn btn-link" target="<?php echo esc_attr( $phone_number_link_target ); ?>">
-											<?php echo esc_html( $phone_number_link_title ); ?>
-										</a>
-										<?php
-									}
-									?>
-									<?php
-									if ( $linked_in && ! empty( $linked_in['url'] ) && ! empty( $linked_in['title'] ) ) {
-										$link_url    = $linked_in['url'];
-										$link_title  = $linked_in['title'];
-										$link_target = $linked_in['target'] ? $linked_in['target'] : '_self';
-										?>
-										<a href="<?php echo esc_url( $link_url ); ?>" class="btn btn-link" target="<?php echo esc_attr( $link_target ); ?>">
-											<?php echo esc_html( $link_title ); ?>
-										</a>
-										<?php
-									}
 									if ( ! empty( $send_message_button ) ) {
 										?>
 										<div class="popup-form">

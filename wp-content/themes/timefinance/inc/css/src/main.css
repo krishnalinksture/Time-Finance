@@ -1577,6 +1577,144 @@ header {
       margin: 0 auto;
       width: 55%; }
 
+.bdt-block {
+  padding: 125px 0 80px;
+  background-color: #F5F3F6;
+  position: relative;
+  overflow: hidden; }
+  .bdt-block::before {
+    content: "";
+    background-color: #3d1050;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 88vh;
+    width: 100%; }
+  .bdt-block .container {
+    position: relative; }
+  .bdt-block .section-title {
+    color: #00a98f;
+    line-height: 30px;
+    font-weight: 600;
+    margin-bottom: 30px; }
+  .bdt-block p {
+    color: #fff;
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 700;
+    width: 94%;
+    margin-bottom: 80px; }
+  .bdt-block .cat-filter {
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #00a98f;
+    margin-top: 5px;
+    margin-bottom: 25px; }
+  .bdt-block ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 600; }
+    .bdt-block ul .bdts-cat-list {
+      margin-bottom: 15px; }
+      .bdt-block ul .bdts-cat-list:last-child {
+        margin-bottom: 0; }
+      .bdt-block ul .bdts-cat-list a {
+        color: #fff;
+        text-decoration: none; }
+        .bdt-block ul .bdts-cat-list a:hover {
+          text-decoration: underline; }
+        .bdt-block ul .bdts-cat-list a.btn.btn-link:hover {
+          color: #fff; }
+  .bdt-block .bdt-wrapper {
+    padding-left: 50px;
+    padding-right: 20px; }
+    .bdt-block .bdt-wrapper .row .col {
+      margin-bottom: 20px;
+      overflow: hidden; }
+    .bdt-block .bdt-wrapper .bdts-box {
+      height: 100%; }
+      .bdt-block .bdt-wrapper .bdts-box .bdts-image {
+        height: 272px;
+        overflow: hidden; }
+        .bdt-block .bdt-wrapper .bdts-box .bdts-image img {
+          display: block;
+          height: 100%;
+          width: 100%;
+          object-fit: cover; }
+      .bdt-block .bdt-wrapper .bdts-box .bdts-content {
+        background-color: #fff;
+        padding: 23px 28px;
+        height: 100%; }
+        .bdt-block .bdt-wrapper .bdts-box .bdts-content .bdts-title {
+          font-size: 25px;
+          line-height: 33px;
+          font-weight: 600;
+          padding: 0 15px;
+          margin-bottom: 8px;
+          color: #3d1050;
+          text-decoration: none; }
+        .bdt-block .bdt-wrapper .bdts-box .bdts-content .bdts-role {
+          font-size: 12px;
+          line-height: 12px;
+          font-weight: 700;
+          letter-spacing: 2px;
+          color: #00a98f;
+          text-transform: uppercase;
+          margin-bottom: 16px; }
+        .bdt-block .bdt-wrapper .bdts-box .bdts-content .bdts-category {
+          font-size: 12px;
+          line-height: 12px;
+          font-weight: 700;
+          letter-spacing: 2px;
+          color: #00a98f;
+          text-transform: uppercase;
+          margin-bottom: 44px; }
+        .bdt-block .bdt-wrapper .bdts-box .bdts-content .bdts-location {
+          line-height: 21px;
+          font-weight: 600;
+          margin-bottom: 16px; }
+          .bdt-block .bdt-wrapper .bdts-box .bdts-content .bdts-location::before {
+            width: 20px;
+            height: 20px;
+            left: 0;
+            content: "";
+            background-image: url(../inc/assets/location-icon.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            display: inline-block;
+            vertical-align: middle; }
+        .bdt-block .bdt-wrapper .bdts-box .bdts-content p {
+          color: #3d1050;
+          font-size: 15px;
+          line-height: 21px;
+          font-weight: 600;
+          width: 100%;
+          margin: 0 auto; }
+        .bdt-block .bdt-wrapper .bdts-box .bdts-content .contact {
+          margin-top: 18px; }
+          .bdt-block .bdt-wrapper .bdts-box .bdts-content .contact a {
+            font-size: 16px;
+            color: #00a98f;
+            letter-spacing: normal;
+            text-decoration: underline;
+            display: table !important;
+            margin: 0 auto; }
+            .bdt-block .bdt-wrapper .bdts-box .bdts-content .contact a:hover {
+              color: #3d1050; }
+        .bdt-block .bdt-wrapper .bdts-box .bdts-content .popup-form .btn {
+          margin-top: 32px;
+          font-size: 15px;
+          line-height: 15px;
+          letter-spacing: normal;
+          padding: 8px 19px;
+          font-weight: 400; }
+
 footer {
   background-color: #3d1050;
   color: #fff;
