@@ -52,27 +52,15 @@ $find_out_more_button = get_field( 'find_out_more_button', 'option' );
 						echo get_the_excerpt(); //phpcs:ignore
 					} else {
 						$_term = get_queried_object();
-						if( have_rows( 'page_builder', $_term ) ):
-
-							// Loop through rows.
-							while (have_rows( 'page_builder', $_term )) : the_row();
-
-								// Case: Paragraph layout.
-								if( get_row_layout() == 'trustpilot_block' ):
-									$content = get_sub_field('content');
-									echo wp_trim_words( $content, 20 );
-									// Do something...
-
-								// Case: Download layout.
-
-								endif;
-
-							// End loop.
-							endwhile;
-
-						// No value.
-
-						endif;
+						if ( have_rows( 'page_builder', $_term ) ) {
+							while ( have_rows( 'page_builder', $_term ) ) {
+								the_row();
+								if ( get_row_layout() == 'trustpilot_block' ) {
+									$content = get_sub_field( 'content' );
+									echo wp_trim_words( $content, 20 ); //phpcs:ignore
+								}
+							}
+						}
 					}
 					?>
 				</div>

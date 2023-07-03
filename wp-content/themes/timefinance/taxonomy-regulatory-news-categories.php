@@ -1,26 +1,24 @@
 <?php
 /**
- * REGULATORY NEWS BLOCK
+ * REGULATORY NEWS CATEGORY PAGE
  *
  * @package TIMEFINANCE
  */
 
-$main_title = get_sub_field( 'title' );
-$select_tag = get_sub_field( 'select_tag' );
-$content    = get_sub_field( 'content' );
-$view_all_button    = get_sub_field( 'view_all_button' );
-$section_id = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'regulatory-news-block-' );
-
+$regulatory_news_title = get_field( 'regulatory_news_title', 'option' );
+$regulatory_news_select_tag = get_field( 'regulatory_news_select_tag', 'option' );
+$regulatory_news_content    = get_field( 'regulatory_news_content', 'option' );
+$regulatory_news_view_all_button    = get_field( 'regulatory_news_view_all_button', 'option' );
 ?>
-<section class="regulatory-news-block" id="<?php echo $section_id; //phpcs:ignore ?>">
+<section class="regulatory-news-category">
 	<div class="container">
 		<div class="row">
 			<div class="col-9">
 				<?php
-				if ( ! empty( $main_title ) ) {
-					echo '<' . esc_attr( $select_tag ) . ' class="section-title h-4">' . esc_html( $main_title ) . '</' . esc_attr( $select_tag ) . '>';
+				if ( ! empty( $regulatory_news_title ) ) {
+					echo '<' . esc_attr( $regulatory_news_select_tag ) . ' class="section-title h-4">' . esc_html( $regulatory_news_title ) . '</' . esc_attr( $regulatory_news_select_tag ) . '>';
 				}
-				echo $content; //phpcs:ignore
+				echo $regulatory_news_content; //phpcs:ignore
 				?>
 			</div>
 		</div>
@@ -46,10 +44,10 @@ $section_id = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : un
 					?>
 					<li class="regulatory-news-cat-list">
 						<?php
-						if ( $view_all_button && ! empty( $view_all_button['url'] ) && ! empty( $view_all_button['title'] ) ) {
-							$link_url    = $view_all_button['url'];
-							$link_title  = $view_all_button['title'];
-							$link_target = $view_all_button['target'] ? $view_all_button['target'] : '_self';
+						if ( $regulatory_news_view_all_button && ! empty( $regulatory_news_view_all_button['url'] ) && ! empty( $regulatory_news_view_all_button['title'] ) ) {
+							$link_url    = $regulatory_news_view_all_button['url'];
+							$link_title  = $regulatory_news_view_all_button['title'];
+							$link_target = $regulatory_news_view_all_button['target'] ? $regulatory_news_view_all_button['target'] : '_self';
 							?>
 							<a href="<?php echo esc_url( $link_url ); ?>" class="btn btn-link" target="<?php echo esc_attr( $link_target ); ?>">
 								<?php echo esc_html( $link_title ); ?>
