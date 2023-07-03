@@ -42,7 +42,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php
 		if ( ! empty( $header_logo ) || ! empty( $cta_button ) ) {
 			?>
-			
 			<nav class="navbar navbar-expand-xl">
 				<div class="container">
 					<?php
@@ -100,7 +99,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 					if ( ! empty( $cta_button ) ) {
 						?>
 						<div class="col-auto header-btn">
-							<img class="search-icon" width="<?php echo $search_icon['sizes']['timefinance-desktop-width']; ?>" height="<?php echo $search_icon['sizes']['timefinance-desktop-height']; ?>" src="<?php echo $search_icon['url']; ?>" srcset="<?php echo $search_icon['sizes']['timefinance-small-mobile']; ?> 400w, <?php echo $search_icon['sizes']['timefinance-mobile']; ?> 800w, <?php echo $search_icon['sizes']['timefinance-tablet']; ?> 1200w, <?php echo $search_icon['sizes']['timefinance-desktop']; ?> 2000w" sizes="50vw" alt="<?php echo $search_icon_alt; //phpcs:ignore ?>">
+							<div class="header-searchbar">
+								<a href="#search-header" class="header-search-form">
+									<img class="search-icon" width="<?php echo $search_icon['sizes']['timefinance-desktop-width']; ?>" height="<?php echo 	$search_icon['sizes']['timefinance-desktop-height']; ?>" src="<?php echo $search_icon['url']; ?>" srcset="<?php echo $search_icon['sizes']['timefinance-small-mobile']; ?> 400w, <?php echo $search_icon['sizes']['timefinance-mobile']; ?> 800w, <?php echo $search_icon['sizes']['timefinance-tablet']; ?> 1200w, <?php echo $search_icon['sizes']['timefinance-desktop']; ?> 2000w" sizes="50vw" alt="<?php echo $search_icon_alt; //phpcs:ignore ?>">
+								</a>
+								<form id="search-header" method="get" action="<?php echo home_url('/'); //phpcs:ignore ?>" name="search-header" class="mfp-hide search-form-result">
+									<div class="search-form">
+										<input name="s" class="search-input" placeholder="Start typing to search" autocomplete="off" type="text">
+										<button type="submit" class="search-button">
+											<img class="search-icon" width="<?php echo $search_icon['sizes']['timefinance-desktop-width']; ?>" height="<?php echo $search_icon['sizes']['timefinance-desktop-height']; ?>" src="<?php echo $search_icon['url']; ?>" srcset="<?php echo $search_icon['sizes']['timefinance-small-mobile']; ?> 400w, <?php echo $search_icon['sizes']['timefinance-mobile']; ?> 800w, <?php echo $search_icon['sizes']['timefinance-tablet']; ?> 1200w, <?php echo $search_icon['sizes']['timefinance-desktop']; ?> 2000w" sizes="50vw" alt="<?php echo $search_icon_alt; //phpcs:ignore ?>">
+										</button>
+									</div>
+								</form>
+							</div>
+
 							<?php
 							if ( $cta_button && ! empty( $cta_button['url'] ) && ! empty( $cta_button['title'] ) ) {
 								$link_url    = $cta_button['url'];
