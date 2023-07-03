@@ -111,6 +111,57 @@ window.Scrollanimate = () => {
 					}, 600);
 				});
 
+
+				// Search Page And Post.
+				$('.header-search-form').magnificPopup({
+					mainClass: 'mfp-fade timefinance-search-popup',
+					closeOnBgClick: true,
+					preloader: false,
+					// for white background
+					fixedContentPos: false,
+					closeBtnInside: false,
+					callbacks: {
+						open: function () {
+							setTimeout(function () {
+								$('.search-input').focus();
+							}, 500);
+							$('#search-header').parent().addClass('search-popup');
+							if (!isMobile) {
+								$('body').addClass('overflow-hidden');
+								$('body').addClass('width-100');
+								document.onmousewheel = ScrollStop;
+							} else {
+								$('body, html').on('touchmove', function (e) {
+									e.preventDefault();
+								});
+							}
+						},
+						close: function () {
+							if (!isMobile) {
+								$('body').removeClass('overflow-hidden');
+								$('body').removeClass('width-100');
+								$('#search-header input[type=text]').each(function (index) {
+									if (index == 0) {
+										$(this).val('');
+										$("#search-header").find("input:eq(" + index + ")");
+									}
+								});
+								document.onmousewheel = ScrollStart;
+							} else {
+								$('body, html').unbind('touchmove');
+							}
+						}
+					}
+				});
+
+				// Search Again.
+				$('#search-again input[type=text]').each(function (index) {
+					if (index == 0) {
+						$(this).val('');
+						$("#search-again").find("input:eq(" + index + ")");
+					}
+				});
+
 			},
 			finalize: function () {
 				// JavaScript to be fired on all pages, after page specific JS is fired
