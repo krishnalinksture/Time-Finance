@@ -14,17 +14,17 @@ $time_blog_view_all_button    = get_field( 'time_blog_view_all_button', 'option'
 <section class="time-blog-category">
 	<div class="container">
 		<div class="row">
-			<div class="col">
+			<div class="col-9">
 				<?php
 				if ( ! empty( $time_blog_title ) ) {
-					echo '<' . esc_attr( $time_blog_select_tag ) . ' class="section-title h-2">' . esc_html( $time_blog_title ) . '</' . esc_attr( $time_blog_select_tag ) . '>';
+					echo '<' . esc_attr( $time_blog_select_tag ) . ' class="section-title h-4">' . esc_html( $time_blog_title ) . '</' . esc_attr( $time_blog_select_tag ) . '>';
 				}
 				echo $time_blog_content; //phpcs:ignore
 				?>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-4">
+			<div class="col-3">
 				<div class="cat-filter">
 					<?php echo esc_html( 'FILTER POSTS:' ); ?>
 				</div>
@@ -59,19 +59,19 @@ $time_blog_view_all_button    = get_field( 'time_blog_view_all_button', 'option'
 					</li>
 				</ul>
 			</div>
-			<div class="col-8">
-				<div class="row">
+			<div class="col-9 time-blog-wrapper">
+				<div class="row row-cols-1 row-cols-lg-2">
 					<?php
 					while ( have_posts() ) {
 						the_post();
 						$read_more_button = get_field( 'read_more_button' );
 						?>
-						<div class="col">
+						<div class="col text-center">
 							<div class="time-blog-box">
 								<div class="time-blog-image">
 									<?php the_post_thumbnail(); ?>
 								</div>
-								<div class="time-blog-conent">
+								<div class="time-blog-content">
 									<div class="time-blog-date">
 										<?php
 										echo get_the_date( 'm F Y', get_the_ID() );
@@ -79,11 +79,9 @@ $time_blog_view_all_button    = get_field( 'time_blog_view_all_button', 'option'
 										?>
 									</div>
 									<div class="time-blog-title">
-										<?php echo get_the_title(); //phpcs:ignore ?>
+										<a href="<?php echo get_the_permalink(); //phpcs:ignore ?>"><?php echo get_the_title(); //phpcs:ignore ?></a>
 									</div>
-									<div class="time-blog-content">
 										<?php echo get_the_content(); //phpcs:ignore ?>
-									</div>
 									<div class="read-more btn">
 										<a href="<?php echo get_the_permalink(); //phpcs:ignore ?>"><?php echo esc_html( $read_more_button ); ?></a>
 									</div>

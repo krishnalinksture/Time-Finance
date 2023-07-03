@@ -920,7 +920,7 @@
 }
 
 //Press releases block
-.press-releases-block {
+.press-releases-block, .press-releases-category {
     padding: 125px 0 80px;
     background-color: $gray;
     position: relative;
@@ -1330,7 +1330,7 @@
 }
 
 //Time blog block
-.time-blog-block {
+.time-blog-block, .time-blog-category {
     padding: 125px 0 80px;
     background-color: $gray;
     position: relative;
@@ -1484,7 +1484,7 @@
 }
 
 //Case studies custom post block
-.case-studies-custom-post-block {
+.case-studies-custom-post-block, .case-studies-category {
     padding: 125px 0 80px;
     background-color: $gray;
     position: relative;
@@ -1584,7 +1584,7 @@
                 }
             }
             
-            .case-study-conent {
+            .case-study-content {
                 background-color: $white;
                 padding: 35px 24px;
                 height: 100%;

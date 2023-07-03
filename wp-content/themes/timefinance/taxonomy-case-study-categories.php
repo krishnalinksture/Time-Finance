@@ -13,17 +13,17 @@ $case_studies_view_all_button    = get_field( 'case_studies_view_all_button', 'o
 <section class="case-studies-category">
 	<div class="container">
 		<div class="row">
-			<div class="col">
+			<div class="col-9">
 				<?php
 				if ( ! empty( $case_studies_title ) ) {
-					echo '<' . esc_attr( $case_studies_select_tag ) . ' class="section-title h-2">' . esc_html( $case_studies_title ) . '</' . esc_attr( $case_studies_select_tag ) . '>';
+					echo '<' . esc_attr( $case_studies_select_tag ) . ' class="section-title h-4">' . esc_html( $case_studies_title ) . '</' . esc_attr( $case_studies_select_tag ) . '>';
 				}
 				echo $case_studies_content; //phpcs:ignore
 				?>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-4">
+			<div class="col-3">
 				<div class="cat-filter">
 					<?php echo esc_html( 'FILTER POSTS:' ); ?>
 				</div>
@@ -58,19 +58,19 @@ $case_studies_view_all_button    = get_field( 'case_studies_view_all_button', 'o
 					</li>
 				</ul>
 			</div>
-			<div class="col-8">
-				<div class="row">
+			<div class="col-9 case-studies-wrapper">
+				<div class="row row-cols-1 row-cols-lg-2">
 					<?php
 					while ( have_posts() ) {
 						the_post();
 						$read_more_button = get_field( 'read_more_button' );
 						?>
-						<div class="col">
+						<div class="col text-center">
 							<div class="case-study-box">
 								<div class="case-study-image">
 									<?php the_post_thumbnail(); ?>
 								</div>
-								<div class="case-study-conent">
+								<div class="case-study-content">
 									<div class="case-study-date">
 										<?php
 										echo get_the_date( 'm F Y', get_the_ID() );
@@ -78,11 +78,9 @@ $case_studies_view_all_button    = get_field( 'case_studies_view_all_button', 'o
 										?>
 									</div>
 									<div class="case-study-title">
-										<?php echo get_the_title(); //phpcs:ignore ?>
+										<a href="<?php echo get_the_permalink(); //phpcs:ignore ?>"><?php echo get_the_title(); //phpcs:ignore ?></a>
 									</div>
-									<div class="case-study-content">
 										<?php echo get_the_content(); //phpcs:ignore ?>
-									</div>
 									<div class="read-more btn">
 										<a href="<?php echo get_the_permalink(); //phpcs:ignore ?>"><?php echo esc_html( $read_more_button ); ?></a>
 									</div>

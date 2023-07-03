@@ -13,17 +13,17 @@ $press_release_view_all_button    = get_field( 'press_release_view_all_button', 
 <section class="press-releases-category">
 	<div class="container">
 		<div class="row">
-			<div class="col">
+			<div class="col-9">
 				<?php
 				if ( ! empty( $press_release_title ) ) {
-					echo '<' . esc_attr( $press_release_select_tag ) . ' class="section-title h-2">' . esc_html( $press_release_title ) . '</' . esc_attr( $press_release_select_tag ) . '>';
+					echo '<' . esc_attr( $press_release_select_tag ) . ' class="section-title h-4">' . esc_html( $press_release_title ) . '</' . esc_attr( $press_release_select_tag ) . '>';
 				}
 				echo $press_release_content; //phpcs:ignore
 				?>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-4">
+			<div class="col-3">
 				<div class="cat-filter">
 					<?php echo esc_html( 'FILTER POSTS:' ); ?>
 				</div>
@@ -58,19 +58,19 @@ $press_release_view_all_button    = get_field( 'press_release_view_all_button', 
 					</li>
 				</ul>
 			</div>
-			<div class="col-8">
-				<div class="row">
+			<div class="col-9 press-releases-wrapper">
+				<div class="row row-cols-1 row-cols-lg-2">
 					<?php
 					while ( have_posts() ) {
 						the_post();
 						$read_more_button = get_field( 'read_more_button' );
 						?>
-						<div class="col">
+						<div class="col text-center">
 							<div class="press-release-box">
 								<div class="press-release-image">
 									<?php the_post_thumbnail(); ?>
 								</div>
-								<div class="press-release-conent">
+								<div class="press-release-content">
 									<div class="press-release-date">
 										<?php
 										echo get_the_date( 'm F Y', get_the_ID() );
@@ -78,11 +78,9 @@ $press_release_view_all_button    = get_field( 'press_release_view_all_button', 
 										?>
 									</div>
 									<div class="press-release-title">
-										<?php echo get_the_title(); //phpcs:ignore ?>
+										<a href="<?php echo get_the_permalink(); //phpcs:ignore ?>"><?php echo get_the_title(); //phpcs:ignore ?></a>
 									</div>
-									<div class="press-release-content">
 										<?php echo get_the_content(); //phpcs:ignore ?>
-									</div>
 									<div class="read-more btn">
 										<a href="<?php echo get_the_permalink(); //phpcs:ignore ?>"><?php echo esc_html( $read_more_button ); ?></a>
 									</div>

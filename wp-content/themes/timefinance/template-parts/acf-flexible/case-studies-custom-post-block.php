@@ -78,7 +78,7 @@ $section_id = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : un
 								<div class="case-study-image">
 									<?php the_post_thumbnail(); ?>
 								</div>
-								<div class="case-study-conent">
+								<div class="case-study-content">
 									<div class="case-study-date">
 										<?php
 										echo get_the_date( 'm F Y', get_the_ID() );
