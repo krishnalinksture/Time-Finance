@@ -29,12 +29,12 @@ $section_id     = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) 
 					</div>
 					<form>
 						<input type="text" id="amount_value" name="amount_value" value="10,000">
-						<button class="btn submit">submit</button>
+						<button class="btn submit"><?php echo esc_html( 'submit' ); ?></button>
 					</form>
 					<div class="result-title">
 						<?php echo esc_html( $result_title ); ?>
 					</div>
-					<div class="result">£9,000*</div>
+					<div class="result"><?php echo esc_html( '£9,000*' ); ?></div>
 					<div class="approval-title">
 						<?php echo esc_html( $approval_title ); ?>
 					</div>
