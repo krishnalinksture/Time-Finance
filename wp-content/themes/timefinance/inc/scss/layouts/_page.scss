@@ -2184,3 +2184,35 @@
         }
     }
 }
+
+//Content with login
+.content-with-login {
+    padding-top: 88px;
+    padding-bottom: 90px;
+    .login-wrapper {
+        padding: 0 20px;
+        .login-box {
+            background-color: $white;
+            padding: 24px;
+            height: 100%;
+            .section-title {
+                margin-bottom: 17px;
+            }
+
+            p {
+                font-size: 18px;
+                line-height: 25px;
+                font-weight: 600;
+            }
+
+            .btn {
+                margin-top: 56px;
+                font-size: 15px;
+                line-height: 15px;
+                letter-spacing: normal;
+                padding: 11px 49px; 
+                font-weight: 400;
+            }
+        }
+    }
+}

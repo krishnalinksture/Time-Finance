@@ -21,23 +21,25 @@ $section_id              = get_sub_field( 'section_id' ) ? get_sub_field( 'secti
 					$content      = get_sub_field( 'content' );
 					$login_button = get_sub_field( 'login_button' );
 					?>
-					<div class="col">
-						<?php
-						if ( ! empty( $login_title ) ) {
-							echo '<' . esc_attr( $select_tag ) . ' class="section-title">' . esc_html( $login_title ) . '</' . esc_attr( $select_tag ) . '>';
-						}
-						echo $content; //phpcs:ignore
-						if ( $login_button && ! empty( $login_button['url'] ) && ! empty( $login_button['title'] ) ) {
-							$link_url    = $login_button['url'];
-							$link_title  = $login_button['title'];
-							$link_target = $login_button['target'] ? $login_button['target'] : '_self';
-							?>
-							<a href="<?php echo esc_url( $link_url ); ?>" class="btn btn-green" target="<?php echo esc_attr( $link_target ); ?>">
-								<?php echo esc_html( $link_title ); ?>
-							</a>
+					<div class="col login-wrapper">
+						<div class="login-box">
 							<?php
-						}
-						?>
+							if ( ! empty( $login_title ) ) {
+								echo '<' . esc_attr( $select_tag ) . ' class="section-title h-4">' . esc_html( $login_title ) . '</' . esc_attr( $select_tag ) . '>';
+							}
+							echo $content; //phpcs:ignore
+							if ( $login_button && ! empty( $login_button['url'] ) && ! empty( $login_button['title'] ) ) {
+								$link_url    = $login_button['url'];
+								$link_title  = $login_button['title'];
+								$link_target = $login_button['target'] ? $login_button['target'] : '_self';
+								?>
+								<a href="<?php echo esc_url( $link_url ); ?>" class="btn btn-green" target="<?php echo esc_attr( $link_target ); ?>">
+									<?php echo esc_html( $link_title ); ?>
+								</a>
+								<?php
+							}
+							?>
+						</div>
 					</div>
 					<?php
 				}
