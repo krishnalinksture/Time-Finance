@@ -5,26 +5,34 @@
  * @package TIMEFINANCE
  */
 
-$main_title = get_sub_field( 'title' );
-$select_tag = get_sub_field( 'select_tag' );
-$content    = get_sub_field( 'content' );
-$view_all    = get_sub_field( 'view_all' );
-$press_release_view_all_button    = get_field( 'press_release_view_all_button', 'option' );
-$section_id = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'our-team-block-' );
+$main_title                    = get_sub_field( 'title' );
+$select_tag                    = get_sub_field( 'select_tag' );
+$content                       = get_sub_field( 'content' );
+$view_all                      = get_sub_field( 'view_all' );
+$press_release_view_all_button = get_field( 'press_release_view_all_button', 'option' );
+$section_id                    = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'our-team-block-' );
 
 ?>
 <section class="our-team-block" id="<?php echo $section_id; //phpcs:ignore ?>">
 	<div class="container">
-		<div class="row">
-			<div class="col-9">
-				<?php
-				if ( ! empty( $main_title ) ) {
-					echo '<' . esc_attr( $select_tag ) . ' class="section-title h-4">' . esc_html( $main_title ) . '</' . esc_attr( $select_tag ) . '>';
-				}
-				echo $content; //phpcs:ignore
-				?>
+		<?php
+		if ( ! empty( $main_title ) || ! empty( $content ) ) {
+			?>
+			<div class="row">
+				<div class="col-9">
+					<?php
+					if ( ! empty( $main_title ) ) {
+						echo '<' . esc_attr( $select_tag ) . ' class="section-title h-4">' . esc_html( $main_title ) . '</' . esc_attr( $select_tag ) . '>';
+					}
+					if ( ! empty( $content ) ) {
+						echo $content; //phpcs:ignore
+					}
+					?>
+				</div>
 			</div>
-		</div>
+			<?php
+		}
+		?>
 		<div class="row">
 			<div class="col-3">
 				<div class="cat-filter">
@@ -44,10 +52,10 @@ $section_id = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : un
 						</li>
 						<?php
 					}
-					?>
-					<li class="our-team-cat-list">
-						<?php
-						if ( $view_all && ! empty( $view_all['url'] ) && ! empty( $view_all['title'] ) ) {
+					if ( $view_all && ! empty( $view_all['url'] ) && ! empty( $view_all['title'] ) ) {
+						?>
+						<li class="our-team-cat-list">
+							<?php
 							$link_url    = $view_all['url'];
 							$link_title  = $view_all['title'];
 							$link_target = $view_all['target'] ? $view_all['target'] : '_self';
@@ -55,71 +63,93 @@ $section_id = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : un
 							<a href="<?php echo esc_url( $link_url ); ?>" class="btn btn-link" target="<?php echo esc_attr( $link_target ); ?>">
 								<?php echo esc_html( $link_title ); ?>
 							</a>
-							<?php
-						}
-						?>
-					</li>
+						</li>
+						<?php
+					}
+					?>
 				</ul>
 			</div>
-			<div class="col-9 our-team-wrapper">
-				<div class="row row-cols-1 row-cols-lg-2">
-					<?php
-					$args = array(
-						'post_type'   => 'our-teams',
-						'post_status' => 'publish',
-						'orderby'     => 'post_date',
-					);
-					$loop = new WP_Query( $args );
-					while ( $loop->have_posts() ) {
-						$loop->the_post();
-						$team_role = get_field( 'role' );
-						$mail      = get_field( 'mail' );
-						$linked_in = get_field( 'linked_in' );
-						?>
-						<div class="col text-center">
-						<div class="our-team-box">
-							<div class="our-team-image">
-								<?php the_post_thumbnail(); ?>
-							</div>
-								<div class="our-team-conent-box">
-									<div class="our-team-title">
-										<?php echo get_the_title(); //phpcs:ignore ?>
-									</div>
-									<div class="role">
-										<?php echo esc_html( $team_role ); ?>
-									</div>
-										<?php echo get_the_content(); //phpcs:ignore ?>
+			<?php
+			if ( $loop->have_posts() ) {
+				?>
+				<div class="col-9 our-team-wrapper">
+					<div class="row row-cols-1 row-cols-lg-2">
+						<?php
+						$args = array(
+							'post_type'   => 'our-teams',
+							'post_status' => 'publish',
+							'orderby'     => 'post_date',
+						);
+						$loop = new WP_Query( $args );
+						while ( $loop->have_posts() ) {
+							$loop->the_post();
+							$team_role = get_field( 'role' );
+							$mail      = get_field( 'mail' );
+							$linked_in = get_field( 'linked_in' );
+							?>
+							<div class="col text-center">
+								<div class="our-team-box">
 									<?php
-									if ( $mail && ! empty( $mail['url'] ) && ! empty( $mail['title'] ) ) {
-										$link_url    = $mail['url'];
-										$link_title  = $mail['title'];
-										$link_target = $mail['target'] ? $mail['target'] : '_self';
+									if ( get_the_post_thumbnail() ) {
 										?>
-										<a href="<?php echo esc_url( $link_url ); ?>" class="btn btn-link" target="<?php echo esc_attr( $link_target ); ?>">
-											<?php echo esc_html( $link_title ); ?>
-										</a>
-										<?php
-									}
-									if ( $linked_in && ! empty( $linked_in['url'] ) && ! empty( $linked_in['title'] ) ) {
-										$link_url    = $linked_in['url'];
-										$link_title  = $linked_in['title'];
-										$link_target = $linked_in['target'] ? $linked_in['target'] : '_self';
-										?>
-										<a href="<?php echo esc_url( $link_url ); ?>" class="btn btn-link" target="<?php echo esc_attr( $link_target ); ?>">
-											<?php echo esc_html( $link_title ); ?>
-										</a>
+										<div class="our-team-image">
+											<?php the_post_thumbnail(); ?>
+										</div>
 										<?php
 									}
 									?>
+									<div class="our-team-conent-box">
+										<?php
+										if ( get_the_title() ) {
+											?>
+											<div class="our-team-title">
+												<?php echo get_the_title(); //phpcs:ignore ?>
+											</div>
+											<?php
+										}
+										if ( ! empty( $team_role ) ) {
+											?>
+											<div class="role">
+												<?php echo esc_html( $team_role ); ?>
+											</div>
+											<?php
+										}
+										if ( get_the_content() ) {
+											echo get_the_content(); //phpcs:ignore
+										}
+										if ( $mail && ! empty( $mail['url'] ) && ! empty( $mail['title'] ) ) {
+											$link_url    = $mail['url'];
+											$link_title  = $mail['title'];
+											$link_target = $mail['target'] ? $mail['target'] : '_self';
+											?>
+											<a href="<?php echo esc_url( $link_url ); ?>" class="btn btn-link" target="<?php echo esc_attr( $link_target ); ?>">
+												<?php echo esc_html( $link_title ); ?>
+											</a>
+											<?php
+										}
+										if ( $linked_in && ! empty( $linked_in['url'] ) && ! empty( $linked_in['title'] ) ) {
+											$link_url    = $linked_in['url'];
+											$link_title  = $linked_in['title'];
+											$link_target = $linked_in['target'] ? $linked_in['target'] : '_self';
+											?>
+											<a href="<?php echo esc_url( $link_url ); ?>" class="btn btn-link" target="<?php echo esc_attr( $link_target ); ?>">
+												<?php echo esc_html( $link_title ); ?>
+											</a>
+											<?php
+										}
+										?>
+									</div>
 								</div>
 							</div>
-						</div>
-						<?php
-						wp_reset_postdata();
-					}
-					?>
+							<?php
+							wp_reset_postdata();
+						}
+						?>
+					</div>
 				</div>
-			</div>
+				<?php
+			}
+			?>
 		</div>
 	</div>
 </section>
