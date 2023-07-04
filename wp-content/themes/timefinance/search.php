@@ -98,7 +98,7 @@ if ( have_posts() ) {
 								?>
 								<div class="search-read-more">
 									<?php $page_url = get_permalink(); ?>
-									<a href="<?php echo esc_url( $page_url ); ?>"><button class="btn btn-secondary"><?php echo esc_html( $find_out_more_button ); ?></button></a>
+									<a href="<?php echo esc_url( $page_url ); ?>"><button class="btn btn-green"><?php echo esc_html( $find_out_more_button ); ?></button></a>
 								</div>
 								<?php
 							}

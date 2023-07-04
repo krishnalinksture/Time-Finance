@@ -5,12 +5,12 @@
  * @package TIMEFINANCE
  */
 
-$resources_title = get_field( 'resources_title', 'option' );
-$resources_select_tag = get_field( 'resources_select_tag', 'option' );
-$resources_content    = get_field( 'resources_content', 'option' );
-$resources_view_all_button    = get_field( 'resources_view_all_button', 'option' );
-$resources_select_form    = get_field( 'resources_select_form', 'option' );
-$resources_form             = ( ! empty( $resources_select_form ) ) ? '[forminator_form id="' . $resources_select_form . '"]' : '';
+$resources_title           = get_field( 'resources_title', 'option' );
+$resources_select_tag      = get_field( 'resources_select_tag', 'option' );
+$resources_content         = get_field( 'resources_content', 'option' );
+$resources_view_all_button = get_field( 'resources_view_all_button', 'option' );
+$resources_select_form     = get_field( 'resources_select_form', 'option' );
+$resources_form            = ( ! empty( $resources_select_form ) ) ? '[forminator_form id="' . $resources_select_form . '"]' : '';
 ?>
 <section class="resources-category">
 	<div class="container">
