@@ -1748,6 +1748,10 @@
                     border-color: $green;
                     padding: 20px 45px;
                     vertical-align: middle;
+                    &:hover {
+                        background-color: $dark-gray;
+                        border-color: $dark-gray;
+                    }
                 }
             }
 
@@ -2138,6 +2142,33 @@
             letter-spacing: normal;
             padding: 11px 34px;
             font-weight: 700;
+        }
+    }
+}
+
+//Content with logo
+.content-with-logo {
+    padding: 206px 0 182px;
+    .section-title {
+        line-height: 30px;
+        color: $green;
+        font-weight: 400;
+        margin-bottom: 40px;
+    }
+
+    p {
+        font-size: 40px;
+        line-height: 50px;
+        font-weight: 700;
+        width: 84%;
+    }
+
+    .logo-icon {
+        margin-top: 30px;
+        margin-bottom: 18px;
+        img {
+            width: 131px;
+            height: auto;
         }
     }
 }

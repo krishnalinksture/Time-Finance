@@ -1632,6 +1632,9 @@ header {
           border-color: #00a98f;
           padding: 20px 45px;
           vertical-align: middle; }
+          .calculator-block .calculator-wrapper .content form .btn:hover {
+            background-color: #4D4D4D;
+            border-color: #4D4D4D; }
       .calculator-block .calculator-wrapper .content .result-title {
         font-size: 18px;
         line-height: 18px;
@@ -1908,6 +1911,25 @@ header {
       letter-spacing: normal;
       padding: 11px 34px;
       font-weight: 700; }
+
+.content-with-logo {
+  padding: 206px 0 182px; }
+  .content-with-logo .section-title {
+    line-height: 30px;
+    color: #00a98f;
+    font-weight: 400;
+    margin-bottom: 40px; }
+  .content-with-logo p {
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 700;
+    width: 84%; }
+  .content-with-logo .logo-icon {
+    margin-top: 30px;
+    margin-bottom: 18px; }
+    .content-with-logo .logo-icon img {
+      width: 131px;
+      height: auto; }
 
 footer {
   background-color: #3d1050;

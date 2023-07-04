@@ -105,7 +105,7 @@ window.Scrollanimate = () => {
 					replace_value = value.replace( ',', ''),
 					calculate_value = ( parseInt( replace_value ) * 9 ) / 10,
 					calculatorform = $(".calculator-block").find(".result");
-					calculatorform.text( '£' + calculate_value + '*' );
+					calculatorform.text( '£' + calculate_value.toLocaleString() + '*' );
 					setTimeout(function(){
 						$('.calculator-block input[name="amount_value"]').val(value);
 					}, 600);
