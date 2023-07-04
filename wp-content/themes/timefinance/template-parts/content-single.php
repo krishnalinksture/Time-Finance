@@ -66,14 +66,9 @@ $image_alt           = ( isset( $image['alt'] ) && ! empty( $image['alt'] ) ) ? 
 				if ( have_rows( 'page_builder', $_term ) ) {
 					while ( have_rows( 'page_builder', $_term ) ) {
 						the_row();
-						$layout_section = get_row_layout();
-						switch ( $layout_section ) {
-							case 'content_block':
-								$template_name = str_replace( '_', '-', $layout_section );
-								get_template_part( 'template-parts/acf-flexible/' . $template_name );
-								break;
-							default:
-								break;
+						if ( get_row_layout() === 'content_block' ) {
+							$content = get_sub_field( 'content' );
+							echo $content; //phpcs:ignore
 						}
 					}
 				}
