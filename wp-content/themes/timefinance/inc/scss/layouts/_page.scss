@@ -1695,23 +1695,84 @@
 //Calculator block
 .calculator-block {
     padding: 150px 0;
-    .content-wrapper {
-        background-color: bisque;
-        .section-title {
-            font-size: 32px;
-            line-height: 32px;
-            margin-bottom: 30px;
-            color: $white;
-        }
+    .calculator-wrapper {
+        padding-left: 45px;
+        padding-right: 45px;
+        .content {
+            background-color: $purple;
+            padding: 96px 0 134px;
+            .section-title {
+                font-size: 32px;
+                line-height: 32px;
+                margin-bottom: 30px;
+                color: $white;
+            }
+    
+            p {
+                font-size: 18px;
+                line-height: 25px;
+                font-weight: 600;
+                color: $white;
+                margin: 0 auto 83px;
+                width: 60%;
+            }
 
-        p {
-            font-size: 18px;
-            line-height: 25px;
-            font-weight: 600;
-            color: $white;
-            margin: 0 auto;
-            width: 55%;
-        }
+            .value-title {
+                font-size: 18px;
+                line-height: 18px;
+                color: $white;
+                margin-bottom: 48px;
+            }
+
+            form {
+                margin-bottom: 64px;
+                @include flex;
+                @include justify-content(center);
+                input {
+                    font-size: 22px;
+                    line-height: 22px;
+                    color: $purple;
+                    @include borderRadius(50px 0 0 50px);
+                    border: none;
+                    padding: 17px 55px 17px 35px;
+                    vertical-align: middle
+
+                }
+
+                .btn {
+                    @include borderRadius(0 50px 50px 0);
+                    font-size: 18px;
+                    letter-spacing: normal;
+                    font-weight: 400;
+                    background-color: $green;
+                    border-color: $green;
+                    padding: 20px 45px;
+                    vertical-align: middle;
+                }
+            }
+
+            .result-title {
+                font-size: 18px;
+                line-height: 18px;
+                color: $white;
+                margin-bottom: 20px;
+            }
+
+            .result {
+                font-size: 91px;
+                line-height: 91px;
+                font-weight: 600;
+                color: $white;
+                margin-bottom: 7px;
+            }
+
+            .approval-title {
+                font-size: 12px;
+                line-height: 12px;
+                font-weight: 600;
+                color: $white;
+            }
+        } 
     }
 }
 
