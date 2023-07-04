@@ -74,13 +74,6 @@ img {
 
 .bg-white {
   background-color: #fff; }
-  .bg-white .btn-green {
-    background-color: #00a98f;
-    border-color: #00a98f; }
-    .bg-white .btn-green:hover {
-      background-color: transparent;
-      color: #3d1050;
-      border-color: #3d1050; }
 
 .bg-grey {
   background-color: #F5F3F6 !important; }
@@ -197,6 +190,13 @@ button.mfp-close {
     .btn.btn-link:hover {
       color: #121212;
       text-decoration: underline; }
+  .btn.btn-green {
+    background-color: #00a98f;
+    border-color: #00a98f; }
+    .btn.btn-green:hover {
+      background-color: transparent;
+      color: #3d1050;
+      border-color: #3d1050; }
 
 h1,
 h2,
@@ -514,6 +514,13 @@ header {
 
 .trustpilot-block.bg-purple p {
   color: #fff; }
+
+.trustpilot-block.style-2 {
+  padding-top: 125px; }
+  .trustpilot-block.style-2 .content {
+    padding: 0 10px; }
+    .trustpilot-block.style-2 .content .section-title {
+      margin-bottom: 27px; }
 
 .featured-content-image {
   padding: 150px 0 270px 0; }
@@ -1924,12 +1931,13 @@ header {
     line-height: 50px;
     font-weight: 700;
     width: 84%; }
-  .content-with-logo .logo-icon {
-    margin-top: 30px;
-    margin-bottom: 18px; }
-    .content-with-logo .logo-icon img {
-      width: 131px;
-      height: auto; }
+  .content-with-logo .logo-wrapper {
+    padding: 30px 0; }
+    .content-with-logo .logo-wrapper .logo-icon {
+      margin-bottom: 48px; }
+      .content-with-logo .logo-wrapper .logo-icon img {
+        width: 142px;
+        height: auto; }
 
 footer {
   background-color: #3d1050;

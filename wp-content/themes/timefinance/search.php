@@ -65,43 +65,49 @@ if ( have_posts() ) {
 						<?php
 						while ( have_posts() ) {
 							the_post();
-							if ( get_the_title() ) {
-								?>
-								<div class="search-title">
-									<?php echo get_the_title(); //phpcs:ignore?>
-								</div>
+							?>
+							<div class="search-data">
 								<?php
-							}
-							$_term = get_queried_object();
-							if ( get_the_excerpt() || have_rows( 'page_builder', $_term ) ) {
-								?>
-								<div class="search-content">
+								if ( get_the_title() ) {
+									?>
+									<div class="search-title">
+										<?php echo get_the_title(); //phpcs:ignore?>
+									</div>
 									<?php
-									if ( get_the_excerpt() ) {
-										echo wp_trim_words( get_the_excerpt(), 19, ' ' ); //phpcs:ignore
-									} else {
-										if ( have_rows( 'page_builder', $_term ) ) {
-											while ( have_rows( 'page_builder', $_term ) ) {
-												the_row();
-												if ( get_row_layout() === 'trustpilot_block' ) {
-													$content = get_sub_field( 'content' );
-													echo wp_trim_words( $content, 19, ' ' ); //phpcs:ignore
+								}
+								$_term = get_queried_object();
+								if ( get_the_excerpt() || have_rows( 'page_builder', $_term ) ) {
+									?>
+									<div class="search-content">
+										<?php
+										if ( get_the_excerpt() ) {
+											echo wp_trim_words( get_the_excerpt(), 19, ' ' ); //phpcs:ignore
+										} else {
+											if ( have_rows( 'page_builder', $_term ) ) {
+												while ( have_rows( 'page_builder', $_term ) ) {
+													the_row();
+													if ( get_row_layout() === 'trustpilot_block' ) {
+														$content = get_sub_field( 'content' );
+														echo wp_trim_words( $content, 19, ' ' ); //phpcs:ignore
+													}
 												}
 											}
 										}
-									}
+										?>
+									</div>
+									<?php
+								}
+								if ( ! empty( $find_out_more_button ) ) {
 									?>
-								</div>
-								<?php
-							}
-							if ( ! empty( $find_out_more_button ) ) {
+									<div class="search-read-more">
+										<?php $page_url = get_permalink(); ?>
+										<a href="<?php echo esc_url( $page_url ); ?>"><button class="btn btn-green"><?php echo esc_html( $find_out_more_button ); ?></button></a>
+									</div>
+									<?php
+								}
 								?>
-								<div class="search-read-more">
-									<?php $page_url = get_permalink(); ?>
-									<a href="<?php echo esc_url( $page_url ); ?>"><button class="btn btn-green"><?php echo esc_html( $find_out_more_button ); ?></button></a>
-								</div>
-								<?php
-							}
+							</div>
+							<?php
 							wp_reset_postdata();
 						}
 						?>

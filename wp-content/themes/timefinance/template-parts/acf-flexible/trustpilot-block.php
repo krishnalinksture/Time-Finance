@@ -38,7 +38,7 @@ switch ( $select_style ) {
 		<section class="trustpilot-block <?php echo $select_background_color . ' ' . $select_style; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
 			<div class="container">
 				<div class="row justify-content-start">
-					<div class="col-10 content">
+					<div class="col-9 content">
 						<?php
 						if ( ! empty( $main_title ) ) {
 							echo '<' . esc_attr( $select_tag ) . ' class="section-title h-4">' . esc_html( $main_title ) . '</' . esc_attr( $select_tag ) . '>';

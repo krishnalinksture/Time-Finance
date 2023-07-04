@@ -22,7 +22,7 @@ $section_id = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : un
 				echo $content; //phpcs:ignore
 				?>
 			</div>
-			<div class="col-6">
+			<div class="col-6 logo-wrapper">
 				<div class="row row-cols-1 row-cols-lg-3 text-center align-items-center">
 					<?php
 					if ( have_rows( 'logos' ) ) {
