@@ -1961,6 +1961,22 @@ header {
         letter-spacing: normal;
         padding: 11px 49px;
         font-weight: 400; }
+        .content-with-login .login-wrapper .login-box .btn:hover {
+          background-color: #025244;
+          border-color: #025244;
+          color: #fff; }
+
+.time-blog-detail .time-blog-detail-wrapper {
+  padding: 0;
+  overflow: hidden; }
+  .time-blog-detail .time-blog-detail-wrapper .image-box {
+    height: 450px;
+    width: 100%;
+    display: inline-block; }
+    .time-blog-detail .time-blog-detail-wrapper .image-box img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover; }
 
 footer {
   background-color: #3d1050;

@@ -2212,6 +2212,29 @@
                 letter-spacing: normal;
                 padding: 11px 49px; 
                 font-weight: 400;
+                &:hover{
+                    background-color: $dark-green;
+                    border-color: $dark-green;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+//Blog detail
+.time-blog-detail {
+    .time-blog-detail-wrapper {
+        padding: 0;
+        overflow: hidden;
+        .image-box {
+            height: 450px;
+            width: 100%;
+            display: inline-block;
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
             }
         }
     }

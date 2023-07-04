@@ -10,24 +10,26 @@ $all_articles_button = get_field( 'all_articles_button' );
 $image_alt           = ( isset( $image['alt'] ) && ! empty( $image['alt'] ) ) ? $image['alt'] : ( isset( $image['title'] ) && ! empty( $image['title'] ) ? $image['title'] : '' );
 
 ?>
-<section class="time-blog-detail">
+<section class="time-blog-detail bg-grey">
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col">
-				<?php
-				if ( $image ) {
-					?>
-					<img class="time-blog-images" width="<?php echo $image['sizes']['timefinance-desktop-width']; ?>" height="<?php echo 	$image['sizes']['timefinance-desktop-height']; ?>" src="<?php echo $image['url']; ?>" srcset="<?php echo $image['sizes']['timefinance-small-mobile']; ?> 400w, <?php echo $image['sizes']['timefinance-mobile']; ?> 800w, <?php echo $image['sizes']['timefinance-tablet']; ?> 1200w, <?php echo $image['sizes']['timefinance-desktop']; ?> 2000w" sizes="50vw" alt="<?php echo $image_alt; //phpcs:ignore ?>">
+			<div class="col time-blog-detail-wrapper">
+				<div class="image-box">
 					<?php
-				} else {
-					the_post_thumbnail(); //phpcs:ignore
-				}
-				?>
+					if ( $image ) {
+						?>
+						<img class="time-blog-images" width="<?php echo $image['sizes']['timefinance-desktop-width']; ?>" height="<?php echo 	$image['sizes']['timefinance-desktop-height']; ?>" src="<?php echo $image['url']; ?>" srcset="<?php echo $image['sizes']['timefinance-small-mobile']; ?> 400w, <?php echo $image['sizes']['timefinance-mobile']; ?> 800w, <?php echo $image['sizes']['timefinance-tablet']; ?> 1200w, <?php echo $image['sizes']['timefinance-desktop']; ?> 2000w" sizes="50vw" alt="<?php echo $image_alt; //phpcs:ignore ?>">
+						<?php
+					} else {
+						the_post_thumbnail(); //phpcs:ignore
+					}
+					?>
+				</div>
 			</div>
 		</div>
 	</div>
 	<div class="container">
-		<div class="row">
+		<div class="row justify-content-center">
 			<div class="col-4">
 				<div class="time-blog-detail-conent sticky-top">
 					<div class="time-blog-date">
