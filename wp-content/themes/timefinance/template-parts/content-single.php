@@ -30,8 +30,8 @@ $image_alt           = ( isset( $image['alt'] ) && ! empty( $image['alt'] ) ) ? 
 	</div>
 	<div class="container">
 		<div class="row justify-content-center">
-			<div class="col-4">
-				<div class="time-blog-detail-conent sticky-top">
+			<div class="col-4 left">
+				<div class="time-blog-detail-content sticky-top">
 					<div class="time-blog-date">
 						<?php
 						echo get_the_date( 'm F Y', get_the_ID() );
@@ -60,7 +60,7 @@ $image_alt           = ( isset( $image['alt'] ) && ! empty( $image['alt'] ) ) ? 
 					?>
 				</div>
 			</div>
-			<div class="col-8">
+			<div class="col-8 right">
 				<?php
 				$_term = get_queried_object();
 				if ( have_rows( 'page_builder', $_term ) ) {
