@@ -1804,7 +1804,7 @@ header {
             transform: rotate(450deg); }
           .career-details-block.style-2 .accordion-item .accordion-header .accordion-button:not(.collapsed) {
             border-bottom: 2px solid #00a98f; }
-            .career-details-block.style-2 .accordion-item .accordion-header .accordion-button:not(.collapsed) .faq-title {
+            .career-details-block.style-2 .accordion-item .accordion-header .accordion-button:not(.collapsed) .careers-title {
               color: #00a98f; }
             .career-details-block.style-2 .accordion-item .accordion-header .accordion-button:not(.collapsed)::after {
               background-image: url(../inc/assets/plus-icon.svg);
@@ -1815,36 +1815,38 @@ header {
               opacity: 1;
               transform: rotate(180deg); }
       .career-details-block.style-2 .accordion-item .accordion-collapse .accordion-body {
-        padding: 40px 0 56px 0; }
+        padding: 54px 0 108px 0;
+        border-bottom: 2px solid #3d1050; }
         .career-details-block.style-2 .accordion-item .accordion-collapse .accordion-body .careers-conent .careers-area, .career-details-block.style-2 .accordion-item .accordion-collapse .accordion-body .careers-conent .careers-salary, .career-details-block.style-2 .accordion-item .accordion-collapse .accordion-body .careers-conent .careers-job_type {
+          font-size: 16px;
+          line-height: 23px;
+          font-weight: 600;
           margin-bottom: 16px; }
           .career-details-block.style-2 .accordion-item .accordion-collapse .accordion-body .careers-conent .careers-area span, .career-details-block.style-2 .accordion-item .accordion-collapse .accordion-body .careers-conent .careers-salary span, .career-details-block.style-2 .accordion-item .accordion-collapse .accordion-body .careers-conent .careers-job_type span {
             font-weight: 700; }
         .career-details-block.style-2 .accordion-item .accordion-collapse .accordion-body .careers-conent .careers-job_type {
           margin-bottom: 0; }
         .career-details-block.style-2 .accordion-item .accordion-collapse .accordion-body .careers-conent .btn {
-          margin-top: 64px;
+          margin-top: 54px;
           font-size: 15px;
           line-height: 15px;
           letter-spacing: normal;
-          padding: 10px 45px;
-          font-weight: 700;
-          background-color: #00a98f;
-          border-color: #00a98f; }
-          .career-details-block.style-2 .accordion-item .accordion-collapse .accordion-body .careers-conent .btn:hover {
-            background-color: #3d1050;
-            border-color: #3d1050; }
-        .career-details-block.style-2 .accordion-item .accordion-collapse .accordion-body .careers-conent .text-wrapper p {
-          font-size: 16px;
-          line-height: 23px;
-          font-weight: 600; }
+          padding: 11px 32px;
+          font-weight: 700; }
+        .career-details-block.style-2 .accordion-item .accordion-collapse .accordion-body .careers-conent .text-wrapper {
+          padding-top: 23px;
+          padding-left: 0;
+          margin-left: -5px; }
+          .career-details-block.style-2 .accordion-item .accordion-collapse .accordion-body .careers-conent .text-wrapper p {
+            font-size: 16px;
+            line-height: 23px;
+            font-weight: 600; }
     .career-details-block.style-2 .btn {
       margin-top: 88px;
-      margin-top: 64px;
       font-size: 15px;
       line-height: 15px;
       letter-spacing: normal;
-      padding: 10px 45px;
+      padding: 11px 34px;
       font-weight: 700; }
 
 footer {

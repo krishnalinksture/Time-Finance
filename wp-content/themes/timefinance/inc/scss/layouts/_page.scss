@@ -2008,7 +2008,7 @@
 
                     &:not(.collapsed) {
                         border-bottom: 2px solid $green;
-                        .faq-title {
+                        .careers-title {
                             color: $green;
                         }
 
@@ -2029,9 +2029,13 @@
 
             .accordion-collapse {
                 .accordion-body {
-                    padding: 40px 0 56px 0;
+                    padding: 54px 0 108px 0;
+                    border-bottom: 2px solid $purple;
                     .careers-conent {
                         .careers-area, .careers-salary, .careers-job_type {
+                            font-size: 16px;
+                            line-height: 23px;
+                            font-weight: 600;
                             margin-bottom: 16px;
                             span {
                                 font-weight: 700;
@@ -2043,21 +2047,18 @@
                         }
         
                         .btn {
-                            margin-top: 64px;
+                            margin-top: 54px;
                             font-size: 15px;
                             line-height: 15px;
                             letter-spacing: normal;
-                            padding: 10px 45px;
+                            padding: 11px 32px;
                             font-weight: 700;
-                            background-color: $green;
-                            border-color: $green;
-                            &:hover {
-                                background-color: $purple;
-                                border-color: $purple;
-                            }
                         }
 
                         .text-wrapper {
+                            padding-top: 23px;
+                            padding-left: 0;
+                            margin-left: -5px;
                             p {
                                 font-size: 16px;
                                 line-height: 23px;
@@ -2071,11 +2072,10 @@
 
         .btn {
             margin-top: 88px;
-            margin-top: 64px;
             font-size: 15px;
             line-height: 15px;
             letter-spacing: normal;
-            padding: 10px 45px;
+            padding: 11px 34px;
             font-weight: 700;
         }
     }
