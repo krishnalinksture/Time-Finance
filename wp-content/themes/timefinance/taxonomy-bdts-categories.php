@@ -81,100 +81,124 @@ if ( ! empty( $bdt_title ) || ! empty( $bdt_content ) || ! empty( $bdt_view_all_
 								$location            = get_field( 'location' );
 								$phone_number        = get_field( 'phone_number' );
 								$linked_in           = get_field( 'linked_in' );
-								$select_form         = get_sub_field( 'select_form' );
+								$select_form         = get_field( 'bdt_select_form', 'option' );
 								$form                = ( ! empty( $select_form ) ) ? '[forminator_form id="' . $select_form . '"]' : '';
-								?>
-								<div class="col text-center">
-									<div class="bdts-box">
-										<div class="bdts-image">
-											<?php the_post_thumbnail(); ?>
-										</div>
-										<div class="bdts-content">
-											<div class="bdts-title">
-												<?php echo get_the_title(); //phpcs:ignore ?>
-											</div>
-											<div class="bdts-role">
-												<?php echo esc_html( $bdt_role ); ?>
-											</div>
-											<div class="bdts-category">
-												<?php
-												echo wp_strip_all_tags( get_the_term_list( get_the_ID(), 'bdts-categories', ' ', ', ', ' ' ) ); //phpcs:ignore
-												?>
-											</div>
-											<div class="bdts-location">
-												<?php echo esc_html( $location ); ?>
-											</div>
-											<?php echo get_the_content(); //phpcs:ignore ?>
-											<div class="contact">
-												<?php
-												if ( $phone_number && ! empty( $phone_number['url'] ) && ! empty( $phone_number['title'] ) ) {
-													$phone_number_link_url    = $phone_number['url'];
-													$phone_number_link_title  = $phone_number['title'];
-													$phone_number_link_target = $phone_number['target'] ? $phone_number['target'] : '_self';
-													?>
-													<a href="<?php echo esc_url( $phone_number_link_url ); ?>" class="btn btn-link" target="<?php echo esc_attr( $phone_number_link_target ); ?>">
-														<?php echo esc_html( $phone_number_link_title ); ?>
-													</a>
-													<?php
-												}
-												if ( $linked_in && ! empty( $linked_in['url'] ) && ! empty( $linked_in['title'] ) ) {
-													$link_url    = $linked_in['url'];
-													$link_title  = $linked_in['title'];
-													$link_target = $linked_in['target'] ? $linked_in['target'] : '_self';
-													?>
-													<a href="<?php echo esc_url( $link_url ); ?>" class="btn btn-link" target="<?php echo esc_attr( $link_target ); ?>">
-														<?php echo esc_html( $link_title ); ?>
-													</a>
-													<?php
-												}
-												?>
-											</div>
+								if ( ! empty( get_the_title() ) || ! empty( $bdt_role ) || ! empty( $location ) || ! empty( $phone_number ) || ! empty( $linked_in ) || ! empty( $send_message_button ) || ! empty( $select_form ) ) {
+									?>
+									<div class="col text-center">
+										<div class="bdts-box">
 											<?php
-											if ( ! empty( $send_message_button ) ) {
+											if ( get_the_post_thumbnail() ) {
 												?>
-												<div class="popup-form">
-													<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#bdtModal">
-														<?php echo esc_html( $send_message_button ); ?>
-													</button>
-													<div class="modal fade" id="bdtModal" tabindex="-1" aria-labelledby="bdtModalLabel" aria-hidden="true">
-														<div class="modal-dialog">
-															<div class="modal-content">
-															<div class="modal-header">
-																<h5 class="modal-title" id="bdtModalLabel"><?php echo esc_html( 'Enquiry form' ); ?></h5>
-																<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-															</div>
-																<div class="modal-body">
-																	<?php
-																	if ( ! empty( $select_form ) ) {
-																		?>
-																		<div class="row justify-content-center">
-																			<div class="col">
-																				<?php
-																				if ( ! empty( $select_form ) ) {
-																					?>
-																					<div class="bdt-popup-form">
-																						<?php echo do_shortcode( $form ); ?>
-																					</div>
-																					<?php
-																				}
-																				?>
-																			</div>
-																		</div>
-																		<?php
-																	}
-																	?>
-																</div>
-															</div>
-														</div>
-													</div>
+												<div class="bdts-image">
+													<?php the_post_thumbnail(); ?>
 												</div>
 												<?php
 											}
 											?>
+											<div class="bdts-content">
+												<?php
+												if ( ! empty( get_the_title() ) ) {
+													?>
+													<div class="bdts-title">
+														<?php echo get_the_title(); //phpcs:ignore ?>
+													</div>
+													<?php
+												}
+												if ( ! empty( $bdt_role ) ) {
+													?>
+													<div class="bdts-role">
+														<?php echo esc_html( $bdt_role ); ?>
+													</div>
+													<?php
+												}
+												?>
+												<div class="bdts-category">
+													<?php echo wp_strip_all_tags( get_the_term_list( get_the_ID(), 'bdts-categories', ' ', ', ', ' ' ) ); //phpcs:ignore ?>
+												</div>
+												<?php
+												if ( ! empty( $location ) ) {
+													?>
+													<div class="bdts-location">
+														<?php echo esc_html( $location ); ?>
+													</div>
+													<?php
+												}
+												echo get_the_content(); //phpcs:ignore
+												if ( ! empty( $phone_number ) || ! empty( $linked_in ) ) {
+													?>
+													<div class="contact">
+														<?php
+														if ( $phone_number && ! empty( $phone_number['url'] ) && ! empty( $phone_number['title'] ) ) {
+															$phone_number_link_url    = $phone_number['url'];
+															$phone_number_link_title  = $phone_number['title'];
+															$phone_number_link_target = $phone_number['target'] ? $phone_number['target'] : '_self';
+															?>
+															<a href="<?php echo esc_url( $phone_number_link_url ); ?>" class="btn btn-link" target="<?php echo esc_attr( $phone_number_link_target ); ?>">
+																<?php echo esc_html( $phone_number_link_title ); ?>
+															</a>
+															<?php
+														}
+														if ( $linked_in && ! empty( $linked_in['url'] ) && ! empty( $linked_in['title'] ) ) {
+															$link_url    = $linked_in['url'];
+															$link_title  = $linked_in['title'];
+															$link_target = $linked_in['target'] ? $linked_in['target'] : '_self';
+															?>
+															<a href="<?php echo esc_url( $link_url ); ?>" class="btn btn-link" target="<?php echo esc_attr( $link_target ); ?>">
+																<?php echo esc_html( $link_title ); ?>
+															</a>
+															<?php
+														}
+														?>
+													</div>
+													<?php
+												}
+												if ( ! empty( $send_message_button ) ) {
+													?>
+													<div class="popup-form">
+														<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#bdtModal">
+															<?php echo esc_html( $send_message_button ); ?>
+														</button>
+														<div class="modal fade" id="bdtModal" tabindex="-1" aria-labelledby="bdtModalLabel" aria-hidden="true">
+															<div class="modal-dialog">
+																<div class="modal-content">
+																<div class="modal-header">
+																	<h5 class="modal-title" id="bdtModalLabel"><?php echo esc_html( 'Enquiry form' ); ?></h5>
+																	<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+																</div>
+																	<div class="modal-body">
+																		<?php
+																		if ( ! empty( $select_form ) ) {
+																			?>
+																			<div class="row justify-content-center">
+																				<div class="col">
+																					<?php
+																					if ( ! empty( $select_form ) ) {
+																						?>
+																						<div class="bdt-popup-form">
+																							<?php echo do_shortcode( $form ); ?>
+																						</div>
+																						<?php
+																					}
+																					?>
+																				</div>
+																			</div>
+																			<?php
+																		}
+																		?>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<?php
+												}
+												?>
+											</div>
 										</div>
 									</div>
-								</div>
-								<?php
+									<?php
+								}
 								wp_reset_postdata();
 							}
 							?>

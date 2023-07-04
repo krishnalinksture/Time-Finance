@@ -76,9 +76,15 @@ $section_id = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : un
 						?>
 						<div class="col text-center">
 							<div class="regulatory-news-box">
-								<div class="regulatory-news-image">
-									<?php the_post_thumbnail(); ?>
-								</div>
+								<?php
+								if ( get_the_post_thumbnail() ) {
+									?>
+									<div class="regulatory-news-image">
+										<?php the_post_thumbnail(); ?>
+									</div>
+									<?php
+								}
+								?>
 								<div class="regulatory-news-content">
 									<div class="regulatory-news-date">
 										<?php

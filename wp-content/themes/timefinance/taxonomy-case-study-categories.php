@@ -74,9 +74,15 @@ if ( ! empty( $case_studies_title ) || ! empty( $case_studies_content ) || ! emp
 								?>
 								<div class="col text-center">
 									<div class="case-study-box">
-										<div class="case-study-image">
-											<?php the_post_thumbnail(); ?>
-										</div>
+										<?php
+										if ( get_the_post_thumbnail() ) {
+											?>
+											<div class="case-study-image">
+												<?php the_post_thumbnail(); ?>
+											</div>
+											<?php
+										}
+										?>
 										<div class="case-study-content">
 											<div class="case-study-date">
 												<?php
@@ -84,13 +90,25 @@ if ( ! empty( $case_studies_title ) || ! empty( $case_studies_content ) || ! emp
 												echo wp_strip_all_tags( get_the_term_list( get_the_ID(), 'case-study-categories', ' ', ', ', ' ' ) ); //phpcs:ignore
 												?>
 											</div>
-											<div class="case-study-title">
-												<a href="<?php echo get_the_permalink(); //phpcs:ignore ?>"><?php echo get_the_title(); //phpcs:ignore ?></a>
-											</div>
-												<?php echo get_the_content(); //phpcs:ignore ?>
-											<div class="read-more btn">
-												<a href="<?php echo get_the_permalink(); //phpcs:ignore ?>"><?php echo esc_html( $read_more_button ); ?></a>
-											</div>
+											<?php
+											if ( get_the_title() ) {
+												?>
+												<div class="case-study-title">
+													<a href="<?php echo get_the_permalink(); //phpcs:ignore ?>"><?php echo get_the_title(); //phpcs:ignore ?></a>
+												</div>
+												<?php
+											}
+											if ( get_the_content() ) {
+												echo get_the_content(); //phpcs:ignore
+											}
+											if ( ! empty( $read_more_button ) ) {
+												?>
+												<div class="read-more btn">
+													<a href="<?php echo get_the_permalink(); //phpcs:ignore ?>"><?php echo esc_html( $read_more_button ); ?></a>
+												</div>
+												<?php
+											}
+											?>
 										</div>
 									</div>
 								</div>

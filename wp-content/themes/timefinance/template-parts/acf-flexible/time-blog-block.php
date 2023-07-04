@@ -5,25 +5,33 @@
  * @package TIMEFINANCE
  */
 
-$main_title = get_sub_field( 'title' );
-$select_tag = get_sub_field( 'select_tag' );
-$content    = get_sub_field( 'content' );
-$time_blog_view_all_button    = get_field( 'time_blog_view_all_button', 'option' );
-$section_id = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'time-blog-block-' );
+$main_title                = get_sub_field( 'title' );
+$select_tag                = get_sub_field( 'select_tag' );
+$content                   = get_sub_field( 'content' );
+$time_blog_view_all_button = get_field( 'time_blog_view_all_button', 'option' );
+$section_id                = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'time-blog-block-' );
 
 ?>
 <section class="time-blog-block" id="<?php echo $section_id; //phpcs:ignore ?>">
 	<div class="container">
-		<div class="row">
-			<div class="col-9">
-				<?php
-				if ( ! empty( $main_title ) ) {
-					echo '<' . esc_attr( $select_tag ) . ' class="section-title h-4">' . esc_html( $main_title ) . '</' . esc_attr( $select_tag ) . '>';
-				}
-				echo $content; //phpcs:ignore
-				?>
+		<?php
+		if ( ! empty( $main_title ) || ! empty( $content ) ) {
+			?>
+			<div class="row">
+				<div class="col-9">
+					<?php
+					if ( ! empty( $main_title ) ) {
+						echo '<' . esc_attr( $select_tag ) . ' class="section-title h-4">' . esc_html( $main_title ) . '</' . esc_attr( $select_tag ) . '>';
+					}
+					if ( ! empty( $content ) ) {
+						echo $content; //phpcs:ignore
+					}
+					?>
+				</div>
 			</div>
-		</div>
+			<?php
+		}
+		?>
 		<div class="row">
 			<div class="col-3">
 				<div class="cat-filter">
@@ -39,14 +47,14 @@ $section_id = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : un
 					foreach ( $categories as $category ) {
 						?>
 						<li class="time-blog-cat-list">
-							<a href="<?php echo get_category_link( $category->term_id ); //phpcs:ignore ?>"><?php echo $category->name; ?> </a>
+							<a href="<?php echo get_category_link( $category->term_id ); //phpcs:ignore ?>"><?php echo $category->name; ?></a>
 						</li>
 						<?php
 					}
-					?>
-					<li class="time-blog-cat-list">
-						<?php
-						if ( $time_blog_view_all_button && ! empty( $time_blog_view_all_button['url'] ) && ! empty( $time_blog_view_all_button['title'] ) ) {
+					if ( $time_blog_view_all_button && ! empty( $time_blog_view_all_button['url'] ) && ! empty( $time_blog_view_all_button['title'] ) ) {
+						?>
+						<li class="time-blog-cat-list">
+							<?php
 							$link_url    = $time_blog_view_all_button['url'];
 							$link_title  = $time_blog_view_all_button['title'];
 							$link_target = $time_blog_view_all_button['target'] ? $time_blog_view_all_button['target'] : '_self';
@@ -54,10 +62,10 @@ $section_id = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : un
 							<a href="<?php echo esc_url( $link_url ); ?>" class="btn btn-link" target="<?php echo esc_attr( $link_target ); ?>">
 								<?php echo esc_html( $link_title ); ?>
 							</a>
-							<?php
-						}
-						?>
-					</li>
+						</li>
+						<?php
+					}
+					?>
 				</ul>
 			</div>
 			<div class="col-9 time-blog-wrapper">
