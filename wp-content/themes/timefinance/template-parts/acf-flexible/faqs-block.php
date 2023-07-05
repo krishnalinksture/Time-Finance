@@ -12,7 +12,7 @@ $section_id = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : un
 
 if ( ! empty( $main_title ) || have_rows( 'faqs' ) ) {
 	?>
-	<section class="faq-block <?php echo $select_background_color; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
+	<section class="faq-block" id="<?php echo $section_id; //phpcs:ignore ?>">
 		<div class="container">
 			<?php
 			if ( ! empty( $main_title ) ) {
