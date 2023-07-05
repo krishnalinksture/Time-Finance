@@ -2337,15 +2337,28 @@ header {
     -webkit-justify-content: center;
     justify-content: center; }
     .timefinance-search-popup .search-form-result .search-form {
+      padding-bottom: 10px;
       border-bottom: 2px solid #fff;
-      opacity: 0.2; }
+      opacity: 0.2;
+      width: 44%;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: justify;
+      -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+      -webkit-justify-content: space-between;
+      justify-content: space-between; }
       .timefinance-search-popup .search-form-result .search-form .search-input {
         background-color: #3d1050;
         color: #fff;
         font-size: 40px;
         line-height: 40px;
         border: none;
-        font-weight: 700; }
+        font-weight: 700;
+        vertical-align: middle; }
         .timefinance-search-popup .search-form-result .search-form .search-input:focus-visible {
           outline-offset: 0px;
           box-shadow: none;
@@ -2353,11 +2366,12 @@ header {
           outline: 0; }
       .timefinance-search-popup .search-form-result .search-form .search-button {
         background-color: transparent;
-        border: none; }
+        border: none;
+        vertical-align: middle; }
         .timefinance-search-popup .search-form-result .search-form .search-button img {
           filter: brightness(0) invert(1);
-          height: 30px;
-          width: 30px; }
+          height: 31px;
+          width: 31px; }
 
 footer {
   background-color: #3d1050;
