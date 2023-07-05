@@ -58,6 +58,7 @@ if ( have_rows( 'page_builder', $_term ) ) {
 			case 'content_with_logo':
 			case 'content_with_login':
 			case 'image_with_content':
+			case 'client_custom_post_block':
 				$template_name = str_replace( '_', '-', $layout_section );
 				get_template_part( 'template-parts/acf-flexible/' . $template_name );
 				break;
