@@ -158,7 +158,7 @@ switch ( $select_style ) {
 											?>
 											<div id="<?php echo $section_id; ?>-<?php echo $i; ?>" class="accordion-collapse collapse" aria-labelledby="heading-<?php echo $i; ?>" data-bs-parent="#accordion-<?php echo $section_id; //phpcs:ignore ?>">
 												<div class="accordion-body">
-													<div class="careers-conent">
+													<div class="careers-content">
 														<div class="row">
 															<?php
 															if ( ! empty( $area ) || ! empty( $salary ) || ! empty( $job_type ) || ! empty( $find_out_more_button ) ) {
