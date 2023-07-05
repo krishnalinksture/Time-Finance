@@ -69,71 +69,65 @@ if ( ! empty( $main_title ) || ! empty( $content ) || ! empty( $press_release_vi
 						?>
 					</ul>
 				</div>
-				<?php
-				if ( $loop->have_posts() ) {
-					?>
-					<div class="col-9 press-releases-wrapper">
-						<div class="row row-cols-1 row-cols-lg-2">
-							<?php
-							$args = array(
-								'post_type'   => 'press-release',
-								'post_status' => 'publish',
-								'orderby'     => 'post_date',
-							);
-							$loop = new WP_Query( $args );
-							while ( $loop->have_posts() ) {
-								$loop->the_post();
-								$read_more_button = get_field( 'read_more_button' );
-								?>
-								<div class="col text-center">
-									<div class="press-release-box">
+				<div class="col-9 press-releases-wrapper">
+					<div class="row row-cols-1 row-cols-lg-2">
+						<?php
+						$args = array(
+							'post_type'   => 'press-release',
+							'post_status' => 'publish',
+							'orderby'     => 'post_date',
+						);
+						$loop = new WP_Query( $args );
+						while ( $loop->have_posts() ) {
+							$loop->the_post();
+							$read_more_button = get_field( 'read_more_button' );
+							?>
+							<div class="col text-center">
+								<div class="press-release-box">
+									<?php
+									if ( get_the_post_thumbnail() ) {
+										?>
+										<div class="press-release-image">
+											<?php the_post_thumbnail(); ?>
+										</div>
+										<?php
+									}
+									?>
+									<div class="press-release-content">
+										<div class="press-release-date">
+											<?php
+											echo get_the_date( 'm F Y', get_the_ID() );
+											echo wp_strip_all_tags( get_the_term_list( get_the_ID(), 'press-release-categories', ' ', ', ', ' ' ) ); //phpcs:ignore
+											?>
+										</div>
 										<?php
 										if ( get_the_post_thumbnail() ) {
 											?>
-											<div class="press-release-image">
-												<?php the_post_thumbnail(); ?>
+											<div class="press-release-title">
+												<a href="<?php echo get_the_permalink(); //phpcs:ignore ?>"><?php echo get_the_title(); //phpcs:ignore ?></a>
+											</div>
+											<?php
+										}
+										if ( get_the_content() ) {
+											echo get_the_content(); //phpcs:ignore
+										}
+										if ( ! empty( $read_more_button ) ) {
+											?>
+											<div class="read-more btn">
+												<a href="<?php echo get_the_permalink(); //phpcs:ignore ?>"><?php echo esc_html( $read_more_button ); ?></a>
 											</div>
 											<?php
 										}
 										?>
-										<div class="press-release-content">
-											<div class="press-release-date">
-												<?php
-												echo get_the_date( 'm F Y', get_the_ID() );
-												echo wp_strip_all_tags( get_the_term_list( get_the_ID(), 'press-release-categories', ' ', ', ', ' ' ) ); //phpcs:ignore
-												?>
-											</div>
-											<?php
-											if ( get_the_post_thumbnail() ) {
-												?>
-												<div class="press-release-title">
-													<a href="<?php echo get_the_permalink(); //phpcs:ignore ?>"><?php echo get_the_title(); //phpcs:ignore ?></a>
-												</div>
-												<?php
-											}
-											if ( get_the_content() ) {
-												echo get_the_content(); //phpcs:ignore
-											}
-											if ( ! empty( $read_more_button ) ) {
-												?>
-												<div class="read-more btn">
-													<a href="<?php echo get_the_permalink(); //phpcs:ignore ?>"><?php echo esc_html( $read_more_button ); ?></a>
-												</div>
-												<?php
-											}
-											?>
-										</div>
 									</div>
 								</div>
-								<?php
-								wp_reset_postdata();
-							}
-							?>
-						</div>
+							</div>
+							<?php
+							wp_reset_postdata();
+						}
+						?>
 					</div>
-					<?php
-				}
-				?>
+				</div>
 			</div>
 		</div>
 	</section>
