@@ -46,22 +46,24 @@ if ( have_posts() ) {
 	<section class="search-block">
 		<div class="container">
 			<div class="row justify-content-center">
-				<div class="col-9">
-					<form id="search-again" method="get" action="<?php echo home_url('/'); //phpcs:ignore ?>" name="search-header" class="search-form-result">
-						<input type="text" name="s" class="form-control" placeholder="Search again..." aria-label="Search again" aria-describedby="basic-addon2" autocomplete="off">
-						<div class="input-group-append">
-							<button class="btn btn-secondary" type="submit">
-								<?php echo esc_html( $search_again ); ?>
-							</button>
-						</div>
-					</form>
+				<div class="col-9 search-wrapper">
+					<div class="search-box">
+						<form id="search-again" method="get" action="<?php echo home_url('/'); //phpcs:ignore ?>" name="search-header" class="search-form-result">
+							<input type="text" name="s" class="form-control" placeholder="Search again..." aria-label="Search again" aria-describedby="basic-addon2" autocomplete="off">
+							<div class="input-group-append">
+								<button class="btn btn-green" type="submit">
+									<?php echo esc_html( $search_again ); ?>
+								</button>
+							</div>
+						</form>
+					</div>
 				</div>
 			</div>
 			<?php
 			if ( have_posts() ) {
 				?>
 				<div class="row justify-content-center">
-					<div class="col-9">
+					<div class="col-9 search-wrapper">
 						<?php
 						while ( have_posts() ) {
 							the_post();

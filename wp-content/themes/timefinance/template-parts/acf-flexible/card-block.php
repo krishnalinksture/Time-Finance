@@ -27,7 +27,7 @@ if ( ! empty( $main_title ) || have_rows( 'card_content' ) ) {
 			}
 			if ( have_rows( 'card_content' ) ) {
 				?>
-				<div class="row row-cols-1 row-cols-lg-4">
+				<div class="row">
 					<?php
 					while ( have_rows( 'card_content' ) ) {
 						the_row();

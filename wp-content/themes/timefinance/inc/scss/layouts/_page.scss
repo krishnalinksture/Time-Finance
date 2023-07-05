@@ -429,7 +429,7 @@
 
 //card-block
 .card-block {
-    padding: 110px 0 160px 0;
+    padding-top: 110px;
     .container {
         padding: 0 20px;
         .section-title {
@@ -2610,5 +2610,133 @@
         font-size: 15px;
         line-height: 15px;
         margin-bottom: 20px;
+    }
+}
+
+//Search block
+.search-block {
+    padding-top: 60px;
+    padding-bottom: 150px;
+    .search-wrapper {
+        padding: 0 25px;
+    }
+    .search-box {
+        margin-bottom: 60px;
+        form {
+            @include flex;
+            .form-control {
+                color: $dark-green;
+                font-size: 15px;
+                font-weight: 600;
+                padding: 13px 24px;
+                @include borderRadius (50px 0 0 50px);
+                border: 2px solid $green;
+                border-right: none;
+                &:focus {
+                    box-shadow: none;
+                    }
+
+                &::-webkit-input-placeholder {
+                    color: $green;
+                    opacity: 1;
+                }
+                
+                &:-ms-input-placeholder {
+                    color: $green;
+                    opacity: 1;
+                }
+                
+                &::placeholder {
+                    color: $green;
+                    opacity: 1;
+                }
+            }
+
+            .input-group-append {
+                .btn-green {
+                    font-size: 15px;
+                    font-weight: 600;
+                    padding: 14px 48px;
+                    @include borderRadius (0 50px 50px 0);
+                    border-left: none;
+                    &:hover {
+                        color: $white;
+                        background-color: $dark-green;
+                        border-color: $green;
+                    }
+                }
+            }
+        }
+    }
+
+    .search-data {
+            padding-top: 32px;
+            padding-bottom: 48px;
+            border-bottom: 2px solid $purple;
+            .search-title {
+                font-size: 25px;
+                line-height: 33px;
+                font-weight: 700;
+                margin-bottom: 16px;
+            }
+
+            .search-content {
+                font-size: 16px;
+                line-height: 23px;
+                margin-bottom: 66px;
+            }
+
+            .search-read-more {
+                .btn {
+                    font-size: 15px;
+                    line-height: 15px;
+                    letter-spacing: normal;
+                    padding: 8px 33px;
+                    font-weight: 400;
+                    &:hover {
+                        color: $white;
+                        background-color: $very-dark-gray;
+                        border-color: $very-dark-gray;
+                    }
+                }
+            } 
+    }
+}
+
+//Timefinance search popup
+.timefinance-search-popup {
+    background-color: $purple;
+    .search-form-result {
+        @include flex;
+        @include justify-content(center);
+        .search-form {
+            border-bottom: 2px solid $white;
+            opacity: 0.2;
+            .search-input {
+                background-color: $purple;
+                color: $white;
+                font-size: 40px;
+                line-height: 40px;
+                border: none;
+                font-weight: 700;
+
+                &:focus-visible {
+                    outline-offset: 0px;
+                    box-shadow: none;
+                    border: 0;
+                    outline: 0;
+                }
+            }
+
+            .search-button {
+                background-color: transparent;
+                border: none;
+                img {
+                    filter: brightness(0) invert(1);
+                    height: 30px;
+                    width: 30px;
+                }
+            }
+        }
     }
 }
