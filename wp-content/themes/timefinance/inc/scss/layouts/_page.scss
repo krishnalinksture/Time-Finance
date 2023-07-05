@@ -1999,14 +1999,14 @@
             }
 
             .careers-content {
-                .careers-area, .careers-salary, .careers-job_type {
+                .careers-area, .careers-salary, .careers-job-type {
                     margin-bottom: 16px;
                     span {
                         font-weight: 700;
                     }
                 }
 
-                .careers-job_type {
+                .careers-job-type {
                     margin-bottom: 0;
                 }
 
@@ -2106,8 +2106,8 @@
                 .accordion-body {
                     padding: 54px 0 108px 0;
                     border-bottom: 2px solid $purple;
-                    .careers-conent {
-                        .careers-area, .careers-salary, .careers-job_type {
+                    .careers-content {
+                        .careers-area, .careers-salary, .careers-job-type {
                             font-size: 16px;
                             line-height: 23px;
                             font-weight: 600;
@@ -2117,7 +2117,7 @@
                             }
                         }
         
-                        .careers-job_type {
+                        .careers-job-type {
                             margin-bottom: 0;
                         }
         
@@ -2570,6 +2570,9 @@
                 a {
                     text-decoration: none;
                     border-bottom: 1px solid $green;
+                    &:hover {
+                        border-color: $purple;
+                    }
                 }
             }
 
@@ -2582,5 +2585,30 @@
                 font-weight: 400;
             }
         }
+    }
+}
+
+//Search-banner
+.search-banner {
+    padding: 120px 0;
+    .section-title {
+        color: $green;
+        font-weight: 400;
+        margin-bottom: 22px;
+    }
+
+    .seach-word {
+        color: $white;
+        font-size: 55px;
+        line-height: 63px;
+        font-weight: 700;
+        margin-bottom: 7px;
+    }
+
+    .word-count {
+        color: $white;
+        font-size: 15px;
+        line-height: 15px;
+        margin-bottom: 20px;
     }
 }

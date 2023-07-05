@@ -1810,11 +1810,11 @@ header {
         padding-bottom: 16px;
         margin-bottom: 24px;
         border-bottom: 2px solid #3d1050; }
-      .career-details-block .career-wrapper .careers-box .careers-content .careers-area, .career-details-block .career-wrapper .careers-box .careers-content .careers-salary, .career-details-block .career-wrapper .careers-box .careers-content .careers-job_type {
+      .career-details-block .career-wrapper .careers-box .careers-content .careers-area, .career-details-block .career-wrapper .careers-box .careers-content .careers-salary, .career-details-block .career-wrapper .careers-box .careers-content .careers-job-type {
         margin-bottom: 16px; }
-        .career-details-block .career-wrapper .careers-box .careers-content .careers-area span, .career-details-block .career-wrapper .careers-box .careers-content .careers-salary span, .career-details-block .career-wrapper .careers-box .careers-content .careers-job_type span {
+        .career-details-block .career-wrapper .careers-box .careers-content .careers-area span, .career-details-block .career-wrapper .careers-box .careers-content .careers-salary span, .career-details-block .career-wrapper .careers-box .careers-content .careers-job-type span {
           font-weight: 700; }
-      .career-details-block .career-wrapper .careers-box .careers-content .careers-job_type {
+      .career-details-block .career-wrapper .careers-box .careers-content .careers-job-type {
         margin-bottom: 0; }
       .career-details-block .career-wrapper .careers-box .careers-content .btn {
         margin-top: 64px;
@@ -1887,27 +1887,27 @@ header {
       .career-details-block.style-2 .accordion-item .accordion-collapse .accordion-body {
         padding: 54px 0 108px 0;
         border-bottom: 2px solid #3d1050; }
-        .career-details-block.style-2 .accordion-item .accordion-collapse .accordion-body .careers-conent .careers-area, .career-details-block.style-2 .accordion-item .accordion-collapse .accordion-body .careers-conent .careers-salary, .career-details-block.style-2 .accordion-item .accordion-collapse .accordion-body .careers-conent .careers-job_type {
+        .career-details-block.style-2 .accordion-item .accordion-collapse .accordion-body .careers-content .careers-area, .career-details-block.style-2 .accordion-item .accordion-collapse .accordion-body .careers-content .careers-salary, .career-details-block.style-2 .accordion-item .accordion-collapse .accordion-body .careers-content .careers-job-type {
           font-size: 16px;
           line-height: 23px;
           font-weight: 600;
           margin-bottom: 16px; }
-          .career-details-block.style-2 .accordion-item .accordion-collapse .accordion-body .careers-conent .careers-area span, .career-details-block.style-2 .accordion-item .accordion-collapse .accordion-body .careers-conent .careers-salary span, .career-details-block.style-2 .accordion-item .accordion-collapse .accordion-body .careers-conent .careers-job_type span {
+          .career-details-block.style-2 .accordion-item .accordion-collapse .accordion-body .careers-content .careers-area span, .career-details-block.style-2 .accordion-item .accordion-collapse .accordion-body .careers-content .careers-salary span, .career-details-block.style-2 .accordion-item .accordion-collapse .accordion-body .careers-content .careers-job-type span {
             font-weight: 700; }
-        .career-details-block.style-2 .accordion-item .accordion-collapse .accordion-body .careers-conent .careers-job_type {
+        .career-details-block.style-2 .accordion-item .accordion-collapse .accordion-body .careers-content .careers-job-type {
           margin-bottom: 0; }
-        .career-details-block.style-2 .accordion-item .accordion-collapse .accordion-body .careers-conent .btn {
+        .career-details-block.style-2 .accordion-item .accordion-collapse .accordion-body .careers-content .btn {
           margin-top: 54px;
           font-size: 15px;
           line-height: 15px;
           letter-spacing: normal;
           padding: 11px 32px;
           font-weight: 700; }
-        .career-details-block.style-2 .accordion-item .accordion-collapse .accordion-body .careers-conent .text-wrapper {
+        .career-details-block.style-2 .accordion-item .accordion-collapse .accordion-body .careers-content .text-wrapper {
           padding-top: 23px;
           padding-left: 0;
           margin-left: -5px; }
-          .career-details-block.style-2 .accordion-item .accordion-collapse .accordion-body .careers-conent .text-wrapper p {
+          .career-details-block.style-2 .accordion-item .accordion-collapse .accordion-body .careers-content .text-wrapper p {
             font-size: 16px;
             line-height: 23px;
             font-weight: 600; }
@@ -2223,6 +2223,8 @@ header {
         .image-with-content .image-content-box .login-content p a {
           text-decoration: none;
           border-bottom: 1px solid #00a98f; }
+          .image-with-content .image-content-box .login-content p a:hover {
+            border-color: #3d1050; }
       .image-with-content .image-content-box .login-content .btn {
         margin-top: 35px;
         font-size: 15px;
@@ -2230,6 +2232,24 @@ header {
         letter-spacing: normal;
         padding: 7px 18px;
         font-weight: 400; }
+
+.search-banner {
+  padding: 120px 0; }
+  .search-banner .section-title {
+    color: #00a98f;
+    font-weight: 400;
+    margin-bottom: 22px; }
+  .search-banner .seach-word {
+    color: #fff;
+    font-size: 55px;
+    line-height: 63px;
+    font-weight: 700;
+    margin-bottom: 7px; }
+  .search-banner .word-count {
+    color: #fff;
+    font-size: 15px;
+    line-height: 15px;
+    margin-bottom: 20px; }
 
 footer {
   background-color: #3d1050;

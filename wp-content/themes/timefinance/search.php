@@ -15,11 +15,11 @@ if ( ! empty( $banner_title ) || ! empty( $search_again ) || ! empty( $find_out_
 	?>
 	<section class="search-banner bg-purple">
 		<div class="container">
-			<div class="row">
+			<div class="row justify-content-center text-center">
 				<div class="col">
 					<?php
 					if ( ! empty( $banner_title ) ) {
-						echo '<' . esc_attr( $search_select_tag ) . ' class="section-title">' . esc_html( $banner_title ) . '</' . esc_attr( $search_select_tag ) . '>';
+						echo '<' . esc_attr( $search_select_tag ) . ' class="section-title h-4">' . esc_html( $banner_title ) . '</' . esc_attr( $search_select_tag ) . '>';
 					}
 					if ( is_search() ) {
 						?>
@@ -45,8 +45,8 @@ if ( have_posts() ) {
 	?>
 	<section class="search-block">
 		<div class="container">
-			<div class="row">
-				<div class="col">
+			<div class="row justify-content-center">
+				<div class="col-9">
 					<form id="search-again" method="get" action="<?php echo home_url('/'); //phpcs:ignore ?>" name="search-header" class="search-form-result">
 						<input type="text" name="s" class="form-control" placeholder="Search again..." aria-label="Search again" aria-describedby="basic-addon2" autocomplete="off">
 						<div class="input-group-append">
@@ -60,8 +60,8 @@ if ( have_posts() ) {
 			<?php
 			if ( have_posts() ) {
 				?>
-				<div class="row">
-					<div class="col">
+				<div class="row justify-content-center">
+					<div class="col-9">
 						<?php
 						while ( have_posts() ) {
 							the_post();
