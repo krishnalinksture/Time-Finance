@@ -5,10 +5,11 @@
  * @package TIMEFINANCE
  */
 
-$history_content = get_sub_field( 'history_content' );
-$main_title      = get_sub_field( 'main_title' );
-$select_tag      = get_sub_field( 'select_tag' );
-$section_id      = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'our-history-block-' );
+$history_content  = get_sub_field( 'history_content' );
+$main_title       = get_sub_field( 'main_title' );
+$select_tag       = get_sub_field( 'select_tag' );
+$background_color = get_sub_field( 'select_background_color' );
+$section_id       = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'our-history-block-' );
 
 if ( ! empty( $main_title ) || have_rows( 'history_content' ) ) {
 	?>
