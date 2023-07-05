@@ -134,7 +134,6 @@ switch ( $select_style ) {
 							$loop = new WP_Query( $args );
 							while ( $loop->have_posts() ) {
 								$loop->the_post();
-								the_row();
 								$area                 = get_field( 'area' );
 								$salary               = get_field( 'salary' );
 								$job_type             = get_field( 'job_type' );
