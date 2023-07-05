@@ -2222,7 +2222,7 @@
     }
 }
 
-//Blog detail
+//Time-blog detail
 .time-blog-detail {
     .time-blog-detail-wrapper {
         padding: 0;
@@ -2243,15 +2243,25 @@
         .row {
             background-color: $white;
             margin: 0;
-            padding: 7%;
+            padding: 7% 6%;
+            margin-top: -150px;
+            position: relative;
             .left {
-                padding: 0;
+                padding-left: 15px;
             }
 
             .right {
-                padding-left: 35px;
+                padding-left: 38px;
+                padding-top: 8px;
+            }
+
+            .left {
+                padding-top: 8px;
             }
             .time-blog-detail-content {
+                &.sticky-top {
+                    top: 200px;
+                }
                 .time-blog-date {
                     font-size: 12px;
                     line-height: 15px;
@@ -2259,7 +2269,7 @@
                     font-weight: 600;
                     color: $green;
                     text-transform: uppercase;
-                    margin-bottom: 54px;
+                    margin-bottom: 39px;
                 }
 
                 .time-blog-title {
@@ -2291,15 +2301,231 @@
 
                 .btn {
                     margin-top: 48px;
+                    font-size: 15px;
+                    line-height: 15px;
+                    letter-spacing: normal;
+                    padding: 7px 22px; 
+                    font-weight: 400;
                     &::before {
-                        width: 20px;
-                        height: 20px;
+                        width: 48px;
+                        height: 16px;
                         content: "";
-                        background-image: url(../inc/assets/arrow-left.svg);
+                        background-image: url(../inc/assets/left-arrow.svg);
                         background-repeat: no-repeat;
                         background-position: center;
                         display: inline-block;
                         vertical-align: middle;
+                        margin-right: 8px;
+                    }
+                }
+            }
+
+            p {
+                margin-bottom: 16px;
+            }
+        }
+    }
+}
+
+//Case-study-detail
+.case-study-detail {
+    .case-study-detail-wrapper {
+        padding: 0;
+        overflow: hidden;
+        .image-box {
+            height: 450px;
+            width: 100%;
+            display: inline-block;
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .container {
+        .row {
+            background-color: $white;
+            margin: 0;
+            padding: 7% 6%;
+            margin-top: -150px;
+            position: relative;
+            .left {
+                padding-left: 15px;
+            }
+
+            .right {
+                padding-left: 38px;
+                padding-top: 8px;
+            }
+
+            .left {
+                padding-top: 8px;
+            }
+            .case-study-detail-content {
+                &.sticky-top {
+                    top: 200px;
+                }
+                .case-study-date {
+                    font-size: 12px;
+                    line-height: 15px;
+                    letter-spacing: 1px;
+                    font-weight: 600;
+                    color: $green;
+                    text-transform: uppercase;
+                    margin-bottom: 39px;
+                }
+
+                .case-study-title {
+                    font-size: 40px;
+                    line-height: 42px;
+                    font-weight: 700;
+                    width: 90%;
+                    margin-bottom: 64px;
+                }
+
+                .social-icon {
+                    padding: 0 15px;
+                    span {
+                        font-size: 16px;
+                        line-height: 16px;
+                        margin-right: 6px;
+                    }
+
+                    a {
+                        @include borderRadius(13px);
+                        border: 1px solid $meduim-gray;
+                        margin-right: 3px;
+                        padding: 4px 8px;
+                        img {
+                            height: 16px;
+                        }
+                    }
+                }
+
+                .btn {
+                    margin-top: 48px;
+                    font-size: 15px;
+                    line-height: 15px;
+                    letter-spacing: normal;
+                    padding: 7px 22px; 
+                    font-weight: 400;
+                    &::before {
+                        width: 48px;
+                        height: 16px;
+                        content: "";
+                        background-image: url(../inc/assets/left-arrow.svg);
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        display: inline-block;
+                        vertical-align: middle;
+                        margin-right: 8px;
+                    }
+                }
+            }
+
+            p {
+                margin-bottom: 16px;
+            }
+        }
+    }
+}
+
+//Press-release-detail
+.press-release-detail {
+    .press-release-detail-wrapper {
+        padding: 0;
+        overflow: hidden;
+        .image-box {
+            height: 450px;
+            width: 100%;
+            display: inline-block;
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .container {
+        .row {
+            background-color: $white;
+            margin: 0;
+            padding: 7% 6%;
+            margin-top: -150px;
+            position: relative;
+            .left {
+                padding-left: 15px;
+            }
+
+            .right {
+                padding-left: 38px;
+                padding-top: 8px;
+            }
+
+            .left {
+                padding-top: 8px;
+            }
+            .press-release-detail-content {
+                &.sticky-top {
+                    top: 200px;
+                }
+                .press-release-date {
+                    font-size: 12px;
+                    line-height: 15px;
+                    letter-spacing: 1px;
+                    font-weight: 600;
+                    color: $green;
+                    text-transform: uppercase;
+                    margin-bottom: 39px;
+                }
+
+                .press-release-title {
+                    font-size: 40px;
+                    line-height: 42px;
+                    font-weight: 700;
+                    width: 90%;
+                    margin-bottom: 64px;
+                }
+
+                .social-icon {
+                    padding: 0 15px;
+                    span {
+                        font-size: 16px;
+                        line-height: 16px;
+                        margin-right: 6px;
+                    }
+
+                    a {
+                        @include borderRadius(13px);
+                        border: 1px solid $meduim-gray;
+                        margin-right: 3px;
+                        padding: 4px 8px;
+                        img {
+                            height: 16px;
+                        }
+                    }
+                }
+
+                .btn {
+                    margin-top: 48px;
+                    font-size: 15px;
+                    line-height: 15px;
+                    letter-spacing: normal;
+                    padding: 7px 22px; 
+                    font-weight: 400;
+                    &::before {
+                        width: 48px;
+                        height: 16px;
+                        content: "";
+                        background-image: url(../inc/assets/left-arrow.svg);
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        display: inline-block;
+                        vertical-align: middle;
+                        margin-right: 8px;
                     }
                 }
             }

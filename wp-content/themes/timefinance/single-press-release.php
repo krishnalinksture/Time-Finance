@@ -11,26 +11,28 @@ $image_alt           = ( isset( $image['alt'] ) && ! empty( $image['alt'] ) ) ? 
 
 if ( ! empty( $image ) || ! empty( $all_articles_button ) ) {
 	?>
-	<section class="press-release-detail">
+	<section class="press-release-detail bg-grey">
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col">
-					<?php
-					if ( ! empty( $image ) ) {
-						?>
-						<img class="press-release-images" width="<?php echo $image['sizes']['timefinance-desktop-width']; ?>" height="<?php echo 	$image['sizes']['timefinance-desktop-height']; ?>" src="<?php echo $image['url']; ?>" srcset="<?php echo $image['sizes']['timefinance-small-mobile']; ?> 400w, <?php echo $image['sizes']['timefinance-mobile']; ?> 800w, <?php echo $image['sizes']['timefinance-tablet']; ?> 1200w, <?php echo $image['sizes']['timefinance-desktop']; ?> 2000w" sizes="50vw" alt="<?php echo $image_alt; //phpcs:ignore ?>">
+				<div class="col press-release-detail-wrapper">
+					<div class="image-box">
 						<?php
-					} else {
-						the_post_thumbnail(); //phpcs:ignore
-					}
-					?>
+						if ( ! empty( $image ) ) {
+							?>
+							<img class="press-release-images" width="<?php echo $image['sizes']['timefinance-desktop-width']; ?>" height="<?php echo 	$image['sizes']['timefinance-desktop-height']; ?>" src="<?php echo $image['url']; ?>" srcset="<?php echo $image['sizes']['timefinance-small-mobile']; ?> 400w, <?php echo $image['sizes']['timefinance-mobile']; ?> 800w, <?php echo $image['sizes']['timefinance-tablet']; ?> 1200w, <?php echo $image['sizes']['timefinance-desktop']; ?> 2000w" sizes="50vw" alt="<?php echo $image_alt; //phpcs:ignore ?>">
+							<?php
+						} else {
+							the_post_thumbnail(); //phpcs:ignore
+						}
+						?>
+					</div>
 				</div>
 			</div>
 		</div>
 		<div class="container">
-			<div class="row">
-				<div class="col-4">
-					<div class="press-release-detail-conent sticky-top">
+			<div class="row justify-content-center">
+				<div class="col-4 left">
+					<div class="press-release-detail-content sticky-top">
 						<div class="press-release-date">
 							<?php
 							echo get_the_date( 'm F Y', get_the_ID() );
@@ -59,20 +61,15 @@ if ( ! empty( $image ) || ! empty( $all_articles_button ) ) {
 						?>
 					</div>
 				</div>
-				<div class="col-8">
+				<div class="col-8 right">
 					<?php
 					$_term = get_queried_object();
 					if ( have_rows( 'page_builder', $_term ) ) {
 						while ( have_rows( 'page_builder', $_term ) ) {
 							the_row();
-							$layout_section = get_row_layout();
-							switch ( $layout_section ) {
-								case 'content_block':
-									$template_name = str_replace( '_', '-', $layout_section );
-									get_template_part( 'template-parts/acf-flexible/' . $template_name );
-									break;
-								default:
-									break;
+							if ( get_row_layout() === 'content_block' ) {
+								$content = get_sub_field( 'content' );
+								echo $content; //phpcs:ignore
 							}
 						}
 					}
