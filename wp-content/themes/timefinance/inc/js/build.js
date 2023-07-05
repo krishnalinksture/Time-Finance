@@ -29,7 +29,38 @@ window.Scrollanimate = () => {
 		// All pages
 		'common': {
 			init: function () {
-
+				if( $('.homepage-hero-slider' ).length > 0 ) {
+					setTimeout(function(){
+						var mySwiper = new Swiper('.swiper', {
+							// Optional parameters
+								loop: true,
+								simulateTouch: false,
+								slidesPerView: 1,
+								autoHeight: true,
+								autoplay: {
+									delay: 6000,
+								},
+								effect: 'fade',
+								fadeEffect: {
+									crossFade: true
+								},
+								pagination: {
+									el: '.swiper-pagination-homepage-hero',
+									clickable: true,
+									type: 'bullets',
+									progress: 1,
+									renderProgressbar: function (progressbarFillClass) {
+									return '<span class="' + progressbarFillClass + '"></span>';
+									}
+								},
+								on: {
+								slideChange: function() {
+									$('.count').text( '0' + ( this.realIndex + 1 ) );
+								  },
+								}
+						});
+					}, 500);
+				}
 
 				let swiperObjs = [];
 				let lastScroll = 0;
@@ -46,39 +77,7 @@ window.Scrollanimate = () => {
                     	swiperObjs.push(swiperObj);
 					}
 				});
-				if( $('.homepage-hero-slider' ).length > 0 ) {
 
-					var mySwiper = new Swiper('.swiper', {
-						// Optional parameters
-							  loop: true,
-							  simulateTouch: false,
-							  slidesPerView: 1,
-							  autoHeight: true,
-							  autoplay: {
-								  delay: 6000,
-							  },
-							  effect: 'fade',
-							  fadeEffect: {
-								  crossFade: true
-							  },
-							  pagination: {
-								  el: '.swiper-pagination-homepage-hero',
-								  clickable: true,
-								  type: 'bullets',
-								  progress: 1,
-								  renderProgressbar: function (progressbarFillClass) {
-									return '<span class="' + progressbarFillClass + '"></span>';
-								  }
-							  },
-							  on: {
-								slideChange: updSwiperNumericPagination
-							  }
-					  });
-					  function updSwiperNumericPagination() {
-						this.el.querySelector(".swiper-counter").innerHTML = '<span class="count">' + '0' + (this.realIndex + 1) + '</span>';
-					  }
-
-				}
 
 				$(".mobile-icon").on("click",function(){
 					if ( $(this).parent( '.menu-item-has-children' ).hasClass( 'show' ) ) {

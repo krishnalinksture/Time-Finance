@@ -70,7 +70,7 @@ if ( have_rows( 'slider_content' ) || ! empty( $show_for_more_button ) ) {
 					}
 					?>
 				</div>
-				<div class="swiper-counter .swiper-counter-homepage-hero"></div>
+				<div class="swiper-counter .swiper-counter-homepage-hero"><span class="count"></span></div>
 				<div class="swiper-pagination swiper-pagination-homepage-hero"></div>
 				<?php
 				if ( $show_for_more_button && ! empty( $show_for_more_button['url'] ) && ! empty( $show_for_more_button['title'] ) ) {
