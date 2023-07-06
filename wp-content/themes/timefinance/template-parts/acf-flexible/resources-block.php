@@ -98,8 +98,7 @@ if ( ! empty( $main_title ) || ! empty( $content ) || ! empty( $resources_view_a
 									<div class="resources-content">
 										<div class="resources-date">
 											<?php
-											echo get_the_date( 'm F Y', get_the_ID() );
-											echo wp_strip_all_tags( get_the_term_list( get_the_ID(), 'resources-categories', ' ', ', ', ' ' ) ); //phpcs:ignore
+											echo get_the_date( 'm F Y', get_the_ID() ) . ' / ' . wp_strip_all_tags( get_the_term_list( get_the_ID(), 'resources-categories', ' ', ', ', ' ' ) ); //phpcs:ignore
 											?>
 										</div>
 										<?php

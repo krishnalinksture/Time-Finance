@@ -95,8 +95,7 @@ $section_id                   = get_sub_field( 'section_id' ) ? get_sub_field( '
 								<div class="case-study-content">
 									<div class="case-study-date">
 										<?php
-										echo get_the_date( 'm F Y', get_the_ID() );
-										echo wp_strip_all_tags( get_the_term_list( get_the_ID(), 'case-study-categories', ' ', ', ', ' ' ) ); //phpcs:ignore
+										echo get_the_date( 'm F Y', get_the_ID() ) . ' / ' . wp_strip_all_tags( get_the_term_list( get_the_ID(), 'case-study-categories', ' ', ', ', ' ' ) ); //phpcs:ignore
 										?>
 									</div>
 									<?php

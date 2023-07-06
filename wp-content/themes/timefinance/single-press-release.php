@@ -35,8 +35,7 @@ if ( ! empty( $image ) || ! empty( $all_articles_button ) ) {
 					<div class="press-release-detail-content sticky-top">
 						<div class="press-release-date">
 							<?php
-							echo get_the_date( 'm F Y', get_the_ID() );
-							echo wp_strip_all_tags( get_the_term_list( get_the_ID(), 'press-release-categories', ' ', ', ', ' ' ) ); //phpcs:ignore
+							echo get_the_date( 'm F Y', get_the_ID() ) . ' / ' . wp_strip_all_tags( get_the_term_list( get_the_ID(), 'press-release-categories', ' ', ', ', ' ' ) ); //phpcs:ignore
 							?>
 						</div>
 						<div class="press-release-title">
