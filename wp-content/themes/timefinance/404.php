@@ -15,7 +15,7 @@ if ( ! empty( $page_not_found_title ) || ! empty( $page_not_found_content ) || !
 	<section class="error-404">
 		<div class="container">
 			<div class="row justify-content-center">
-				<div class="col-11">
+				<div class="col error-wrapper">
 					<?php
 					if ( ! empty( $page_not_found_title ) ) {
 						echo '<' . esc_attr( $page_not_found_select_tag ) . ' class="section-title h-3">' . esc_html( $page_not_found_title ) . '</' . esc_attr( $page_not_found_select_tag ) . '>';

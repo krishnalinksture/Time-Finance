@@ -2433,20 +2433,33 @@ header {
 
 .error-404 {
   padding: 130px 0; }
+  .error-404 .error-wrapper {
+    padding: 045px; }
   .error-404 .section-title {
     line-height: 20px;
     font-weight: 400;
-    margin-bottom: 24px; }
+    margin-bottom: 39px; }
   .error-404 .btn-404 {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    flex-wrap: wrap;
-    font-size: 24px;
-    line-height: 32px;
-    font-weight: 400; }
+    flex-wrap: wrap; }
+    .error-404 .btn-404 p {
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: 400;
+      margin-right: 7px; }
+    .error-404 .btn-404 .btn-link {
+      font-size: 19px;
+      line-height: 35px;
+      font-weight: 400;
+      letter-spacing: normal;
+      color: #00a98f;
+      text-decoration: underline; }
+      .error-404 .btn-404 .btn-link:hover {
+        color: #3d1050; }
 
 footer {
   background-color: #3d1050;

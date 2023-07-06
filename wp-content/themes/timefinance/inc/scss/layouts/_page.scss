@@ -2828,17 +2828,36 @@
 //Error 404
 .error-404 {
     padding: 130px 0;
+    .error-wrapper {
+        padding: 045px;
+    }
+
     .section-title {
         line-height: 20px;
         font-weight: 400;
-        margin-bottom: 24px;
+        margin-bottom: 39px;
     }
 
     .btn-404 {
         @include flex;
         flex-wrap: wrap;
-        font-size: 24px;
-        line-height: 32px;
-        font-weight: 400;
+        p {
+            font-size: 24px;
+            line-height: 32px;
+            font-weight: 400;
+            margin-right: 7px;
+        }
+
+        .btn-link {
+            font-size: 19px;
+            line-height: 35px;
+            font-weight: 400;
+            letter-spacing: normal;
+            color: $green;
+            text-decoration: underline;
+            &:hover {
+                color: $purple;
+            }
+        }
     }
 }
