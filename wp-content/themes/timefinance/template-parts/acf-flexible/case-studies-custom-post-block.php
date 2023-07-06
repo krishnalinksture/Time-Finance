@@ -32,8 +32,12 @@ $section_id                   = get_sub_field( 'section_id' ) ? get_sub_field( '
 			<?php
 		}
 		?>
-		<div class="row">
-			<div class="col-3">
+	</div>
+</section>
+<section class="case-studies-filter-block">
+	<div class="container">
+		<div class="row align-items-start">
+			<div class="col-3 filter-post-left">
 				<div class="cat-filter">
 					<?php echo esc_html( 'FILTER POSTS:' ); ?>
 				</div>
