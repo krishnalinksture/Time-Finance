@@ -12,7 +12,7 @@ $section_id  = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : u
 
 if ( ! empty( $main_title ) ) {
 	?>
-	<section class="client-custom-post-block" id="<?php echo $section_id; //phpcs:ignore ?>">
+	<section class="client-custom-post-block bg-grey" id="<?php echo $section_id; //phpcs:ignore ?>">
 		<div class="container">
 			<?php
 			if ( ! empty( $main_title ) ) {
@@ -25,28 +25,32 @@ if ( ! empty( $main_title ) ) {
 				<?php
 			}
 			?>
-			<div class="row">
+			<div class="row row-cols-1 row-cols-lg-2">
 				<?php
 				foreach ( $select_post as $client_post ) {
 					setup_postdata( $client_post );
 					?>
-					<div class="col">
-						<div class="client-image">
-							<?php echo get_the_post_thumbnail( $client_post->ID ); ?>
-						</div>
-						<div class="client-category">
-							<?php
-							$terms = get_the_terms( $client_post->ID, 'case-study-categories' );
-							foreach ( $terms as $_term ) {
-							echo $_term->name; //phpcs:ignore
-							}
-							?>
-						</div>
-						<div class="client-title">
-							<?php echo esc_html( get_the_title( $client_post->ID ) ); ?>
-						</div>
-						<div class="client-read-more btn">
-							<a href="<?php echo get_the_permalink(); //phpcs:ignore ?>"><?php echo esc_html( 'Read More' ); ?></a>
+					<div class="col text-center client-wrapper">
+						<div class="client-box">
+							<div class="client-image">
+								<?php echo get_the_post_thumbnail( $client_post->ID ); ?>
+							</div>
+							<div class="client-content">
+								<div class="client-category">
+									<?php
+									$terms = get_the_terms( $client_post->ID, 'case-study-categories' );
+									foreach ( $terms as $_term ) {
+									echo $_term->name; //phpcs:ignore
+									}
+									?>
+								</div>
+								<div class="client-title">
+									<?php echo esc_html( get_the_title( $client_post->ID ) ); ?>
+								</div>
+								<div class="client-read-more btn">
+									<a href="<?php echo get_the_permalink(); //phpcs:ignore ?>"><?php echo esc_html( 'Read More' ); ?></a>
+								</div>
+							</div>
 						</div>
 					</div>
 					<?php

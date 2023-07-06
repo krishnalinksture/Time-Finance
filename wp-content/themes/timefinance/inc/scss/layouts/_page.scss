@@ -2746,3 +2746,67 @@
         }
     }
 }
+
+//Client custom post block
+.client-custom-post-block {
+    padding: 100px 0 140px 0;
+    .container {
+        padding: 0 20px;
+        .section-title {
+            margin-bottom: 29px;
+        }
+
+        .client-wrapper {
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .client-box {
+            height: 100%;
+            .client-image {
+                height: 387px;
+                overflow: hidden;
+                img {
+                    display: block;
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .client-content {
+                background-color: $white;
+                padding: 44px 55px 35px 55px;
+                height: 100%;
+                .client-category {
+                    font-size: 11px;
+                    line-height: 11px;
+                    letter-spacing: 1.1px;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    color: $green;
+                    margin-bottom: 28px;
+                }
+
+                .client-title {
+                    font-size: 25px;
+                    line-height: 33px;
+                    font-weight: 600;
+                    margin-bottom: 32px;
+                }
+
+                .btn {
+                    font-size: 15px;
+                    line-height: 15px;
+                    letter-spacing: normal;
+                    padding: 8px 19px;
+                    font-weight: 400;
+                    a {
+                        color: $white;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
