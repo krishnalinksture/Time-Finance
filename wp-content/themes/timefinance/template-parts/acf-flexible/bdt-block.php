@@ -183,15 +183,10 @@ if ( ! empty( $main_title ) || ! empty( $content ) ) {
 																<div class="modal-body">
 																	<div class="row justify-content-center">
 																		<div class="col">
-																			<?php
-																			if ( ! empty( $select_form ) ) {
-																				?>
-																				<div class="bdt-popup-form">
-																					<?php echo do_shortcode( $form ); ?>
-																				</div>
-																				<?php
-																			}
-																			?>
+																			<div class="bdt-popup-form">
+																				<?php echo do_shortcode( $form ); ?>
+																				<div class="thankyou-msg-bdt"><?php echo esc_html( 'Thank you for your message. A member of our team will be in touch shortly. In the meantime, if youre interested in how we use your data please click ' ); //phpcs:ignore ?><a href="#"><?php echo esc_html( 'here' ); ?></a></div>
+																			</div>
 																		</div>
 																	</div>
 																</div>
