@@ -1509,7 +1509,7 @@
 }
 
 //Case studies custom post block
-.case-studies-custom-post-block{
+.case-studies-custom-post-block, .case-studies-category {
     padding: 125px 0 80px;
     background-color: $purple;
     position: relative;
@@ -1855,18 +1855,9 @@
 //Bdt block
 .bdt-block, .bdt-category {
     padding: 125px 0 80px;
-    background-color: $gray;
+    background-color: $purple;
     position: relative;
     overflow: hidden;
-    &::before {
-        content: "";
-        background-color: $purple;
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 88vh;
-        width: 100%;
-    }
 
     .container {
         position: relative;
@@ -1885,7 +1876,31 @@
         line-height: 50px;
         font-weight: 700;
         width: 94%;
-        margin-bottom: 80px;
+        margin-bottom: 0px;
+    }
+}
+
+.bdt-filter-block {
+    background-color: $gray;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    padding-bottom: 80px;
+    .filter-post-left {
+        position: relative;
+        padding-bottom: 165px;
+        &:before {
+            height: 100%;
+            content: "";
+            background-color: $purple;
+            width: 200vw;
+            position: absolute;
+            left: 0;
+            top: 0;
+            margin-left: -100vw;
+            right: -100vw;
+            z-index: -1;
+        }
     }
 
     .cat-filter {

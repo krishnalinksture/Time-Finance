@@ -1444,19 +1444,19 @@ header {
             color: #fff;
             text-decoration: none; }
 
-.case-studies-custom-post-block {
+.case-studies-custom-post-block, .case-studies-category {
   padding: 125px 0 80px;
   background-color: #3d1050;
   position: relative;
   overflow: hidden; }
-  .case-studies-custom-post-block .container {
+  .case-studies-custom-post-block .container, .case-studies-category .container {
     position: relative; }
-  .case-studies-custom-post-block .section-title {
+  .case-studies-custom-post-block .section-title, .case-studies-category .section-title {
     color: #00a98f;
     line-height: 30px;
     font-weight: 600;
     margin-bottom: 30px; }
-  .case-studies-custom-post-block p {
+  .case-studies-custom-post-block p, .case-studies-category p {
     color: #fff;
     font-size: 40px;
     line-height: 50px;
@@ -1706,17 +1706,9 @@ header {
 
 .bdt-block, .bdt-category {
   padding: 125px 0 80px;
-  background-color: #F5F3F6;
+  background-color: #3d1050;
   position: relative;
   overflow: hidden; }
-  .bdt-block::before, .bdt-category::before {
-    content: "";
-    background-color: #3d1050;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 88vh;
-    width: 100%; }
   .bdt-block .container, .bdt-category .container {
     position: relative; }
   .bdt-block .section-title, .bdt-category .section-title {
@@ -1730,8 +1722,29 @@ header {
     line-height: 50px;
     font-weight: 700;
     width: 94%;
-    margin-bottom: 80px; }
-  .bdt-block .cat-filter, .bdt-category .cat-filter {
+    margin-bottom: 0px; }
+
+.bdt-filter-block {
+  background-color: #F5F3F6;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  padding-bottom: 80px; }
+  .bdt-filter-block .filter-post-left {
+    position: relative;
+    padding-bottom: 165px; }
+    .bdt-filter-block .filter-post-left:before {
+      height: 100%;
+      content: "";
+      background-color: #3d1050;
+      width: 200vw;
+      position: absolute;
+      left: 0;
+      top: 0;
+      margin-left: -100vw;
+      right: -100vw;
+      z-index: -1; }
+  .bdt-filter-block .cat-filter {
     font-size: 12px;
     line-height: 15px;
     font-weight: 600;
@@ -1740,45 +1753,45 @@ header {
     color: #00a98f;
     margin-top: 5px;
     margin-bottom: 25px; }
-  .bdt-block ul, .bdt-category ul {
+  .bdt-filter-block ul {
     list-style: none;
     padding: 0;
     margin: 0;
     font-size: 18px;
     line-height: 18px;
     font-weight: 600; }
-    .bdt-block ul .bdts-cat-list, .bdt-category ul .bdts-cat-list {
+    .bdt-filter-block ul .bdts-cat-list {
       margin-bottom: 15px; }
-      .bdt-block ul .bdts-cat-list:last-child, .bdt-category ul .bdts-cat-list:last-child {
+      .bdt-filter-block ul .bdts-cat-list:last-child {
         margin-bottom: 0; }
-      .bdt-block ul .bdts-cat-list a, .bdt-category ul .bdts-cat-list a {
+      .bdt-filter-block ul .bdts-cat-list a {
         color: #fff;
         text-decoration: none; }
-        .bdt-block ul .bdts-cat-list a:hover, .bdt-category ul .bdts-cat-list a:hover {
+        .bdt-filter-block ul .bdts-cat-list a:hover {
           text-decoration: underline; }
-        .bdt-block ul .bdts-cat-list a.btn.btn-link:hover, .bdt-category ul .bdts-cat-list a.btn.btn-link:hover {
+        .bdt-filter-block ul .bdts-cat-list a.btn.btn-link:hover {
           color: #fff; }
-  .bdt-block .bdt-wrapper, .bdt-category .bdt-wrapper {
+  .bdt-filter-block .bdt-wrapper {
     padding-left: 50px;
     padding-right: 20px; }
-    .bdt-block .bdt-wrapper .row .col, .bdt-category .bdt-wrapper .row .col {
+    .bdt-filter-block .bdt-wrapper .row .col {
       margin-bottom: 20px;
       overflow: hidden; }
-    .bdt-block .bdt-wrapper .bdts-box, .bdt-category .bdt-wrapper .bdts-box {
+    .bdt-filter-block .bdt-wrapper .bdts-box {
       height: 100%; }
-      .bdt-block .bdt-wrapper .bdts-box .bdts-image, .bdt-category .bdt-wrapper .bdts-box .bdts-image {
+      .bdt-filter-block .bdt-wrapper .bdts-box .bdts-image {
         height: 272px;
         overflow: hidden; }
-        .bdt-block .bdt-wrapper .bdts-box .bdts-image img, .bdt-category .bdt-wrapper .bdts-box .bdts-image img {
+        .bdt-filter-block .bdt-wrapper .bdts-box .bdts-image img {
           display: block;
           height: 100%;
           width: 100%;
           object-fit: cover; }
-      .bdt-block .bdt-wrapper .bdts-box .bdts-content, .bdt-category .bdt-wrapper .bdts-box .bdts-content {
+      .bdt-filter-block .bdt-wrapper .bdts-box .bdts-content {
         background-color: #fff;
         padding: 23px 28px;
         height: 100%; }
-        .bdt-block .bdt-wrapper .bdts-box .bdts-content .bdts-title, .bdt-category .bdt-wrapper .bdts-box .bdts-content .bdts-title {
+        .bdt-filter-block .bdt-wrapper .bdts-box .bdts-content .bdts-title {
           font-size: 25px;
           line-height: 33px;
           font-weight: 600;
@@ -1786,7 +1799,7 @@ header {
           margin-bottom: 8px;
           color: #3d1050;
           text-decoration: none; }
-        .bdt-block .bdt-wrapper .bdts-box .bdts-content .bdts-role, .bdt-category .bdt-wrapper .bdts-box .bdts-content .bdts-role {
+        .bdt-filter-block .bdt-wrapper .bdts-box .bdts-content .bdts-role {
           font-size: 12px;
           line-height: 12px;
           font-weight: 700;
@@ -1794,7 +1807,7 @@ header {
           color: #00a98f;
           text-transform: uppercase;
           margin-bottom: 16px; }
-        .bdt-block .bdt-wrapper .bdts-box .bdts-content .bdts-category, .bdt-category .bdt-wrapper .bdts-box .bdts-content .bdts-category {
+        .bdt-filter-block .bdt-wrapper .bdts-box .bdts-content .bdts-category {
           font-size: 12px;
           line-height: 12px;
           font-weight: 700;
@@ -1802,11 +1815,11 @@ header {
           color: #00a98f;
           text-transform: uppercase;
           margin-bottom: 44px; }
-        .bdt-block .bdt-wrapper .bdts-box .bdts-content .bdts-location, .bdt-category .bdt-wrapper .bdts-box .bdts-content .bdts-location {
+        .bdt-filter-block .bdt-wrapper .bdts-box .bdts-content .bdts-location {
           line-height: 21px;
           font-weight: 600;
           margin-bottom: 16px; }
-          .bdt-block .bdt-wrapper .bdts-box .bdts-content .bdts-location::before, .bdt-category .bdt-wrapper .bdts-box .bdts-content .bdts-location::before {
+          .bdt-filter-block .bdt-wrapper .bdts-box .bdts-content .bdts-location::before {
             width: 20px;
             height: 20px;
             left: 0;
@@ -1816,25 +1829,25 @@ header {
             background-position: center;
             display: inline-block;
             vertical-align: middle; }
-        .bdt-block .bdt-wrapper .bdts-box .bdts-content p, .bdt-category .bdt-wrapper .bdts-box .bdts-content p {
+        .bdt-filter-block .bdt-wrapper .bdts-box .bdts-content p {
           color: #3d1050;
           font-size: 15px;
           line-height: 21px;
           font-weight: 600;
           width: 100%;
           margin: 0 auto; }
-        .bdt-block .bdt-wrapper .bdts-box .bdts-content .contact, .bdt-category .bdt-wrapper .bdts-box .bdts-content .contact {
+        .bdt-filter-block .bdt-wrapper .bdts-box .bdts-content .contact {
           margin-top: 18px; }
-          .bdt-block .bdt-wrapper .bdts-box .bdts-content .contact a, .bdt-category .bdt-wrapper .bdts-box .bdts-content .contact a {
+          .bdt-filter-block .bdt-wrapper .bdts-box .bdts-content .contact a {
             font-size: 16px;
             color: #00a98f;
             letter-spacing: normal;
             text-decoration: underline;
             display: table !important;
             margin: 0 auto; }
-            .bdt-block .bdt-wrapper .bdts-box .bdts-content .contact a:hover, .bdt-category .bdt-wrapper .bdts-box .bdts-content .contact a:hover {
+            .bdt-filter-block .bdt-wrapper .bdts-box .bdts-content .contact a:hover {
               color: #3d1050; }
-        .bdt-block .bdt-wrapper .bdts-box .bdts-content .popup-form .btn, .bdt-category .bdt-wrapper .bdts-box .bdts-content .popup-form .btn {
+        .bdt-filter-block .bdt-wrapper .bdts-box .bdts-content .popup-form .btn {
           margin-top: 32px;
           font-size: 15px;
           line-height: 15px;
