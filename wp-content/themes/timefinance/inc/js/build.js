@@ -129,10 +129,10 @@ window.Scrollanimate = () => {
 					callbacks: {
 						open: function () {
 							$("#search-header input").focus(function(){
-								$("#search-header").addClass('lighten');
+								$("#search-header .search-form").addClass('lighten');
 							});
 							$("#search-header input").focusout(function(){
-								$("#search-header").removeClass('lighten');
+								$("#search-header .search-form").removeClass('lighten');
 							});
 							$('#search-header').parent().addClass('search-popup');
 							if (!isMobile) {
