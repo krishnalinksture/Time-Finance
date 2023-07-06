@@ -112,18 +112,28 @@ window.Scrollanimate = () => {
 
 
 				// Search Page And Post.
+				function ScrollStop() {
+					return false;
+				}
+				function ScrollStart() {
+					return true;
+				}
+				var isMobile = false;
 				$('.header-search-form').magnificPopup({
 					mainClass: 'mfp-fade timefinance-search-popup',
-					closeOnBgClick: true,
+					closeOnBgClick: false,
 					preloader: false,
 					// for white background
 					fixedContentPos: false,
 					closeBtnInside: false,
 					callbacks: {
 						open: function () {
-							setTimeout(function () {
-								$('.search-input').focus();
-							}, 500);
+							$("#search-header input").focus(function(){
+								$("#search-header").addClass('lighten');
+							});
+							$("#search-header input").focusout(function(){
+								$("#search-header").removeClass('lighten');
+							});
 							$('#search-header').parent().addClass('search-popup');
 							if (!isMobile) {
 								$('body').addClass('overflow-hidden');
