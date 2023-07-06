@@ -1568,7 +1568,31 @@ header {
 .our-history-block {
   padding: 120px 0; }
   .our-history-block .history-wrapper {
-    padding: 0 35px; }
+    padding: 35px 35px 0 35px;
+    position: relative; }
+    .our-history-block .history-wrapper .separator {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 2px;
+      height: 100%;
+      background-color: #3d1050; }
+      .our-history-block .history-wrapper .separator::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -20px;
+        height: 2px;
+        width: 40px;
+        background-color: #3d1050; }
+      .our-history-block .history-wrapper .separator::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: -20px;
+        background-color: #3d1050;
+        width: 40px;
+        height: 2px; }
     .our-history-block .history-wrapper .row + .row {
       margin-top: -100px; }
   .our-history-block .section-title {
@@ -2366,6 +2390,8 @@ header {
       -ms-flex-pack: justify;
       -webkit-justify-content: space-between;
       justify-content: space-between; }
+      .timefinance-search-popup .search-form-result .search-form.lighten {
+        opacity: 1; }
       .timefinance-search-popup .search-form-result .search-form .search-input {
         background-color: #3d1050;
         color: #fff;
