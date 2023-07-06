@@ -92,9 +92,18 @@ window.Scrollanimate = () => {
 				});
 
 				// Form Toggle.
-				$(".form").css("display", "none");
+				$(".cta-form").css("display", "none");
 				$( ".cta-block .send-message" ).on( "click", function() {
-					$( ".form" ).slideToggle(500);
+					$( ".cta-form" ).slideToggle(500);
+				});
+				$(".cta-form .thankyou-msg-cta").css("display", "none");
+				$(".cta-form .forminator-button-submit").on( "click", function(){
+
+					var cta_popup = $( '.cta-form').find('.forminator-custom-form').find('.forminator-is_filled');
+					if( cta_popup.length > 0 ) {
+						$(".cta-form .thankyou-msg-cta").css("display", "block");
+						$(".cta-form .forminator-custom-form").css("display", "none");
+					}
 				});
 
 				// Calculator Form
@@ -191,6 +200,7 @@ window.Scrollanimate = () => {
 						$(".bdt-block .bdt-popup-form .forminator-custom-form").css("display", "none");
 					}
 				});
+
 
 			},
 			finalize: function () {
