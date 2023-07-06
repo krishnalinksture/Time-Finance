@@ -1468,7 +1468,8 @@ header {
   background-color: #F5F3F6;
   position: relative;
   z-index: 0;
-  overflow: hidden; }
+  overflow: hidden;
+  padding-bottom: 80px; }
   .case-studies-filter-block .filter-post-left {
     position: relative;
     padding-bottom: 165px; }
@@ -1567,8 +1568,9 @@ header {
 .our-history-block {
   padding: 120px 0; }
   .our-history-block .history-wrapper {
-    padding-left: 35px;
-    padding-right: 25px; }
+    padding: 0 35px; }
+    .our-history-block .history-wrapper .row + .row {
+      margin-top: -100px; }
   .our-history-block .section-title {
     font-size: 32px;
     line-height: 42px;
@@ -1586,7 +1588,8 @@ header {
     .our-history-block .history-card .card-content .card-text {
       font-size: 25px;
       line-height: 33px;
-      font-weight: 600; }
+      font-weight: 600;
+      width: 70%; }
 
 .content-block {
   padding: 60px 0; }

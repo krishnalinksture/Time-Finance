@@ -28,7 +28,7 @@ if ( ! empty( $main_title ) || have_rows( 'history_content' ) ) {
 			if ( have_rows( 'history_content' ) ) {
 				?>
 				<div class="row justify-content-center">
-					<div class="col-11">
+					<div class="col-11 history-wrapper">
 						<div class="separator"></div>
 						<?php
 						while ( have_rows( 'history_content' ) ) {
@@ -42,7 +42,7 @@ if ( ! empty( $main_title ) || have_rows( 'history_content' ) ) {
 							if ( ! empty( $image ) || ! empty( $date ) || ! empty( $history_title ) ) {
 								?>
 								<div class="row <?php echo $position; //phpcs:ignore ?>">
-									<div class="col-12 col-md-5 history-wrapper">
+									<div class="col-12 col-md-5">
 										<div class="history-card">
 											<?php
 											if ( ! empty( $image ) ) {

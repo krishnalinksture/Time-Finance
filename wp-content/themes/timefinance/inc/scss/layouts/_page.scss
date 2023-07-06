@@ -1541,6 +1541,7 @@
     position: relative;
     z-index: 0;
     overflow: hidden;
+    padding-bottom: 80px;
     .filter-post-left {
         position: relative;
         padding-bottom: 165px;
@@ -1680,8 +1681,12 @@
 .our-history-block {
     padding: 120px 0;
     .history-wrapper {
-       padding-left: 35px;
-       padding-right: 25px;
+      padding: 0 35px;
+      .row {
+        +.row {
+            margin-top: -100px;
+        }
+      }
     }
 
     .section-title {
@@ -1706,6 +1711,7 @@
                 font-size: 25px;
                 line-height: 33px;
                 font-weight: 600;
+                width: 70%;
             }
         }
     }
