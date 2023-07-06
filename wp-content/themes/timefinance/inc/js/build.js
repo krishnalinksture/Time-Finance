@@ -170,6 +170,16 @@ window.Scrollanimate = () => {
 						$("#search-again").find("input:eq(" + index + ")");
 					}
 				});
+				//Resourse Popup Form
+				$(".resources-block .resource-popup-form .thankyou-msg").css("display", "none");
+				$(".resources-block .resource-popup-form .forminator-button-submit").on( "click", function(){
+
+					var resourse_popup = $( '.resources-block').find('.forminator-custom-form').find('.forminator-is_filled');
+					if( ( resourse_popup ).length == 1 ) {
+						$(".resources-block .resource-popup-form .thankyou-msg").css("display", "block");
+						$(".resources-block .resource-popup-form .forminator-custom-form").css("display", "none");
+					}
+				});
 
 			},
 			finalize: function () {

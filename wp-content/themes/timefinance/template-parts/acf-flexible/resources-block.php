@@ -128,15 +128,10 @@ if ( ! empty( $main_title ) || ! empty( $content ) || ! empty( $resources_view_a
 																<div class="modal-body">
 																	<div class="row justify-content-center">
 																		<div class="col">
-																			<?php
-																			if ( ! empty( $select_form ) ) {
-																				?>
-																				<div class="resource-popup-form">
-																					<?php echo do_shortcode( $form ); ?>
-																				</div>
-																				<?php
-																			}
-																			?>
+																			<div class="resource-popup-form">
+																				<?php echo do_shortcode( $form ); ?>
+																				<div class="thankyou-msg"><?php echo esc_html( 'Thank you for downloading one of our useful resources. To read how we process your information, please view our privacy policy ' ); //phpcs:ignore ?><a href="#"><?php echo esc_html( 'here' ); ?></a></div>
+																			</div>
 																		</div>
 																	</div>
 																</div>
