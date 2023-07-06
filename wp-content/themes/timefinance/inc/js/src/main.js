@@ -201,6 +201,16 @@ window.Scrollanimate = () => {
 					}
 				});
 
+				//Contact Form
+				$(".contact-block .contact-form .thankyou-msg-contact").css("display", "none");
+				$(".contact-block .contact-form .forminator-button-submit").on( "click", function(){
+
+					var contact_popup = $( '.contact-block').find('.forminator-custom-form').find('.forminator-is_filled');
+					if( contact_popup.length > 0 ) {
+						$(".contact-block .contact-form .thankyou-msg-contact").css("display", "block");
+						$(".contact-block .contact-form .forminator-custom-form").css("display", "none");
+					}
+				});
 
 			},
 			finalize: function () {
