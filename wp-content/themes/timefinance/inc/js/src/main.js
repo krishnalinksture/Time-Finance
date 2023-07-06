@@ -170,6 +170,27 @@ window.Scrollanimate = () => {
 						$("#search-again").find("input:eq(" + index + ")");
 					}
 				});
+				//Resourse Popup Form
+				$(".resources-block .resource-popup-form .thankyou-msg").css("display", "none");
+				$(".resources-block .resource-popup-form .forminator-button-submit").on( "click", function(){
+
+					var resourse_popup = $( '.resources-block').find('.forminator-custom-form').find('.forminator-is_filled');
+					if( resourse_popup.length > 0 ) {
+						$(".resources-block .resource-popup-form .thankyou-msg").css("display", "block");
+						$(".resources-block .resource-popup-form .forminator-custom-form").css("display", "none");
+					}
+				});
+
+				//BDT Popup Form
+				$(".bdt-block .bdt-popup-form .thankyou-msg-bdt").css("display", "none");
+				$(".bdt-block .bdt-popup-form .forminator-button-submit").on( "click", function(){
+
+					var bdt_popup = $( '.bdt-block').find('.forminator-custom-form').find('.forminator-is_filled');
+					if( bdt_popup.length > 0 ) {
+						$(".bdt-block .bdt-popup-form .thankyou-msg-bdt").css("display", "block");
+						$(".bdt-block .bdt-popup-form .forminator-custom-form").css("display", "none");
+					}
+				});
 
 			},
 			finalize: function () {
