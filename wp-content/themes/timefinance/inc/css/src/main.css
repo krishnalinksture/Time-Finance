@@ -1593,6 +1593,12 @@ header {
         background-color: #3d1050;
         width: 40px;
         height: 2px; }
+    .our-history-block .history-wrapper .row .history-card {
+      padding-left: 0;
+      padding-right: 16px; }
+    .our-history-block .history-wrapper .row.justify-content-end .history-card {
+      padding-left: 18px;
+      padding-right: 0; }
     .our-history-block .history-wrapper .row + .row {
       margin-top: -100px; }
   .our-history-block .section-title {
@@ -2392,6 +2398,15 @@ header {
       justify-content: space-between; }
       .timefinance-search-popup .search-form-result .search-form.lighten {
         opacity: 1; }
+        .timefinance-search-popup .search-form-result .search-form.lighten .search-input::-webkit-input-placeholder {
+          color: #fff;
+          opacity: 0.4; }
+        .timefinance-search-popup .search-form-result .search-form.lighten .search-input:-ms-input-placeholder {
+          color: #fff;
+          opacity: 0.4; }
+        .timefinance-search-popup .search-form-result .search-form.lighten .search-input::placeholder {
+          color: #fff;
+          opacity: 0.4; }
       .timefinance-search-popup .search-form-result .search-form .search-input {
         background-color: #3d1050;
         color: #fff;

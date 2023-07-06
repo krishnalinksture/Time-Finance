@@ -1713,6 +1713,18 @@
       }
 
       .row {
+        .history-card {
+            padding-left: 0;
+            padding-right: 16px;
+        }
+
+        &.justify-content-end {
+            .history-card {
+                padding-left: 18px;
+                padding-right: 0;
+            }
+        }
+        
         +.row {
             margin-top: -100px;
         }
@@ -2769,6 +2781,22 @@
 
             &.lighten {
                 opacity: 1;
+                .search-input {
+                    &::-webkit-input-placeholder {
+                        color: $white;
+                        opacity: 0.4;
+                    }
+                    
+                    &:-ms-input-placeholder {
+                        color: $white;
+                        opacity: 0.4;
+                    }
+                    
+                    &::placeholder {
+                        color: $white;
+                        opacity: 0.4;
+                    }
+                }
             }
 
             .search-input {
