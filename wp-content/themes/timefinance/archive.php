@@ -31,8 +31,12 @@ $time_blog_view_all_button = get_field( 'time_blog_view_all_button', 'option' );
 			<?php
 		}
 		?>
-		<div class="row">
-			<div class="col-3">
+	</div>
+</section>
+<section class="time-blog-filter-block">
+	<div class="container">
+		<div class="row align-items-start">
+			<div class="col-3 filter-post-left">
 				<div class="cat-filter">
 					<?php echo esc_html( 'FILTER POSTS:' ); ?>
 				</div>

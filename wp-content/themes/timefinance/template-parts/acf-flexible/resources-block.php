@@ -13,7 +13,7 @@ $form                      = ( ! empty( $select_form ) ) ? '[forminator_form id=
 $resources_view_all_button = get_field( 'resources_view_all_button', 'option' );
 $section_id                = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'resources-block-' );
 
-if ( ! empty( $main_title ) || ! empty( $content ) || ! empty( $resources_view_all_button ) || ! empty( $select_form ) ) {
+if ( ! empty( $main_title ) || ! empty( $content ) ) {
 	?>
 	<section class="resources-block" id="<?php echo $section_id; //phpcs:ignore ?>">
 		<div class="container">
@@ -35,127 +35,132 @@ if ( ! empty( $main_title ) || ! empty( $content ) || ! empty( $resources_view_a
 				<?php
 			}
 			?>
-			<div class="row">
-				<div class="col-3">
-					<div class="cat-filter">
-						<?php echo esc_html( 'FILTER POSTS:' ); ?>
-					</div>
-					<ul>
-						<?php
-						$args       = array(
-							'taxonomy' => 'resources-categories',
-						);
-						$categories = get_categories( $args );
-
-						foreach ( $categories as $category ) {
-							?>
-							<li class="resources-cat-list">
-								<a href="<?php echo get_category_link( $category->term_id ); //phpcs:ignore ?>"><?php echo $category->name; ?> </a>
-							</li>
-							<?php
-						}
-						if ( $resources_view_all_button && ! empty( $resources_view_all_button['url'] ) && ! empty( $resources_view_all_button['title'] ) ) {
-							?>
-							<li class="resources-cat-list">
-								<?php
-								$link_url    = $resources_view_all_button['url'];
-								$link_title  = $resources_view_all_button['title'];
-								$link_target = $resources_view_all_button['target'] ? $resources_view_all_button['target'] : '_self';
-								?>
-								<a href="<?php echo esc_url( $link_url ); ?>" class="btn btn-link" target="<?php echo esc_attr( $link_target ); ?>">
-									<?php echo esc_html( $link_title ); ?>
-								</a>
-							</li>
-							<?php
-						}
-						?>
-					</ul>
+		</div>
+	</section>
+	<?php
+}
+?>
+<section class="resources-filter-block">
+	<div class="container">
+		<div class="row align-items-start">
+			<div class="col-3 filter-post-left">
+				<div class="cat-filter">
+					<?php echo esc_html( 'FILTER POSTS:' ); ?>
 				</div>
-				<div class="col-9 resources-wrapper">
-					<div class="row row-cols-1 row-cols-lg-2">
+				<ul>
+					<?php
+					$args       = array(
+						'taxonomy' => 'resources-categories',
+					);
+					$categories = get_categories( $args );
+
+					foreach ( $categories as $category ) {
+						?>
+						<li class="resources-cat-list">
+							<a href="<?php echo get_category_link( $category->term_id ); //phpcs:ignore ?>"><?php echo $category->name; ?> </a>
+						</li>
 						<?php
-						$args = array(
-							'post_type'   => 'resources',
-							'post_status' => 'publish',
-							'orderby'     => 'post_date',
-						);
-						$loop = new WP_Query( $args );
-						while ( $loop->have_posts() ) {
-							$loop->the_post();
-							$read_more_button = get_field( 'read_more_button' );
+					}
+					if ( $resources_view_all_button && ! empty( $resources_view_all_button['url'] ) && ! empty( $resources_view_all_button['title'] ) ) {
+						?>
+						<li class="resources-cat-list">
+							<?php
+							$link_url    = $resources_view_all_button['url'];
+							$link_title  = $resources_view_all_button['title'];
+							$link_target = $resources_view_all_button['target'] ? $resources_view_all_button['target'] : '_self';
 							?>
-							<div class="col text-center">
-								<div class="resources-box">
+							<a href="<?php echo esc_url( $link_url ); ?>" class="btn btn-link" target="<?php echo esc_attr( $link_target ); ?>">
+								<?php echo esc_html( $link_title ); ?>
+							</a>
+						</li>
+						<?php
+					}
+					?>
+				</ul>
+			</div>
+			<div class="col-9 resources-wrapper">
+				<div class="row row-cols-1 row-cols-lg-2">
+					<?php
+					$args = array(
+						'post_type'   => 'resources',
+						'post_status' => 'publish',
+						'orderby'     => 'post_date',
+					);
+					$loop = new WP_Query( $args );
+					while ( $loop->have_posts() ) {
+						$loop->the_post();
+						$read_more_button = get_field( 'read_more_button' );
+						?>
+						<div class="col text-center">
+							<div class="resources-box">
+								<?php
+								if ( get_the_post_thumbnail() ) {
+									?>
+									<div class="resources-image">
+										<?php the_post_thumbnail(); ?>
+									</div>
 									<?php
-									if ( get_the_post_thumbnail() ) {
+								}
+								?>
+								<div class="resources-content">
+									<div class="resources-date">
+										<?php
+										echo get_the_date( 'm F Y', get_the_ID() ) . ' / ' . wp_strip_all_tags( get_the_term_list( get_the_ID(), 'resources-categories', ' ', ', ', ' ' ) ); //phpcs:ignore
 										?>
-										<div class="resources-image">
-											<?php the_post_thumbnail(); ?>
+									</div>
+									<?php
+									if ( get_the_title() ) {
+										?>
+										<div class="resources-title">
+											<?php echo get_the_title(); //phpcs:ignore ?>
 										</div>
 										<?php
 									}
-									?>
-									<div class="resources-content">
-										<div class="resources-date">
+									if ( ! empty( $read_more_button ) || ! empty( $select_form ) ) {
+										?>
+										<div class="popup-form">
 											<?php
-											echo get_the_date( 'm F Y', get_the_ID() ) . ' / ' . wp_strip_all_tags( get_the_term_list( get_the_ID(), 'resources-categories', ' ', ', ', ' ' ) ); //phpcs:ignore
-											?>
-										</div>
-										<?php
-										if ( get_the_title() ) {
-											?>
-											<div class="resources-title">
-												<?php echo get_the_title(); //phpcs:ignore ?>
-											</div>
-											<?php
-										}
-										if ( ! empty( $read_more_button ) || ! empty( $select_form ) ) {
-											?>
-											<div class="popup-form">
+											if ( ! empty( $read_more_button ) ) {
+												?>
+												<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#resourseModal">
+													<?php echo esc_html( $read_more_button ); ?>
+												</button>
 												<?php
-												if ( ! empty( $read_more_button ) ) {
-													?>
-													<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#resourseModal">
-														<?php echo esc_html( $read_more_button ); ?>
-													</button>
-													<?php
-												}
-												if ( ! empty( $select_form ) ) {
-													?>
-													<div class="modal fade" id="resourseModal" tabindex="-1" aria-labelledby="resourseModalLabel" aria-hidden="true">
-														<div class="modal-dialog">
-															<div class="modal-content">
-																<div class="modal-body">
-																	<div class="row justify-content-center">
-																		<div class="col">
-																			<div class="resource-popup-form">
-																				<?php echo do_shortcode( $form ); ?>
-																				<div class="thankyou-msg"><?php echo esc_html( 'Thank you for downloading one of our useful resources. To read how we process your information, please view our privacy policy ' ); //phpcs:ignore ?><a href="#"><?php echo esc_html( 'here' ); ?></a></div>
-																			</div>
+											}
+											if ( ! empty( $select_form ) ) {
+												?>
+												<div class="modal fade" id="resourseModal" tabindex="-1" aria-labelledby="resourseModalLabel" aria-hidden="true">
+													<div class="modal-dialog">
+														<div class="modal-content">
+															<div class="modal-body">
+																<div class="row justify-content-center">
+																	<div class="col">
+																		<div class="resource-popup-form">
+																			<?php echo do_shortcode( $form ); ?>
+																			<div class="thankyou-msg"><?php echo esc_html( 'Thank you for downloading one of our useful resources. To read how we process your information, please view our privacy policy ' ); //phpcs:ignore ?><a href="#"><?php echo esc_html( 'here' ); ?></a></div>
 																		</div>
 																	</div>
 																</div>
 															</div>
 														</div>
 													</div>
-													<?php
-												}
-												?>
-											</div>
-											<?php
-										}
-										?>
-									</div>
+												</div>
+												<?php
+											}
+											?>
+										</div>
+										<?php
+									}
+									?>
 								</div>
 							</div>
-							<?php
-							wp_reset_postdata();
-						}
-						?>
-					</div>
+						</div>
+						<?php
+						wp_reset_postdata();
+					}
+					?>
 				</div>
 			</div>
 		</div>
-	</section>
-	<?php
-}
+	</div>
+</section>

@@ -40,8 +40,8 @@ if ( ! empty( $main_title ) || ! empty( $content ) ) {
 ?>
 <section class="regulatory-news-filter-block">
 	<div class="container">
-		<div class="row">
-			<div class="col-3">
+		<div class="row align-items-start">
+			<div class="col-3 filter-post-left">
 				<div class="cat-filter">
 					<?php echo esc_html( 'FILTER POSTS:' ); ?>
 				</div>
