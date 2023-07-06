@@ -14,18 +14,18 @@ if ( ! empty( $page_not_found_title ) || ! empty( $page_not_found_content ) || !
 	?>
 	<section class="error-404">
 		<div class="container">
-			<div class="row">
-				<div class="col">
+			<div class="row justify-content-center">
+				<div class="col-11">
 					<?php
 					if ( ! empty( $page_not_found_title ) ) {
-						echo '<' . esc_attr( $page_not_found_select_tag ) . ' class="section-title">' . esc_html( $page_not_found_title ) . '</' . esc_attr( $page_not_found_select_tag ) . '>';
-					}
-					if ( ! empty( $page_not_found_content ) ) {
-						echo $page_not_found_content; //phpcs:ignore
+						echo '<' . esc_attr( $page_not_found_select_tag ) . ' class="section-title h-3">' . esc_html( $page_not_found_title ) . '</' . esc_attr( $page_not_found_select_tag ) . '>';
 					}
 					?>
-					<div class="404-btn">
+					<div class="btn-404">
 						<?php
+						if ( ! empty( $page_not_found_content ) ) {
+							echo $page_not_found_content; //phpcs:ignore
+						}
 						if ( $page_not_found_button && ! empty( $page_not_found_button['url'] ) && ! empty( $page_not_found_button['title'] ) ) {
 							$link_url    = $page_not_found_button['url'];
 							$link_title  = $page_not_found_button['title'];

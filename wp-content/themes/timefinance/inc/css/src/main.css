@@ -1444,34 +1444,46 @@ header {
             color: #fff;
             text-decoration: none; }
 
-.case-studies-custom-post-block, .case-studies-category {
+.case-studies-custom-post-block {
   padding: 125px 0 80px;
-  background-color: #F5F3F6;
+  background-color: #3d1050;
   position: relative;
   overflow: hidden; }
-  .case-studies-custom-post-block::before, .case-studies-category::before {
-    content: "";
-    background-color: #3d1050;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 95vh;
-    width: 100%; }
-  .case-studies-custom-post-block .container, .case-studies-category .container {
+  .case-studies-custom-post-block .container {
     position: relative; }
-  .case-studies-custom-post-block .section-title, .case-studies-category .section-title {
+  .case-studies-custom-post-block .section-title {
     color: #00a98f;
     line-height: 30px;
     font-weight: 600;
     margin-bottom: 30px; }
-  .case-studies-custom-post-block p, .case-studies-category p {
+  .case-studies-custom-post-block p {
     color: #fff;
     font-size: 40px;
     line-height: 50px;
     font-weight: 700;
     width: 94%;
-    margin-bottom: 80px; }
-  .case-studies-custom-post-block .cat-filter, .case-studies-category .cat-filter {
+    margin-bottom: 0; }
+
+.case-studies-filter-block {
+  background-color: #F5F3F6;
+  position: relative;
+  z-index: 0;
+  overflow: hidden; }
+  .case-studies-filter-block .filter-post-left {
+    position: relative;
+    padding-bottom: 165px; }
+    .case-studies-filter-block .filter-post-left:before {
+      height: 100%;
+      content: "";
+      background-color: #3d1050;
+      width: 200vw;
+      position: absolute;
+      left: 0;
+      top: 0;
+      margin-left: -100vw;
+      right: -100vw;
+      z-index: -1; }
+  .case-studies-filter-block .cat-filter {
     font-size: 12px;
     line-height: 15px;
     font-weight: 600;
@@ -1480,45 +1492,45 @@ header {
     color: #00a98f;
     margin-top: 5px;
     margin-bottom: 25px; }
-  .case-studies-custom-post-block ul, .case-studies-category ul {
+  .case-studies-filter-block ul {
     list-style: none;
     padding: 0;
     margin: 0;
     font-size: 18px;
     line-height: 18px;
     font-weight: 600; }
-    .case-studies-custom-post-block ul .case-study-cat-list, .case-studies-category ul .case-study-cat-list {
+    .case-studies-filter-block ul .case-study-cat-list {
       margin-bottom: 15px; }
-      .case-studies-custom-post-block ul .case-study-cat-list:last-child, .case-studies-category ul .case-study-cat-list:last-child {
+      .case-studies-filter-block ul .case-study-cat-list:last-child {
         margin-bottom: 0; }
-      .case-studies-custom-post-block ul .case-study-cat-list a, .case-studies-category ul .case-study-cat-list a {
+      .case-studies-filter-block ul .case-study-cat-list a {
         color: #fff;
         text-decoration: none; }
-        .case-studies-custom-post-block ul .case-study-cat-list a:hover, .case-studies-category ul .case-study-cat-list a:hover {
+        .case-studies-filter-block ul .case-study-cat-list a:hover {
           text-decoration: underline; }
-        .case-studies-custom-post-block ul .case-study-cat-list a.btn.btn-link:hover, .case-studies-category ul .case-study-cat-list a.btn.btn-link:hover {
+        .case-studies-filter-block ul .case-study-cat-list a.btn.btn-link:hover {
           color: #fff; }
-  .case-studies-custom-post-block .case-studies-wrapper, .case-studies-category .case-studies-wrapper {
+  .case-studies-filter-block .case-studies-wrapper {
     padding-left: 50px;
     padding-right: 20px; }
-    .case-studies-custom-post-block .case-studies-wrapper .row .col, .case-studies-category .case-studies-wrapper .row .col {
+    .case-studies-filter-block .case-studies-wrapper .row .col {
       margin-bottom: 20px;
       overflow: hidden; }
-    .case-studies-custom-post-block .case-studies-wrapper .case-study-box, .case-studies-category .case-studies-wrapper .case-study-box {
+    .case-studies-filter-block .case-studies-wrapper .case-study-box {
       height: 100%; }
-      .case-studies-custom-post-block .case-studies-wrapper .case-study-box .case-study-image, .case-studies-category .case-studies-wrapper .case-study-box .case-study-image {
+      .case-studies-filter-block .case-studies-wrapper .case-study-box .case-study-image {
         height: 270px;
         overflow: hidden; }
-        .case-studies-custom-post-block .case-studies-wrapper .case-study-box .case-study-image img, .case-studies-category .case-studies-wrapper .case-study-box .case-study-image img {
+        .case-studies-filter-block .case-studies-wrapper .case-study-box .case-study-image img {
           display: block;
           height: 100%;
           width: 100%;
           object-fit: cover; }
-      .case-studies-custom-post-block .case-studies-wrapper .case-study-box .case-study-content, .case-studies-category .case-studies-wrapper .case-study-box .case-study-content {
+      .case-studies-filter-block .case-studies-wrapper .case-study-box .case-study-content {
         background-color: #fff;
         padding: 35px 24px;
         height: 100%; }
-        .case-studies-custom-post-block .case-studies-wrapper .case-study-box .case-study-content .case-study-date, .case-studies-category .case-studies-wrapper .case-study-box .case-study-content .case-study-date {
+        .case-studies-filter-block .case-studies-wrapper .case-study-box .case-study-content .case-study-date {
           font-size: 12px;
           line-height: 15px;
           letter-spacing: 1.1px;
@@ -1526,7 +1538,7 @@ header {
           color: #00a98f;
           text-transform: uppercase;
           margin-bottom: 28px; }
-        .case-studies-custom-post-block .case-studies-wrapper .case-study-box .case-study-content .case-study-title a, .case-studies-category .case-studies-wrapper .case-study-box .case-study-content .case-study-title a {
+        .case-studies-filter-block .case-studies-wrapper .case-study-box .case-study-content .case-study-title a {
           font-size: 25px;
           line-height: 33px;
           font-weight: 600;
@@ -1534,21 +1546,21 @@ header {
           margin-bottom: 12px;
           color: #3d1050;
           text-decoration: none; }
-        .case-studies-custom-post-block .case-studies-wrapper .case-study-box .case-study-content p, .case-studies-category .case-studies-wrapper .case-study-box .case-study-content p {
+        .case-studies-filter-block .case-studies-wrapper .case-study-box .case-study-content p {
           color: #3d1050;
           font-size: 15px;
           line-height: 21px;
           font-weight: 600;
           width: 92%;
           margin: 0 auto; }
-        .case-studies-custom-post-block .case-studies-wrapper .case-study-box .case-study-content .read-more, .case-studies-category .case-studies-wrapper .case-study-box .case-study-content .read-more {
+        .case-studies-filter-block .case-studies-wrapper .case-study-box .case-study-content .read-more {
           margin-top: 48px;
           font-size: 15px;
           line-height: 15px;
           letter-spacing: normal;
           padding: 8px 19px;
           font-weight: 400; }
-          .case-studies-custom-post-block .case-studies-wrapper .case-study-box .case-study-content .read-more a, .case-studies-category .case-studies-wrapper .case-study-box .case-study-content .read-more a {
+          .case-studies-filter-block .case-studies-wrapper .case-study-box .case-study-content .read-more a {
             color: #fff;
             text-decoration: none; }
 
@@ -1556,7 +1568,7 @@ header {
   padding: 120px 0; }
   .our-history-block .history-wrapper {
     padding-left: 35px;
-    padding-right: 75px; }
+    padding-right: 25px; }
   .our-history-block .section-title {
     font-size: 32px;
     line-height: 42px;
@@ -2418,6 +2430,23 @@ header {
           .client-custom-post-block .container .client-box .client-content .btn a {
             color: #fff;
             text-decoration: none; }
+
+.error-404 {
+  padding: 130px 0; }
+  .error-404 .section-title {
+    line-height: 20px;
+    font-weight: 400;
+    margin-bottom: 24px; }
+  .error-404 .btn-404 {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 400; }
 
 footer {
   background-color: #3d1050;
