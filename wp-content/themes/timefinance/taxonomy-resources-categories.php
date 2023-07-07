@@ -32,8 +32,12 @@ $resources_form            = ( ! empty( $resources_select_form ) ) ? '[forminato
 			<?php
 		}
 		?>
-		<div class="row">
-			<div class="col-3">
+	</div>
+</section>
+<section class="resources-filter-block">
+	<div class="container">
+		<div class="row align-items-start">
+			<div class="col-3 filter-post-left">
 				<div class="cat-filter">
 					<?php echo esc_html( 'FILTER POSTS:' ); ?>
 				</div>
