@@ -1,5 +1,105 @@
-// .cta-form {
-//     .forminator-row {
+//Hello teamfinance form
+.cta-form {
+    .forminator-custom-form {
+        padding: 110px 255px !important;
+        .forminator-row {
+            margin-bottom: 24px !important;
+            &.forminator-row-last {
+                margin-bottom: 0 !important;
+            }
+            .forminator-col {
+                padding: 0 10px !important;
+                .forminator-field {
+                    .forminator-label {
+                        font-weight: 600 !important;
+                        line-height: 22px;
+                        font-family: $primary-font !important;
+                        padding-bottom: 7px;
+                        border-bottom: 2px solid $purple;
+                    }
 
-//     }
-// }
+                    .forminator-input {
+                        border: none;
+                        font-family: $primary-font !important;
+                        padding: 10px 0 10px 0;
+                    }
+
+                    .forminator-error-message {
+                        font-family: $primary-font !important;
+                        font-style: italic;
+                        padding: 0;
+                        margin-top: 0;
+                        margin-bottom: 10px;
+                        line-height: 20px;
+                    }
+
+                    .forminator-select {
+                        .selection {
+                            .select2-selection {
+                                border: none !important;
+                                .select2-selection__rendered {
+                                    font-family: $primary-font !important;
+                                    padding: 0 !important;
+                                }
+
+                                .select2-selection__arrow {
+                                    @include justify-content(end);
+                                    .forminator-icon-chevron-down {
+                                        margin: 0 !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .forminator-textarea {
+                        border: none;
+                        font-family: $primary-font !important;
+                        padding: 10px 0 10px 0;
+                        height: 235px;
+                        resize: none;
+                        line-height: 33px;
+                    }
+
+                    .forminator-button-submit {
+                        padding: 15px 41px;
+                        margin-bottom: 15px;
+                        font-family: $primary-font !important;
+                        line-height: 15px;
+                        letter-spacing: normal;
+                        @include borderRadius(50px);
+                    }
+                }
+            }
+        }
+    }
+
+    .thankyou-msg-cta {
+        background-color: $light-green;
+        padding: 110px 240px;
+        font-size: 24px;
+        line-height: 32px;
+        a {
+            color: $purple;
+            text-decoration: none;
+            &:hover {
+                color: $blue;
+            }
+        }
+    }
+}
+
+.select2-container {
+    .forminator-select-dropdown {
+        padding: 0 !important;
+        .select2-results {
+            .select2-results__options {
+                max-height: 100% !important;
+                font-family: $primary-font !important;
+                li {
+                    padding: 9px 5px !important;
+                }
+            }
+        }
+    }
+}

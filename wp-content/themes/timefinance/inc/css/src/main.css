@@ -200,6 +200,81 @@ button.mfp-close {
       color: #3d1050;
       border-color: #3d1050; }
 
+.cta-form .forminator-custom-form {
+  padding: 110px 255px !important; }
+  .cta-form .forminator-custom-form .forminator-row {
+    margin-bottom: 24px !important; }
+    .cta-form .forminator-custom-form .forminator-row.forminator-row-last {
+      margin-bottom: 0 !important; }
+    .cta-form .forminator-custom-form .forminator-row .forminator-col {
+      padding: 0 10px !important; }
+      .cta-form .forminator-custom-form .forminator-row .forminator-col .forminator-field .forminator-label {
+        font-weight: 600 !important;
+        line-height: 22px;
+        font-family: "Nunito Sans", sans-serif !important;
+        padding-bottom: 7px;
+        border-bottom: 2px solid #3d1050; }
+      .cta-form .forminator-custom-form .forminator-row .forminator-col .forminator-field .forminator-input {
+        border: none;
+        font-family: "Nunito Sans", sans-serif !important;
+        padding: 10px 0 10px 0; }
+      .cta-form .forminator-custom-form .forminator-row .forminator-col .forminator-field .forminator-error-message {
+        font-family: "Nunito Sans", sans-serif !important;
+        font-style: italic;
+        padding: 0;
+        margin-top: 0;
+        margin-bottom: 10px;
+        line-height: 20px; }
+      .cta-form .forminator-custom-form .forminator-row .forminator-col .forminator-field .forminator-select .selection .select2-selection {
+        border: none !important; }
+        .cta-form .forminator-custom-form .forminator-row .forminator-col .forminator-field .forminator-select .selection .select2-selection .select2-selection__rendered {
+          font-family: "Nunito Sans", sans-serif !important;
+          padding: 0 !important; }
+        .cta-form .forminator-custom-form .forminator-row .forminator-col .forminator-field .forminator-select .selection .select2-selection .select2-selection__arrow {
+          -webkit-box-pack: end;
+          -moz-box-pack: end;
+          -ms-flex-pack: end;
+          -webkit-justify-content: end;
+          justify-content: end; }
+          .cta-form .forminator-custom-form .forminator-row .forminator-col .forminator-field .forminator-select .selection .select2-selection .select2-selection__arrow .forminator-icon-chevron-down {
+            margin: 0 !important; }
+      .cta-form .forminator-custom-form .forminator-row .forminator-col .forminator-field .forminator-textarea {
+        border: none;
+        font-family: "Nunito Sans", sans-serif !important;
+        padding: 10px 0 10px 0;
+        height: 235px;
+        resize: none;
+        line-height: 33px; }
+      .cta-form .forminator-custom-form .forminator-row .forminator-col .forminator-field .forminator-button-submit {
+        padding: 15px 41px;
+        margin-bottom: 15px;
+        font-family: "Nunito Sans", sans-serif !important;
+        line-height: 15px;
+        letter-spacing: normal;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        -ms-border-radius: 50px;
+        border-radius: 50px; }
+
+.cta-form .thankyou-msg-cta {
+  background-color: #eff9f7;
+  padding: 110px 240px;
+  font-size: 24px;
+  line-height: 32px; }
+  .cta-form .thankyou-msg-cta a {
+    color: #3d1050;
+    text-decoration: none; }
+    .cta-form .thankyou-msg-cta a:hover {
+      color: #0056b3; }
+
+.select2-container .forminator-select-dropdown {
+  padding: 0 !important; }
+  .select2-container .forminator-select-dropdown .select2-results .select2-results__options {
+    max-height: 100% !important;
+    font-family: "Nunito Sans", sans-serif !important; }
+    .select2-container .forminator-select-dropdown .select2-results .select2-results__options li {
+      padding: 9px 5px !important; }
+
 h1,
 h2,
 h3,
