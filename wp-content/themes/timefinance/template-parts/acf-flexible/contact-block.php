@@ -25,6 +25,12 @@ if ( ! empty( $main_title ) || ! empty( $content ) || ! empty( $select_form ) ) 
 					if ( ! empty( $content ) ) {
 						echo $content; //phpcs:ignore
 					}
+					?>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<?php
 					if ( ! empty( $select_form ) ) {
 						?>
 						<div class="contact-form">

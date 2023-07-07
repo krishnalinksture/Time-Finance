@@ -1,41 +1,23 @@
 #forminator-module-251:not(.select2-dropdown) {
-					padding-top: 0;
-							padding-right: 0;
-							padding-bottom: 0;
-							padding-left: 0;
-			}
+		padding-top: 0;
+		padding-right: 0;
+		padding-bottom: 0;
+		padding-left: 0;
+	}
 
 
 	#forminator-module-251 {
-					border-width: 0;
-							border-style: none;
-							border-radius: 0;
-			-moz-border-radius: 0;
-			-webkit-border-radius: 0;
-			}
+		border-width: 0;
+		border-style: none;
+		border-radius: 0;
+		-moz-border-radius: 0;
+		-webkit-border-radius: 0;
+	}
 
 
 	#forminator-module-251 {
 					border-color: rgba(0,0,0,0);
 							background-color: #eff9f7;
-			}
-
-
-	#forminator-module-251.forminator-design--default .forminator-input,
-	.forminator-ui#forminator-module-251.forminator-design--default div.StripeElement,
-	#forminator-module-251.forminator-design--default .forminator-select2 + .forminator-select .selection .select2-selection--single[role="combobox"],
-	#forminator-module-251.forminator-design--default .forminator-radio .forminator-radio-bullet,
-	#forminator-module-251.forminator-design--default .forminator-checkbox .forminator-checkbox-box,
-	#forminator-module-251.forminator-design--default .forminator-textarea,
-	#forminator-module-251.forminator-design--default .forminator-signature {
-
-			}
-
-	#forminator-module-251.forminator-design--default .forminator-input,
-	.forminator-ui#forminator-module-251.forminator-design--default div.StripeElement,
-	#forminator-module-251.forminator-design--default .forminator-select2 + .forminator-select .selection .select2-selection--single[role="combobox"],
-	#forminator-module-251.forminator-design--default .forminator-textarea,
-	#forminator-module-251.forminator-design--default .forminator-signature {
 			}
 
 #forminator-module-251 .forminator-pagination-footer .forminator-button-paypal {
@@ -893,7 +875,7 @@
 
 
 	.forminator-ui#forminator-module-251.forminator-design--default .forminator-button-submit {
-					font-size: 15px;
+					font-size: 14px;
 											font-family: Nunito;
 										font-weight: 700;			}
 
