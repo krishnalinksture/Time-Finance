@@ -355,6 +355,13 @@ button.mfp-close {
   font-size: 24px;
   line-height: 32px; }
 
+.popup-form .modal-dialog {
+  max-width: 740px; }
+  .popup-form .modal-dialog .modal-body .resource-popup-form .forminator-custom-form .forminator-row {
+    margin-bottom: 24px !important; }
+    .popup-form .modal-dialog .modal-body .resource-popup-form .forminator-custom-form .forminator-row .forminator-field.forminator-merge-tags {
+      text-align: start !important; }
+
 h1,
 h2,
 h3,
@@ -1950,7 +1957,6 @@ header {
 .bdt-filter-block {
   background-color: #F5F3F6;
   position: relative;
-  z-index: 0;
   overflow: hidden;
   padding-bottom: 80px; }
   .bdt-filter-block .filter-post-left {

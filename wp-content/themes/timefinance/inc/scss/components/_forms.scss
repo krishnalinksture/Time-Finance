@@ -206,3 +206,24 @@
         line-height: 32px;
     }
 }
+
+//Resources popup form
+.popup-form {
+    .modal-dialog {
+        max-width: 740px;
+        .modal-body {
+            .resource-popup-form {
+                .forminator-custom-form {
+                    .forminator-row {
+                        margin-bottom: 24px !important;
+                        .forminator-field {
+                            &.forminator-merge-tags {
+                                text-align: start !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
