@@ -95,8 +95,10 @@ img {
 button.mfp-close {
   width: 35px;
   height: 35px;
-  font-size: 35px;
-  opacity: 1; }
+  font-size: 45px;
+  opacity: 1;
+  top: 15%;
+  right: 15%; }
 
 .glide .glide__bullets {
   display: -webkit-box;
