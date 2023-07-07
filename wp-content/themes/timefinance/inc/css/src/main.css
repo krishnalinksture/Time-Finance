@@ -233,7 +233,10 @@ button.mfp-close {
         border: none !important; }
         .cta-form .forminator-custom-form .forminator-row .forminator-col .forminator-field .forminator-select .selection .select2-selection .select2-selection__rendered {
           font-family: "Nunito Sans", sans-serif !important;
-          padding: 0 !important; }
+          padding: 0 !important;
+          color: #00a98f !important; }
+          .cta-form .forminator-custom-form .forminator-row .forminator-col .forminator-field .forminator-select .selection .select2-selection .select2-selection__rendered .select2-selection__placeholder {
+            color: #cabdcd; }
         .cta-form .forminator-custom-form .forminator-row .forminator-col .forminator-field .forminator-select .selection .select2-selection .select2-selection__arrow {
           -webkit-box-pack: end;
           -moz-box-pack: end;
@@ -308,10 +311,14 @@ button.mfp-close {
       line-height: 20px; }
     .contact-form .forminator-custom-form .forminator-row .forminator-field .forminator-select .selection .select2-selection {
       border: none !important;
-      background-color: #fff !important; }
+      background-color: #fff !important;
+      margin-bottom: 26px !important; }
       .contact-form .forminator-custom-form .forminator-row .forminator-field .forminator-select .selection .select2-selection .select2-selection__rendered {
         font-family: "Nunito Sans", sans-serif !important;
-        padding: 8px 0 40px !important; }
+        padding-left: 0px !important;
+        color: #00a98f !important; }
+        .contact-form .forminator-custom-form .forminator-row .forminator-field .forminator-select .selection .select2-selection .select2-selection__rendered .select2-selection__placeholder {
+          color: #cabdcd; }
       .contact-form .forminator-custom-form .forminator-row .forminator-field .forminator-select .selection .select2-selection .select2-selection__arrow {
         -webkit-box-pack: end;
         -moz-box-pack: end;
@@ -1461,7 +1468,6 @@ header {
 .resources-filter-block {
   background-color: #F5F3F6;
   position: relative;
-  z-index: 0;
   overflow: hidden;
   padding-bottom: 80px; }
   .resources-filter-block .filter-post-left {

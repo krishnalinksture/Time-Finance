@@ -41,6 +41,10 @@
                                 .select2-selection__rendered {
                                     font-family: $primary-font !important;
                                     padding: 0 !important;
+                                    color: $green !important;
+                                    .select2-selection__placeholder {
+                                        color: #cabdcd;
+                                    }
                                 }
 
                                 .select2-selection__arrow {
@@ -149,9 +153,14 @@
                         .select2-selection {
                             border: none !important;
                             background-color: $white !important;
+                            margin-bottom: 26px !important;
                             .select2-selection__rendered {
                                 font-family: $primary-font !important;
-                                padding: 8px 0 40px!important;
+                                padding-left: 0px !important;
+                                color: $green !important;
+                                .select2-selection__placeholder {
+                                    color: #cabdcd;
+                                }
                             }
 
                             .select2-selection__arrow {
