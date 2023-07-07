@@ -1,4 +1,4 @@
-//Hello teamfinance form
+//Hello Team, Asset, Invoice, Loans, Vehicle finance form
 .cta-form {
     .forminator-custom-form {
         padding: 110px 255px !important;
@@ -20,6 +20,7 @@
 
                     .forminator-input {
                         border: none;
+                        line-height: 18px;
                         font-family: $primary-font !important;
                         padding: 10px 0 10px 0;
                     }
@@ -68,6 +69,9 @@
                         line-height: 15px;
                         letter-spacing: normal;
                         @include borderRadius(50px);
+                        &:hover {
+                            box-shadow: none;
+                        }
                     }
                 }
             }

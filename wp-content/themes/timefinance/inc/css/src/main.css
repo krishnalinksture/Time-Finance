@@ -216,6 +216,7 @@ button.mfp-close {
         border-bottom: 2px solid #3d1050; }
       .cta-form .forminator-custom-form .forminator-row .forminator-col .forminator-field .forminator-input {
         border: none;
+        line-height: 18px;
         font-family: "Nunito Sans", sans-serif !important;
         padding: 10px 0 10px 0; }
       .cta-form .forminator-custom-form .forminator-row .forminator-col .forminator-field .forminator-error-message {
@@ -255,6 +256,8 @@ button.mfp-close {
         -moz-border-radius: 50px;
         -ms-border-radius: 50px;
         border-radius: 50px; }
+        .cta-form .forminator-custom-form .forminator-row .forminator-col .forminator-field .forminator-button-submit:hover {
+          box-shadow: none; }
 
 .cta-form .thankyou-msg-cta {
   background-color: #eff9f7;
@@ -578,26 +581,26 @@ header {
     padding-left: 10.5%;
     padding-right: 7.33%; }
 
-.trustpilot-block .content {
-  padding: 0 35px; }
-  .trustpilot-block .content .section-title {
-    color: #00a98f;
-    font-weight: 600;
-    margin-bottom: 35px; }
-  .trustpilot-block .content p {
-    font-size: 40px;
-    line-height: 50px;
-    font-weight: 700; }
-
-.trustpilot-block.bg-purple p {
-  color: #fff; }
-
-.trustpilot-block.style-2 {
-  padding-top: 125px; }
-  .trustpilot-block.style-2 .content {
-    padding: 0 10px; }
-    .trustpilot-block.style-2 .content .section-title {
-      margin-bottom: 27px; }
+.trustpilot-block {
+  padding: 156px 0 186px 0; }
+  .trustpilot-block .content {
+    padding: 0 35px; }
+    .trustpilot-block .content .section-title {
+      color: #00a98f;
+      font-weight: 600;
+      margin-bottom: 35px; }
+    .trustpilot-block .content p {
+      font-size: 40px;
+      line-height: 50px;
+      font-weight: 700; }
+  .trustpilot-block.bg-purple p {
+    color: #fff; }
+  .trustpilot-block.style-2 {
+    padding-top: 125px; }
+    .trustpilot-block.style-2 .content {
+      padding: 0 10px; }
+      .trustpilot-block.style-2 .content .section-title {
+        margin-bottom: 27px; }
 
 .featured-content-image {
   padding: 150px 0 270px 0; }
@@ -985,10 +988,12 @@ header {
     font-weight: 400;
     margin-bottom: 48px; }
   .office-locations-block .location-card {
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    overflow: hidden; }
     .office-locations-block .location-card .location-card-content {
       padding: 20px;
-      background-color: #F5F3F6; }
+      background-color: #F5F3F6;
+      height: 100%; }
       .office-locations-block .location-card .location-card-content .card-title {
         font-size: 24px;
         line-height: 32px;
@@ -2659,6 +2664,20 @@ header {
       text-decoration: underline; }
       .error-404 .btn-404 .btn-link:hover {
         color: #3d1050; }
+
+.contact-block {
+  padding: 125px 0 48px 0; }
+  .contact-block .section-title {
+    color: #00a98f;
+    line-height: 30px;
+    font-weight: 600;
+    margin-bottom: 30px; }
+  .contact-block p {
+    color: #fff;
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 700;
+    margin-bottom: 96px; }
 
 footer {
   background-color: #3d1050;
