@@ -107,3 +107,93 @@
         }
     }
 }
+
+//Contact form
+.contact-form {
+    .forminator-custom-form {
+        padding: 110px 185px !important;
+        margin-bottom: 0 !important;
+        .forminator-row {
+            margin-bottom: 52px !important;
+            &.forminator-row-last {
+                margin-bottom: 0 !important;
+            }
+
+            .forminator-field {
+                .forminator-label {
+                    font-weight: 600 !important;
+                    line-height: 22px;
+                    font-family: $primary-font !important;
+                    padding-bottom: 5px;
+                    border-bottom: 2px solid $purple;
+                }
+
+                .forminator-input {
+                    border: none;
+                    line-height: 18px;
+                    font-family: $primary-font !important;
+                    padding: 10px 0 40px 0;
+                }
+
+                .forminator-error-message {
+                    font-family: $primary-font !important;
+                    font-style: italic;
+                    padding: 0;
+                    margin-top: 0;
+                    margin-bottom: 20px;
+                    line-height: 20px;
+                }
+
+                .forminator-select {
+                    .selection {
+                        .select2-selection {
+                            border: none !important;
+                            background-color: $white !important;
+                            .select2-selection__rendered {
+                                font-family: $primary-font !important;
+                                padding: 8px 0 40px!important;
+                            }
+
+                            .select2-selection__arrow {
+                                @include justify-content(end);
+                                .forminator-icon-chevron-down {
+                                    margin: 0 !important;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .forminator-textarea {
+                    border: none;
+                    font-family: $primary-font !important;
+                    padding: 15px 0 40px 0;
+                    height: 235px;
+                    resize: none;
+                    line-height: 33px;
+                }
+
+                .forminator-button-submit {
+                    padding: 13px 24px;
+                    font-family: $primary-font !important;
+                    line-height: 15px;
+                    margin-top: 10px;
+                    letter-spacing: normal;
+                    @include borderRadius(50px);
+                    background-color: $green !important;
+                    &:hover {
+                        box-shadow: none;
+                        background-color: $dark-green !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .thankyou-msg-contact {
+        background-color: $white;
+        padding: 110px 170px;
+        font-size: 24px;
+        line-height: 32px;
+    }
+}
