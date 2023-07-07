@@ -42,7 +42,7 @@
         margin-top: 15px;
         background-color: transparent;
         color: $white;
-    
+
         &:hover {
             color: $white;
             text-decoration: underline;
@@ -83,7 +83,7 @@
         .btn-link {
             background-color: transparent;
             color: $white;
-        
+
             &:hover {
                 color: $white;
                 text-decoration: underline;
@@ -130,7 +130,7 @@
             padding-left: 10.5%;
             padding-right: 7.33%;
         }
-    } 
+    }
 }
 
 //Trustpilot block
@@ -148,7 +148,7 @@
             font-size: 40px;
             line-height: 50px;
             font-weight: 700;
-        }    
+        }
     }
 
     &.bg-purple {
@@ -225,13 +225,13 @@
             line-height: 30px;
             margin-bottom: 80px;
         }
-    
+
         img {
             width: auto;
             height: 179px;
             margin-bottom: 30px;
         }
-    
+
         p {
             color: $white;
             line-height: 21px;
@@ -239,17 +239,17 @@
             width: 91%;
             margin: 0 auto;
         }
-    
+
         &.bg-white, &.bg-grey {
             .section-title {
                 color: $green;
             }
-    
+
             p {
                 color: $green;
             }
         }
-    } 
+    }
 
     &.style-2 {
         .section-title {
@@ -376,7 +376,7 @@
         margin-top: 25px;
         margin-bottom: 20px;
     }
-    
+
     p {
         font-size: 16px;
         line-height: 23px;
@@ -411,7 +411,7 @@
             font-weight: 700;
             color: $white;
         }
-        
+
         .apply-send-button {
             margin-top: 75px;
             a {
@@ -437,7 +437,7 @@
         .section-title {
             margin-bottom: 25px;
         }
-        
+
         .card-box {
             position: relative;
 
@@ -453,9 +453,9 @@
             }
             &:hover {
                 .hover-card {
-                    max-height:300px; 
+                    max-height:300px;
                     p {
-                        opacity: 1;  
+                        opacity: 1;
                         @include translateY(0);
                     }
                     .btn {
@@ -477,27 +477,27 @@
                     font-weight: 600;
                     margin-bottom: 0;
                 }
-        
+
                 p {
                     min-height: 70px;
                     margin-top: 15px;
-                    opacity: 0;  
+                    opacity: 0;
                     @include translateY(30px);
-                    @include transitionAll(0.8s); 
+                    @include transitionAll(0.8s);
                     transition-delay: 0.3s;
                 }
-        
+
                 .btn {
                     margin-top: 45px;
                     opacity: 0;
                     font-size: 15px;
                     line-height: 15px;
                     letter-spacing: normal;
-                    padding: 8px 22px; 
+                    padding: 8px 22px;
                     font-weight: 400;
                     @include translateY(40px);
-                    transition: 0.8s !important; 
-                    transition-delay: 0.4s !important;  
+                    transition: 0.8s !important;
+                    transition-delay: 0.4s !important;
                 }
             }
         }
@@ -507,8 +507,8 @@
         .hover-card {
             background-color: $gray !important;
         }
-    } 
-    
+    }
+
     &.bg-purple {
         .hover-card {
             .btn {
@@ -560,7 +560,7 @@
             font-size: 15px;
             line-height: 15px;
             letter-spacing: normal;
-            padding: 8px 15px; 
+            padding: 8px 15px;
             font-weight: 400;
         }
     }
@@ -620,7 +620,7 @@
                         background-position: center;
                         opacity: 0;
                         transform: rotate(0deg);
-                       
+
                     }
 
                     &::after {
@@ -631,7 +631,7 @@
                         background-repeat: no-repeat;
                         background-position: center;
                         transform: rotate(450deg);
-                       
+
                     }
 
                     &:not(.collapsed) {
@@ -712,7 +712,7 @@
             font-size: 15px;
             line-height: 15px;
             letter-spacing: normal;
-            padding: 8px 18px; 
+            padding: 8px 18px;
             font-weight: 400;
             a {
                 color: $white;
@@ -743,7 +743,7 @@
                 font-weight: 400;
                 margin-bottom: 20px;
             }
-    
+
             .email {
                 font-weight: 700;
                 a {
@@ -751,13 +751,13 @@
                     color: $green;
                     text-decoration: underline;
                     letter-spacing: normal;
-    
+
                     &:hover {
                         color: $purple;
                     }
                 }
             }
-    
+
             .phone-number {
                 font-weight: 700;
                 margin-bottom: 16px;
@@ -766,7 +766,7 @@
                     color: $green;
                     text-decoration: underline;
                     letter-spacing: normal;
-    
+
                     &:hover {
                         color: $purple;
                     }
@@ -911,7 +911,7 @@
                     font-weight: 700;
                     margin-bottom: 8px;
                 }
-    
+
                 .role {
                     color: $green;
                     font-size: 12px;
@@ -921,7 +921,7 @@
                     text-transform: uppercase;
                     margin-bottom: 43px;
                 }
-    
+
                 p {
                     color: $purple;
                     font-size: 15px;
@@ -930,7 +930,7 @@
                     width: 100%;
                     margin-bottom: 0;
                 }
-    
+
                 a {
                     color: $green;
                     margin-top: 20px;
@@ -939,7 +939,7 @@
                     +a {
                         margin-top: 0;
                     }
-    
+
                     &.btn {
                         &.btn-link {
                             &:hover {
@@ -1109,7 +1109,7 @@
                     font-size: 15px;
                     line-height: 15px;
                     letter-spacing: normal;
-                    padding: 8px 20px; 
+                    padding: 8px 20px;
                     font-weight: 400;
                     a {
                         color: $white;
@@ -1259,14 +1259,14 @@
                         margin-bottom: 32px;
                         color: $purple;
                         text-decoration: none ;
-                    }     
+                    }
                 }
 
                 .btn {
                     font-size: 15px;
                     line-height: 15px;
                     letter-spacing: normal;
-                    padding: 8px 20px; 
+                    padding: 8px 20px;
                     font-weight: 400;
                 }
             }
@@ -1410,7 +1410,7 @@
                     font-size: 15px;
                     line-height: 15px;
                     letter-spacing: normal;
-                    padding: 8px 20px; 
+                    padding: 8px 20px;
                     font-weight: 400;
                 }
             }
@@ -1533,12 +1533,12 @@
                     object-fit: cover;
                 }
             }
-            
+
             .time-blog-content {
                 background-color: $white;
                 padding: 35px 24px;
                 height: 100%;
-                
+
                 .time-blog-date {
                     font-size: 12px;
                     line-height: 15px;
@@ -1548,7 +1548,7 @@
                     text-transform: uppercase;
                     margin-bottom: 28px;
                 }
-    
+
                 .time-blog-title {
                     a {
                         font-size: 25px;
@@ -1560,7 +1560,7 @@
                         text-decoration: none;
                     }
                 }
-    
+
                 p {
                     color: $purple;
                     font-size: 15px;
@@ -1569,13 +1569,13 @@
                     width: 92%;
                     margin: 0 auto;
                 }
-    
+
                 .read-more {
                     margin-top: 48px;
                     font-size: 15px;
                     line-height: 15px;
                     letter-spacing: normal;
-                    padding: 8px 19px; 
+                    padding: 8px 19px;
                     font-weight: 400;
                     a {
                         color: $white;
@@ -1702,12 +1702,12 @@
                     object-fit: cover;
                 }
             }
-            
+
             .case-study-content {
                 background-color: $white;
                 padding: 35px 24px;
                 height: 100%;
-                
+
                 .case-study-date {
                     font-size: 12px;
                     line-height: 15px;
@@ -1717,7 +1717,7 @@
                     text-transform: uppercase;
                     margin-bottom: 28px;
                 }
-    
+
                 .case-study-title {
                     a {
                         font-size: 25px;
@@ -1729,7 +1729,7 @@
                         text-decoration: none;
                     }
                 }
-    
+
                 p {
                     color: $purple;
                     font-size: 15px;
@@ -1738,13 +1738,13 @@
                     width: 92%;
                     margin: 0 auto;
                 }
-    
+
                 .read-more {
                     margin-top: 48px;
                     font-size: 15px;
                     line-height: 15px;
                     letter-spacing: normal;
-                    padding: 8px 19px; 
+                    padding: 8px 19px;
                     font-weight: 400;
                     a {
                         color: $white;
@@ -1803,7 +1803,7 @@
                 padding-right: 0;
             }
         }
-        
+
         +.row {
             margin-top: -90px;
         }
@@ -1858,7 +1858,7 @@
                 margin-bottom: 30px;
                 color: $white;
             }
-    
+
             p {
                 font-size: 18px;
                 line-height: 25px;
@@ -1927,7 +1927,7 @@
                 font-weight: 600;
                 color: $white;
             }
-        } 
+        }
     }
 }
 
@@ -2046,12 +2046,12 @@
                     object-fit: cover;
                 }
             }
-            
+
             .bdts-content {
                 background-color: $white;
                 padding: 23px 28px;
                 height: 100%;
-    
+
                 .bdts-title {
                         font-size: 25px;
                         line-height: 33px;
@@ -2071,7 +2071,7 @@
                     text-transform: uppercase;
                     margin-bottom: 16px;
                 }
-                
+
                 .bdts-category {
                     font-size: 12px;
                     line-height: 12px;
@@ -2122,14 +2122,14 @@
                         }
                     }
                 }
-    
+
                 .popup-form {
                     .btn {
                         margin-top: 32px;
                         font-size: 15px;
                         line-height: 15px;
                         letter-spacing: normal;
-                        padding: 8px 19px; 
+                        padding: 8px 19px;
                         font-weight: 400;
                     }
                 }
@@ -2223,7 +2223,7 @@
                         background-position: center;
                         opacity: 0;
                         transform: rotate(0deg);
-                       
+
                     }
 
                     &::after {
@@ -2234,7 +2234,7 @@
                         background-repeat: no-repeat;
                         background-position: center;
                         transform: rotate(450deg);
-                       
+
                     }
 
                     &:not(.collapsed) {
@@ -2255,7 +2255,7 @@
                             transform: rotate(180deg);
                         }
                     }
-                } 
+                }
             }
 
             .accordion-collapse {
@@ -2272,11 +2272,11 @@
                                 font-weight: 700;
                             }
                         }
-        
+
                         .careers-job-type {
                             margin-bottom: 0;
                         }
-        
+
                         .btn {
                             margin-top: 54px;
                             font-size: 15px;
@@ -2366,7 +2366,7 @@
                 font-size: 15px;
                 line-height: 15px;
                 letter-spacing: normal;
-                padding: 11px 49px; 
+                padding: 11px 49px;
                 font-weight: 400;
                 &:hover{
                     background-color: $dark-green;
@@ -2460,7 +2460,7 @@
                     font-size: 15px;
                     line-height: 15px;
                     letter-spacing: normal;
-                    padding: 7px 22px; 
+                    padding: 7px 22px;
                     font-weight: 400;
                     &::before {
                         width: 48px;
@@ -2565,7 +2565,7 @@
                     font-size: 15px;
                     line-height: 15px;
                     letter-spacing: normal;
-                    padding: 7px 22px; 
+                    padding: 7px 22px;
                     font-weight: 400;
                     &::before {
                         width: 48px;
@@ -2670,7 +2670,7 @@
                     font-size: 15px;
                     line-height: 15px;
                     letter-spacing: normal;
-                    padding: 7px 22px; 
+                    padding: 7px 22px;
                     font-weight: 400;
                     &::before {
                         width: 48px;
@@ -2737,7 +2737,7 @@
                 font-size: 15px;
                 line-height: 15px;
                 letter-spacing: normal;
-                padding: 7px 18px; 
+                padding: 7px 18px;
                 font-weight: 400;
             }
         }
@@ -2796,12 +2796,12 @@
                     color: $green;
                     opacity: 1;
                 }
-                
+
                 &:-ms-input-placeholder {
                     color: $green;
                     opacity: 1;
                 }
-                
+
                 &::placeholder {
                     color: $green;
                     opacity: 1;
@@ -2855,7 +2855,7 @@
                         border-color: $very-dark-gray;
                     }
                 }
-            } 
+            }
     }
 }
 
@@ -2880,12 +2880,12 @@
                         color: $white;
                         opacity: 0.4;
                     }
-                    
+
                     &:-ms-input-placeholder {
                         color: $white;
                         opacity: 0.4;
                     }
-                    
+
                     &::placeholder {
                         color: $white;
                         opacity: 0.4;

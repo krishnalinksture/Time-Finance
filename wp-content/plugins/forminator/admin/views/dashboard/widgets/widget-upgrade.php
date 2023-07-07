@@ -36,7 +36,7 @@
 			class="sui-button sui-button-purple"
 			target="_blank"
 		>
-			<?php esc_html_e( 'Try Pro for FREE today!', 'forminator' ); ?>
+			<?php esc_html_e( 'Upgrade to Pro', 'forminator' ); ?>
 		</a>
 
 	</div>

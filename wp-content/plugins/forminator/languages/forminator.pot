@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the Forminator package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Forminator 1.24.4\n"
+"Project-Id-Version: Forminator 1.24.6\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/build\n"
-"POT-Creation-Date: 2023-06-30 10:16:01+00:00\n"
+"POT-Creation-Date: 2023-07-06 07:04:41+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10002,7 +10002,7 @@ msgid ""
 msgstr ""
 
 #: admin/locale.php:881
-msgid "Need access to pro form fields? {{link}}Try Forminator Pro for FREE{{/link}}"
+msgid "Need access to pro form fields? {{link}}Upgrade to Pro{{/link}}"
 msgstr ""
 
 #: admin/locale.php:885
@@ -14136,10 +14136,10 @@ msgstr ""
 #. Translators: 1. Opening <strong> tag with milestone value, 2. closing
 #. <strong> tag, 3. Module slug
 msgid ""
-"Hey, we noticed you just crossed %1\\$s submissions%2\\$s on this %3\\$s - "
-"that's awesome! We have spent countless hours developing this free plugin "
-"for you, and we would really appreciate it if you could drop us a rating on "
-"wp.org to help us spread the word and boost our motivation."
+"Hey, we noticed you just crossed %1$s submissions%2$s on this %3$s - that's "
+"awesome! We have spent countless hours developing this free plugin for you, "
+"and we would really appreciate it if you could drop us a rating on wp.org "
+"to help us spread the word and boost our motivation."
 msgstr ""
 
 #: admin/views/common/list/empty_content.php:23
@@ -14986,7 +14986,9 @@ msgid "The WPMU DEV Guarantee"
 msgstr ""
 
 #: admin/views/dashboard/widgets/widget-upgrade.php:39
-msgid "Try Pro for FREE today!"
+#: admin/views/upgrade/upgrade-content.php:24
+#: admin/views/upgrade/upgrade-content.php:120
+msgid "Upgrade to Pro"
 msgstr ""
 
 #: admin/views/integrations/addon.php:48
@@ -15945,10 +15947,6 @@ msgid ""
 "of all our premium plugins, managed hosting credits, and more."
 msgstr ""
 
-#: admin/views/upgrade/upgrade-content.php:24
-msgid "Try Forminator Pro for Free Today"
-msgstr ""
-
 #: admin/views/upgrade/upgrade-content.php:31
 msgid "5.0 rating from"
 msgstr ""
@@ -15990,9 +15988,9 @@ msgstr ""
 
 #: admin/views/upgrade/upgrade-content.php:69
 msgid ""
-"Start accepting recurring Stripe/PayPal subscription payments on your "
-"WordPress sites with Forminator Pro. Add multiple payment fields and "
-"conditionally process them based on form values selected by your users."
+"Start accepting recurring Stripe subscription payments on your WordPress "
+"sites with Forminator Pro. Add multiple payment fields and conditionally "
+"process them based on form values selected by your users."
 msgstr ""
 
 #: admin/views/upgrade/upgrade-content.php:73
@@ -16065,9 +16063,9 @@ msgstr ""
 
 #: admin/views/upgrade/upgrade-content.php:104
 msgid ""
-"You'll be delighted with Forminator Pro and everything else included in "
-"your membership😁 You can try the plugin first with a WPMU DEV Membership, "
-"and if change your mind, you can cancel any time."
+"You'll be delighted with Forminator Pro! 😁 However, if you're not happy in "
+"any way, we have a 100%, 30-day money-back guarantee. Cancel within the "
+"first 30 days and we'll refund your money, no questions asked."
 msgstr ""
 
 #: admin/views/upgrade/upgrade-content.php:111
@@ -16077,8 +16075,8 @@ msgstr ""
 #: admin/views/upgrade/upgrade-content.php:112
 msgid ""
 "97% of customers are happy with WPMU DEV's service, and it's a great time "
-"to join them. As a Forminator user, you'll get a free trial period, so you "
-"can see what all the fuss is about. "
+"to join them! Forminator users can unlock our full suite of Pro WP plugins, "
+"time-saving site management, and integrated client billing/management tools."
 msgstr ""
 
 #: admin/views/upgrade/upgrade-content.php:114
@@ -16087,10 +16085,6 @@ msgstr ""
 
 #: admin/views/upgrade/upgrade-content.php:117
 msgid "Get Forminator Pro and get a better WordPress"
-msgstr ""
-
-#: admin/views/upgrade/upgrade-content.php:120
-msgid "Try Pro for Free Today"
 msgstr ""
 
 #: library/abstracts/abstract-class-field.php:761

@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<p><?php esc_html_e( 'Plus - you\'ll get a WPMU DEV membership, which includes our award-winning Smush Pro image optimization plugin, white label reporting, unlimited usage of all our premium plugins, managed hosting credits, and more.', 'forminator' ); ?></p>
 
 					<a href="<?php echo esc_url( forminator_get_link( 'plugin', 'forminator_propage_topbutton' ) ); ?>" target="_blank" class="sui-button sui-button-lg sui-button-purple">
-						<?php esc_html_e( 'Try Forminator Pro for Free Today', 'forminator' ); ?>
+						<?php esc_html_e( 'Upgrade to Pro', 'forminator' ); ?>
 					</a>
 
 				<div class="sui-reviews" aria-hidden="true" tabindex="-1">
@@ -66,7 +66,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<div class="sui-upgrade-page-features__item">
 					<i class="sui-icon-update" aria-hidden="true"></i>
 					<h3><?php esc_html_e( 'Create Recurring/Subscription Payment Forms', 'forminator' ); ?></h3>
-					<p><?php esc_html_e( 'Start accepting recurring Stripe/PayPal subscription payments on your WordPress sites with Forminator Pro. Add multiple payment fields and conditionally process them based on form values selected by your users.', 'forminator' ); ?></p>
+					<p><?php esc_html_e( 'Start accepting recurring Stripe subscription payments on your WordPress sites with Forminator Pro. Add multiple payment fields and conditionally process them based on form values selected by your users.', 'forminator' ); ?></p>
 				</div>
 				<div class="sui-upgrade-page-features__item">
 					<i class="sui-icon-plugin-2" aria-hidden="true"></i>
@@ -101,7 +101,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<div class="sui-upgrade-page-features__item">
 					<i class="sui-icon-wpmudev-logo" aria-hidden="true"></i>
 					<h3><?php esc_html_e( 'The WPMU DEV Guarantee', 'forminator' ); ?></h3>
-					<p><?php esc_html_e( 'You\'ll be delighted with Forminator Pro and everything else included in your membership😁 You can try the plugin first with a WPMU DEV Membership, and if change your mind, you can cancel any time.', 'forminator' ); ?></p>
+					<p><?php esc_html_e( 'You\'ll be delighted with Forminator Pro! 😁 However, if you\'re not happy in any way, we have a 100%, 30-day money-back guarantee. Cancel within the first 30 days and we\'ll refund your money, no questions asked.', 'forminator' ); ?></p>
 				</div>
 			</div>
 		</div>
@@ -109,7 +109,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<div class="sui-upgrade-page-cta">
 			<div class="sui-upgrade-page-cta__inner">
 				<h2><?php esc_html_e( 'Join 896,671 Happy Members', 'forminator' ); ?></h2>
-				<p><?php esc_html_e( '97% of customers are happy with WPMU DEV\'s service, and it\'s a great time to join them. As a Forminator user, you\'ll get a free trial period, so you can see what all the fuss is about. ', 'forminator' ); ?></p>
+				<p><?php esc_html_e( '97% of customers are happy with WPMU DEV\'s service, and it\'s a great time to join them! Forminator users can unlock our full suite of Pro WP plugins, time-saving site management, and integrated client billing/management tools.', 'forminator' ); ?></p>
 				<a href="<?php echo esc_url( forminator_get_link( 'plugin', 'forminator_propage_bottombutton' ) ); ?>" class="sui-button sui-button-lg sui-button-purple" style="color: white;" target="_blank">
 					<?php esc_html_e( 'Get Forminator Pro, and get a better WordPress', 'forminator' ); ?>
 				</a>
@@ -117,7 +117,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<?php esc_html_e( 'Get Forminator Pro and get a better WordPress', 'forminator' ); ?>
 				</button>
 				<a href="<?php echo esc_url( forminator_get_link( 'plugin', 'forminator_propage_bottombutton' ) ); ?>" target="_blank">
-					<?php esc_html_e( 'Try Pro for Free Today', 'forminator' ); ?>
+					<?php esc_html_e( 'Upgrade to Pro', 'forminator' ); ?>
 				</a>
 			</div>
 		</div>

@@ -805,7 +805,7 @@ class Forminator_Quiz_Admin extends Forminator_Admin_Module {
 						esc_html__( 'You have a new {quiz_type} quiz submission:', 'forminator' ),
 						esc_html__( 'Lead details:', 'forminator' ),
 						esc_html__( 'Quiz details:', 'forminator' ),
-						esc_html__( 'This message was sent from {site_url}.', 'forminator' ),
+						esc_html__( 'This message was sent from {site_url}.', 'forminator' )
 					),
 				),
 				array(
@@ -1011,7 +1011,7 @@ class Forminator_Quiz_Admin extends Forminator_Admin_Module {
 					'email-editor'     => sprintf( '%1$s <br/><br/>{quiz_answer}<br/><br/>%2$s <br/>{quiz_result} <br/>---<br/> %3$s',
 						esc_html__( 'You have a new quiz submission:', 'forminator' ),
 						esc_html__( 'Quiz results:', 'forminator' ),
-						esc_html__( 'This message was sent from {site_url}.', 'forminator' ),
+						esc_html__( 'This message was sent from {site_url}.', 'forminator' )
 					),
 				),
 			);

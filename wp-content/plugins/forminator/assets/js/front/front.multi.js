@@ -1685,8 +1685,12 @@
 	 * @param {string} string
 	 */
 	function sanitize_text_field( string ) {
-		var str = String(string).replace(/[&\/\\#^+()$~%.'":*?<>{}!@]/g, '');
-		return str.trim();
+		if ( typeof string === 'string') {
+			var str = String(string).replace(/[&\/\\#^+()$~%.'":*?<>{}!@]/g, '');
+			return str.trim();
+		}
+
+		return string;
 	}
 
 })(jQuery, window, document);
