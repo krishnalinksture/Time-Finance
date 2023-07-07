@@ -30,17 +30,15 @@ if ( ! empty( $main_title ) ) {
 					if ( ! empty( $main_title ) ) {
 						echo '<' . esc_attr( $select_tag ) . ' class="section-title h-2">' . esc_html( $main_title ) . '</' . esc_attr( $select_tag ) . '>';
 					}
-					if ( 'standard-background' === $select_background ) {
-						if ( $cta_button && ! empty( $cta_button['url'] ) && ! empty( $cta_button['title'] ) ) {
-							$link_url    = $cta_button['url'];
-							$link_title  = $cta_button['title'];
-							$link_target = $cta_button['target'] ? $link['target'] : '_self';
-							?>
-							<a href="<?php echo esc_url( $link_url ); ?>" class="btn btn-link" target="<?php echo esc_attr( $link_target ); ?>">
-								<?php echo esc_html( $link_title ); ?>
-							</a>
-							<?php
-						}
+					if ( $cta_button && ! empty( $cta_button['url'] ) && ! empty( $cta_button['title'] ) ) {
+						$link_url    = $cta_button['url'];
+						$link_title  = $cta_button['title'];
+						$link_target = $cta_button['target'] ? $link['target'] : '_self';
+						?>
+						<a href="<?php echo esc_url( $link_url ); ?>" class="btn btn-link" target="<?php echo esc_attr( $link_target ); ?>">
+							<?php echo esc_html( $link_title ); ?>
+						</a>
+						<?php
 					}
 					?>
 				</div>
