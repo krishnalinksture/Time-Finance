@@ -79,6 +79,12 @@
         color: $white;
     }
 
+    .btn-link {
+        color: $white;
+        text-decoration: underline;
+        font-size: 30px;
+    }
+
     &.standard-background {
         .btn-link {
             background-color: transparent;

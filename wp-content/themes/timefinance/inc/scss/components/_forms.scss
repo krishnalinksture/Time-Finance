@@ -212,17 +212,74 @@
     .modal-dialog {
         max-width: 740px;
         .modal-body {
+            .col {
+                margin-bottom: 0 !important;
+            }
             .resource-popup-form {
                 .forminator-custom-form {
+                    margin-bottom: 0 !important;
                     .forminator-row {
                         margin-bottom: 24px !important;
+                        text-align: start !important;
                         .forminator-field {
                             &.forminator-merge-tags {
-                                text-align: start !important;
+                                text-align: start !important; 
+                                border: none;
+                                font-size: 20px !important;
+                                line-height: 1.5;
+                                font-family: $primary-font !important;
+                                .forminator-label {
+                                   display: none;
+                                }
+                            }
+
+                            .forminator-label {
+                                font-weight: 600 !important;
+                                line-height: 22px;
+                                font-family: $primary-font !important;
+                                padding-bottom: 5px;
+                                border-bottom: 2px solid $purple;
+                            }
+
+                            .forminator-input {
+                                border: none;
+                                line-height: 18px;
+                                font-family: $primary-font !important;
+                                padding: 10px 0 40px 0;
+                            }
+
+                            .forminator-error-message {
+                                font-family: $primary-font !important;
+                                font-style: italic;
+                                padding: 0;
+                                margin-top: 0;
+                                margin-bottom: 20px;
+                                line-height: 20px;
+                            }
+
+                            .forminator-button-submit {
+                                padding: 13px 24px;
+                                font-family: $primary-font !important;
+                                line-height: 15px;
+                                margin-top: 10px;
+                                letter-spacing: normal;
+                                @include borderRadius(50px);
+                                background-color: $green !important;
+                                &:hover {
+                                    box-shadow: none;
+                                    background-color: $dark-green !important;
+                                }
                             }
                         }
                     }
                 }
+            }
+
+            .thankyou-msg {
+                padding: 14px;
+                font-size: 24px;
+                line-height: 32px;
+                text-align: start;
             }
         }
     }

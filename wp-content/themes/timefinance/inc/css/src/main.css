@@ -357,10 +357,58 @@ button.mfp-close {
 
 .popup-form .modal-dialog {
   max-width: 740px; }
-  .popup-form .modal-dialog .modal-body .resource-popup-form .forminator-custom-form .forminator-row {
-    margin-bottom: 24px !important; }
-    .popup-form .modal-dialog .modal-body .resource-popup-form .forminator-custom-form .forminator-row .forminator-field.forminator-merge-tags {
+  .popup-form .modal-dialog .modal-body .col {
+    margin-bottom: 0 !important; }
+  .popup-form .modal-dialog .modal-body .resource-popup-form .forminator-custom-form {
+    margin-bottom: 0 !important; }
+    .popup-form .modal-dialog .modal-body .resource-popup-form .forminator-custom-form .forminator-row {
+      margin-bottom: 24px !important;
       text-align: start !important; }
+      .popup-form .modal-dialog .modal-body .resource-popup-form .forminator-custom-form .forminator-row .forminator-field.forminator-merge-tags {
+        text-align: start !important;
+        border: none;
+        font-size: 20px !important;
+        line-height: 1.5;
+        font-family: "Nunito Sans", sans-serif !important; }
+        .popup-form .modal-dialog .modal-body .resource-popup-form .forminator-custom-form .forminator-row .forminator-field.forminator-merge-tags .forminator-label {
+          display: none; }
+      .popup-form .modal-dialog .modal-body .resource-popup-form .forminator-custom-form .forminator-row .forminator-field .forminator-label {
+        font-weight: 600 !important;
+        line-height: 22px;
+        font-family: "Nunito Sans", sans-serif !important;
+        padding-bottom: 5px;
+        border-bottom: 2px solid #3d1050; }
+      .popup-form .modal-dialog .modal-body .resource-popup-form .forminator-custom-form .forminator-row .forminator-field .forminator-input {
+        border: none;
+        line-height: 18px;
+        font-family: "Nunito Sans", sans-serif !important;
+        padding: 10px 0 40px 0; }
+      .popup-form .modal-dialog .modal-body .resource-popup-form .forminator-custom-form .forminator-row .forminator-field .forminator-error-message {
+        font-family: "Nunito Sans", sans-serif !important;
+        font-style: italic;
+        padding: 0;
+        margin-top: 0;
+        margin-bottom: 20px;
+        line-height: 20px; }
+      .popup-form .modal-dialog .modal-body .resource-popup-form .forminator-custom-form .forminator-row .forminator-field .forminator-button-submit {
+        padding: 13px 24px;
+        font-family: "Nunito Sans", sans-serif !important;
+        line-height: 15px;
+        margin-top: 10px;
+        letter-spacing: normal;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        -ms-border-radius: 50px;
+        border-radius: 50px;
+        background-color: #00a98f !important; }
+        .popup-form .modal-dialog .modal-body .resource-popup-form .forminator-custom-form .forminator-row .forminator-field .forminator-button-submit:hover {
+          box-shadow: none;
+          background-color: #025244 !important; }
+  .popup-form .modal-dialog .modal-body .thankyou-msg {
+    padding: 14px;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: start; }
 
 h1,
 h2,
@@ -633,6 +681,10 @@ header {
   .inner-page-hero-small .section-title {
     font-weight: 800;
     color: #fff; }
+  .inner-page-hero-small .btn-link {
+    color: #fff;
+    text-decoration: underline;
+    font-size: 30px; }
   .inner-page-hero-small.standard-background .btn-link {
     background-color: transparent;
     color: #fff; }
