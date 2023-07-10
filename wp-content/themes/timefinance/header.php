@@ -64,7 +64,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						<?php
 					}
 					?>
-					<div class="col-auto header-menu ms-auto">
+					<div class="col-auto header-menu ms-xl-auto">
 						<button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-label="Toggle navigation" aria-expanded="false">
 							<span class="navbar-toggler-line"></span>
 						</button>
