@@ -96,6 +96,8 @@ window.Scrollanimate = () => {
 				$( ".cta-block .send-message" ).on( "click", function() {
 					$( ".cta-form" ).slideToggle(500);
 				});
+
+				// Thankyou Message.
 				$(".cta-form .thankyou-msg-cta").css("display", "none");
 				$(".cta-form .forminator-button-submit").on( "click", function(){
 
@@ -210,6 +212,10 @@ window.Scrollanimate = () => {
 						$(".contact-block .contact-form .thankyou-msg-contact").css("display", "block");
 						$(".contact-block .contact-form .forminator-custom-form").css("display", "none");
 					}
+				});
+
+				$(".navbar .navbar-toggler").on("click", function(){
+					$("html").toggleClass("show-menu");
 				});
 
 			},
