@@ -211,6 +211,7 @@
 .popup-form {
     .modal-dialog {
         max-width: 740px;
+        margin-top: 200px;
         .modal-body {
             .col {
                 margin-bottom: 0 !important;
@@ -280,6 +281,98 @@
                 font-size: 24px;
                 line-height: 32px;
                 text-align: start;
+            }
+        }
+    }
+}
+
+//BDT Enquiry Form
+.bdt-filter-block {
+    .popup-form {
+        .modal-dialog {
+            .modal-content {
+                .modal-header {
+                    border: none;
+                    .modal-title {
+                        font-size: 20px;
+                        line-height: 1.5;
+                        font-weight: 400;
+                    }
+
+                    .btn-close {
+                        font-size: 11px;
+                        font-weight: 700;
+                        line-height: 1;
+                    }
+                }
+
+                .modal-body {
+                    padding: 30px;
+                    .bdt-popup-form {
+                        .forminator-custom-form {
+                            margin-bottom: 0 !important;
+                            .forminator-row {
+                                margin-bottom: 24px !important;
+                                text-align: start !important;
+                                .forminator-field {
+                                    .forminator-label {
+                                        font-weight: 600 !important;
+                                        line-height: 22px;
+                                        font-family: $primary-font !important;
+                                        padding-bottom: 5px;
+                                        border-bottom: 2px solid $purple;
+                                    }
+
+                                    .forminator-input {
+                                        border: none;
+                                        line-height: 18px;
+                                        font-family: $primary-font !important;
+                                        padding: 10px 0 40px 0;
+                                    }
+
+                                    .forminator-error-message {
+                                        font-family: $primary-font !important;
+                                        font-style: italic;
+                                        padding: 0;
+                                        margin-top: 0;
+                                        margin-bottom: 20px;
+                                        line-height: 20px;
+                                    }
+
+                                    .forminator-textarea {
+                                        border: none;
+                                        font-family: $primary-font !important;
+                                        padding: 15px 0 40px 0;
+                                        height: 140px;
+                                        resize: none;
+                                        line-height: 33px;
+                                    }
+
+                                    .forminator-button-submit {
+                                        padding: 13px 24px;
+                                        font-family: $primary-font !important;
+                                        line-height: 15px;
+                                        margin-top: 10px;
+                                        letter-spacing: normal;
+                                        @include borderRadius(50px);
+                                        background-color: $green !important;
+                                        &:hover {
+                                            box-shadow: none;
+                                            background-color: $dark-green !important;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .thankyou-msg-bdt {
+                        font-size: 24px;
+                        line-height: 32px;
+                        font-weight: 400;
+                        text-align: start;
+                    }
+                }
             }
         }
     }
