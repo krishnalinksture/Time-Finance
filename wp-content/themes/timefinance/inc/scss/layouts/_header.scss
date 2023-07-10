@@ -38,14 +38,18 @@ header {
             width: auto;
             height: 67px;
 
-            @include responsive(mobile-small, max) {
-                height: 30px;
+            @include responsive(laptop, max) {
+                height: 45px;
             }
         }
     }
 
     // Header Button
     .header-btn {
+        @include responsive(laptop, max) {
+            margin-left: auto;
+        }
+
         .search-icon {
             width: 19px;
             margin-left: 20px;
@@ -54,7 +58,14 @@ header {
             @include responsive(mini-desktop, max) {
                 width: 17px;
                 margin-left: 12px;
-                margin-right: 3px;
+                margin-right: 5px;
+            }
+
+            @include responsive(laptop, max) {
+                width: 19px;
+                margin-left: 0;
+                margin-right: 0;
+                margin-top: -3px;
             }
         }
 
@@ -67,8 +78,12 @@ header {
             letter-spacing: 0;
 
             @include responsive(mini-desktop, max) {
-                padding: 6px 18px 8px 18px;
-                font-size: 15px;
+                padding: 7px 18px 7px 18px;
+                font-size: 14px;
+            }
+
+            @include responsive(laptop, max) {
+                display: none !important;
             }
         }
     }
@@ -77,96 +92,140 @@ header {
     nav.navbar {
         padding: 0;
 
-        .navbar-nav {
-            @media (min-width: 768px) {
-                flex-direction: row;
+        @include responsive(laptop, max) {
+            margin: 18.5px auto 18.5px 0;
+            min-height: 45px;
+        }
+
+        .header-menu {
+            @include responsive(laptop, max) {
+                order: 3;
             }
 
-            >.menu-item {
-                margin-right: 6px;
-                position: relative;
-
-                @include responsive(mobile-big, max) {
-                    margin: 0;
-                    border-bottom: 1px solid $white;
+            .navbar-nav {
+                @media (min-width: 1200px) {
+                    flex-direction: row;
                 }
 
-                &:last-child {
-                    margin: 0;
+                >.menu-item {
+                    margin-right: 6px;
+                    position: relative;
 
-                    @include responsive(mobile-big, max) {
-                        border: none;
+                    @include responsive(laptop, max) {
+                        margin: 0;
+                        padding: 11px 0 6px;
+                        border-bottom: 2px solid $white;
                     }
-                }
 
-                >a {
-                    color: $purple;
-                    font-size: 15px;
-                    line-height: 25px;
-                    font-weight: 600;
-                    padding: 50px 8px;
-                    text-decoration: none;
+                    &:last-child {
+                        margin: 0;
 
-                    @include responsive(mini-desktop, max) {
-                        padding-left: 6px;
-                        padding-right: 6px;
-
+                        @include responsive(laptop, max) {
+                            border: none;
+                        }
                     }
-                }
 
-                &:hover {
-                    .mega-menu-wrapper {
-                        opacity: 1;
-                        visibility: visible;
-                    }
-                }
-            }
+                    >a {
+                        color: $purple;
+                        font-size: 15px;
+                        line-height: 25px;
+                        font-weight: 600;
+                        padding: 50px 8px;
+                        text-decoration: none;
 
-            // Mega Menu Wrapper
-            .mega-menu-wrapper {
-                opacity: 0;
-                visibility: visible;
-                transition: .2s ease-in-out;
-                -webkit-box-shadow: 4px 0 20px -8px rgba(0, 0, 0, .05);
-                box-shadow: 4px 0 20px -8px rgba(0, 0, 0, .05);
-                background-color: $white;
-                left: -10px;
-                width: 218px;
-                padding: 0;
-                position: absolute;
-                margin: 0;
-
-                ul {
-                    list-style: none;
-                    padding: 0;
-                    margin: 0;
-
-                    li {
-                        border-bottom: 1px solid $light-blue;
-
-                        &:last-child {
-                            border: 0;
+                        @include responsive(mini-desktop, max) {
+                            padding-left: 5px;
+                            padding-right: 5px;
                         }
 
-                        &.current-menu-item,
-                        &.current_page_item {
-                            a {
-                                color: $dark-purple;
+                        @include responsive(laptop, max) {
+                            color: $white;
+                            font-weight: 700;
+                            padding: 6px 0;
+                        }
+                    }
+
+                    &:hover {
+                        .mega-menu-wrapper {
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+
+                    .mobile-icon {
+                        display: none;
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            top: calc(50% - 6px);
+                            right: 4px;
+                            border-right: 1px solid $white;
+                            border-bottom: 1px solid $white;
+                            height: 8px;
+                            width: 8px;
+                            @include rotate(45deg);
+                        }
+
+                        @include responsive(laptop, max) {
+                            display: block;
+                        }
+                    }
+
+                    &.show {
+                        .mobile-icon {
+                            &::after {
+                                -webkit-transform: translateY(3px) rotate(225deg);
+                                transform: translateY(3px) rotate(225deg);
                             }
                         }
+                    }
+                }
 
-                        a {
-                            font-size: 15px;
-                            line-height: 22px;
-                            white-space: normal;
-                            padding: 15px 25px;
-                            font-weight: 600;
-                            color: $purple;
-                            text-decoration: none;
-                            color: $light-gray;
+                // Mega Menu Wrapper
+                .mega-menu-wrapper {
+                    opacity: 0;
+                    visibility: visible;
+                    background-color: $white;
+                    left: -10px;
+                    width: 218px;
+                    padding: 0;
+                    position: absolute;
+                    margin: 0;
+                    @include transitionAll(0.2s ease-in-out);
+                    @include box-shadow(4px 0 20px -8px rgba(0, 0, 0, .05));
 
-                            &:hover {
-                                color: $dark-purple;
+                    ul {
+                        list-style: none;
+                        padding: 0;
+                        margin: 0;
+
+                        li {
+                            border-bottom: 1px solid $light-blue;
+
+                            &:last-child {
+                                border: 0;
+                            }
+
+                            &.current-menu-item,
+                            &.current_page_item {
+                                a {
+                                    color: $dark-purple;
+                                }
+                            }
+
+                            a {
+                                font-size: 15px;
+                                line-height: 22px;
+                                white-space: normal;
+                                padding: 15px 25px;
+                                font-weight: 600;
+                                text-decoration: none;
+                                color: $dark-gray;
+
+                                &:hover {
+                                    color: $dark-purple;
+                                }
                             }
                         }
                     }
@@ -177,13 +236,13 @@ header {
 
     // navbar toggle
     .navbar-toggler {
-        width: 26px;
-        height: 30px;
+        width: 22px;
+        height: 14px;
         padding: 0;
-        position: absolute;
-        top: 26px;
-        left: 35px;
         display: inline-flex;
+        position: relative;
+        top: -4px;
+        margin-left: 17px;
         @include align-items(center);
 
         @include responsive(mobile-small, max) {
@@ -200,10 +259,10 @@ header {
 
         .navbar-toggler-line {
             width: 100%;
-            height: 5px;
-            background-color: $black;
+            height: 2px;
+            background-color: $purple;
             position: relative;
-            @include borderRadius(3px);
+            @include borderRadius(0px);
             @include transitionAll(0.3s ease-in-out);
 
             &:before,
@@ -211,19 +270,19 @@ header {
                 content: "";
                 width: 100%;
                 height: 100%;
-                background-color: $black;
+                background-color: $purple;
                 position: absolute;
                 left: 0;
-                @include borderRadius(3px);
+                @include borderRadius(0px);
                 @include transitionAll(0.3s ease-in-out);
             }
 
             &:before {
-                top: -10px;
+                top: -7px;
             }
 
             &:after {
-                top: 10px;
+                top: 7px;
             }
         }
 
@@ -246,15 +305,16 @@ header {
 
     // mobile menu
     .navbar-collapse {
-        @include responsive(mobile-big, max) {
-            position: absolute;
-            padding: 0 15px;
-            top: 83px;
+        @include responsive(laptop, max) {
+            position: fixed;
+            padding: 100px 25px 0;
+            top: 0;
             left: 0;
-            width: 60%;
+            width: 100%;
             z-index: 9;
-            height: calc(100vh - 83px);
+            height: 100vh;
             overflow-y: auto;
+            background-color: $purple;
             @include transitionAll(0.5s);
         }
 
@@ -265,7 +325,7 @@ header {
         }
 
         &.collapse:not(.show) {
-            @include responsive(mobile-big, max) {
+            @include responsive(laptop, max) {
                 display: block;
                 left: -100%;
             }
