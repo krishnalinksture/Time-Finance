@@ -3022,6 +3022,35 @@ header {
   border-bottom: 1px solid grey;
   border-right: 1px solid grey; }
 
+.page-shareholder-information .content-block h4 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 400;
+  margin-bottom: 16px; }
+
+.page-shareholder-information .content-block p {
+  margin-bottom: 16px; }
+
+.page-shareholder-information .content-block table tbody tr td {
+  font-size: 16px;
+  line-height: 1.5; }
+
+.page-company-information .content-block h4 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 400;
+  margin-bottom: 16px; }
+
+.customize-support .content-block h4 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 400;
+  margin-bottom: 16px; }
+
+.customize-support .content-block table tbody tr td a {
+  font-size: 16px;
+  line-height: 1.5; }
+
 footer {
   background-color: #3d1050;
   color: #fff;

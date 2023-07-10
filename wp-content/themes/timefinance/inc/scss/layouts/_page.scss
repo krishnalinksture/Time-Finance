@@ -3092,3 +3092,67 @@
         }
     }
 }
+
+//Page shareholder information
+.page-shareholder-information {
+    .content-block {
+        h4 {
+            font-size: 24px;
+            line-height: 32px;
+            font-weight: 400;
+            margin-bottom: 16px;
+        }
+
+        p {
+            margin-bottom: 16px;
+        }
+
+        table {
+            tbody {
+                tr {
+                    td {
+                        font-size: 16px;
+                        line-height: 1.5;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//Page company information
+.page-company-information {
+    .content-block {
+        h4 {
+            font-size: 24px;
+            line-height: 32px;
+            font-weight: 400;
+            margin-bottom: 16px;
+        }
+    }
+}
+
+//Page financials calendar presentations and research customize support
+.customize-support {
+    .content-block {
+        h4 {
+            font-size: 24px;
+            line-height: 32px;
+            font-weight: 400;
+            margin-bottom: 16px;
+        }
+
+        table {
+            tbody {
+                tr {
+                    td {
+                        a {
+                            font-size: 16px;
+                            line-height: 1.5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
