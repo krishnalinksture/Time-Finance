@@ -423,7 +423,7 @@ button.mfp-close {
     line-height: 1; }
 
 .bdt-filter-block .popup-form .modal-dialog .modal-content .modal-body {
-  padding: 30px; }
+  padding: 30px 45px; }
   .bdt-filter-block .popup-form .modal-dialog .modal-content .modal-body .bdt-popup-form .forminator-custom-form {
     margin-bottom: 0 !important; }
     .bdt-filter-block .popup-form .modal-dialog .modal-content .modal-body .bdt-popup-form .forminator-custom-form .forminator-row {
@@ -441,6 +441,7 @@ button.mfp-close {
         font-family: "Nunito Sans", sans-serif !important;
         padding: 10px 0 40px 0; }
       .bdt-filter-block .popup-form .modal-dialog .modal-content .modal-body .bdt-popup-form .forminator-custom-form .forminator-row .forminator-field .forminator-error-message {
+        font-size: 12px !important;
         font-family: "Nunito Sans", sans-serif !important;
         font-style: italic;
         padding: 0;
@@ -451,14 +452,14 @@ button.mfp-close {
         border: none;
         font-family: "Nunito Sans", sans-serif !important;
         padding: 15px 0 40px 0;
-        height: 140px;
+        height: 170px;
         resize: none;
         line-height: 33px; }
       .bdt-filter-block .popup-form .modal-dialog .modal-content .modal-body .bdt-popup-form .forminator-custom-form .forminator-row .forminator-field .forminator-button-submit {
         padding: 13px 24px;
         font-family: "Nunito Sans", sans-serif !important;
+        font-size: 15px;
         line-height: 15px;
-        margin-top: 10px;
         letter-spacing: normal;
         -webkit-border-radius: 50px;
         -moz-border-radius: 50px;
