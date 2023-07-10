@@ -113,8 +113,16 @@ header {
 
                     @include responsive(laptop, max) {
                         margin: 0;
-                        padding: 11px 0 6px;
-                        border-bottom: 2px solid $white;
+                        padding: 11px 0 7px;
+
+                        &:before {
+                            content: "";
+                            border-bottom: 2px solid $white;
+                            width: 100%;
+                            position: relative;
+                            display: block;
+                            top: 45px;
+                        }
                     }
 
                     &:last-child {
@@ -149,16 +157,25 @@ header {
                         .mega-menu-wrapper {
                             opacity: 1;
                             visibility: visible;
+
+                            @include responsive(laptop, max) {
+                                display: block;
+                            }
                         }
                     }
 
                     .mobile-icon {
                         display: none;
+                        position: absolute;
+                        right: 0;
+                        top: 25px;
+                        width: 20px;
+                        height: 20px;
 
                         &::after {
                             content: '';
                             position: absolute;
-                            top: calc(50% - 6px);
+                            top: 0;
                             right: 4px;
                             border-right: 1px solid $white;
                             border-bottom: 1px solid $white;
@@ -173,6 +190,20 @@ header {
                     }
 
                     &.show {
+                        .mega-menu-wrapper {
+                            @include responsive(laptop, max) {
+                                display: block;
+                                opacity: 1;
+                                visibility: visible;
+                            }
+                        }
+
+                        &:before {
+                            @include responsive(laptop, max) {
+                                border-color: $green;
+                            }
+                        }
+
                         .mobile-icon {
                             &::after {
                                 -webkit-transform: translateY(3px) rotate(225deg);
@@ -195,6 +226,20 @@ header {
                     @include transitionAll(0.2s ease-in-out);
                     @include box-shadow(4px 0 20px -8px rgba(0, 0, 0, .05));
 
+                    @include responsive(laptop, max) {
+                        position: relative;
+                        left: 0;
+                        width: 100%;
+                        background-color: transparent;
+                        padding: 29px 0 12px 0;
+                        display: none;
+                        opacity: 1;
+                        visibility: visible;
+                        -webkit-transition: .0s ease-in-out;
+                        transition: .0s ease-in-out;
+                        @include box-shadow(none);
+                    }
+
                     ul {
                         list-style: none;
                         padding: 0;
@@ -202,6 +247,10 @@ header {
 
                         li {
                             border-bottom: 1px solid $light-blue;
+
+                            @include responsive(laptop, max) {
+                                border: 0;
+                            }
 
                             &:last-child {
                                 border: 0;
@@ -223,6 +272,11 @@ header {
                                 text-decoration: none;
                                 color: $dark-gray;
 
+                                @include responsive(laptop, max) {
+                                    color: $white;
+                                    padding: 8px 0;
+                                }
+
                                 &:hover {
                                     color: $dark-purple;
                                 }
@@ -230,6 +284,16 @@ header {
                         }
                     }
                 }
+            }
+
+            .btn {
+                display: none;
+                padding: 6px 24px 8px 24px;
+                font-size: 15px;
+                line-height: 16px;
+                font-weight: 400;
+                letter-spacing: 0;
+                margin: 50px 8px 0 0;
             }
         }
     }
@@ -243,11 +307,9 @@ header {
         position: relative;
         top: -4px;
         margin-left: 17px;
+        z-index: 99;
         @include align-items(center);
 
-        @include responsive(mobile-small, max) {
-            left: 20px;
-        }
 
         &:hover,
         &:focus {
@@ -257,24 +319,34 @@ header {
             background: transparent;
         }
 
+        &.collapsed {
+            .navbar-toggler-line {
+                background-color: $purple !important;
+
+                &:before,
+                &:after {
+                    background-color: $purple !important;
+                }
+            }
+        }
+
         .navbar-toggler-line {
             width: 100%;
             height: 2px;
-            background-color: $purple;
+            background-color: transparent !important;
             position: relative;
             @include borderRadius(0px);
-            @include transitionAll(0.3s ease-in-out);
+
 
             &:before,
             &:after {
                 content: "";
                 width: 100%;
                 height: 100%;
-                background-color: $purple;
+                background-color: $white !important;
                 position: absolute;
                 left: 0;
                 @include borderRadius(0px);
-                @include transitionAll(0.3s ease-in-out);
             }
 
             &:before {
@@ -307,7 +379,7 @@ header {
     .navbar-collapse {
         @include responsive(laptop, max) {
             position: fixed;
-            padding: 100px 25px 0;
+            padding: 100px 25px 100px;
             top: 0;
             left: 0;
             width: 100%;
@@ -327,7 +399,7 @@ header {
         &.collapse:not(.show) {
             @include responsive(laptop, max) {
                 display: block;
-                left: -100%;
+                top: -100%;
             }
         }
     }
