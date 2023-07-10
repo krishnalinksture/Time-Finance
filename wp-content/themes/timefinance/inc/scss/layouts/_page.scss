@@ -1308,10 +1308,14 @@
     }
 }
 
+.modal-open section.resources-filter-block {
+    z-index: 9999;
+}
+
 .resources-filter-block {
     background-color: $gray;
     position: relative;
-    z-index: 9999;
+    z-index: 1;
     overflow: hidden;
     padding-bottom: 80px;
     .filter-post-left {
@@ -1968,10 +1972,14 @@
     }
 }
 
+.modal-open section.bdt-filter-block {
+    z-index: 9999;
+}
+
 .bdt-filter-block {
     background-color: $gray;
     position: relative;
-    z-index: 9999;
+    z-index: 1;
     overflow: hidden;
     padding-bottom: 80px;
     .filter-post-left {
@@ -2868,71 +2876,6 @@
     }
 }
 
-//Timefinance search popup
-.timefinance-search-popup {
-    background-color: $purple;
-    .search-form-result {
-        @include flex;
-        @include justify-content(center);
-        .search-form {
-            padding-bottom: 10px;
-            border-bottom: 2px solid $white;
-            opacity: 0.2;
-            width: 44%;
-            @include flex;
-            @include justify-content(space-between);
-
-            &.lighten {
-                opacity: 1;
-                .search-input {
-                    &::-webkit-input-placeholder {
-                        color: $white;
-                        opacity: 0.4;
-                    }
-
-                    &:-ms-input-placeholder {
-                        color: $white;
-                        opacity: 0.4;
-                    }
-
-                    &::placeholder {
-                        color: $white;
-                        opacity: 0.4;
-                    }
-                }
-            }
-
-            .search-input {
-                background-color: $purple;
-                color: $white;
-                font-size: 40px;
-                line-height: 40px;
-                border: none;
-                font-weight: 700;
-                vertical-align: middle;
-
-                &:focus-visible {
-                    outline-offset: 0px;
-                    box-shadow: none;
-                    border: 0;
-                    outline: 0;
-                }
-            }
-
-            .search-button {
-                background-color: transparent;
-                border: none;
-                vertical-align: middle;
-                img {
-                    filter: brightness(0) invert(1);
-                    height: 31px;
-                    width: 31px;
-                }
-            }
-        }
-    }
-}
-
 //Client custom post block
 .client-custom-post-block {
     padding: 100px 0 140px 0;
@@ -3139,6 +3082,10 @@
             font-size: 24px;
             line-height: 32px;
             font-weight: 400;
+            margin-bottom: 16px;
+        }
+
+        p {
             margin-bottom: 16px;
         }
 

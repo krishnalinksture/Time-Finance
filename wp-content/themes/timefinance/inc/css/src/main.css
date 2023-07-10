@@ -858,6 +858,67 @@ header {
     top: 135px;
     right: 10px; }
 
+.timefinance-search-popup {
+  background-color: #3d1050; }
+  .timefinance-search-popup .search-form-result {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center; }
+    .timefinance-search-popup .search-form-result .search-form {
+      padding-bottom: 10px;
+      border-bottom: 2px solid #fff;
+      opacity: 0.2;
+      width: 44%;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: justify;
+      -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+      -webkit-justify-content: space-between;
+      justify-content: space-between; }
+      .timefinance-search-popup .search-form-result .search-form.lighten {
+        opacity: 1; }
+        .timefinance-search-popup .search-form-result .search-form.lighten .search-input::-webkit-input-placeholder {
+          color: #fff;
+          opacity: 0.4; }
+        .timefinance-search-popup .search-form-result .search-form.lighten .search-input:-ms-input-placeholder {
+          color: #fff;
+          opacity: 0.4; }
+        .timefinance-search-popup .search-form-result .search-form.lighten .search-input::placeholder {
+          color: #fff;
+          opacity: 0.4; }
+      .timefinance-search-popup .search-form-result .search-form .search-input {
+        background-color: #3d1050;
+        color: #fff;
+        font-size: 40px;
+        line-height: 40px;
+        border: none;
+        font-weight: 700;
+        vertical-align: middle; }
+        .timefinance-search-popup .search-form-result .search-form .search-input:focus-visible {
+          outline-offset: 0px;
+          box-shadow: none;
+          border: 0;
+          outline: 0; }
+      .timefinance-search-popup .search-form-result .search-form .search-button {
+        background-color: transparent;
+        border: none;
+        vertical-align: middle; }
+        .timefinance-search-popup .search-form-result .search-form .search-button img {
+          filter: brightness(0) invert(1);
+          height: 31px;
+          width: 31px; }
+
 .inner-page-hero {
   overflow: hidden;
   background-size: auto 125%;
@@ -1760,10 +1821,13 @@ header {
     width: 94%;
     margin-bottom: 0; }
 
+.modal-open section.resources-filter-block {
+  z-index: 9999; }
+
 .resources-filter-block {
   background-color: #F5F3F6;
   position: relative;
-  z-index: 9999;
+  z-index: 1;
   overflow: hidden;
   padding-bottom: 80px; }
   .resources-filter-block .filter-post-left {
@@ -2245,10 +2309,13 @@ header {
     width: 94%;
     margin-bottom: 0px; }
 
+.modal-open section.bdt-filter-block {
+  z-index: 9999; }
+
 .bdt-filter-block {
   background-color: #F5F3F6;
   position: relative;
-  z-index: 9999;
+  z-index: 1;
   overflow: hidden;
   padding-bottom: 80px; }
   .bdt-filter-block .filter-post-left {
@@ -2902,67 +2969,6 @@ header {
         background-color: #545b62;
         border-color: #545b62; }
 
-.timefinance-search-popup {
-  background-color: #3d1050; }
-  .timefinance-search-popup .search-form-result {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center; }
-    .timefinance-search-popup .search-form-result .search-form {
-      padding-bottom: 10px;
-      border-bottom: 2px solid #fff;
-      opacity: 0.2;
-      width: 44%;
-      display: -webkit-box;
-      display: -moz-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-box-pack: justify;
-      -moz-box-pack: justify;
-      -ms-flex-pack: justify;
-      -webkit-justify-content: space-between;
-      justify-content: space-between; }
-      .timefinance-search-popup .search-form-result .search-form.lighten {
-        opacity: 1; }
-        .timefinance-search-popup .search-form-result .search-form.lighten .search-input::-webkit-input-placeholder {
-          color: #fff;
-          opacity: 0.4; }
-        .timefinance-search-popup .search-form-result .search-form.lighten .search-input:-ms-input-placeholder {
-          color: #fff;
-          opacity: 0.4; }
-        .timefinance-search-popup .search-form-result .search-form.lighten .search-input::placeholder {
-          color: #fff;
-          opacity: 0.4; }
-      .timefinance-search-popup .search-form-result .search-form .search-input {
-        background-color: #3d1050;
-        color: #fff;
-        font-size: 40px;
-        line-height: 40px;
-        border: none;
-        font-weight: 700;
-        vertical-align: middle; }
-        .timefinance-search-popup .search-form-result .search-form .search-input:focus-visible {
-          outline-offset: 0px;
-          box-shadow: none;
-          border: 0;
-          outline: 0; }
-      .timefinance-search-popup .search-form-result .search-form .search-button {
-        background-color: transparent;
-        border: none;
-        vertical-align: middle; }
-        .timefinance-search-popup .search-form-result .search-form .search-button img {
-          filter: brightness(0) invert(1);
-          height: 31px;
-          width: 31px; }
-
 .client-custom-post-block {
   padding: 100px 0 140px 0; }
   .client-custom-post-block .container {
@@ -3097,6 +3103,9 @@ header {
   font-size: 24px;
   line-height: 32px;
   font-weight: 400;
+  margin-bottom: 16px; }
+
+.customize-support .content-block p {
   margin-bottom: 16px; }
 
 .customize-support .content-block table tbody tr td a {
