@@ -1475,6 +1475,7 @@ header {
 .resources-filter-block {
   background-color: #F5F3F6;
   position: relative;
+  z-index: 9999;
   overflow: hidden;
   padding-bottom: 80px; }
   .resources-filter-block .filter-post-left {
@@ -1957,6 +1958,7 @@ header {
 .bdt-filter-block {
   background-color: #F5F3F6;
   position: relative;
+  z-index: 9999;
   overflow: hidden;
   padding-bottom: 80px; }
   .bdt-filter-block .filter-post-left {

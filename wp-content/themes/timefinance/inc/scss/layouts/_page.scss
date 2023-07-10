@@ -1305,7 +1305,7 @@
 .resources-filter-block {
     background-color: $gray;
     position: relative;
-    // z-index: 0;
+    z-index: 9999;
     overflow: hidden;
     padding-bottom: 80px;
     .filter-post-left {
@@ -1962,7 +1962,7 @@
 .bdt-filter-block {
     background-color: $gray;
     position: relative;
-    // z-index: 0;
+    z-index: 9999;
     overflow: hidden;
     padding-bottom: 80px;
     .filter-post-left {
