@@ -547,10 +547,10 @@ header {
   box-shadow: 0 0 20px -8px rgba(0, 0, 0, 0.1); }
   @media (max-width: 991px) {
     header .container {
-      padding: 0; } }
-  @media (max-width: 575px) {
-    header .container .row {
-      margin: 0; } }
+      padding: 0 5px; } }
+  @media (max-width: 767px) {
+    header .container {
+      padding: 0 30px; } }
   @media (max-width: 991px) {
     header .main-logo {
       margin-bottom: 30px; } }
@@ -745,13 +745,16 @@ header {
             header nav.navbar .header-menu .navbar-nav .mega-menu-wrapper ul li a:hover {
               color: #38154d; }
     header nav.navbar .header-menu .btn {
-      display: none;
+      display: none !important;
       padding: 6px 24px 8px 24px;
       font-size: 15px;
       line-height: 16px;
       font-weight: 400;
       letter-spacing: 0;
       margin: 50px 8px 0 0; }
+      @media (max-width: 1199px) {
+        header nav.navbar .header-menu .btn {
+          display: inline-block !important; } }
   header .navbar-toggler {
     width: 22px;
     height: 14px;
@@ -766,6 +769,8 @@ header {
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center; }
+    header .navbar-toggler:hover {
+      opacity: .7; }
     header .navbar-toggler:hover, header .navbar-toggler:focus {
       outline: none;
       box-shadow: none;
@@ -817,29 +822,28 @@ header {
     header .navbar-collapse {
       position: fixed;
       padding: 100px 25px 100px;
-      top: 0;
+      top: -100% !important;
       left: 0;
       width: 100%;
       z-index: 9;
-      height: 100vh;
+      height: 100vh !important;
       overflow-y: auto;
       background-color: #3d1050;
+      display: block !important;
       -webkit-transition: 0.5s;
       -moz-transition: 0.5s;
       -ms-transition: 0.5s;
       transition: 0.5s; } }
-  @media (max-width: 575px) {
-    header .navbar-collapse {
-      width: 70%;
-      top: 80px;
-      height: calc(100vh - 80px); } }
-  @media (max-width: 1199px) {
-    header .navbar-collapse.collapse:not(.show) {
-      display: block;
-      top: -100%; } }
   header .header-center {
     padding: 70px 0;
     border-top: 1px solid #eeeeee; }
+
+.show-menu {
+  overflow: hidden; }
+  .show-menu body {
+    overflow: hidden; }
+  .show-menu header .navbar-collapse {
+    top: 0 !important; }
 
 .timefinance-search-popup.mfp-bg {
   z-index: 2 !important;
