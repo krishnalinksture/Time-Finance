@@ -35,12 +35,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	$header_logo     = get_field( 'header_logo', 'option' );
 	$search_icon     = get_field( 'search_icon', 'option' );
 	$cta_button      = get_field( 'cta_button', 'option' );
+	$contact_button  = get_field( 'contact_button', 'option' );
 	$header_logo_alt = ( isset( $header_logo['alt'] ) && ! empty( $header_logo['alt'] ) ) ? $header_logo['alt'] : ( isset( $header_logo['title'] ) && ! empty( $header_logo['title'] ) ? $header_logo['title'] : '' );
 	$search_icon_alt = ( isset( $search_icon['alt'] ) && ! empty( $search_icon['alt'] ) ) ? $search_icon['alt'] : ( isset( $search_icon['title'] ) && ! empty( $search_icon['title'] ) ? $search_icon['title'] : '' );
 	?>
 	<header>
 		<?php
-		if ( ! empty( $header_logo ) || ! empty( $cta_button ) || ! empty( $search_icon ) ) {
+		if ( ! empty( $header_logo ) || ! empty( $cta_button ) || ! empty( $search_icon ) || ! empty( $contact_button ) ) {
 			?>
 			<nav class="navbar navbar-expand-xl">
 				<div class="container">
@@ -96,9 +97,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 						</div>
 					</div>
 					<?php
-					if ( ! empty( $cta_button ) || ! empty( $search_icon ) ) {
+					if ( ! empty( $cta_button ) || ! empty( $search_icon ) || ! empty( $contact_button ) ) {
 						?>
-						<div class="col-auto header-btn">
+						<div class="col-auto header-btn d-flex align-items-center">
 							<div class="header-searchbar">
 								<a href="#search-header" class="header-search-form">
 									<img class="search-icon" width="<?php echo $search_icon['sizes']['timefinance-desktop-width']; ?>" height="<?php echo 	$search_icon['sizes']['timefinance-desktop-height']; ?>" src="<?php echo $search_icon['url']; ?>" srcset="<?php echo $search_icon['sizes']['timefinance-small-mobile']; ?> 400w, <?php echo $search_icon['sizes']['timefinance-mobile']; ?> 800w, <?php echo $search_icon['sizes']['timefinance-tablet']; ?> 1200w, <?php echo $search_icon['sizes']['timefinance-desktop']; ?> 2000w" sizes="50vw" alt="<?php echo $search_icon_alt; //phpcs:ignore ?>">
@@ -117,6 +118,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 								$link_url    = $cta_button['url'];
 								$link_title  = $cta_button['title'];
 								$link_target = $cta_button['target'] ? $cta_button['target'] : '_self';
+								?>
+								<a href="<?php echo esc_url( $link_url ); ?>" class="btn" target="<?php echo esc_attr( $link_target ); ?>">
+									<?php echo esc_html( $link_title ); ?>
+								</a>
+								<?php
+							}
+							if ( $contact_button && ! empty( $contact_button['url'] ) && ! empty( $contact_button['title'] ) ) {
+								$link_url    = $contact_button['url'];
+								$link_title  = $contact_button['title'];
+								$link_target = $contact_button['target'] ? $contact_button['target'] : '_self';
 								?>
 								<a href="<?php echo esc_url( $link_url ); ?>" class="btn" target="<?php echo esc_attr( $link_target ); ?>">
 									<?php echo esc_html( $link_title ); ?>
