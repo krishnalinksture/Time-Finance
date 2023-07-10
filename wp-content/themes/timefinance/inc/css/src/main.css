@@ -740,7 +740,7 @@ header {
   position: relative;
   height: 450px;
   z-index: 0; }
-  .inner-page-hero-small .container, .inner-page-hero-small .row {
+  .inner-page-hero-small .container-fluid, .inner-page-hero-small .row {
     position: relative;
     height: 100%; }
   .inner-page-hero-small .bg-overlay {
@@ -1978,7 +1978,9 @@ header {
       width: 70%; }
 
 .content-block {
-  padding: 60px 0; }
+  padding: 128px 0 32px 0; }
+  .content-block .content-wrapper {
+    padding: 0 45px; }
 
 .calculator-block {
   padding: 150px 0; }
@@ -2887,6 +2889,27 @@ header {
     line-height: 50px;
     font-weight: 700;
     margin-bottom: 96px; }
+
+.page-governance-statement .content-block h2 + h3 {
+  margin-top: 0;
+  margin-bottom: 16px; }
+
+.page-governance-statement .content-block p {
+  margin-bottom: 16px; }
+
+.page-governance-statement .content-block h3 {
+  margin-top: 54px; }
+
+.page-governance-statement .content-block ol {
+  padding-left: 40px; }
+  .page-governance-statement .content-block ol li {
+    font-size: 16px;
+    line-height: 1.5; }
+
+.page-governance-statement .content-block table tbody tr td {
+  padding-bottom: 16px;
+  border-bottom: 1px solid grey;
+  border-right: 1px solid grey; }
 
 footer {
   background-color: #3d1050;

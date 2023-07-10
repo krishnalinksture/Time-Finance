@@ -23,9 +23,9 @@ if ( ! empty( $main_title ) ) {
 			<?php
 		}
 		?>
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row justify-content-center align-items-center">
-				<div class="col-md-10 col-lg-8 text-center">
+				<div class="col-9 text-center">
 					<?php
 					if ( ! empty( $main_title ) ) {
 						echo '<' . esc_attr( $select_tag ) . ' class="section-title h-2">' . esc_html( $main_title ) . '</' . esc_attr( $select_tag ) . '>';

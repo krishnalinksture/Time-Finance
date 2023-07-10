@@ -14,7 +14,7 @@ if ( ! empty( $content ) ) {
 	<section class="content-block" id="<?php echo $section_id; //phpcs:ignore ?>">
 		<div class="container">
 			<div class="row justify-content-center <?php echo $select_text_align; //phpcs:ignore ?>">
-				<div class="col">
+				<div class="col content-wrapper">
 					<?php echo $content; //phpcs:ignore ?>
 				</div>
 			</div>

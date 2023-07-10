@@ -59,7 +59,7 @@
     position: relative;
     height: 450px;
     z-index: 0;
-    .container, .row {
+    .container-fluid, .row {
         position: relative;
         height: 100%;
     }
@@ -1846,7 +1846,10 @@
 
 //Content block
 .content-block {
-    padding: 60px 0;
+    padding: 128px 0 32px 0;
+    .content-wrapper {
+        padding: 0 45px;
+    }
 }
 
 //Calculator block
@@ -3047,5 +3050,45 @@
         line-height: 50px;
         font-weight: 700;
         margin-bottom: 96px;
+    }
+}
+
+//Page governance statement
+.page-governance-statement {
+    .content-block {
+        h2 {
+            +h3 {
+                margin-top: 0;
+                margin-bottom: 16px;
+            }
+        }
+        
+        p {
+            margin-bottom: 16px;
+        }
+        
+        h3 {
+            margin-top: 54px;
+        }
+
+        ol {
+            padding-left: 40px;
+            li {
+                font-size: 16px;
+                line-height: 1.5;
+            }
+        }
+
+        table {
+            tbody {
+                tr {
+                    td {
+                        padding-bottom: 16px;
+                        border-bottom: 1px solid grey;
+                        border-right: 1px solid grey;
+                    }
+                }
+            }
+        }
     }
 }
