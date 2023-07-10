@@ -97,7 +97,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 									$link_title  = $cta_button['title'];
 									$link_target = $cta_button['target'] ? $cta_button['target'] : '_self';
 									?>
-									<a href="<?php echo esc_url( $link_url ); ?>" class="btn" target="<?php echo esc_attr( $link_target ); ?>">
+									<a href="<?php echo esc_url( $link_url ); ?>" class="btn btn-green" target="<?php echo esc_attr( $link_target ); ?>">
 										<?php echo esc_html( $link_title ); ?>
 									</a>
 									<?php
@@ -107,7 +107,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 									$link_title  = $contact_button['title'];
 									$link_target = $contact_button['target'] ? $contact_button['target'] : '_self';
 									?>
-									<a href="<?php echo esc_url( $link_url ); ?>" class="btn" target="<?php echo esc_attr( $link_target ); ?>">
+									<a href="<?php echo esc_url( $link_url ); ?>" class="btn btn-green" target="<?php echo esc_attr( $link_target ); ?>">
 										<?php echo esc_html( $link_title ); ?>
 									</a>
 									<?php
