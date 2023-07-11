@@ -530,9 +530,6 @@ h6,
   line-height: 24px; }
 
 /*================ Layouts ================*/
-body {
-  padding-top: 125px; }
-
 header {
   position: fixed;
   top: 0;
@@ -551,12 +548,6 @@ header {
   @media (max-width: 767px) {
     header .container {
       padding: 0 30px; } }
-  @media (max-width: 991px) {
-    header .main-logo {
-      margin-bottom: 30px; } }
-  @media (max-width: 767px) {
-    header .main-logo {
-      margin-bottom: 0; } }
   header .main-logo img {
     width: auto;
     height: 67px; }
@@ -821,7 +812,7 @@ header {
   @media (max-width: 1199px) {
     header .navbar-collapse {
       position: fixed;
-      padding: 100px 25px 100px;
+      padding: 95px 25px 100px;
       top: -100% !important;
       left: 0;
       width: 100%;
@@ -852,11 +843,12 @@ header {
 .timefinance-search-popup ~ .mfp-wrap {
   transition: .3s ease-in-out;
   z-index: 2 !important; }
-  .timefinance-search-popup ~ .mfp-wrap .mfp-container {
-    padding-top: 125px; }
   .timefinance-search-popup ~ .mfp-wrap button.mfp-close {
     top: 135px;
     right: 10px; }
+    @media (max-width: 1199px) {
+      .timefinance-search-popup ~ .mfp-wrap button.mfp-close {
+        top: 85px; } }
 
 .timefinance-search-popup {
   background-color: #3d1050; }
@@ -875,7 +867,7 @@ header {
       padding-bottom: 10px;
       border-bottom: 2px solid #fff;
       opacity: 0.2;
-      width: 44%;
+      width: 800px;
       display: -webkit-box;
       display: -moz-box;
       display: -ms-flexbox;
@@ -886,6 +878,11 @@ header {
       -ms-flex-pack: justify;
       -webkit-justify-content: space-between;
       justify-content: space-between; }
+      @media (max-width: 991px) {
+        .timefinance-search-popup .search-form-result .search-form {
+          padding-bottom: 12px;
+          max-width: calc(100% - 60px);
+          height: 36px; } }
       .timefinance-search-popup .search-form-result .search-form.lighten {
         opacity: 1; }
         .timefinance-search-popup .search-form-result .search-form.lighten .search-input::-webkit-input-placeholder {
@@ -904,7 +901,16 @@ header {
         line-height: 40px;
         border: none;
         font-weight: 700;
-        vertical-align: middle; }
+        vertical-align: middle;
+        width: 92%;
+        padding: 2px 0; }
+        @media (max-width: 991px) {
+          .timefinance-search-popup .search-form-result .search-form .search-input {
+            font-size: 24px;
+            line-height: 24px;
+            margin: -10px 0;
+            padding: 10px 0;
+            width: calc(100% - 44px); } }
         .timefinance-search-popup .search-form-result .search-form .search-input:focus-visible {
           outline-offset: 0px;
           box-shadow: none;
@@ -918,6 +924,10 @@ header {
           filter: brightness(0) invert(1);
           height: 31px;
           width: 31px; }
+          @media (max-width: 991px) {
+            .timefinance-search-popup .search-form-result .search-form .search-button img {
+              width: 20px;
+              height: 20px; } }
 
 .inner-page-hero {
   overflow: hidden;
