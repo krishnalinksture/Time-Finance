@@ -214,8 +214,20 @@ window.Scrollanimate = () => {
 					}
 				});
 
+				//Mobile Menu Toggle Class.
 				$(".navbar .navbar-toggler").on("click", function(){
 					$("html").toggleClass("show-menu");
+				});
+
+				//Footer Popup Form
+				$("footer .modal-body .form-subscribtion-data").css("display", "none");
+				$("footer .modal-body .forminator-button-submit").on( "click", function(){
+
+					var footer_popup = $( 'footer').find('.forminator-custom-form').find('.forminator-is_filled');
+					if( footer_popup.length > 0 ) {
+						$("footer .modal-body .form-subscribtion-data").css("display", "block");
+						$("footer .modal-body .forminator-custom-form").css("display", "none");
+					}
 				});
 
 			},

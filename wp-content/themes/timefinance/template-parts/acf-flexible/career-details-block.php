@@ -144,7 +144,7 @@ switch ( $select_style ) {
 										<?php
 										if ( get_the_title() ) {
 											?>
-											<div class="accordion-header" id="heading-<?php echo $i; //phpcs:ignore ?>">
+											<div class="accordion-header career" id="heading-<?php echo $section_id . $i; //phpcs:ignore ?>">
 												<div class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#<?php echo $section_id; ?>-<?php echo $i; ?>" aria-expanded="true" data-bs-parent="#accordion-<?php echo $section_id; //phpcs:ignore ?>">
 													<div class="careers-title">
 														<?php echo get_the_title(); //phpcs:ignore ?>
@@ -155,7 +155,7 @@ switch ( $select_style ) {
 										}
 										if ( ! empty( $area ) || ! empty( $salary ) || ! empty( $job_type ) || ! empty( $find_out_more_button ) ) {
 											?>
-											<div id="<?php echo $section_id; ?>-<?php echo $i; ?>" class="accordion-collapse collapse" aria-labelledby="heading-<?php echo $i; ?>" data-bs-parent="#accordion-<?php echo $section_id; //phpcs:ignore ?>">
+											<div id="<?php echo $section_id; ?>-<?php echo $i; ?>" class="accordion-collapse collapse" aria-label="heading-<?php echo $i; ?>" data-bs-parent="#accordion-<?php echo $section_id; //phpcs:ignore ?>">
 												<div class="accordion-body">
 													<div class="careers-content">
 														<div class="row">

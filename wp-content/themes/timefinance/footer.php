@@ -16,6 +16,7 @@ $pop_up_form        = get_field( 'pop_up_form', 'options' );
 $trustpilot         = get_field( 'trustpilot', 'options' );
 $form_logo          = get_field( 'form_logo', 'options' );
 $footer_logo        = get_field( 'footer_logo', 'options' );
+$form_subscribtion_data        = get_field( 'form_subscribtion_data', 'options' );
 $footer_address     = get_field( 'footer_address', 'options' );
 $footer_social_icon = get_field( 'footer_social_icon', 'options' );
 $footer_content     = get_field( 'footer_content', 'options' );
@@ -55,14 +56,14 @@ if ( ! empty( $main_title ) || ! empty( $mail ) || ! empty( $pop_up_title ) || !
 									<?php
 									if ( ! empty( $pop_up_title ) ) {
 										?>
-										<button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#footerModal">
+										<button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#footerpopupModal">
 											<?php echo esc_html( $pop_up_title ); ?>
 										</button>
 										<?php
 									}
 									if ( ! empty( $form_logo ) || ! empty( $pop_up_form ) ) {
 										?>
-										<div class="modal fade" id="footerModal" tabindex="-1" aria-labelledby="footerModalLabel" aria-hidden="true">
+										<div class="modal fade" id="footerpopupModal" tabindex="-1" aria-label="footerpopupModalLabel" aria-hidden="true">
 											<div class="modal-dialog">
 												<div class="modal-content">
 													<?php
@@ -87,6 +88,9 @@ if ( ! empty( $main_title ) || ! empty( $mail ) || ! empty( $pop_up_title ) || !
 																		<?php
 																	}
 																	?>
+																	<div class="form-subscribtion-data">
+																		<?php echo $form_subscribtion_data; //phpcs:ignore ?>
+																	</div>
 																</div>
 															</div>
 														</div>
