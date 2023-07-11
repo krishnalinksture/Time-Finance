@@ -129,7 +129,7 @@ if ( ! empty( $main_title ) || ! empty( $content ) ) {
 											}
 											if ( ! empty( $select_form ) ) {
 												?>
-												<div class="modal fade" id="resourseModal" tabindex="-1" aria-labelledby="resourseModalLabel" aria-hidden="true">
+												<div class="modal fade" id="resourseModal" tabindex="-1" aria-label="resourseModalLabel" aria-hidden="true">
 													<div class="modal-dialog">
 														<div class="modal-content">
 															<div class="modal-header">

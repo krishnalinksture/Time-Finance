@@ -121,7 +121,7 @@ $resources_form            = ( ! empty( $resources_select_form ) ) ? '[forminato
 												<?php
 											}
 											?>
-											<div class="modal fade" id="resourcesModal" tabindex="-1" aria-labelledby="resourcesModalLabel" aria-hidden="true">
+											<div class="modal fade" id="resourcesModal" tabindex="-1" aria-label="resourcesModalLabel" aria-hidden="true">
 												<div class="modal-dialog">
 													<div class="modal-content">
 														<?php

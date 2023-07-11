@@ -177,7 +177,7 @@ if ( ! empty( $main_title ) || ! empty( $content ) ) {
 												<?php
 											}
 											?>
-											<div class="modal fade" id="bdtModal" tabindex="-1" aria-labelledby="bdtModalLabel" aria-hidden="true">
+											<div class="modal fade" id="bdtModal" tabindex="-1" aria-label="bdtModalLabel" aria-hidden="true">
 												<div class="modal-dialog">
 													<div class="modal-content">
 														<div class="modal-header">

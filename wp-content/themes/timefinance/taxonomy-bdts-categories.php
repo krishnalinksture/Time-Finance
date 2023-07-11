@@ -166,7 +166,7 @@ if ( ! empty( $bdt_title ) || ! empty( $bdt_content ) ) {
 													<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#bdtModal">
 														<?php echo esc_html( $send_message_button ); ?>
 													</button>
-													<div class="modal fade" id="bdtModal" tabindex="-1" aria-labelledby="bdtModalLabel" aria-hidden="true">
+													<div class="modal fade" id="bdtModal" tabindex="-1" aria-label	="bdtModalLabel" aria-hidden="true">
 														<div class="modal-dialog">
 															<div class="modal-content">
 															<div class="modal-header">

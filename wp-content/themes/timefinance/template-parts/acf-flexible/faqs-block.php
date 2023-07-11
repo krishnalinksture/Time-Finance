@@ -43,7 +43,7 @@ if ( ! empty( $main_title ) || have_rows( 'faqs' ) ) {
 										<?php
 										if ( ! empty( $faq_title ) ) {
 											?>
-											<div class="accordion-header" id="heading-<?php echo $i; //phpcs:ignore ?>">
+											<div class="accordion-header faq" id="heading-<?php echo $section_id . $i; //phpcs:ignore ?>">
 												<div class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#<?php echo $section_id; ?>-<?php echo $i; ?>" aria-expanded="true" data-bs-parent="#accordion-<?php echo $section_id; //phpcs:ignore ?>">
 													<div class="faq-title">
 														<?php echo esc_html( $faq_title ); ?>
@@ -54,7 +54,7 @@ if ( ! empty( $main_title ) || have_rows( 'faqs' ) ) {
 										}
 										if ( ! empty( $faq_content ) ) {
 											?>
-											<div id="<?php echo $section_id; ?>-<?php echo $i; ?>" class="accordion-collapse collapse" aria-labelledby="heading-<?php echo $i; ?>" data-bs-parent="#accordion-<?php echo $section_id; //phpcs:ignore ?>">
+											<div id="<?php echo $section_id; ?>-<?php echo $i; ?>" class="accordion-collapse collapse" aria-label="heading-<?php echo $i; ?>" data-bs-parent="#accordion-<?php echo $section_id; //phpcs:ignore ?>">
 												<div class="accordion-body">
 													<div class="faq-content">
 														<?php echo $faq_content; //phpcs:ignore ?>
