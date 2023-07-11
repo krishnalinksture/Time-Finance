@@ -71,9 +71,7 @@ if ( have_rows( 'slider_content' ) || ! empty( $show_for_more_button ) ) {
 									<?php
 									if ( ! empty( $left_image ) ) {
 										?>
-										<div class="background-overlay">
-											<img class="left-image" width="<?php echo $left_image['sizes']['timefinance-desktop-width']; ?>" height="<?php echo 	$left_image['sizes']['timefinance-desktop-height']; ?>" src="<?php echo $left_image['url']; ?>" srcset="<?php echo $left_image['sizes']['timefinance-small-mobile']; ?> 400w, <?php echo $left_image['sizes']['timefinance-mobile']; ?> 800w, <?php echo $left_image['sizes']['timefinance-tablet']; ?> 1200w, <?php echo $left_image['sizes']['timefinance-desktop']; ?> 2000w" sizes="50vw" alt="<?php echo $left_image_alt; //phpcs:ignore ?>">
-										</div>
+											<img class="left-image background-overlay" width="<?php echo $left_image['sizes']['timefinance-desktop-width']; ?>" height="<?php echo 	$left_image['sizes']['timefinance-desktop-height']; ?>" src="<?php echo $left_image['url']; ?>" srcset="<?php echo $left_image['sizes']['timefinance-small-mobile']; ?> 400w, <?php echo $left_image['sizes']['timefinance-mobile']; ?> 800w, <?php echo $left_image['sizes']['timefinance-tablet']; ?> 1200w, <?php echo $left_image['sizes']['timefinance-desktop']; ?> 2000w" sizes="50vw" alt="<?php echo $left_image_alt; //phpcs:ignore ?>">
 										<?php
 									}
 									?>

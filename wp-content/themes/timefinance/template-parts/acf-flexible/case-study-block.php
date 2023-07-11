@@ -34,12 +34,13 @@ $section_id            = get_sub_field( 'section_id' ) ? get_sub_field( 'section
 								<?php
 								if ( get_the_post_thumbnail() ) {
 									?>
-									<div class="col-6"><?php the_post_thumbnail(); ?></div>
+									<div class="col-6 case-study-left"><?php the_post_thumbnail(); ?></div>
 									<?php
 								}
 								if ( ! empty( $brand_logo ) || ! empty( $testimonial ) || ! empty( $button ) ) {
 									?>
 									<div class="col-6">
+										<div class="case-study-right">
 										<?php
 										if ( ! empty( $brand_logo ) ) {
 											?>
@@ -56,11 +57,12 @@ $section_id            = get_sub_field( 'section_id' ) ? get_sub_field( 'section
 										if ( ! empty( $button ) ) {
 											?>
 											<div class="read-more">
-												<a href="<?php echo get_the_permalink(); //phpcs:ignore ?>"><?php echo esc_html( $button ); ?></a>
+												<a class="btn btn-green" href="<?php echo get_the_permalink(); //phpcs:ignore ?>"><?php echo esc_html( $button ); ?></a>
 											</div>
 											<?php
 										}
 										?>
+									</div>
 									</div>
 									<?php
 								}

@@ -9,6 +9,7 @@
     position: relative;
     height: 550px;
     z-index: 0;
+
     .section-left-image {
         background-position: center;
         background-size: cover;
@@ -20,7 +21,8 @@
         left: 0;
     }
 
-    .container, .row {
+    .container,
+    .row {
         position: relative;
         height: 100%;
     }
@@ -59,7 +61,9 @@
     position: relative;
     height: 450px;
     z-index: 0;
-    .container-fluid, .row {
+
+    .container-fluid,
+    .row {
         position: relative;
         height: 100%;
     }
@@ -101,6 +105,7 @@
 //Left right content image
 .left-right-content-image {
     padding: 60px 0px;
+
     .image-box {
         padding-left: 40px;
         padding-right: 0px;
@@ -109,6 +114,7 @@
     .content {
         padding-left: 7.33%;
         padding-right: 40px;
+
         .section-title {
             margin-bottom: 25px;
         }
@@ -142,8 +148,10 @@
 //Trustpilot block
 .trustpilot-block {
     padding: 156px 0 186px 0;
+
     .content {
         padding: 0 35px;
+
         .section-title {
             color: $green;
             font-weight: 600;
@@ -158,15 +166,17 @@
     }
 
     &.bg-purple {
-        p{
+        p {
             color: $white;
         }
     }
 
-    &.style-2  {
+    &.style-2 {
         padding-top: 125px;
+
         .content {
             padding: 0 10px;
+
             .section-title {
                 margin-bottom: 27px;
             }
@@ -177,8 +187,10 @@
 //Featured content image
 .featured-content-image {
     padding: 150px 0 270px 0;
+
     .content {
         padding-left: 10.5%;
+
         .section-title {
             font-weight: 600;
             color: $green;
@@ -199,6 +211,7 @@
 
     .image-box {
         padding: 0;
+
         .featured-image-content {
             margin-left: 0;
             margin-right: -8vw;
@@ -215,7 +228,7 @@
     }
 
     &.bg-purple {
-        p{
+        p {
             color: $white;
         }
     }
@@ -224,8 +237,10 @@
 //Usp block
 .usp-block {
     padding: 113px 0;
+
     .container {
         padding: 0 75px;
+
         .section-title {
             color: $white;
             line-height: 30px;
@@ -246,7 +261,8 @@
             margin: 0 auto;
         }
 
-        &.bg-white, &.bg-grey {
+        &.bg-white,
+        &.bg-grey {
             .section-title {
                 color: $green;
             }
@@ -307,17 +323,22 @@
 .image-bulletpoint-groups {
     padding: 140px 0;
     background-color: $gray;
+
     .container {
         padding-left: 0;
+
         .image-box {
             padding: 0;
+
             img {
                 height: 100%;
             }
         }
+
         .content-box {
             padding: 90px 7.3% 55px;
             background-color: $white;
+
             p {
                 color: $green;
                 font-size: 11px;
@@ -329,7 +350,8 @@
 
             .bulletpoint-group {
                 margin-top: 60px;
-                border-bottom: 1px solid rgb(240,240,240);
+                border-bottom: 1px solid rgb(240, 240, 240);
+
                 .section-title {
                     font-weight: 600;
                 }
@@ -341,6 +363,7 @@
                     flex-direction: row;
                     flex-wrap: wrap;
                     @include justify-content(space-between);
+
                     li {
                         font-size: 16px;
                         line-height: 28px;
@@ -357,6 +380,7 @@
 //Video block
 .video-block {
     padding: 110px 0;
+
     .section-title {
         margin-bottom: 35px;
     }
@@ -377,6 +401,7 @@
 //Centred content image gallery
 .centred-content-image-gallery {
     padding: 80px 0;
+
     .section-title {
         color: $green;
         margin-top: 25px;
@@ -399,6 +424,7 @@
 .cta-block {
     .container {
         padding: 0 20px;
+
         .image {
             background-position: center;
             background-size: cover;
@@ -420,6 +446,7 @@
 
         .apply-send-button {
             margin-top: 75px;
+
             a {
                 margin-right: 10px;
             }
@@ -438,8 +465,10 @@
 //card-block
 .card-block {
     padding: 110px 0 162px 0;
+
     .container {
         padding: 0 20px;
+
         .section-title {
             margin-bottom: 25px;
         }
@@ -450,6 +479,7 @@
             .card-image {
                 height: 345px;
                 overflow: hidden;
+
                 img {
                     display: block;
                     width: 100%;
@@ -457,19 +487,23 @@
                     object-fit: cover;
                 }
             }
+
             &:hover {
                 .hover-card {
-                    max-height:300px;
+                    max-height: 300px;
+
                     p {
                         opacity: 1;
                         @include translateY(0);
                     }
+
                     .btn {
                         opacity: 1;
                         @include translateY(0);
                     }
                 }
             }
+
             .hover-card {
                 padding: 32px;
                 background-color: $white;
@@ -478,6 +512,7 @@
                 overflow: hidden;
                 max-height: 85px;
                 transition: max-height 0.6s;
+
                 .card-title {
                     font-size: 22px;
                     font-weight: 600;
@@ -531,6 +566,7 @@
 //Large card block
 .large-card-block {
     padding: 110px 0;
+
     .section-title {
         font-weight: 600;
         margin-bottom: 30px;
@@ -539,6 +575,7 @@
     .large-card-image {
         height: 345px;
         overflow: hidden;
+
         img {
             display: block;
             width: 100%;
@@ -550,6 +587,7 @@
     .large-card-content {
         padding: 32px 15%;
         background-color: $white;
+
         .large-card-title {
             font-size: 25px;
             line-height: 33px;
@@ -593,22 +631,27 @@
 //faq-block
 .faq-block {
     padding: 115px 0 150px 0;
+
     .section-title {
         margin-bottom: 88px;
     }
 
     .accordion {
         padding: 0 25px;
+
         .accordion-item {
             @include borderRadius(0);
             border: none;
+
             .accordion-header {
                 position: relative;
+
                 .accordion-button {
                     background-color: $white;
                     border-bottom: 2px solid $purple;
                     cursor: pointer;
                     padding: 29px 0;
+
                     .faq-title {
                         color: $purple;
                         font-size: 18px;
@@ -641,23 +684,24 @@
                     }
 
                     &:not(.collapsed) {
-                            border-bottom: 2px solid $green;
-                            .faq-title {
-                                color: $green;
-                            }
+                        border-bottom: 2px solid $green;
 
-                            &::after {
-                                background-image: url(../inc/assets/plus-icon.svg);
-                                opacity: 0;
-                                transform: rotate(90deg);
-                            }
-
-                            &::before {
-                                background-image: url(../inc/assets/minus-icon.svg);
-                                opacity: 1;
-                                transform: rotate(180deg);
-                            }
+                        .faq-title {
+                            color: $green;
                         }
+
+                        &::after {
+                            background-image: url(../inc/assets/plus-icon.svg);
+                            opacity: 0;
+                            transform: rotate(90deg);
+                        }
+
+                        &::before {
+                            background-image: url(../inc/assets/minus-icon.svg);
+                            opacity: 1;
+                            transform: rotate(180deg);
+                        }
+                    }
                 }
             }
 
@@ -668,6 +712,7 @@
                     p {
                         text-align: left;
                         margin-bottom: 16px;
+
                         &:last-child {
                             margin-bottom: 0;
                         }
@@ -687,9 +732,11 @@
 //Latest news block
 .latest-news-block {
     padding: 75px 0;
+
     .latest-news-image {
         height: 380px;
         overflow: hidden;
+
         img {
             height: 100%;
             width: 100%;
@@ -699,6 +746,7 @@
 
     .latest-news-content-box {
         padding: 25px 0;
+
         .latest-news-title {
             font-size: 25px;
             line-height: 33px;
@@ -720,6 +768,7 @@
             letter-spacing: normal;
             padding: 8px 18px;
             font-weight: 400;
+
             a {
                 color: $white;
                 text-decoration: none;
@@ -731,6 +780,7 @@
 //Office locations block
 .office-locations-block {
     padding: 50px 0 30px;
+
     .section-title {
         font-weight: 400;
         margin-bottom: 48px;
@@ -739,10 +789,12 @@
     .location-card {
         margin-bottom: 20px;
         overflow: hidden;
+
         .location-card-content {
             padding: 20px;
             background-color: $gray;
             height: 100%;
+
             .card-title {
                 font-size: 24px;
                 line-height: 32px;
@@ -752,6 +804,7 @@
 
             .email {
                 font-weight: 700;
+
                 a {
                     font-size: 15px;
                     color: $green;
@@ -767,6 +820,7 @@
             .phone-number {
                 font-weight: 700;
                 margin-bottom: 16px;
+
                 a {
                     font-size: 15px;
                     color: $green;
@@ -804,7 +858,8 @@
 }
 
 //Our team block
-.our-team-block, .our-teams-category {
+.our-team-block,
+.our-teams-category {
     padding: 125px 0 80px;
     background-color: $purple;
     position: relative;
@@ -837,9 +892,11 @@
     z-index: 0;
     overflow: hidden;
     padding-bottom: 80px;
+
     .filter-post-left {
         position: relative;
         padding-bottom: 270px;
+
         &:before {
             height: 100%;
             content: "";
@@ -875,6 +932,7 @@
 
         .our-team-cat-list {
             margin-bottom: 15px;
+
             &:last-child {
                 margin-bottom: 0;
             }
@@ -882,6 +940,7 @@
             a {
                 color: $white;
                 text-decoration: none;
+
                 &:hover {
                     text-decoration: underline;
                 }
@@ -900,17 +959,21 @@
     .our-team-wrapper {
         padding-left: 50px;
         padding-right: 20px;
+
         .row .col {
             margin-bottom: 20px;
             overflow: hidden;
         }
+
         .our-team-box {
             cursor: pointer;
             height: 100%;
+
             .our-team-conent-box {
                 background-color: $white;
                 padding: 23px;
                 height: 100%;
+
                 .our-team-title {
                     font-size: 24px;
                     line-height: 32px;
@@ -942,6 +1005,7 @@
                     margin-top: 20px;
                     letter-spacing: normal;
                     text-decoration: underline;
+
                     +a {
                         margin-top: 0;
                     }
@@ -960,7 +1024,8 @@
 }
 
 //Press releases block
-.press-releases-block, .press-releases-category {
+.press-releases-block,
+.press-releases-category {
     padding: 125px 0 80px;
     background-color: $purple;
     position: relative;
@@ -993,9 +1058,11 @@
     z-index: 0;
     overflow: hidden;
     padding-bottom: 80px;
+
     .filter-post-left {
         position: relative;
         padding-bottom: 210px;
+
         &:before {
             height: 100%;
             content: "";
@@ -1031,6 +1098,7 @@
 
         .press-release-cat-list {
             margin-bottom: 15px;
+
             &:last-child {
                 margin-bottom: 0;
             }
@@ -1038,6 +1106,7 @@
             a {
                 color: $white;
                 text-decoration: none;
+
                 &:hover {
                     text-decoration: underline;
                 }
@@ -1056,18 +1125,22 @@
     .press-releases-wrapper {
         padding-left: 50px;
         padding-right: 20px;
+
         .row {
             .col {
                 margin-bottom: 20px;
                 overflow: hidden;
             }
         }
+
         .press-release-box {
             cursor: pointer;
             height: 100%;
+
             .press-release-image {
                 height: 270px;
                 overflow: hidden;
+
                 img {
                     display: block;
                     height: 100%;
@@ -1075,10 +1148,12 @@
                     object-fit: cover;
                 }
             }
+
             .press-release-content {
                 background-color: $white;
                 padding: 35px 24px;
                 height: 100%;
+
                 .press-release-date {
                     font-size: 12px;
                     line-height: 15px;
@@ -1097,7 +1172,7 @@
                         padding: 0 15px;
                         margin-bottom: 12px;
                         color: $purple;
-                        text-decoration: none ;
+                        text-decoration: none;
                     }
                 }
 
@@ -1117,6 +1192,7 @@
                     letter-spacing: normal;
                     padding: 8px 20px;
                     font-weight: 400;
+
                     a {
                         color: $white;
                         text-decoration: none;
@@ -1128,7 +1204,8 @@
 }
 
 //Regulatory news block
-.regulatory-news-block, .regulatory-news-category {
+.regulatory-news-block,
+.regulatory-news-category {
     padding: 125px 0 80px;
     background-color: $purple;
     position: relative;
@@ -1161,9 +1238,11 @@
     z-index: 0;
     overflow: hidden;
     padding-bottom: 80px;
+
     .filter-post-left {
         position: relative;
         padding-bottom: 50px;
+
         &:before {
             height: 100%;
             content: "";
@@ -1199,6 +1278,7 @@
 
         .regulatory-news-cat-list {
             margin-bottom: 15px;
+
             &:last-child {
                 margin-bottom: 0;
             }
@@ -1206,6 +1286,7 @@
             a {
                 color: $white;
                 text-decoration: none;
+
                 &:hover {
                     text-decoration: underline;
                 }
@@ -1224,17 +1305,21 @@
     .regulatory-news-wrapper {
         padding-left: 50px;
         padding-right: 20px;
+
         .row {
             .col {
                 margin-bottom: 20px;
                 overflow: hidden;
             }
         }
+
         .regulatory-news-box {
             height: 100%;
             cursor: pointer;
+
             .regulatory-news-image {
                 height: 270px;
+
                 img {
                     display: block;
                     height: 100%;
@@ -1242,10 +1327,12 @@
                     object-fit: cover;
                 }
             }
+
             .regulatory-news-content {
                 padding: 35px 24px;
                 background-color: $white;
                 height: 100%;
+
                 .regulatory-news-date {
                     font-size: 12px;
                     line-height: 15px;
@@ -1264,7 +1351,7 @@
                         padding: 0 15px;
                         margin-bottom: 32px;
                         color: $purple;
-                        text-decoration: none ;
+                        text-decoration: none;
                     }
                 }
 
@@ -1281,7 +1368,8 @@
 }
 
 //Resources block
-.resources-block, .resources-category {
+.resources-block,
+.resources-category {
     padding: 125px 0 80px;
     background-color: $purple;
     position: relative;
@@ -1318,9 +1406,11 @@
     z-index: 1;
     overflow: hidden;
     padding-bottom: 80px;
+
     .filter-post-left {
         position: relative;
         padding-bottom: 140px;
+
         &:before {
             height: 100%;
             content: "";
@@ -1356,6 +1446,7 @@
 
         .resources-cat-list {
             margin-bottom: 15px;
+
             &:last-child {
                 margin-bottom: 0;
             }
@@ -1363,6 +1454,7 @@
             a {
                 color: $white;
                 text-decoration: none;
+
                 &:hover {
                     text-decoration: underline;
                 }
@@ -1381,13 +1473,16 @@
     .resources-wrapper {
         padding-left: 50px;
         padding-right: 20px;
+
         .row {
             .col {
                 margin-bottom: 20px;
             }
         }
+
         .resources-image {
             height: 272px;
+
             img {
                 display: block;
                 width: 100%;
@@ -1395,9 +1490,11 @@
                 object-fit: cover;
             }
         }
+
         .resources-content {
             padding: 25px;
             background-color: $white;
+
             .resources-date {
                 font-size: 12px;
                 line-height: 15px;
@@ -1429,7 +1526,8 @@
 }
 
 //Time blog block
-.time-blog-block, .time-blog-category {
+.time-blog-block,
+.time-blog-category {
     padding: 125px 0 80px;
     background-color: $purple;
     position: relative;
@@ -1462,9 +1560,11 @@
     z-index: 0;
     overflow: hidden;
     padding-bottom: 80px;
+
     .filter-post-left {
         position: relative;
         padding-bottom: 155px;
+
         &:before {
             height: 100%;
             content: "";
@@ -1500,6 +1600,7 @@
 
         .time-blog-cat-list {
             margin-bottom: 15px;
+
             &:last-child {
                 margin-bottom: 0;
             }
@@ -1507,6 +1608,7 @@
             a {
                 color: $white;
                 text-decoration: none;
+
                 &:hover {
                     text-decoration: underline;
                 }
@@ -1525,17 +1627,21 @@
     .time-blog-wrapper {
         padding-left: 50px;
         padding-right: 20px;
+
         .row {
             .col {
                 margin-bottom: 20px;
                 overflow: hidden;
             }
         }
+
         .time-blog-box {
             height: 100%;
+
             .time-blog-image {
                 height: 270px;
                 overflow: hidden;
+
                 img {
                     display: block;
                     height: 100%;
@@ -1587,6 +1693,7 @@
                     letter-spacing: normal;
                     padding: 8px 19px;
                     font-weight: 400;
+
                     a {
                         color: $white;
                         text-decoration: none;
@@ -1598,7 +1705,8 @@
 }
 
 //Case studies custom post block
-.case-studies-custom-post-block, .case-studies-category {
+.case-studies-custom-post-block,
+.case-studies-category {
     padding: 125px 0 80px;
     background-color: $purple;
     position: relative;
@@ -1631,9 +1739,11 @@
     z-index: 0;
     overflow: hidden;
     padding-bottom: 80px;
+
     .filter-post-left {
         position: relative;
         padding-bottom: 165px;
+
         &:before {
             height: 100%;
             content: "";
@@ -1669,6 +1779,7 @@
 
         .case-study-cat-list {
             margin-bottom: 15px;
+
             &:last-child {
                 margin-bottom: 0;
             }
@@ -1676,6 +1787,7 @@
             a {
                 color: $white;
                 text-decoration: none;
+
                 &:hover {
                     text-decoration: underline;
                 }
@@ -1694,17 +1806,21 @@
     .case-studies-wrapper {
         padding-left: 50px;
         padding-right: 20px;
+
         .row {
             .col {
                 margin-bottom: 20px;
                 overflow: hidden;
             }
         }
+
         .case-study-box {
             height: 100%;
+
             .case-study-image {
                 height: 270px;
                 overflow: hidden;
+
                 img {
                     display: block;
                     height: 100%;
@@ -1756,6 +1872,7 @@
                     letter-spacing: normal;
                     padding: 8px 19px;
                     font-weight: 400;
+
                     a {
                         color: $white;
                         text-decoration: none;
@@ -1769,55 +1886,57 @@
 //Our history block
 .our-history-block {
     padding: 120px 0;
-    .history-wrapper {
-      padding: 35px 35px 0 35px;
-      position: relative;
 
-      .separator {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        width: 2px;
-        height: 100%;
-        background-color: $purple;
-        &::before {
-            content: "";
+    .history-wrapper {
+        padding: 35px 35px 0 35px;
+        position: relative;
+
+        .separator {
             position: absolute;
             top: 0;
-            left: -20px;
-            height: 2px;
-            width: 40px;
+            left: 50%;
+            width: 2px;
+            height: 100%;
             background-color: $purple;
-        }
 
-        &::after{
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: -20px;
-            background-color: $purple;
-            width: 40px;
-            height: 2px;
-        }
-      }
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: -20px;
+                height: 2px;
+                width: 40px;
+                background-color: $purple;
+            }
 
-      .row {
-        .history-card {
-            padding-left: 0;
-            padding-right: 16px;
-        }
-
-        &.justify-content-end {
-            .history-card {
-                padding-left: 18px;
-                padding-right: 0;
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: -20px;
+                background-color: $purple;
+                width: 40px;
+                height: 2px;
             }
         }
 
-        +.row {
-            margin-top: -90px;
+        .row {
+            .history-card {
+                padding-left: 0;
+                padding-right: 16px;
+            }
+
+            &.justify-content-end {
+                .history-card {
+                    padding-left: 18px;
+                    padding-right: 0;
+                }
+            }
+
+            +.row {
+                margin-top: -90px;
+            }
         }
-      }
     }
 
     .section-title {
@@ -1829,6 +1948,7 @@
     .history-card {
         .card-content {
             padding: 25px 0 35px;
+
             .card-title {
                 text-transform: uppercase;
                 font-size: 11px;
@@ -1838,6 +1958,7 @@
                 color: $green;
                 margin-bottom: 28px;
             }
+
             .card-text {
                 font-size: 25px;
                 line-height: 33px;
@@ -1851,6 +1972,7 @@
 //Content block
 .content-block {
     padding: 128px 0 32px 0;
+
     .content-wrapper {
         padding: 0 45px;
     }
@@ -1859,12 +1981,15 @@
 //Calculator block
 .calculator-block {
     padding: 150px 0;
+
     .calculator-wrapper {
         padding-left: 45px;
         padding-right: 45px;
+
         .content {
             background-color: $purple;
             padding: 96px 0 134px;
+
             .section-title {
                 font-size: 32px;
                 line-height: 32px;
@@ -1892,6 +2017,7 @@
                 margin-bottom: 64px;
                 @include flex;
                 @include justify-content(center);
+
                 input {
                     font-size: 22px;
                     line-height: 22px;
@@ -1900,7 +2026,6 @@
                     border: none;
                     padding: 17px 55px 17px 35px;
                     vertical-align: middle
-
                 }
 
                 .btn {
@@ -1912,6 +2037,7 @@
                     border-color: $green;
                     padding: 20px 45px;
                     vertical-align: middle;
+
                     &:hover {
                         background-color: $dark-gray;
                         border-color: $dark-gray;
@@ -1945,7 +2071,8 @@
 }
 
 //Bdt block
-.bdt-block, .bdt-category {
+.bdt-block,
+.bdt-category {
     padding: 125px 0 80px;
     background-color: $purple;
     position: relative;
@@ -1982,9 +2109,11 @@
     z-index: 1;
     overflow: hidden;
     padding-bottom: 80px;
+
     .filter-post-left {
         position: relative;
         padding-bottom: 165px;
+
         &:before {
             height: 100%;
             content: "";
@@ -2020,6 +2149,7 @@
 
         .bdts-cat-list {
             margin-bottom: 15px;
+
             &:last-child {
                 margin-bottom: 0;
             }
@@ -2027,6 +2157,7 @@
             a {
                 color: $white;
                 text-decoration: none;
+
                 &:hover {
                     text-decoration: underline;
                 }
@@ -2045,17 +2176,21 @@
     .bdt-wrapper {
         padding-left: 50px;
         padding-right: 20px;
+
         .row {
             .col {
                 margin-bottom: 20px;
                 overflow: hidden;
             }
         }
+
         .bdts-box {
             height: 100%;
+
             .bdts-image {
                 height: 272px;
                 overflow: hidden;
+
                 img {
                     display: block;
                     height: 100%;
@@ -2070,13 +2205,13 @@
                 height: 100%;
 
                 .bdts-title {
-                        font-size: 25px;
-                        line-height: 33px;
-                        font-weight: 600;
-                        padding: 0 15px;
-                        margin-bottom: 8px;
-                        color: $purple;
-                        text-decoration: none;
+                    font-size: 25px;
+                    line-height: 33px;
+                    font-weight: 600;
+                    padding: 0 15px;
+                    margin-bottom: 8px;
+                    color: $purple;
+                    text-decoration: none;
                 }
 
                 .bdts-role {
@@ -2103,6 +2238,7 @@
                     line-height: 21px;
                     font-weight: 600;
                     margin-bottom: 16px;
+
                     &::before {
                         width: 20px;
                         height: 20px;
@@ -2127,6 +2263,7 @@
 
                 .contact {
                     margin-top: 18px;
+
                     a {
                         font-size: 16px;
                         color: $green;
@@ -2134,6 +2271,7 @@
                         text-decoration: underline;
                         display: table !important;
                         margin: 0 auto;
+
                         &:hover {
                             color: $purple;
                         }
@@ -2158,11 +2296,14 @@
 //Career details block
 .career-details-block {
     padding-top: 95px;
+
     .career-wrapper {
         padding-left: 35px;
         padding-right: 35px;
+
         .careers-box {
             margin-bottom: 138px;
+
             .careers-title {
                 font-size: 18px;
                 font-weight: 700;
@@ -2172,8 +2313,12 @@
             }
 
             .careers-content {
-                .careers-area, .careers-salary, .careers-job-type {
+
+                .careers-area,
+                .careers-salary,
+                .careers-job-type {
                     margin-bottom: 16px;
+
                     span {
                         font-weight: 700;
                     }
@@ -2192,6 +2337,7 @@
                     font-weight: 700;
                     background-color: $green;
                     border-color: $green;
+
                     &:hover {
                         background-color: $purple;
                         border-color: $purple;
@@ -2208,6 +2354,7 @@
     &.style-2 {
         background-color: $gray;
         padding: 115px 0;
+
         .section-title {
             margin-bottom: 88px;
         }
@@ -2216,13 +2363,16 @@
             @include borderRadius(0);
             background-color: $gray;
             border: none;
+
             .accordion-header {
                 position: relative;
+
                 .accordion-button {
                     background-color: $gray;
                     border-bottom: 2px solid $purple;
                     cursor: pointer;
                     padding: 29px 0;
+
                     .careers-title {
                         color: $purple;
                         font-size: 18px;
@@ -2256,6 +2406,7 @@
 
                     &:not(.collapsed) {
                         border-bottom: 2px solid $green;
+
                         .careers-title {
                             color: $green;
                         }
@@ -2279,12 +2430,17 @@
                 .accordion-body {
                     padding: 54px 0 108px 0;
                     border-bottom: 2px solid $purple;
+
                     .careers-content {
-                        .careers-area, .careers-salary, .careers-job-type {
+
+                        .careers-area,
+                        .careers-salary,
+                        .careers-job-type {
                             font-size: 16px;
                             line-height: 23px;
                             font-weight: 600;
                             margin-bottom: 16px;
+
                             span {
                                 font-weight: 700;
                             }
@@ -2307,6 +2463,7 @@
                             padding-top: 23px;
                             padding-left: 0;
                             margin-left: -5px;
+
                             p {
                                 font-size: 16px;
                                 line-height: 23px;
@@ -2332,6 +2489,7 @@
 //Content with logo
 .content-with-logo {
     padding: 206px 0 182px;
+
     .section-title {
         line-height: 30px;
         color: $green;
@@ -2348,8 +2506,10 @@
 
     .logo-wrapper {
         padding: 30px 0;
+
         .logo-icon {
             margin-bottom: 48px;
+
             img {
                 width: 142px;
                 height: auto;
@@ -2362,12 +2522,15 @@
 .content-with-login {
     padding-top: 88px;
     padding-bottom: 90px;
+
     .login-wrapper {
         padding: 0 20px;
+
         .login-box {
             background-color: $white;
             padding: 24px;
             height: 100%;
+
             .section-title {
                 margin-bottom: 17px;
             }
@@ -2385,7 +2548,8 @@
                 letter-spacing: normal;
                 padding: 11px 49px;
                 font-weight: 400;
-                &:hover{
+
+                &:hover {
                     background-color: $dark-green;
                     border-color: $dark-green;
                     color: $white;
@@ -2400,10 +2564,12 @@
     .time-blog-detail-wrapper {
         padding: 0;
         overflow: hidden;
+
         .image-box {
             height: 450px;
             width: 100%;
             display: inline-block;
+
             img {
                 height: 100%;
                 width: 100%;
@@ -2419,6 +2585,7 @@
             padding: 7% 6%;
             margin-top: -150px;
             position: relative;
+
             .left {
                 padding-left: 15px;
             }
@@ -2431,10 +2598,12 @@
             .left {
                 padding-top: 8px;
             }
+
             .time-blog-detail-content {
                 &.sticky-top {
                     top: 200px;
                 }
+
                 .time-blog-date {
                     font-size: 12px;
                     line-height: 15px;
@@ -2455,6 +2624,7 @@
 
                 .social-icon {
                     padding: 0 15px;
+
                     span {
                         font-size: 16px;
                         line-height: 16px;
@@ -2466,6 +2636,7 @@
                         border: 1px solid $meduim-gray;
                         margin-right: 3px;
                         padding: 4px 8px;
+
                         img {
                             height: 16px;
                         }
@@ -2479,6 +2650,7 @@
                     letter-spacing: normal;
                     padding: 7px 22px;
                     font-weight: 400;
+
                     &::before {
                         width: 48px;
                         height: 16px;
@@ -2505,10 +2677,12 @@
     .case-study-detail-wrapper {
         padding: 0;
         overflow: hidden;
+
         .image-box {
             height: 450px;
             width: 100%;
             display: inline-block;
+
             img {
                 height: 100%;
                 width: 100%;
@@ -2524,6 +2698,7 @@
             padding: 7% 6%;
             margin-top: -150px;
             position: relative;
+
             .left {
                 padding-left: 15px;
             }
@@ -2536,10 +2711,12 @@
             .left {
                 padding-top: 8px;
             }
+
             .case-study-detail-content {
                 &.sticky-top {
                     top: 200px;
                 }
+
                 .case-study-date {
                     font-size: 12px;
                     line-height: 15px;
@@ -2560,6 +2737,7 @@
 
                 .social-icon {
                     padding: 0 15px;
+
                     span {
                         font-size: 16px;
                         line-height: 16px;
@@ -2571,6 +2749,7 @@
                         border: 1px solid $meduim-gray;
                         margin-right: 3px;
                         padding: 4px 8px;
+
                         img {
                             height: 16px;
                         }
@@ -2584,6 +2763,7 @@
                     letter-spacing: normal;
                     padding: 7px 22px;
                     font-weight: 400;
+
                     &::before {
                         width: 48px;
                         height: 16px;
@@ -2610,10 +2790,12 @@
     .press-release-detail-wrapper {
         padding: 0;
         overflow: hidden;
+
         .image-box {
             height: 450px;
             width: 100%;
             display: inline-block;
+
             img {
                 height: 100%;
                 width: 100%;
@@ -2629,6 +2811,7 @@
             padding: 7% 6%;
             margin-top: -150px;
             position: relative;
+
             .left {
                 padding-left: 15px;
             }
@@ -2641,10 +2824,12 @@
             .left {
                 padding-top: 8px;
             }
+
             .press-release-detail-content {
                 &.sticky-top {
                     top: 200px;
                 }
+
                 .press-release-date {
                     font-size: 12px;
                     line-height: 15px;
@@ -2665,6 +2850,7 @@
 
                 .social-icon {
                     padding: 0 15px;
+
                     span {
                         font-size: 16px;
                         line-height: 16px;
@@ -2676,6 +2862,7 @@
                         border: 1px solid $meduim-gray;
                         margin-right: 3px;
                         padding: 4px 8px;
+
                         img {
                             height: 16px;
                         }
@@ -2689,6 +2876,7 @@
                     letter-spacing: normal;
                     padding: 7px 22px;
                     font-weight: 400;
+
                     &::before {
                         width: 48px;
                         height: 16px;
@@ -2713,11 +2901,14 @@
 //Image with content
 .image-with-content {
     padding-bottom: 100px;
+
     .image-content-box {
         height: 100%;
+
         .image-box {
             height: 380px;
             overflow: hidden;
+
             img {
                 display: block;
                 height: 100%;
@@ -2729,6 +2920,7 @@
         .login-content {
             height: 100%;
             padding: 25px 0;
+
             .section-title {
                 font-weight: 600;
                 margin-bottom: 9px;
@@ -2737,12 +2929,15 @@
             p {
                 font-weight: 600;
                 margin-bottom: 16px;
+
                 &:last-of-type {
                     margin-bottom: 0;
                 }
+
                 a {
                     text-decoration: none;
                     border-bottom: 1px solid $green;
+
                     &:hover {
                         border-color: $purple;
                     }
@@ -2764,6 +2959,7 @@
 //Search-banner
 .search-banner {
     padding: 120px 0;
+
     .section-title {
         color: $green;
         font-weight: 400;
@@ -2790,13 +2986,17 @@
 .search-block {
     padding-top: 60px;
     padding-bottom: 150px;
+
     .search-wrapper {
         padding: 0 25px;
     }
+
     .search-box {
         margin-bottom: 60px;
+
         form {
             @include flex;
+
             .form-control {
                 color: $dark-green;
                 font-size: 15px;
@@ -2805,9 +3005,10 @@
                 @include borderRadius (50px 0 0 50px);
                 border: 2px solid $green;
                 border-right: none;
+
                 &:focus {
                     box-shadow: none;
-                    }
+                }
 
                 &::-webkit-input-placeholder {
                     color: $green;
@@ -2832,6 +3033,7 @@
                     padding: 14px 48px;
                     @include borderRadius (0 50px 50px 0);
                     border-left: none;
+
                     &:hover {
                         color: $white;
                         background-color: $dark-green;
@@ -2843,44 +3045,48 @@
     }
 
     .search-data {
-            padding-top: 32px;
-            padding-bottom: 48px;
-            border-bottom: 2px solid $purple;
-            .search-title {
-                font-size: 25px;
-                line-height: 33px;
-                font-weight: 700;
-                margin-bottom: 16px;
-            }
+        padding-top: 32px;
+        padding-bottom: 48px;
+        border-bottom: 2px solid $purple;
 
-            .search-content {
-                font-size: 16px;
-                line-height: 23px;
-                margin-bottom: 66px;
-            }
+        .search-title {
+            font-size: 25px;
+            line-height: 33px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
 
-            .search-read-more {
-                .btn {
-                    font-size: 15px;
-                    line-height: 15px;
-                    letter-spacing: normal;
-                    padding: 8px 33px;
-                    font-weight: 400;
-                    &:hover {
-                        color: $white;
-                        background-color: $very-dark-gray;
-                        border-color: $very-dark-gray;
-                    }
+        .search-content {
+            font-size: 16px;
+            line-height: 23px;
+            margin-bottom: 66px;
+        }
+
+        .search-read-more {
+            .btn {
+                font-size: 15px;
+                line-height: 15px;
+                letter-spacing: normal;
+                padding: 8px 33px;
+                font-weight: 400;
+
+                &:hover {
+                    color: $white;
+                    background-color: $very-dark-gray;
+                    border-color: $very-dark-gray;
                 }
             }
+        }
     }
 }
 
 //Client custom post block
 .client-custom-post-block {
     padding: 100px 0 140px 0;
+
     .container {
         padding: 0 20px;
+
         .section-title {
             margin-bottom: 29px;
         }
@@ -2892,9 +3098,11 @@
 
         .client-box {
             height: 100%;
+
             .client-image {
                 height: 387px;
                 overflow: hidden;
+
                 img {
                     display: block;
                     height: 100%;
@@ -2907,6 +3115,7 @@
                 background-color: $white;
                 padding: 44px 55px 35px 55px;
                 height: 100%;
+
                 .client-category {
                     font-size: 11px;
                     line-height: 11px;
@@ -2930,6 +3139,7 @@
                     letter-spacing: normal;
                     padding: 8px 19px;
                     font-weight: 400;
+
                     a {
                         color: $white;
                         text-decoration: none;
@@ -2943,6 +3153,7 @@
 //Error 404
 .error-404 {
     padding: 130px 0;
+
     .error-wrapper {
         padding: 045px;
     }
@@ -2956,6 +3167,7 @@
     .btn-404 {
         @include flex;
         flex-wrap: wrap;
+
         p {
             font-size: 24px;
             line-height: 32px;
@@ -2970,6 +3182,7 @@
             letter-spacing: normal;
             color: $green;
             text-decoration: underline;
+
             &:hover {
                 color: $purple;
             }
@@ -2980,6 +3193,7 @@
 //Contact block
 .contact-block {
     padding: 125px 0 48px 0;
+
     .section-title {
         color: $green;
         line-height: 30px;
@@ -3005,17 +3219,18 @@
                 margin-bottom: 16px;
             }
         }
-        
+
         p {
             margin-bottom: 16px;
         }
-        
+
         h3 {
             margin-top: 54px;
         }
 
         ol {
             padding-left: 40px;
+
             li {
                 font-size: 16px;
                 line-height: 1.5;
