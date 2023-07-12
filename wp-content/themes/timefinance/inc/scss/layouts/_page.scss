@@ -202,8 +202,26 @@
                     z-index: 1;
                 }
 
-                &.swiper-pagination-bullet-active {
+				&:after {
+                    content: '';
+                    height: 3px;
+                    width: 0;
                     background-color: $green;
+                    position: absolute;
+                    display: block;
+                    top: calc(50% - 0.5px);
+                    left: 0;
+                    z-index: 1;
+					@include transitionAll(10s ease-in-out);
+                }
+
+                &.swiper-pagination-bullet-active {
+
+					&:after {
+						@include transitionAll(10s ease-in-out);
+						content: '';
+						width: 100%;
+					}
                 }
             }
         }
