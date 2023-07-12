@@ -14,8 +14,8 @@ html {
   -ms-text-size-adjust: 100%; }
 
 body {
+  margin-top: 125px;
   font-family: "Nunito Sans", sans-serif;
-  margin: 0;
   padding: 0;
   font-size: 15px;
   line-height: 22px;
@@ -44,6 +44,12 @@ a,
 .container, .container-xl {
   padding-left: 10px;
   padding-right: 10px; }
+  @media (min-width: 768px) {
+    .container, .container-xl {
+      max-width: 840px; } }
+  @media (min-width: 992px) {
+    .container, .container-xl {
+      max-width: 1020px; } }
   @media (min-width: 1400px) {
     .container, .container-xl {
       max-width: 1200px; } }
@@ -1235,74 +1241,6 @@ header {
     transform: translateX(50%) translateY(2px);
     height: 14px; } }
 
-.case-study-block {
-  position: relative;
-  padding: 312px 0 218px 0;
-  background-size: contain;
-  background-repeat: no-repeat; }
-  .case-study-block .swiper {
-    margin-left: -130px;
-    margin-right: 90px; }
-    .case-study-block .swiper .swiper-slide .row {
-      margin-left: 0;
-      margin-right: 0; }
-      .case-study-block .swiper .swiper-slide .row > * {
-        padding: 0; }
-        .case-study-block .swiper .swiper-slide .row > *:last-child {
-          background-color: #fff; }
-    .case-study-block .swiper .swiper-slide .case-study-left img {
-      height: 600px;
-      width: 100%;
-      -o-object-fit: cover;
-      object-fit: cover; }
-    .case-study-block .swiper .swiper-slide .case-study-right {
-      height: auto;
-      min-height: 100%;
-      padding: 90px 18% 0 17%; }
-      .case-study-block .swiper .swiper-slide .case-study-right .brand-logo-image {
-        width: 141px; }
-      .case-study-block .swiper .swiper-slide .case-study-right p {
-        color: #3d1050;
-        font-size: 22px;
-        line-height: 30px;
-        margin-top: 1.5rem; }
-      .case-study-block .swiper .swiper-slide .case-study-right .read-more {
-        margin-top: 16px; }
-        .case-study-block .swiper .swiper-slide .case-study-right .read-more .btn {
-          font-size: 15px;
-          color: #fff;
-          padding: 7px 1.5rem;
-          letter-spacing: 0; }
-          .case-study-block .swiper .swiper-slide .case-study-right .read-more .btn:hover {
-            background-color: #025244;
-            border-color: #025244;
-            color: #fff; }
-    .case-study-block .swiper .swiper-pagination-bullet {
-      opacity: 1;
-      width: 10px;
-      height: 10px;
-      margin: 0 2px !important;
-      border: none;
-      border-radius: 50%;
-      background-color: #e1dbe4; }
-      .case-study-block .swiper .swiper-pagination-bullet.swiper-pagination-bullet-active {
-        background-color: #3d1050; }
-    .case-study-block .swiper .swiper-pagination {
-      width: 50% !important;
-      right: 0;
-      padding-left: 8.3%;
-      left: inherit !important;
-      text-align: left;
-      bottom: 75px; }
-  .case-study-block .view-all-case-studies {
-    text-align: right;
-    margin-top: 25px;
-    margin-right: 90px; }
-    .case-study-block .view-all-case-studies a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 600; }
-
 .inner-page-hero {
   overflow: hidden;
   background-size: auto 125%;
@@ -1404,6 +1342,12 @@ header {
   padding: 156px 0 186px 0; }
   .trustpilot-block .content {
     padding: 0 35px; }
+    @media (max-width: 1399px) {
+      .trustpilot-block .content {
+        padding: 0 10px; } }
+    @media (max-width: 991px) {
+      .trustpilot-block .content {
+        padding: 0 5px; } }
     .trustpilot-block .content .section-title {
       color: #00a98f;
       font-weight: 600;
@@ -3533,6 +3477,74 @@ header {
 .customize-support .content-block table tbody tr td a {
   font-size: 16px;
   line-height: 1.5; }
+
+.case-study-block {
+  position: relative;
+  padding: 312px 0 218px 0;
+  background-size: contain;
+  background-repeat: no-repeat; }
+  .case-study-block .swiper {
+    margin-left: -130px;
+    margin-right: 90px; }
+    .case-study-block .swiper .swiper-slide .row {
+      margin-left: 0;
+      margin-right: 0; }
+      .case-study-block .swiper .swiper-slide .row > * {
+        padding: 0; }
+        .case-study-block .swiper .swiper-slide .row > *:last-child {
+          background-color: #fff; }
+    .case-study-block .swiper .swiper-slide .case-study-left img {
+      height: 600px;
+      width: 100%;
+      -o-object-fit: cover;
+      object-fit: cover; }
+    .case-study-block .swiper .swiper-slide .case-study-right {
+      height: auto;
+      min-height: 100%;
+      padding: 90px 18% 0 17%; }
+      .case-study-block .swiper .swiper-slide .case-study-right .brand-logo-image {
+        width: 141px; }
+      .case-study-block .swiper .swiper-slide .case-study-right p {
+        color: #3d1050;
+        font-size: 22px;
+        line-height: 30px;
+        margin-top: 1.5rem; }
+      .case-study-block .swiper .swiper-slide .case-study-right .read-more {
+        margin-top: 16px; }
+        .case-study-block .swiper .swiper-slide .case-study-right .read-more .btn {
+          font-size: 15px;
+          color: #fff;
+          padding: 7px 1.5rem;
+          letter-spacing: 0; }
+          .case-study-block .swiper .swiper-slide .case-study-right .read-more .btn:hover {
+            background-color: #025244;
+            border-color: #025244;
+            color: #fff; }
+    .case-study-block .swiper .swiper-pagination-bullet {
+      opacity: 1;
+      width: 10px;
+      height: 10px;
+      margin: 0 2px !important;
+      border: none;
+      border-radius: 50%;
+      background-color: #e1dbe4; }
+      .case-study-block .swiper .swiper-pagination-bullet.swiper-pagination-bullet-active {
+        background-color: #3d1050; }
+    .case-study-block .swiper .swiper-pagination {
+      width: 50% !important;
+      right: 0;
+      padding-left: 8.3%;
+      left: inherit !important;
+      text-align: left;
+      bottom: 75px; }
+  .case-study-block .view-all-case-studies {
+    text-align: right;
+    margin-top: 25px;
+    margin-right: 90px; }
+    .case-study-block .view-all-case-studies a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600; }
 
 .modal-open header {
   z-index: 999999; }

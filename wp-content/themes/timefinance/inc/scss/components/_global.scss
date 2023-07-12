@@ -9,8 +9,8 @@ html {
 }
 
 body {
+    margin-top: 125px;
     font-family: $primary-font;
-    margin: 0;
     padding: 0;
     font-size: 15px;
     line-height: 22px;
@@ -41,10 +41,19 @@ a,
     padding-left: 10px;
     padding-right: 10px;
 
+    @media (min-width: 768px) {
+        max-width: 840px;
+    }
+
+    @media (min-width: 992px) {
+        max-width: 1020px;
+    }
+
     @media (min-width: 1400px) {
         max-width: 1200px;
     }
 }
+
 .container-fluid {
     padding-left: 10px;
     padding-right: 10px;
