@@ -1,10 +1,76 @@
+.modal-open {
+    header {
+        z-index: 999999;
+    }
+
+    footer {
+        .modal {
+            overflow-x: hidden;
+            overflow-y: auto;
+
+            .modal-dialog {
+                max-width: 1140px;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                -ms-flex-pack: center;
+                justify-content: center;
+                height: 100%;
+                transition: -webkit-transform .3s ease-out;
+                transition: transform .3s ease-out;
+                transition: transform .3s ease-out, -webkit-transform .3s ease-out;
+                -webkit-transform: translate(0, -50px);
+                transform: translate(0, -50px);
+                height: calc(100vh - 145px);
+                overflow-y: auto;
+                margin: 130px auto 1.75rem;
+                border-radius: 0.3rem;
+            }
+
+            &.show {
+                .modal-dialog {
+                    -webkit-transform: none;
+                    transform: none;
+                }
+            }
+
+            .modal-content {
+                background-color: #3d1050 !important;
+
+                .modal-header,
+                .modal-body {
+                    width: 600px;
+                    margin: 0 auto;
+                    padding: 1rem 1rem;
+                }
+
+                .modal-header {
+                    .prs-logo {
+                        width: 300px;
+                    }
+                }
+            }
+        }
+    }
+
+    .modal-backdrop.show {
+        background-color: #000;
+        z-index: 9999;
+    }
+}
+
+
+
 footer {
     background-color: $purple;
     color: $white;
     padding: 87px 0;
 
+    .modal {
+        z-index: 99999;
+    }
+
     .row {
-        + .row {
+        +.row {
             margin-top: 50px;
         }
     }
@@ -65,10 +131,10 @@ footer {
             &:hover {
                 color: $white;
                 text-decoration: none;
-            } 
+            }
         }
     }
-    
+
     .footer-menu-first {
         .menu {
             list-style: none;
@@ -138,6 +204,7 @@ footer {
 
             li {
                 margin-bottom: 2px;
+
                 a {
                     color: $white;
                     text-decoration: none;

@@ -142,10 +142,7 @@ header {
                         >.mega-menu-wrapper {
                             opacity: 1;
                             visibility: visible;
-
-                            @include responsive(laptop, max) {
-                                display: block;
-                            }
+                            display: block;
                         }
                     }
 
@@ -177,7 +174,7 @@ header {
                     &.show {
                         .mega-menu-wrapper {
                             @include responsive(laptop, max) {
-                                display: block;
+                                display: block !important;
                                 opacity: 1;
                                 visibility: visible;
                             }
@@ -200,7 +197,7 @@ header {
 
                 // Mega Menu Wrapper
                 .mega-menu-wrapper {
-                    opacity: 0;
+                    opacity: 1;
                     visibility: visible;
                     background-color: $white;
                     left: -10px;
@@ -208,6 +205,7 @@ header {
                     padding: 0;
                     position: absolute;
                     margin: 0;
+                    display: none;
                     @include transitionAll(0.2s ease-in-out);
                     @include box-shadow(4px 0 20px -8px rgba(0, 0, 0, .05));
 
@@ -216,10 +214,12 @@ header {
                         left: 0;
                         width: 100%;
                         background-color: transparent;
-                        padding: 29px 0 12px 0;
-                        display: none;
+                        padding: 29px 0 12px 0 !important;
+                        display: none !important;
                         opacity: 1;
                         visibility: visible;
+                        margin: 0 !important;
+                        height: auto !important;
                         -webkit-transition: .0s ease-in-out;
                         transition: .0s ease-in-out;
                         @include box-shadow(none);
@@ -256,10 +256,15 @@ header {
                                 font-weight: 600;
                                 text-decoration: none;
                                 color: $dark-gray;
+                                width: 100%;
 
                                 @include responsive(laptop, max) {
-                                    color: $white;
+                                    color: $white !important;
                                     padding: 8px 0;
+
+                                    &:hover {
+                                        color: $green !important;
+                                    }
                                 }
 
                                 &:hover {
@@ -409,12 +414,19 @@ header {
 .timefinance-search-popup.mfp-bg {
     z-index: 2 !important;
     opacity: 0 !important;
+    transition: all 0.2s;
+    background-color: transparent;
+    position: fixed !important;
 }
 
 .timefinance-search-popup {
     ~.mfp-wrap {
-        transition: .3s ease-in-out;
+        opacity: 0;
+        transition: all 0.3s;
+        transform: translateY(-200px);
         z-index: 2 !important;
+        position: fixed !important;
+        top: 0 !important;
 
         button.mfp-close {
             top: 135px;
@@ -425,14 +437,31 @@ header {
             }
         }
     }
+
+    &.mfp-ready {
+        ~.mfp-wrap {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
 }
 
 .timefinance-search-popup {
     background-color: $purple;
 
+    &.mfp-ready {
+        .search-form-result {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
     .search-form-result {
         @include flex;
         @include justify-content(center);
+        opacity: 0;
+        transition: all 0.2s;
+        transform: translateY(-100px);
 
         .search-form {
             padding-bottom: 10px;
@@ -528,7 +557,7 @@ header {
         margin-top: 40px;
         opacity: 0;
         margin-bottom: 0;
-        @include translateX(-50px);
+        @include translateX(-65px);
         @include transitionAll(0.3s ease-in-out);
     }
 
@@ -536,7 +565,7 @@ header {
         margin-top: 25px;
         width: 80%;
         opacity: 0;
-        @include translateX(-50px);
+        @include translateX(-65px);
         @include transitionAll(0.3s ease-in-out);
     }
 
@@ -547,8 +576,8 @@ header {
         margin-top: 3rem;
         padding-bottom: 7px;
         opacity: 0;
-        @include translateX(-50px);
-        @include transitionAll(0.3s ease-in-out);
+        @include translateX(-65px);
+        @include transitionAll(0.4s ease-in-out !important);
 
         &:hover {
             text-decoration: none;
@@ -612,9 +641,6 @@ header {
                 right: 0;
                 z-index: 2;
                 overflow: hidden;
-                opacity: 0;
-                @include scale(1.2);
-                @include transitionAll(1.5s ease-in-out);
 
                 img {
                     width: 100%;
@@ -624,6 +650,9 @@ header {
                     object-fit: cover;
                     top: 0;
                     left: 0;
+                    opacity: 0;
+                    @include scale(1.4);
+                    @include transitionAll(.4s ease-in-out);
                 }
             }
         }
@@ -634,8 +663,11 @@ header {
             }
 
             .hero-container {
-                opacity: 1;
-                @include scale(1.0);
+                img {
+                    opacity: 1;
+                    @include transitionAll(1.5s ease-in-out);
+                    @include scale(1.1);
+                }
             }
 
             .section-title {
@@ -657,8 +689,8 @@ header {
             .btn-link {
                 opacity: 1;
                 will-change: opacity, transform;
-                -webkit-transition-delay: .2s;
-                transition-delay: .2s;
+                -webkit-transition-delay: .3s;
+                transition-delay: .3s;
                 @include translateX(0);
             }
         }
