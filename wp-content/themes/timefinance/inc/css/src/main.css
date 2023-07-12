@@ -956,6 +956,12 @@ header {
               width: 20px;
               height: 20px; } }
 
+.admin-bar header {
+  top: 32px; }
+  @media (max-width: 991px) {
+    .admin-bar header {
+      top: 46px; } }
+
 .homepage-hero {
   position: relative;
   padding: 0;

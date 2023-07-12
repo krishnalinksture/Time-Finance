@@ -544,3 +544,14 @@ header {
         }
     }
 }
+
+// admin
+.admin-bar {
+    header {
+        top: 32px;
+
+        @include responsive(ipad-portrait, max) {
+            top: 46px;
+        }
+    }
+}
