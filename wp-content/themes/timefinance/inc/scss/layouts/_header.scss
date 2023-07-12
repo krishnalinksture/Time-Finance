@@ -652,7 +652,7 @@ header {
                     left: 0;
                     opacity: 0;
                     @include scale(1.4);
-                    @include transitionAll(.4s ease-in-out);
+                    @include transitionAll(1s ease-in-out);
                 }
             }
         }
@@ -665,8 +665,8 @@ header {
             .hero-container {
                 img {
                     opacity: 1;
-                    @include transitionAll(1.5s ease-in-out);
-                    @include scale(1.1);
+                    @include transitionAll(1s ease-in-out);
+                    @include scale(1);
                 }
             }
 

@@ -1061,22 +1061,22 @@ header {
         -webkit-transform: scale(1.4);
         -ms-transform: scale(1.4);
         transform: scale(1.4);
-        -webkit-transition: 0.4s ease-in-out;
-        -moz-transition: 0.4s ease-in-out;
-        -ms-transition: 0.4s ease-in-out;
-        transition: 0.4s ease-in-out; }
+        -webkit-transition: 1s ease-in-out;
+        -moz-transition: 1s ease-in-out;
+        -ms-transition: 1s ease-in-out;
+        transition: 1s ease-in-out; }
   .homepage-hero .swiper-slide.swiper-slide-active .swiper-slide-warp {
     pointer-events: all; }
   .homepage-hero .swiper-slide.swiper-slide-active .hero-container img {
     opacity: 1;
-    -webkit-transition: 1.5s ease-in-out;
-    -moz-transition: 1.5s ease-in-out;
-    -ms-transition: 1.5s ease-in-out;
-    transition: 1.5s ease-in-out;
-    -moz-transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1); }
+    -webkit-transition: 1s ease-in-out;
+    -moz-transition: 1s ease-in-out;
+    -ms-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); }
   .homepage-hero .swiper-slide.swiper-slide-active .section-title {
     opacity: 1;
     will-change: opacity, transform;
