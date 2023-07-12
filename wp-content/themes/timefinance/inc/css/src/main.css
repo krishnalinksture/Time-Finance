@@ -1110,7 +1110,7 @@ header {
     position: relative;
     left: 10px;
     width: 100%;
-    bottom: 105px;
+    bottom: 120px;
     max-width: 1200px;
     margin: 0 auto;
     right: 0;
@@ -1185,6 +1185,15 @@ header {
           display: block;
           -webkit-animation: bounce-arrow-tail 1s 0s infinite;
           animation: bounce-arrow-tail 1s 0s infinite; }
+  .homepage-hero .swiper-number-pagination {
+    text-align: left;
+    margin-bottom: -7px; }
+    .homepage-hero .swiper-number-pagination .swiper-pagination-current {
+      color: #fff;
+      left: 10px;
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 22px; }
 
 @-webkit-keyframes bounce-arrow-head {
   0%,
@@ -1225,9 +1234,6 @@ header {
     -webkit-transform: translateX(50%) translateY(2px);
     transform: translateX(50%) translateY(2px);
     height: 14px; } }
-
-.swiper-counter-homepage-hero {
-  display: none; }
 
 .case-study-block {
   position: relative;
@@ -3538,18 +3544,22 @@ header {
     max-width: 1140px;
     -ms-flex-direction: column;
     flex-direction: column;
-    -ms-flex-pack: center;
-    justify-content: center;
     height: 100%;
-    transition: -webkit-transform .3s ease-out;
-    transition: transform .3s ease-out;
-    transition: transform .3s ease-out, -webkit-transform .3s ease-out;
     -webkit-transform: translate(0, -50px);
     transform: translate(0, -50px);
     height: calc(100vh - 145px);
     overflow-y: auto;
     margin: 130px auto 1.75rem;
-    border-radius: 0.3rem; }
+    border-radius: 0.3rem;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out; }
   .modal-open footer .modal.show .modal-dialog {
     -webkit-transform: none;
     transform: none; }
@@ -3564,7 +3574,7 @@ header {
       width: 300px; }
 
 .modal-open .modal-backdrop.show {
-  background-color: #000;
+  background-color: #080808;
   z-index: 9999; }
 
 footer {

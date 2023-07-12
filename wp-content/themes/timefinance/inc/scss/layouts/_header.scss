@@ -707,7 +707,7 @@ header {
         position: relative;
         left: 10px;
         width: 100%;
-        bottom: 105px;
+        bottom: 120px;
         max-width: 1200px;
         margin: 0 auto;
         right: 0;
@@ -799,6 +799,19 @@ header {
             }
         }
     }
+
+    .swiper-number-pagination {
+        text-align: left;
+        margin-bottom: -7px;
+
+        .swiper-pagination-current {
+            color: $white;
+            left: 10px;
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 22px;
+        }
+    }
 }
 
 @-webkit-keyframes bounce-arrow-head {
@@ -859,10 +872,6 @@ header {
         transform: translateX(50%) translateY(2px);
         height: 14px
     }
-}
-
-.swiper-counter-homepage-hero {
-    display: none;
 }
 
 // Case study block
