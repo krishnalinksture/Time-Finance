@@ -44,21 +44,12 @@ a,
 .container, .container-xl {
   padding-left: 10px;
   padding-right: 10px; }
-  @media (min-width: 576px) {
-    .container, .container-xl {
-      max-width: 100%; } }
-  @media (min-width: 768px) {
-    .container, .container-xl {
-      max-width: 100%; } }
-  @media (min-width: 992px) {
-    .container, .container-xl {
-      max-width: 960px; } }
-  @media (min-width: 1200px) {
-    .container, .container-xl {
-      max-width: 1140px; } }
   @media (min-width: 1400px) {
     .container, .container-xl {
       max-width: 1200px; } }
+  @media (max-width: 767px) {
+    .container, .container-xl {
+      min-width: 100%; } }
 
 .container-fluid {
   padding-left: 10px;
@@ -1274,12 +1265,47 @@ header {
 
 .inner-page-hero {
   overflow: hidden;
-  background-size: auto 125%;
-  background-position: right;
-  background-repeat: no-repeat;
   position: relative;
   height: 550px;
   z-index: 0; }
+  @media (max-width: 991px) {
+    .inner-page-hero {
+      height: 340px; } }
+  @media (max-width: 767px) {
+    .inner-page-hero {
+      height: auto;
+      background-color: #3d1050; } }
+  .inner-page-hero .section-right-image {
+    width: 60%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    -ms-flex-item-align: stretch !important;
+    align-self: stretch !important; }
+    @media (max-width: 991px) {
+      .inner-page-hero .section-right-image {
+        max-width: 100%;
+        width: 60%;
+        height: 100%; } }
+    @media (max-width: 767px) {
+      .inner-page-hero .section-right-image {
+        position: relative;
+        width: 100%;
+        height: auto; } }
+    .inner-page-hero .section-right-image img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      -o-object-fit: cover;
+      object-fit: cover;
+      z-index: -2;
+      top: 0;
+      left: 0; }
+      @media (max-width: 767px) {
+        .inner-page-hero .section-right-image img {
+          position: relative; } }
   .inner-page-hero .section-left-image {
     background-position: center;
     background-size: cover;
@@ -1289,19 +1315,35 @@ header {
     width: 100%;
     top: 0;
     left: 0; }
+    @media (max-width: 767px) {
+      .inner-page-hero .section-left-image {
+        display: none; } }
   .inner-page-hero .container,
   .inner-page-hero .row {
     position: relative;
     height: 100%; }
+  .inner-page-hero .container {
+    padding: 50px 35px; }
   .inner-page-hero .section-title {
     color: #fff;
     font-weight: 800;
     margin-bottom: 33px; }
+    @media (max-width: 767px) {
+      .inner-page-hero .section-title {
+        font-size: 40px;
+        line-height: 50px;
+        margin-bottom: 18px; } }
   .inner-page-hero p {
     color: #fff;
     font-size: 18px;
     font-weight: 600;
     width: 35%; }
+    @media (max-width: 991px) {
+      .inner-page-hero p {
+        width: 45%; } }
+    @media (max-width: 767px) {
+      .inner-page-hero p {
+        width: 65%; } }
   .inner-page-hero .btn-link {
     margin-top: 15px;
     background-color: transparent;
@@ -1371,6 +1413,9 @@ header {
 
 .trustpilot-block {
   padding: 156px 0 186px 0; }
+  @media (max-width: 991px) {
+    .trustpilot-block {
+      padding: 56px 0 86px 0; } }
   .trustpilot-block .content {
     padding: 0 35px; }
     @media (max-width: 1399px) {
@@ -1381,15 +1426,27 @@ header {
         padding: 0 25px; } }
     @media (max-width: 991px) {
       .trustpilot-block .content {
-        padding: 0 40px; } }
+        padding: 0; } }
+    @media (max-width: 767px) {
+      .trustpilot-block .content {
+        padding: 0 30px; } }
     .trustpilot-block .content .section-title {
       color: #00a98f;
       font-weight: 600;
       margin-bottom: 35px; }
+      @media (max-width: 991px) {
+        .trustpilot-block .content .section-title {
+          font-size: 16px;
+          line-height: 26px;
+          margin-bottom: 5px; } }
     .trustpilot-block .content p {
       font-size: 40px;
       line-height: 50px;
       font-weight: 700; }
+      @media (max-width: 991px) {
+        .trustpilot-block .content p {
+          font-size: 20px;
+          line-height: 28px; } }
   .trustpilot-block.bg-purple p {
     color: #fff; }
   .trustpilot-block.style-2 {
@@ -2211,7 +2268,7 @@ header {
     margin-bottom: 0; }
 
 .modal-open section.resources-filter-block {
-  z-index: 9999; }
+  z-index: 99999; }
 
 .resources-filter-block {
   background-color: #F5F3F6;
@@ -2711,7 +2768,7 @@ header {
     margin-bottom: 0px; }
 
 .modal-open section.bdt-filter-block {
-  z-index: 9999; }
+  z-index: 99999; }
 
 .bdt-filter-block {
   background-color: #F5F3F6;
