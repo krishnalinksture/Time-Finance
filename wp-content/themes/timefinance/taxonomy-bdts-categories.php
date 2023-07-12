@@ -169,10 +169,10 @@ if ( ! empty( $bdt_title ) || ! empty( $bdt_content ) ) {
 													<div class="modal fade" id="bdtModal" tabindex="-1" aria-label	="bdtModalLabel" aria-hidden="true">
 														<div class="modal-dialog">
 															<div class="modal-content">
-															<div class="modal-header">
-																<h5 class="modal-title" id="bdtModalLabel"><?php echo esc_html( 'Enquiry form' ); ?></h5>
-																<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-															</div>
+																<div class="modal-header">
+																	<h5 class="modal-title" id="bdtModalLabel"><?php echo esc_html( 'Enquiry form' ); ?></h5>
+																	<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+																</div>
 																<div class="modal-body">
 																	<?php
 																	if ( ! empty( $select_form ) ) {

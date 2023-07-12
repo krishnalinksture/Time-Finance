@@ -13,19 +13,19 @@ if ( have_rows( 'slider_content' ) || ! empty( $show_for_more_button ) ) {
 	?>
 	<section class="homepage-hero" id="<?php echo $section_id; //phpcs:ignore ?>">
 		<div class="container-fluid">
-			<div class="swiper homepage-hero-slider" data-slider-options='{ "slidesPerView": 1, "loop": true, "pagination": { "el": ".swiper-pagination-homepage-hero", "clickable": true }, "navigation": { "nextEl": ".slider-one-slide-next-1", "prevEl": ".slider-one-slide-prev-1" }, "autoplay": { "delay": 4000, "stopOnLastSlide": true, "disableOnInteraction": false },"keyboard": { "enabled": true, "onlyInViewport": true }, "effect": "fade" }'>
+			<div class="swiper homepage-hero-slider" data-slider-options='{ "slidesPerView": 1, "speed": 3000, "loop": true, "direction": "horizontal", "pagination": { "el": ".swiper-pagination-homepage-hero", "clickable": true }, "autoplay": { "delay": 6000, "stopOnLastSlide": true, "disableOnInteraction": false },"keyboard": { "enabled": true, "onlyInViewport": true }, "effect": "fade" }' data-slider-number-pagination="1" data-slider-md-direction="horizontal">
 				<div class="swiper-wrapper">
 					<?php
 					while ( have_rows( 'slider_content' ) ) {
 						the_row();
-						$main_title            = get_sub_field( 'title' );
-						$select_tag            = get_sub_field( 'select_tag' );
-						$content               = get_sub_field( 'content' );
-						$left_image = get_sub_field( 'left_background_image' );
-						$cta_button            = get_sub_field( 'cta_button' );
-						$right_image           = get_sub_field( 'right_image' );
-						$right_image_alt       = ( isset( $right_image['alt'] ) && ! empty( $right_image['alt'] ) ) ? $right_image['alt'] : ( isset( $right_image['title'] ) && ! empty( $right_image['title'] ) ? $right_image['title'] : '' );
-						$left_image_alt       = ( isset( $left_image['alt'] ) && ! empty( $left_image['alt'] ) ) ? $left_image['alt'] : ( isset( $left_image['title'] ) && ! empty( $left_image['title'] ) ? $left_image['title'] : '' );
+						$main_title      = get_sub_field( 'title' );
+						$select_tag      = get_sub_field( 'select_tag' );
+						$content         = get_sub_field( 'content' );
+						$left_image      = get_sub_field( 'left_background_image' );
+						$cta_button      = get_sub_field( 'cta_button' );
+						$right_image     = get_sub_field( 'right_image' );
+						$right_image_alt = ( isset( $right_image['alt'] ) && ! empty( $right_image['alt'] ) ) ? $right_image['alt'] : ( isset( $right_image['title'] ) && ! empty( $right_image['title'] ) ? $right_image['title'] : '' );
+						$left_image_alt  = ( isset( $left_image['alt'] ) && ! empty( $left_image['alt'] ) ) ? $left_image['alt'] : ( isset( $left_image['title'] ) && ! empty( $left_image['title'] ) ? $left_image['title'] : '' );
 
 						if ( ! empty( $main_title ) || ! empty( $content ) || ! empty( $cta_button ) || ! empty( $right_image ) ) {
 							?>
@@ -65,7 +65,7 @@ if ( have_rows( 'slider_content' ) || ! empty( $show_for_more_button ) ) {
 											?>
 											</div>
 											<?php
-										}	
+										}
 										?>
 									</div>
 									<?php
@@ -83,24 +83,27 @@ if ( have_rows( 'slider_content' ) || ! empty( $show_for_more_button ) ) {
 					?>
 				</div>
 				<div class="carousel-indicators-wrapper">
-				<div class="swiper-counter swiper-counter-homepage-hero"><span class="count"></span></div>
-				<div class="swiper-pagination swiper-pagination-homepage-hero"></div>
-				<?php
-				if ( $show_for_more_button && ! empty( $show_for_more_button['url'] ) && ! empty( $show_for_more_button['title'] ) ) {
-					$link_url    = $show_for_more_button['url'];
-					$link_title  = $show_for_more_button['title'];
-					$link_target = $show_for_more_button['target'] ? $link['target'] : '_self';
-					?>
-					<div class="scroll-more">
-						<a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
-							<?php echo esc_html( $link_title ); ?>
-							<span class="arrow-head"></span>
-							<span class="arrow-tail"></span>
-						</a>
+					<div class="swiper-number-pagination">
+						<div class="swiper-pagination-current"></div>
 					</div>
+					<div class="swiper-pagination swiper-pagination-homepage-hero"></div>
 					<?php
-				}
-				?>
+					if ( $show_for_more_button && ! empty( $show_for_more_button['url'] ) && ! empty( $show_for_more_button['title'] ) ) {
+						$link_url    = $show_for_more_button['url'];
+						$link_title  = $show_for_more_button['title'];
+						$link_target = $show_for_more_button['target'] ? $link['target'] : '_self';
+						?>
+						<div class="scroll-more">
+							<a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
+								<?php echo esc_html( $link_title ); ?>
+								<span class="arrow-head"></span>
+								<span class="arrow-tail"></span>
+							</a>
+						</div>
+						<?php
+					}
+					?>
+				</div>
 			</div>
 		</div>
 	</section>
