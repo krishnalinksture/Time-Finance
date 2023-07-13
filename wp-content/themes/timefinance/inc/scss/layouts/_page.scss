@@ -1090,12 +1090,21 @@
 
 //Centred content image gallery
 .centred-content-image-gallery {
-    padding: 80px 0;
+    padding: 80px 0 42px 0;
+    @include responsive (mobile-big, max) {
+        padding: 50px 0 12px 0;
+    }
 
     .section-title {
         color: $green;
         margin-top: 25px;
         margin-bottom: 20px;
+        @include responsive (mobile-big, max) {
+            font-size: 20px;
+            line-height: 28px;
+            margin-top: 15px;
+            margin-bottom: 10px
+        }
     }
 
     p {
@@ -1103,6 +1112,15 @@
         line-height: 23px;
         font-weight: 600;
         margin-bottom: 60px;
+
+        @include responsive (ipad-portrait, max) {
+            margin-bottom: 30px;
+        }
+
+        @include responsive (mobile-big, max) {
+            font-size: 13px;
+            line-height: 20px;
+        }
     }
 
     .logo {
