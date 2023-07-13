@@ -77,10 +77,7 @@ window.Scrollanimate = () => {
 								};
 							}
 
-
-
 							var numberPagination = _this.attr('data-slider-number-pagination');
-							//$(".homepage-hero .swiper-pagination-bullet").first().addClass('fill');
 							if (numberPagination != '' && numberPagination != undefined) {
 
 								sliderOptions['on']['slideChange'] = function () {

@@ -38,10 +38,12 @@ if ( ! empty( $main_title ) ) {
 							<div class="client-content">
 								<div class="client-category">
 									<?php
-									$terms = get_the_terms( $client_post->ID, 'case-study-categories' );
+									$terms          = get_the_terms( $client_post->ID, 'case-study-categories' );
+									$category_names = array();
 									foreach ( $terms as $_term ) {
-									echo $_term->name; //phpcs:ignore
+										$category_names[] = $_term->name;
 									}
+									echo implode( ', ', $category_names );  //phpcs:ignore
 									?>
 								</div>
 								<div class="client-title">
