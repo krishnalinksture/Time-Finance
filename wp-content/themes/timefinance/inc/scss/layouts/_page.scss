@@ -21,8 +21,15 @@
         @include translateX(-65px);
         @include transitionAll(0.3s ease-in-out);
     }
+	ul {
+        margin-top: 25px;
+		padding-left: 15px;
+        opacity: 0;
+        @include translateX(-65px);
+        @include transitionAll(0.3s ease-in-out);
+    }
 
-    .btn-link {
+    .btn {
         color: $white;
         font-weight: 600;
         font-size: 18px;
@@ -138,6 +145,13 @@
                 transition-delay: .2s;
                 @include translateX(0);
             }
+			ul {
+                opacity: 1;
+                will-change: opacity, transform;
+                -webkit-transition-delay: .1s;
+                transition-delay: .1s;
+                @include translateX(0);
+            }
 
             .btn-link {
                 opacity: 1;
@@ -180,15 +194,15 @@
                 -ms-flex: 0 1 auto;
                 flex: 0 1 auto;
                 width: 60px;
-                height: 3px;
                 margin: auto 10px 0 0 !important;
                 text-indent: -999px;
                 cursor: pointer;
                 background-clip: padding-box;
                 transition: opacity .6s ease;
-                height: 2px;
+                height: 10px;
                 background: 0 0;
                 position: relative;
+				opacity: 1 !important;
 
                 &:before {
                     content: '';
@@ -209,20 +223,37 @@
                     background-color: $green;
                     position: absolute;
                     display: block;
-                    top: calc(50% - 0.5px);
+                    top: calc(50% - 1.5px);
                     left: 0;
                     z-index: 1;
-					@include transitionAll(10s ease-in-out);
                 }
 
                 &.swiper-pagination-bullet-active {
 
 					&:after {
-						@include transitionAll(10s ease-in-out);
+						animation-name: countingBar;
+						animation-duration: 6000ms;//autopaly 시간과 맞춰주기
+						animation-timing-function: ease-in;
+						animation-iteration-count: 1;
+						animation-direction: alternate ;
+						animation-fill-mode:forwards;
 						content: '';
 						width: 100%;
 					}
                 }
+				&.filled {
+					&:after {
+						content: '';
+						height: 3px;
+						width: 100%;
+						background-color: $green;
+						position: absolute;
+						display: block;
+						top: calc(50% - 1.5px);
+						left: 0;
+						z-index: 1;
+					}
+				}
             }
         }
 
@@ -273,7 +304,7 @@
 
     .swiper-number-pagination {
         text-align: left;
-        margin-bottom: -7px;
+        margin-bottom: -5px;
 
         .swiper-pagination-current {
             color: $white;
@@ -283,6 +314,11 @@
             line-height: 22px;
         }
     }
+}
+
+@keyframes countingBar {
+    0% {width: 0;}
+    100% {width:100%;}
 }
 
 @-webkit-keyframes bounce-arrow-head {
@@ -474,6 +510,10 @@
     height: 450px;
     z-index: 0;
 
+    @include responsive (mobile-big, max) {
+        height: 230px;
+    }
+
     .container-fluid,
     .row {
         position: relative;
@@ -493,6 +533,11 @@
     .section-title {
         font-weight: 800;
         color: $white;
+        @include responsive (mobile-big, max) {
+            font-size: 43px;
+            line-height: 47px;
+            margin-bottom: 10px;
+        }
     }
 
     .btn-link {
@@ -517,18 +562,55 @@
 //Left right content image
 .left-right-content-image {
     padding: 60px 0px;
+    @include responsive (ipad-portrait, max) {
+        padding-bottom: 30px;
+    }
 
     .image-box {
         padding-left: 40px;
         padding-right: 0px;
+        align-self: stretch;
+        @include responsive (ipad-portrait, max) {
+            padding-left: 3.5%;
+            padding-right: 30px;
+        }
+
+        @include responsive (mobile-big, max) {
+            padding-left: 5.5%;
+            padding-right: 5.33%;
+        }
+
+        img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            max-height: 600px;
+        }
     }
 
     .content {
         padding-left: 7.33%;
         padding-right: 40px;
 
+        @include responsive (ipad-portrait, max) {
+            padding-left: 3.5%;
+            padding-right: 30px;
+            margin: 40px 0;
+        }
+
+        @include responsive (mobile-big, max) {
+            padding-left: 5.5%;
+            padding-right: 5.33%;
+            margin: 30px 0;
+        }
+
         .section-title {
             margin-bottom: 25px;
+            @include responsive (mobile-big, max) {
+                font-size: 20px;
+                line-height: 28px;
+                margin-bottom: 15px;
+            }
         }
 
         ul {
@@ -537,10 +619,18 @@
             width: 82%;
             font-size: 16px;
             line-height: 24px;
+            @include responsive (ipad-portrait, max) {
+                width: 100%;
+            }
         }
 
         .btn {
             margin-top: 25px;
+            @include responsive (mobile-big, max) {
+                font-size: 14px;
+                line-height: 14px;
+                padding: 10px 15px;
+            }
         }
     }
 
@@ -548,11 +638,33 @@
         .image-box {
             padding-left: 0px;
             padding-right: 40px;
+
+            @include responsive (ipad-portrait, max) {
+                padding-left: 3.5%;
+                padding-right: 3.33%;
+            }
+
+            @include responsive (mobile-big, max) {
+                padding-left: 5.5%;
+                padding-right: 5.33%;
+            }
         }
 
         .content {
             padding-left: 10.5%;
             padding-right: 7.33%;
+
+            @include responsive (ipad-portrait, max) {
+                padding-left: 3.5%;
+                padding-right: 3.33%;
+                margin: 40px 0;
+            }
+
+            @include responsive (mobile-big, max) {
+                margin: 30px 0;
+                padding-left: 5.5%;
+                padding-right: 5.33%;
+            }
         }
     }
 }
@@ -560,25 +672,25 @@
 //Trustpilot block
 .trustpilot-block {
     padding: 156px 0 186px 0;
-    @include responsive (ipad-portrait,max) {
+    @include responsive (ipad-portrait, max) {
         padding: 56px 0 86px 0; 
     }
 
     .content {
         padding: 0 35px;
-        @include responsive (mini-desktop,max) {
+        @include responsive (mini-desktop, max) {
             padding: 0 15px;
         }
 
-        @include responsive (laptop,max) {
+        @include responsive (laptop, max) {
             padding: 0 25px;
         }
 
-        @include responsive (ipad-portrait,max) {
+        @include responsive (ipad-portrait, max) {
             padding: 0;
         }
 
-        @include responsive (mobile-big,max) {
+        @include responsive (mobile-big, max) {
             padding: 0 30px;
         }
         
@@ -587,7 +699,7 @@
             font-weight: 600;
             margin-bottom: 35px;
 
-            @include responsive (ipad-portrait,max) {
+            @include responsive (ipad-portrait, max) {
                 font-size: 16px;
                 line-height: 26px;
                 margin-bottom: 5px;
@@ -599,7 +711,7 @@
             line-height: 50px;
             font-weight: 700;
 
-            @include responsive (ipad-portrait,max) {
+            @include responsive (ipad-portrait, max) {
                 font-size: 20px;
                 line-height: 28px;
             }
@@ -628,14 +740,40 @@
 //Featured content image
 .featured-content-image {
     padding: 150px 0 160px 0;
+    @include responsive (ipad-portrait, max) {
+        padding: 60px 0;
+    }
+
+    @include responsive (mobile-big, max) {
+        padding: 35px 0;
+    }
 
     .content {
         padding-left: 10.5%;
+
+        @include responsive (ipad-portrait, max) {
+            margin-bottom: 50px;
+        }
+
+        @include responsive (mobile-big, max) {
+            padding: 0 30px;
+            margin-bottom: 40px;
+        }
 
         .section-title {
             font-weight: 600;
             color: $green;
             margin-bottom: 40px;
+
+            @include responsive (ipad-portrait, max) {
+                margin-bottom: 20px;
+            }
+
+            @include responsive (mobile-big, max) {
+                font-size: 16px;
+                line-height: 26px;
+                margin-bottom: 8px;
+            }
         }
 
         p {
@@ -643,10 +781,21 @@
             line-height: 50px;
             font-weight: 700;
             width: 87%;
+
+            @include responsive (mobile-big, max) {
+                width: 100%;
+                font-size: 20px;
+                line-height: 28px;
+            }
         }
 
         .btn {
             margin-top: 30px;
+            @include responsive(mobile-big, max) {
+                font-size: 14px;
+                line-height: 14px;
+                padding: 10px 15px;
+            }
         }
     }
 
@@ -654,12 +803,20 @@
         padding: 0 0 0 20px;
         margin-bottom: -270px;
         z-index: 1;
-        display: none;
+
+        @include responsive (ipad-portrait, max) {
+            padding: 0 30px;
+        }
 
         .featured-image-content {
             margin-left: 0;
             margin-right: -8vw;
             height: 100%;
+
+            @include responsive (ipad-portrait, max) {
+                margin-right: 0;
+            }
+
             img {
                 height: 100%;
                 object-fit: cover;
@@ -670,9 +827,17 @@
     .flex-sm-row-reverse {
         .image-box {
             padding: 0 20px 0 0;
+            @include responsive (ipad-portrait, max) {
+                padding: 0 30px;
+            }
+
             .featured-image-content {
                 margin-left: -8vw;
                 margin-right: 0;
+
+                @include responsive (ipad-portrait, max) {
+                    margin-left: 0;
+                }
             }
         }
     }
@@ -872,6 +1037,8 @@
 
 //Cta block
 .cta-block {
+    margin-top: -85px;
+    position: relative;
     .container {
         padding: 0 20px;
 

@@ -100,18 +100,7 @@ img {
 }
 
 .bg-purple {
-    background-color: $purple !important;
-    .btn {
-        background-color: $white;
-        border-color: $white;
-        color: $purple;
-
-        &:hover {
-            background-color: $green;
-            color: $white;
-            border-color: $green;
-        }
-    }
+    background-color: $purple !important; 
 }
 
 // Accordion

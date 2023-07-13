@@ -39,7 +39,7 @@
             border-color: $green;
             color: $white;
         }
-    }
+    } 
     
     &.btn-link {
         background-color: transparent;
@@ -63,11 +63,41 @@
             border-color: $purple;
         }
     }
+ 
+}
 
-    // &:disabled {
-    //     background-color: $dark-gray;
-    //     border-color: $dark-gray;
-    //     color: $white;
-    //     cursor: not-allowed;
-    // }
+.bg-purple, .bg-green {
+    .btn {
+        background-color: $white;
+        border-color: $white;
+        color: $purple;
+
+        &:hover {
+            background-color: $green;
+            color: $white;
+            border-color: $green;
+        }
+        &.btn-secondary {
+            background-color: transparent;
+            border-color: $white;
+            color: $white;
+        
+            &:hover {
+                background-color: $green;
+                border-color: $green;
+                color: $white;
+            }
+        }
+        &.btn-green {
+            background-color: $white;
+            border-color: $white;
+            color: $purple;
+    
+            &:hover {
+                background-color: $green;
+                color: $white;
+                border-color: $green;
+            }
+        }
+    }
 }
