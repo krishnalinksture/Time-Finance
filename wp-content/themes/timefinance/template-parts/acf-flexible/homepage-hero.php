@@ -11,7 +11,7 @@ $section_id           = get_sub_field( 'section_id' ) ? get_sub_field( 'section_
 
 if ( have_rows( 'slider_content' ) || ! empty( $show_for_more_button ) ) {
 	?>
-	<section class="homepage-hero" id="<?php echo $section_id; //phpcs:ignore ?>" data-pause="false" data-ride="carousel">
+	<section class="homepage-hero bg-purple" id="<?php echo $section_id; //phpcs:ignore ?>" data-pause="false" data-ride="carousel">
 		<div class="container-fluid">
 			<div class="swiper homepage-hero-slider" data-slider-options='{ "slidesPerView": 1, "simulateTouch":false, "speed": 0, "loop": true, "direction": "horizontal", "pagination": { "el": ".swiper-pagination-homepage-hero", "clickable": true }, "autoplay": { "delay": 6000,"stopOnLastSlide": true, "disableOnInteraction": false }, "effect": "fade" }' data-slider-number-pagination="1" data-slider-md-direction="horizontal">
 				<div class="swiper-wrapper">
@@ -48,7 +48,7 @@ if ( have_rows( 'slider_content' ) || ! empty( $show_for_more_button ) ) {
 													$link_title  = $cta_button['title'];
 													$link_target = $cta_button['target'] ? $link['target'] : '_self';
 													?>
-													<a href="<?php echo esc_url( $link_url ); ?>" class="btn btn-secondary-white" target="<?php echo esc_attr( $link_target ); ?>">
+													<a href="<?php echo esc_url( $link_url ); ?>" class="btn" target="<?php echo esc_attr( $link_target ); ?>">
 														<?php echo esc_html( $link_title ); ?>
 													</a>
 													<?php
