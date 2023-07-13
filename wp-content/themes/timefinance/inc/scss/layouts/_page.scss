@@ -838,20 +838,44 @@
 //Usp block
 .usp-block {
     padding: 113px 0;
+    @include responsive (ipad-portrait, max) {
+        padding: 83px 0 33px 0;
+    }
 
     .container {
         padding: 0 75px;
+
+        @include responsive (mini-desktop, max) {
+            padding: 0 55px;
+        }
+
+        @include responsive (laptop, max) {
+            padding: 0 40px;
+        }
 
         .section-title {
             color: $white;
             line-height: 30px;
             margin-bottom: 80px;
+            @include responsive (ipad-portrait, max) {
+                margin-bottom: 60px;
+            }
+        }
+
+        .ups-box {
+            @include responsive (ipad-portrait, max) {
+                margin-bottom: 50px;
+            }
         }
 
         img {
             width: auto;
             height: 179px;
             margin-bottom: 30px;
+
+            @include responsive (laptop, max) {
+                height: 140px;
+            }
         }
 
         p {
@@ -925,8 +949,20 @@
     padding: 140px 0;
     background-color: $gray;
 
-    .container {
+    @include responsive (mini-desktop, max) {
+        padding: 120px 0;
+    }
+
+    @include responsive (ipad-portrait, max) {
+        padding: 80px 0;
+    }
+
+    .container-lg {
         padding-left: 0;
+
+        @include responsive (ipad-portrait, max) {
+            padding: 0 40px;
+        }
 
         .image-box {
             padding: 0;
@@ -940,6 +976,18 @@
             padding: 90px 7.3% 55px;
             background-color: $white;
 
+            @include responsive (laptop, max) {
+                padding: 70px 6.3% 45px;
+            }
+            
+            @include responsive (ipad-portrait, max) {
+                padding: 40px 3% 40px;
+            }
+
+            @include responsive (mobile-big, max) {
+                padding: 40px 6% 40px;
+            }
+
             p {
                 color: $green;
                 font-size: 11px;
@@ -947,11 +995,23 @@
                 letter-spacing: 1.1px;
                 line-height: 24px;
                 width: 90%;
+
+                @include responsive (laptop, max) {
+                    width: 95%;
+                }
+
+                @include responsive (ipad-portrait, max) {
+                    width: 100%;
+                }
             }
 
             .bulletpoint-group {
                 margin-top: 60px;
                 border-bottom: 1px solid rgb(240, 240, 240);
+
+                @include responsive (laptop, max) {
+                    margin-top: 30px;
+                }
 
                 .section-title {
                     font-weight: 600;
@@ -964,6 +1024,14 @@
                     flex-direction: row;
                     flex-wrap: wrap;
                     @include justify-content(space-between);
+
+                    @include responsive (laptop, max) {
+                        padding: 0 15px 30px;
+                    }
+
+                    @include responsive (mobile-big, max) {
+                        flex-direction: column;
+                    }
 
                     li {
                         font-size: 16px;
@@ -981,15 +1049,36 @@
 //Video block
 .video-block {
     padding: 110px 0;
+    @include responsive (ipad-portrait, max) {
+       padding: 80px 0;
+    }
+
+    @include responsive (mobile-big, max) {
+        padding: 60px 0;
+    }
 
     .section-title {
         margin-bottom: 35px;
+        @include responsive (ipad-portrait, max) {
+            margin-bottom: 25px;
+        }
+
+        @include responsive (mobile-big, max) {
+            margin-bottom: 20px;
+        }
     }
 
     .youtube-video {
         iframe {
             width: 100%;
             height: 500px;
+            @include responsive (ipad-portrait, max) {
+                height: 400px;
+            }
+
+            @include responsive (mobile-big, max) {
+                height: 370px;
+            }
         }
     }
 
@@ -1999,6 +2088,10 @@
     }
 }
 
+.modal-open {
+    overflow: visible !important;
+}
+
 .modal-open section.resources-filter-block {
     z-index: 99999;
 }
@@ -2574,10 +2667,15 @@
 
 //Content block
 .content-block {
-    padding: 128px 0 32px 0;
+    padding: 32px;
 
     .content-wrapper {
         padding: 0 45px;
+        p {
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
     }
 }
 
@@ -3431,6 +3529,7 @@
             .press-release-detail-content {
                 &.sticky-top {
                     top: 200px;
+                    z-index: 1;
                 }
 
                 .press-release-date {

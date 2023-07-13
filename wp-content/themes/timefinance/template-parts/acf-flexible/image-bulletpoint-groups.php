@@ -17,19 +17,19 @@ $image_alt               = ( isset( $image['alt'] ) && ! empty( $image['alt'] ) 
 if ( ! empty( $image ) || ! empty( $content ) || have_rows( 'bulletpoint_group' ) ) {
 	?>
 	<section class="image-bulletpoint-groups" id="<?php echo $section_id; //phpcs:ignore ?>">
-		<div class="container">
+		<div class="container-lg">
 			<div class="row<?php echo $reverse; //phpcs:ignore ?>">
 				<?php
 				if ( ! empty( $image ) ) {
 					?>
-					<div class="col-6 image-box">
+					<div class="col-md-6 image-box">
 						<img class="image-bulletpoint" width="<?php echo $image['sizes']['timefinance-desktop-width']; ?>" height="<?php echo $image['sizes']['timefinance-desktop-height']; ?>" src="<?php echo $image['url']; ?>" srcset="<?php echo $image['sizes']['timefinance-small-mobile']; ?> 400w, <?php echo $image['sizes']['timefinance-mobile']; ?> 800w, <?php echo $image['sizes']['timefinance-tablet']; ?> 1200w, <?php echo $image['sizes']['timefinance-desktop']; ?> 2000w" sizes="50vw" alt="<?php echo $image_alt; //phpcs:ignore ?>">
 					</div>
 					<?php
 				}
 				if ( ! empty( $content ) || have_rows( 'bulletpoint_group' ) ) {
 					?>
-					<div class="col-6 content-box">
+					<div class="col-md-6 content-box">
 						<?php
 						if ( ! empty( $content ) ) {
 							echo $content; //phpcs:ignore
