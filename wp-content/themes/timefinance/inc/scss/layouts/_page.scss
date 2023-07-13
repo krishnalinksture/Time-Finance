@@ -30,11 +30,7 @@
     }
 
     .btn {
-        color: $white;
-        font-weight: 600;
-        font-size: 18px;
         margin-top: 3rem;
-        padding-bottom: 7px;
         opacity: 0;
         @include translateX(-65px);
         @include transitionAll(0.4s ease-in-out !important);
@@ -42,16 +38,6 @@
         &:hover {
             text-decoration: none;
             color: $white;
-        }
-
-        &::after {
-            content: '';
-            width: 100%;
-            height: 2px;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            background-color: $white;
         }
     }
 
@@ -153,7 +139,7 @@
                 @include translateX(0);
             }
 
-            .btn-link {
+            .btn {
                 opacity: 1;
                 will-change: opacity, transform;
                 -webkit-transition-delay: .3s;
@@ -4038,6 +4024,10 @@
             color: $white;
             text-decoration: none;
             font-weight: 600;
+            transition: 0.6s;
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 }
