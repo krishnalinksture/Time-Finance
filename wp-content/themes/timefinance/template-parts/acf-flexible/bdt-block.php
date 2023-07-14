@@ -76,12 +76,12 @@ if ( ! empty( $main_title ) || ! empty( $content ) ) {
 					?>
 				</ul>
 			</div>
-			<div class="dropdown d-md-none"> 
+			<div class="dropdown d-md-none">
 				<div class="cat-filter">
-						<?php echo esc_html( 'FILTER POSTS:' ); ?>
+					<?php echo esc_html( 'FILTER POSTS:' ); ?>
 				</div>
 				<button class="btn btn-link dropdown-toggle" type="button" id="dropdownMenuBdt" data-bs-toggle="dropdown" aria-expanded="false">
-					Dropdown button
+					<?php echo esc_html( 'Teams' ); ?>
 				</button>
 				<ul class="dropdown-menu" aria-labelledby="dropdownMenuBdt">
 				<?php
