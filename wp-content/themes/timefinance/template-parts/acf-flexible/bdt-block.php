@@ -41,7 +41,7 @@ if ( ! empty( $main_title ) || ! empty( $content ) ) {
 <section class="bdt-filter-block">
 	<div class="container">
 		<div class="row align-items-start">
-			<div class="col-3 filter-post-left">
+			<div class="col-3 filter-post-left d-none d-md-block">
 				<div class="cat-filter">
 					<?php echo esc_html( 'FILTER POSTS:' ); ?>
 				</div>
@@ -76,7 +76,10 @@ if ( ! empty( $main_title ) || ! empty( $content ) ) {
 					?>
 				</ul>
 			</div>
-			<div class="dropdown"> 
+			<div class="dropdown d-md-none"> 
+				<div class="cat-filter">
+						<?php echo esc_html( 'FILTER POSTS:' ); ?>
+				</div>
 				<button class="btn btn-link dropdown-toggle" type="button" id="dropdownMenuBdt" data-bs-toggle="dropdown" aria-expanded="false">
 					Dropdown button
 				</button>
