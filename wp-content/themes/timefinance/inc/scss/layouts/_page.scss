@@ -1129,6 +1129,11 @@
         img {
             width: 190px;
             height: 155px;
+
+            @include responsive (laptop, max) {
+                width: 160px;
+                height: 140px;
+            }
         }
     }
 }
@@ -1305,6 +1310,10 @@
     }
 
     &.bg-purple {
+        .section-title {
+            color: $white;
+        }
+
         .hover-card {
             .btn {
                 border-color: $purple;
@@ -1370,6 +1379,10 @@
     }
 
     &.bg-purple {
+        .section-title  {
+            color: $white;
+        }
+        
         .large-card-content {
             .btn {
                 border-color: $purple;
