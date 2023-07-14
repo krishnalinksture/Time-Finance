@@ -11,11 +11,10 @@
             .modal-dialog {
                 max-width: 1140px;
                 -ms-flex-direction: column;
-                flex-direction: column;
-                height: 100%;
+                flex-direction: column; 
                 -webkit-transform: translate(0, -50px);
                 transform: translate(0, -50px);
-                height: calc(100vh - 145px);
+                height: auto;
                 overflow-y: auto;
                 margin: 130px auto 1.75rem;
                 border-radius: 0.3rem;
