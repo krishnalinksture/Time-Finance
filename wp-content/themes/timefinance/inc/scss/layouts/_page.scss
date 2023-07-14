@@ -899,15 +899,23 @@
         }
 
     &.style-2 {
+
         .section-title {
             color: $purple;
             font-size: 32px;
             line-height: 45px;
+            @include responsive (mobile-big, max) {
+                font-size: 20px;
+                line-height: 28px;
+            }
         }
 
         img {
             height: 201px;
             margin-bottom: 25px;
+            @include responsive (laptop, max) {
+                height: 140px;
+            }
         }
 
         .usp-title {
@@ -931,6 +939,9 @@
 
         img {
             height: 160px;
+            @include responsive (laptop, max) {
+                height: 160px;
+            }
         }
 
         .usp-title {

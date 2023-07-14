@@ -90,7 +90,7 @@ switch ( $select_style ) {
 					}
 					if ( have_rows( 'icon_content' ) ) {
 						?>
-						<div class="row row-cols-1 row-cols-lg-3 justify-content-center text-center">
+						<div class="row row-cols-2 row-cols-md-3 justify-content-center text-center">
 							<?php
 							while ( have_rows( 'icon_content' ) ) {
 								the_row();
@@ -100,7 +100,7 @@ switch ( $select_style ) {
 								$icon_alt  = ( isset( $icon['alt'] ) && ! empty( $icon['alt'] ) ) ? $icon['alt'] : ( isset( $icon['title'] ) && ! empty( $icon['title'] ) ? $icon['title'] : '' );
 								if ( ! empty( $icon ) || ! empty( $usp_title ) || ! empty( $content ) ) {
 									?>
-									<div class="col">
+									<div class="col ups-box">
 										<?php
 										if ( ! empty( $icon ) ) {
 											?>

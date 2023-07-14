@@ -1683,9 +1683,16 @@ header {
     color: #3d1050;
     font-size: 32px;
     line-height: 45px; }
+    @media (max-width: 767px) {
+      .usp-block.style-2 .section-title {
+        font-size: 20px;
+        line-height: 28px; } }
   .usp-block.style-2 img {
     height: 201px;
     margin-bottom: 25px; }
+    @media (max-width: 1199px) {
+      .usp-block.style-2 img {
+        height: 140px; } }
   .usp-block.style-2 .usp-title {
     line-height: 21px;
     font-weight: 700;
@@ -1699,6 +1706,9 @@ header {
     line-height: 40px; }
   .usp-block.bg-green img {
     height: 160px; }
+    @media (max-width: 1199px) {
+      .usp-block.bg-green img {
+        height: 160px; } }
   .usp-block.bg-green .usp-title {
     color: #fff; }
   .usp-block.bg-green p {
