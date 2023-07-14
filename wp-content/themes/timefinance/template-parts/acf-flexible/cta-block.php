@@ -12,13 +12,14 @@ $subtitle         = get_sub_field( 'subtitle' );
 $send_message     = get_sub_field( 'send_message' );
 $select_form      = get_sub_field( 'select_form' );
 $apply_now        = get_sub_field( 'apply_now' );
+$select_class     = get_sub_field( 'select_class' );
 $form             = ( ! empty( $select_form ) ) ? '[forminator_form id="' . $select_form . '"]' : '';
 $background       = ( ! empty( $background_image ) ) ? ' style="background-image:url(' . esc_url( $background_image ) . ');"' : '';
 $section_id       = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'cta-block-' );
 
 if ( ! empty( $main_title ) || ! empty( $subtitle ) || ! empty( $apply_now ) || ! empty( $send_message ) ) {
 	?>
-	<section class="cta-block" id="<?php echo $section_id; //phpcs:ignore ?>">
+	<section class="cta-block <?php echo $select_class; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col image" <?php echo $background; //phpcs:ignore ?>>
