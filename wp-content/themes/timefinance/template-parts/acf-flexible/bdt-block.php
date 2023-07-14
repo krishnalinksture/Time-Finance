@@ -76,6 +76,41 @@ if ( ! empty( $main_title ) || ! empty( $content ) ) {
 					?>
 				</ul>
 			</div>
+			<div class="dropdown"> 
+				<button class="btn btn-link dropdown-toggle" type="button" id="dropdownMenuBdt" data-bs-toggle="dropdown" aria-expanded="false">
+					Dropdown button
+				</button>
+				<ul class="dropdown-menu" aria-labelledby="dropdownMenuBdt">
+				<?php
+					$args       = array(
+						'taxonomy' => 'bdts-categories',
+					);
+					$categories = get_categories( $args );
+
+					foreach ( $categories as $category ) {
+						?>
+						<li class="bdts-cat-list">
+							<a href="<?php echo get_category_link( $category->term_id ); //phpcs:ignore ?>"><?php echo $category->name; ?> </a>
+						</li>
+						<?php
+					}
+					if ( $view_all && ! empty( $view_all['url'] ) && ! empty( $view_all['title'] ) ) {
+						?>
+						<li class="bdts-cat-list">
+							<?php
+							$link_url    = $view_all['url'];
+							$link_title  = $view_all['title'];
+							$link_target = $view_all['target'] ? $view_all['target'] : '_self';
+							?>
+							<a href="<?php echo esc_url( $link_url ); ?>" class="btn btn-link" target="<?php echo esc_attr( $link_target ); ?>">
+								<?php echo esc_html( $link_title ); ?>
+							</a>
+						</li>
+						<?php
+					}
+					?>
+				</ul>
+			</div>
 			<div class="col-9 bdt-wrapper">
 				<div class="row row-cols-1 row-cols-lg-2">
 					<?php
