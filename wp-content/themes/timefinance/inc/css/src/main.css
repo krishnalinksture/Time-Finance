@@ -555,7 +555,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 9;
   background-color: #fff;
   -webkit-box-shadow: 0 0 20px -8px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 0 20px -8px rgba(0, 0, 0, 0.1);
