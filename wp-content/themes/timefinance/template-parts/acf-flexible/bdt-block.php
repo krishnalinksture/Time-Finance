@@ -41,7 +41,7 @@ if ( ! empty( $main_title ) || ! empty( $content ) ) {
 <section class="bdt-filter-block">
 	<div class="container">
 		<div class="row align-items-start">
-			<div class="col-3 filter-post-left d-none d-md-block">
+			<div class="col col-lg-3 col-md-7 filter-post-left d-none d-md-block">
 				<div class="cat-filter">
 					<?php echo esc_html( 'FILTER POSTS:' ); ?>
 				</div>
@@ -114,8 +114,8 @@ if ( ! empty( $main_title ) || ! empty( $content ) ) {
 					?>
 				</ul>
 			</div>
-			<div class="col-9 bdt-wrapper">
-				<div class="row row-cols-1 row-cols-lg-2">
+			<div class="col col-lg-9 col-md-12 bdt-wrapper">
+				<div class="row row-cols-1 row-cols-md-2">
 					<?php
 					$args = array(
 						'post_type'   => 'bdts',
