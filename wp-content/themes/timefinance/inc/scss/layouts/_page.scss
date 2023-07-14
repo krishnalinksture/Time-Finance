@@ -1688,11 +1688,21 @@
     .section-title {
         font-weight: 400;
         margin-bottom: 48px;
+        @include responsive (mobile-big, max) {
+            font-size: 32px;
+            line-height: 46px;
+        }
     }
 
     .location-card {
         margin-bottom: 20px;
         overflow: hidden;
+
+        .location-card-image {
+            img {
+                width: 100%;
+            }
+        }
 
         .location-card-content {
             padding: 20px;

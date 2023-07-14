@@ -2236,9 +2236,15 @@ header {
   .office-locations-block .section-title {
     font-weight: 400;
     margin-bottom: 48px; }
+    @media (max-width: 767px) {
+      .office-locations-block .section-title {
+        font-size: 32px;
+        line-height: 46px; } }
   .office-locations-block .location-card {
     margin-bottom: 20px;
     overflow: hidden; }
+    .office-locations-block .location-card .location-card-image img {
+      width: 100%; }
     .office-locations-block .location-card .location-card-content {
       padding: 20px;
       background-color: #F5F3F6;
@@ -4053,10 +4059,9 @@ header {
     max-width: 1140px;
     -ms-flex-direction: column;
     flex-direction: column;
-    height: 100%;
     -webkit-transform: translate(0, -50px);
     transform: translate(0, -50px);
-    height: calc(100vh - 145px);
+    height: auto;
     overflow-y: auto;
     margin: 130px auto 1.75rem;
     border-radius: 0.3rem;
