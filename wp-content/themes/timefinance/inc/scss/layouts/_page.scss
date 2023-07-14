@@ -885,8 +885,9 @@
             width: 91%;
             margin: 0 auto;
         }
+    }
 
-        &.bg-white,
+    &.bg-white,
         &.bg-grey {
             .section-title {
                 color: $green;
@@ -896,7 +897,6 @@
                 color: $green;
             }
         }
-    }
 
     &.style-2 {
         .section-title {
@@ -1125,26 +1125,56 @@
 
     .logo {
         margin: 38px auto;
+
+        img {
+            width: 190px;
+            height: 155px;
+        }
     }
 }
 
 //Cta block
 .cta-block {
-    margin-top: -85px;
-    position: relative;
+
+    &.overlap-25 {
+        margin-top: -95px;
+        position: relative;
+
+    @include responsive (mobile-big, max) {
+        margin-top: -170px;
+    }
+    }
+
+    &.overlap-50 {
+        margin-top: -205px;
+        position: relative;
+
+    }
+    
     .container {
         padding: 0 20px;
+        @include responsive (mobile-big, max) {
+            padding: 40px;
+        }
 
         .image {
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
             padding: 74px 80px 85px 80px;
+            @include responsive (mobile-big, max) {
+                padding: 40px 30px 45px 30px;
+            }
         }
 
         .section-title {
             font-weight: 600;
             margin-bottom: 60px;
+            @include responsive (mobile-big, max) {
+                font-size: 16px;
+                line-height: 23px;
+                margin-bottom: 40px;
+            }
         }
 
         .subtitle {
@@ -1152,16 +1182,30 @@
             line-height: 50px;
             font-weight: 700;
             color: $white;
+            @include responsive (mobile-big, max) {
+                font-size: 23px;
+                line-height: 32px;
+            }
         }
 
         .apply-send-button {
             margin-top: 75px;
+
+            @include responsive (mobile-big, max) {
+                margin-top: 45px;
+            }
 
             a {
                 margin-right: 10px;
             }
 
             .btn {
+                @include responsive (mobile-big, max) {
+                    font-size: 14px;
+                    line-height: 14px;
+                    padding: 10px 20px;
+                }
+
                 &:hover {
                     background-color: $white;
                     border-color: $white;
