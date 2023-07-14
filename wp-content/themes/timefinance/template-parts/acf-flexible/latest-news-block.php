@@ -12,7 +12,7 @@ $select_title_align = get_sub_field( 'select_title_align' );
 $section_id         = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'latest-news-block-' );
 
 ?>
-<section class="latest-news-block" id="<?php echo $section_id; //phpcs:ignore ?>">
+<section class="latest-news-block pt-0" id="<?php echo $section_id; //phpcs:ignore ?>">
 	<div class="container">
 		<?php
 		if ( ! empty( $main_title ) ) {
@@ -25,7 +25,7 @@ $section_id         = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id
 			<?php
 		}
 		?>
-		<div class="row row-cols-1 row-cols-lg-3">
+		<div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 justify-content-center">
 			<?php
 			$args = array(
 				'post_type'      => $select_post,
@@ -38,36 +38,38 @@ $section_id         = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id
 				$loop->the_post();
 				$read_more_button = get_field( 'read_more_button' );
 				?>
-				<div class="col">
-					<?php
-					if ( get_the_post_thumbnail() ) {
+				<div class="col col-sm-8 col-md-6 col-lg-4">
+					<div class="latest-news">
+						<?php
+						if ( get_the_post_thumbnail() ) {
+							?>
+							<div class="latest-news-image">
+								<?php the_post_thumbnail(); ?>
+							</div>
+							<?php
+						}
 						?>
-						<div class="latest-news-image">
-							<?php the_post_thumbnail(); ?>
+						<div class="latest-news-content-box">
+							<?php
+							if ( get_the_title() ) {
+								?>
+								<div class="latest-news-title">
+									<?php echo get_the_title(); //phpcs:ignore ?>
+								</div>
+								<?php
+							}
+							if ( get_the_content() ) {
+								echo get_the_content(); //phpcs:ignore
+							}
+							if ( ! empty( $read_more_button ) ) {
+								?>
+								<div class="read-more btn">
+									<a href="<?php echo get_the_permalink(); //phpcs:ignore ?>"><?php echo esc_html( $read_more_button ); ?></a>
+								</div>
+								<?php
+							}
+							?>
 						</div>
-						<?php
-					}
-					?>
-					<div class="latest-news-content-box">
-						<?php
-						if ( get_the_title() ) {
-							?>
-							<div class="latest-news-title">
-								<?php echo get_the_title(); //phpcs:ignore ?>
-							</div>
-							<?php
-						}
-						if ( get_the_content() ) {
-							echo get_the_content(); //phpcs:ignore
-						}
-						if ( ! empty( $read_more_button ) ) {
-							?>
-							<div class="read-more btn">
-								<a href="<?php echo get_the_permalink(); //phpcs:ignore ?>"><?php echo esc_html( $read_more_button ); ?></a>
-							</div>
-							<?php
-						}
-						?>
 					</div>
 				</div>
 				<?php

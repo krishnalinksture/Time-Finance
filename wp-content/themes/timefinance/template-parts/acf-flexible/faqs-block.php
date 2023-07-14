@@ -18,7 +18,7 @@ if ( ! empty( $main_title ) || have_rows( 'faqs' ) ) {
 			if ( ! empty( $main_title ) ) {
 				?>
 				<div class="row justify-content-center text-center">
-					<div class="col-9">
+					<div class="col col-lg-9 col-md-10">
 						<?php echo '<' . esc_attr( $select_tag ) . ' class="section-title h-4">' . esc_html( $main_title ) . '</' . esc_attr( $select_tag ) . '>'; ?>
 					</div>
 				</div>
@@ -27,7 +27,7 @@ if ( ! empty( $main_title ) || have_rows( 'faqs' ) ) {
 			if ( have_rows( 'faqs' ) ) {
 				?>
 				<div class="row justify-content-center text-center">
-					<div class="col-9">
+					<div class="col col-lg-9 col-md-10">
 						<?php
 						$i = 1;
 						?>

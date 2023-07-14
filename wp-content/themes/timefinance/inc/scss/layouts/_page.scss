@@ -1169,6 +1169,8 @@
             padding: 74px 80px 85px 80px;
             @include responsive (mobile-big, max) {
                 padding: 40px 30px 45px 30px;
+                background-color: $green;
+                background-image: none !important;
             }
         }
 
@@ -1330,9 +1332,41 @@
 .large-card-block {
     padding: 110px 0;
 
+    @include responsive (laptop, max) {
+        padding: 90px 0;
+    }
+
+    @include responsive (ipad-portrait, max) {
+        padding: 70px 0;
+    }
+
+    @include responsive (mobile-big, max) {
+        padding: 33px 0;
+    }
+
+    .container {
+        @include responsive (mobile-big, max) {
+            padding: 0 30px;
+        }
+    }
     .section-title {
         font-weight: 600;
         margin-bottom: 30px;
+
+        @include responsive (mobile-big, max) {
+            font-size: 16px;
+            line-height: 22px;
+            margin-bottom: 20px;
+        }
+    }
+
+    .col-md {
+        margin-bottom: 30px;
+    }
+
+    .large-card-box {
+        height: 100%;
+        overflow: hidden;
     }
 
     .large-card-image {
@@ -1350,25 +1384,48 @@
     .large-card-content {
         padding: 32px 15%;
         background-color: $white;
+        height: 100%;
+
+        @include responsive (laptop, max) {
+            padding: 32px 15%;
+        }
+
+        @include responsive (mobile-big, max) {
+            padding: 25px 15%;
+        }
 
         .large-card-title {
             font-size: 25px;
             line-height: 33px;
             font-weight: 600;
             margin-bottom: 10px;
+            @include responsive (mobile-big, max) {
+                font-size: 16px;
+                line-height: 22px;
+            }
         }
 
         p {
             font-weight: 600;
+            @include responsive (mobile-big, max) {
+                font-size: 13px;
+                line-height: 18px;
+            }
         }
 
         .btn {
-            margin-top: 20px;
+            margin-top: 30px;
             font-size: 15px;
             line-height: 15px;
             letter-spacing: normal;
             padding: 8px 15px;
             font-weight: 400;
+
+            @include responsive (mobile-big, max) {
+                font-size: 12px;
+                line-height: 12px;
+                margin-top: 20px;
+            }
         }
     }
 
@@ -1382,7 +1439,7 @@
         .section-title  {
             color: $white;
         }
-        
+
         .large-card-content {
             .btn {
                 border-color: $purple;
@@ -1398,13 +1455,46 @@
 //faq-block
 .faq-block {
     padding: 115px 0 150px 0;
+    background-color: $gray;
+    @include responsive (laptop, max) {
+        padding: 85px 0 120px 0;
+    }
+
+    @include responsive (ipad-portrait, max) {
+        padding: 65px 0 100px 0;
+    }
+
+    @include responsive (ipad-portrait, max) {
+        padding: 50px 0 80px 0;
+    }
 
     .section-title {
         margin-bottom: 88px;
+        @include responsive (laptop, max) {
+            margin-bottom: 73px;
+        }
+
+        @include responsive (ipad-portrait, max) {
+            margin-bottom: 58px;
+        }
+
+        @include responsive (mobile-big, max) {
+            font-size: 20px;
+            line-height: 28px;
+            margin-bottom: 40px;
+        }
     }
 
     .accordion {
         padding: 0 25px;
+
+        @include responsive (ipad-portrait, max) {
+            padding: 0 15px;
+        }
+
+        @include responsive (mobile-big, max) {
+            padding: 0 5px;
+        }
 
         .accordion-item {
             @include borderRadius(0);
@@ -1414,15 +1504,26 @@
                 position: relative;
 
                 .accordion-button {
-                    background-color: $white;
+                    background-color: $gray;
                     border-bottom: 2px solid $purple;
                     cursor: pointer;
                     padding: 29px 0;
+
+                    @include responsive (ipad-portrait, max) {
+                        padding: 24px 0;
+                    }
+
+                    @include responsive (mobile-big, max) {
+                        padding: 19px 0;
+                    }
 
                     .faq-title {
                         color: $purple;
                         font-size: 18px;
                         font-weight: 700;
+                        @include responsive (mobile-big, max) {
+                            font-size: 16px;
+                        }
                     }
 
                     &::before {
@@ -1474,7 +1575,16 @@
 
             .accordion-collapse {
                 .accordion-body {
+                    background-color: $gray;
                     padding: 40px 0 56px 0;
+
+                    @include responsive (ipad-portrait, max) {
+                        padding: 35px 0 51px 0;
+                    }
+
+                    @include responsive (mobile-big, max) {
+                        padding: 28px 0 44px 0;
+                    }
 
                     p {
                         text-align: left;
@@ -1490,6 +1600,14 @@
                         margin: 0;
                         padding-left: 40px;
                     }
+
+                    h4 {
+                        margin-top: 16px;
+                        @include responsive (mobile-big, max) {
+                            font-size: 22px;
+                            line-height: 28px;
+                        }
+                    }
                 }
             }
         }
@@ -1499,6 +1617,15 @@
 //Latest news block
 .latest-news-block {
     padding: 75px 0;
+    @include responsive (mobile-big, max) {
+        padding: 40px 0;
+    }
+
+    .latest-news {
+        @include responsive (ipad-portrait, max) {
+            margin-bottom: 20px;
+        }
+    }
 
     .latest-news-image {
         height: 380px;
@@ -1519,6 +1646,10 @@
             line-height: 33px;
             font-weight: 600;
             margin-bottom: 10px;
+            @include responsive (mobile-big, max) {
+                font-size: 20px;
+                line-height: 28px;
+            }
         }
 
         p {
@@ -1535,6 +1666,12 @@
             letter-spacing: normal;
             padding: 8px 18px;
             font-weight: 400;
+
+            @include responsive (mobile-big, max) {
+                font-size: 14px;
+                line-height: 14px;
+                padding: 10px 30px;
+            }
 
             a {
                 color: $white;
@@ -4151,6 +4288,8 @@
 
                     .btn {
                         font-size: 15px;
+                        background-color: $green;
+                        border-color: $green;
                         color: $white;
                         padding: 7px 1.5rem;
                         letter-spacing: 0;

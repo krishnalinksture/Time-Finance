@@ -1873,7 +1873,9 @@ header {
     padding: 74px 80px 85px 80px; }
     @media (max-width: 767px) {
       .cta-block .container .image {
-        padding: 40px 30px 45px 30px; } }
+        padding: 40px 30px 45px 30px;
+        background-color: #00a98f;
+        background-image: none !important; } }
   .cta-block .container .section-title {
     font-weight: 600;
     margin-bottom: 60px; }
@@ -1988,9 +1990,31 @@ header {
 
 .large-card-block {
   padding: 110px 0; }
+  @media (max-width: 1199px) {
+    .large-card-block {
+      padding: 90px 0; } }
+  @media (max-width: 991px) {
+    .large-card-block {
+      padding: 70px 0; } }
+  @media (max-width: 767px) {
+    .large-card-block {
+      padding: 33px 0; } }
+  @media (max-width: 767px) {
+    .large-card-block .container {
+      padding: 0 30px; } }
   .large-card-block .section-title {
     font-weight: 600;
     margin-bottom: 30px; }
+    @media (max-width: 767px) {
+      .large-card-block .section-title {
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 20px; } }
+  .large-card-block .col-md {
+    margin-bottom: 30px; }
+  .large-card-block .large-card-box {
+    height: 100%;
+    overflow: hidden; }
   .large-card-block .large-card-image {
     height: 345px;
     overflow: hidden; }
@@ -2001,21 +2025,41 @@ header {
       object-fit: cover; }
   .large-card-block .large-card-content {
     padding: 32px 15%;
-    background-color: #fff; }
+    background-color: #fff;
+    height: 100%; }
+    @media (max-width: 1199px) {
+      .large-card-block .large-card-content {
+        padding: 32px 15%; } }
+    @media (max-width: 767px) {
+      .large-card-block .large-card-content {
+        padding: 25px 15%; } }
     .large-card-block .large-card-content .large-card-title {
       font-size: 25px;
       line-height: 33px;
       font-weight: 600;
       margin-bottom: 10px; }
+      @media (max-width: 767px) {
+        .large-card-block .large-card-content .large-card-title {
+          font-size: 16px;
+          line-height: 22px; } }
     .large-card-block .large-card-content p {
       font-weight: 600; }
+      @media (max-width: 767px) {
+        .large-card-block .large-card-content p {
+          font-size: 13px;
+          line-height: 18px; } }
     .large-card-block .large-card-content .btn {
-      margin-top: 20px;
+      margin-top: 30px;
       font-size: 15px;
       line-height: 15px;
       letter-spacing: normal;
       padding: 8px 15px;
       font-weight: 400; }
+      @media (max-width: 767px) {
+        .large-card-block .large-card-content .btn {
+          font-size: 12px;
+          line-height: 12px;
+          margin-top: 20px; } }
   .large-card-block.bg-white .large-card-content {
     background-color: #F5F3F6; }
   .large-card-block.bg-purple .section-title {
@@ -2026,11 +2070,38 @@ header {
       border-color: #00a98f; }
 
 .faq-block {
-  padding: 115px 0 150px 0; }
+  padding: 115px 0 150px 0;
+  background-color: #F5F3F6; }
+  @media (max-width: 1199px) {
+    .faq-block {
+      padding: 85px 0 120px 0; } }
+  @media (max-width: 991px) {
+    .faq-block {
+      padding: 65px 0 100px 0; } }
+  @media (max-width: 991px) {
+    .faq-block {
+      padding: 50px 0 80px 0; } }
   .faq-block .section-title {
     margin-bottom: 88px; }
+    @media (max-width: 1199px) {
+      .faq-block .section-title {
+        margin-bottom: 73px; } }
+    @media (max-width: 991px) {
+      .faq-block .section-title {
+        margin-bottom: 58px; } }
+    @media (max-width: 767px) {
+      .faq-block .section-title {
+        font-size: 20px;
+        line-height: 28px;
+        margin-bottom: 40px; } }
   .faq-block .accordion {
     padding: 0 25px; }
+    @media (max-width: 991px) {
+      .faq-block .accordion {
+        padding: 0 15px; } }
+    @media (max-width: 767px) {
+      .faq-block .accordion {
+        padding: 0 5px; } }
     .faq-block .accordion .accordion-item {
       -webkit-border-radius: 0;
       -moz-border-radius: 0;
@@ -2040,14 +2111,23 @@ header {
       .faq-block .accordion .accordion-item .accordion-header {
         position: relative; }
         .faq-block .accordion .accordion-item .accordion-header .accordion-button {
-          background-color: #fff;
+          background-color: #F5F3F6;
           border-bottom: 2px solid #3d1050;
           cursor: pointer;
           padding: 29px 0; }
+          @media (max-width: 991px) {
+            .faq-block .accordion .accordion-item .accordion-header .accordion-button {
+              padding: 24px 0; } }
+          @media (max-width: 767px) {
+            .faq-block .accordion .accordion-item .accordion-header .accordion-button {
+              padding: 19px 0; } }
           .faq-block .accordion .accordion-item .accordion-header .accordion-button .faq-title {
             color: #3d1050;
             font-size: 18px;
             font-weight: 700; }
+            @media (max-width: 767px) {
+              .faq-block .accordion .accordion-item .accordion-header .accordion-button .faq-title {
+                font-size: 16px; } }
           .faq-block .accordion .accordion-item .accordion-header .accordion-button::before {
             position: absolute;
             width: 20px;
@@ -2080,7 +2160,14 @@ header {
               opacity: 1;
               transform: rotate(180deg); }
       .faq-block .accordion .accordion-item .accordion-collapse .accordion-body {
+        background-color: #F5F3F6;
         padding: 40px 0 56px 0; }
+        @media (max-width: 991px) {
+          .faq-block .accordion .accordion-item .accordion-collapse .accordion-body {
+            padding: 35px 0 51px 0; } }
+        @media (max-width: 767px) {
+          .faq-block .accordion .accordion-item .accordion-collapse .accordion-body {
+            padding: 28px 0 44px 0; } }
         .faq-block .accordion .accordion-item .accordion-collapse .accordion-body p {
           text-align: left;
           margin-bottom: 16px; }
@@ -2090,9 +2177,21 @@ header {
           text-align: left;
           margin: 0;
           padding-left: 40px; }
+        .faq-block .accordion .accordion-item .accordion-collapse .accordion-body h4 {
+          margin-top: 16px; }
+          @media (max-width: 767px) {
+            .faq-block .accordion .accordion-item .accordion-collapse .accordion-body h4 {
+              font-size: 22px;
+              line-height: 28px; } }
 
 .latest-news-block {
   padding: 75px 0; }
+  @media (max-width: 767px) {
+    .latest-news-block {
+      padding: 40px 0; } }
+  @media (max-width: 991px) {
+    .latest-news-block .latest-news {
+      margin-bottom: 20px; } }
   .latest-news-block .latest-news-image {
     height: 380px;
     overflow: hidden; }
@@ -2107,6 +2206,10 @@ header {
       line-height: 33px;
       font-weight: 600;
       margin-bottom: 10px; }
+      @media (max-width: 767px) {
+        .latest-news-block .latest-news-content-box .latest-news-title {
+          font-size: 20px;
+          line-height: 28px; } }
     .latest-news-block .latest-news-content-box p {
       font-size: 16px;
       line-height: 23px;
@@ -2119,6 +2222,11 @@ header {
       letter-spacing: normal;
       padding: 8px 18px;
       font-weight: 400; }
+      @media (max-width: 767px) {
+        .latest-news-block .latest-news-content-box .btn {
+          font-size: 14px;
+          line-height: 14px;
+          padding: 10px 30px; } }
       .latest-news-block .latest-news-content-box .btn a {
         color: #fff;
         text-decoration: none; }
@@ -3897,6 +4005,8 @@ header {
         margin-top: 16px; }
         .case-study-block .swiper .swiper-slide .case-study-right .read-more .btn {
           font-size: 15px;
+          background-color: #00a98f;
+          border-color: #00a98f;
           color: #fff;
           padding: 7px 1.5rem;
           letter-spacing: 0; }
