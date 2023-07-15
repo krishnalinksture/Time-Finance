@@ -12,7 +12,7 @@ if ( have_rows( 'content_image' ) ) {
 	?>
 	<section class="image-with-content" id="<?php echo $section_id; //phpcs:ignore ?>">
 		<div class="container">
-			<div class="row row-cols-1 row-cols-md-3">
+			<div class="row justify-content-center">
 				<?php
 				while ( have_rows( 'content_image' ) ) {
 					the_row();
@@ -25,7 +25,7 @@ if ( have_rows( 'content_image' ) ) {
 
 					if ( ! empty( $image ) || ! empty( $login_title ) || ! empty( $content ) || ! empty( $button ) ) {
 						?>
-						<div class="col">
+						<div class="col-lg-4 col-md-6 col-sm-8">
 							<div class="image-content-box">
 								<div class="image-box">
 									<?php

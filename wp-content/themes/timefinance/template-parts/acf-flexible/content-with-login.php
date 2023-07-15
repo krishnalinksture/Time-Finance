@@ -12,8 +12,8 @@ $section_id              = get_sub_field( 'section_id' ) ? get_sub_field( 'secti
 if ( have_rows( 'content_login' ) ) {
 	?>
 	<section class="content-with-login <?php echo $select_background_color; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
-		<div class="container">
-			<div class="row">
+		<div class="container-lg">
+			<div class="row row-cols-1 row-cols-md-2">
 				<?php
 				while ( have_rows( 'content_login' ) ) {
 					the_row();

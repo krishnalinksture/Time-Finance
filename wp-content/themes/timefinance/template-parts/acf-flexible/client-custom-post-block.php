@@ -13,7 +13,7 @@ $section_id  = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : u
 if ( ! empty( $main_title ) ) {
 	?>
 	<section class="client-custom-post-block bg-grey" id="<?php echo $section_id; //phpcs:ignore ?>">
-		<div class="container">
+		<div class="container-lg">
 			<?php
 			if ( ! empty( $main_title ) ) {
 				?>
@@ -25,7 +25,7 @@ if ( ! empty( $main_title ) ) {
 				<?php
 			}
 			?>
-			<div class="row row-cols-1 row-cols-lg-2">
+			<div class="row row-cols-1 row-cols-md-2">
 				<?php
 				foreach ( $select_post as $client_post ) {
 					setup_postdata( $client_post );

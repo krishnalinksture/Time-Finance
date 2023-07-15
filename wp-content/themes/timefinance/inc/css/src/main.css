@@ -1519,9 +1519,18 @@ header {
 
 .trustpilot-block {
   padding: 156px 0 186px 0; }
+  @media (max-width: 1399px) {
+    .trustpilot-block {
+      padding: 136px 0 166px 0; } }
+  @media (max-width: 1199px) {
+    .trustpilot-block {
+      padding: 116px 0 146px 0; } }
   @media (max-width: 991px) {
     .trustpilot-block {
-      padding: 56px 0 86px 0; } }
+      padding: 86px 0 116px 0; } }
+  @media (max-width: 767px) {
+    .trustpilot-block {
+      padding: 56px 0 76px 0; } }
   .trustpilot-block .content {
     padding: 0 35px; }
     @media (max-width: 1399px) {
@@ -1542,6 +1551,11 @@ header {
       margin-bottom: 35px; }
       @media (max-width: 991px) {
         .trustpilot-block .content .section-title {
+          font-size: 21px;
+          line-height: 30px;
+          margin-bottom: 20px; } }
+      @media (max-width: 767px) {
+        .trustpilot-block .content .section-title {
           font-size: 16px;
           line-height: 26px;
           margin-bottom: 5px; } }
@@ -1551,16 +1565,41 @@ header {
       font-weight: 700; }
       @media (max-width: 991px) {
         .trustpilot-block .content p {
+          font-size: 30px;
+          line-height: 39px; } }
+      @media (max-width: 767px) {
+        .trustpilot-block .content p {
           font-size: 20px;
           line-height: 28px; } }
   .trustpilot-block.bg-purple p {
     color: #fff; }
   .trustpilot-block.style-2 {
-    padding-top: 125px; }
+    padding: 125px 0 0 0; }
+    @media (max-width: 1399px) {
+      .trustpilot-block.style-2 {
+        padding: 110px 0 0 0; } }
+    @media (max-width: 1199px) {
+      .trustpilot-block.style-2 {
+        padding: 90px 0 0 0; } }
+    @media (max-width: 991px) {
+      .trustpilot-block.style-2 {
+        padding: 70px 0 0 0; } }
+    @media (max-width: 767px) {
+      .trustpilot-block.style-2 {
+        padding: 50px 20px 0 20px; } }
     .trustpilot-block.style-2 .content {
       padding: 0 10px; }
+      @media (max-width: 991px) {
+        .trustpilot-block.style-2 .content {
+          padding: 0 20px; } }
       .trustpilot-block.style-2 .content .section-title {
         margin-bottom: 27px; }
+        @media (max-width: 991px) {
+          .trustpilot-block.style-2 .content .section-title {
+            margin-bottom: 22px; } }
+        @media (max-width: 767px) {
+          .trustpilot-block.style-2 .content .section-title {
+            margin-bottom: 15px; } }
 
 .featured-content-image {
   padding: 150px 0 160px 0; }
@@ -1679,6 +1718,9 @@ header {
     color: #00a98f; }
   .usp-block.bg-white p, .usp-block.bg-grey p {
     color: #00a98f; }
+  @media (max-width: 1199px) {
+    .usp-block.style-2 .container {
+      padding: 0 20px; } }
   .usp-block.style-2 .section-title {
     color: #3d1050;
     font-size: 32px;
@@ -1714,6 +1756,9 @@ header {
   .usp-block.bg-green p {
     color: #fff;
     width: 70%; }
+    @media (max-width: 991px) {
+      .usp-block.bg-green p {
+        width: 90%; } }
 
 .image-bulletpoint-groups {
   padding: 140px 0;
@@ -3064,7 +3109,7 @@ header {
       width: 70%; }
 
 .content-block {
-  padding: 32px; }
+  padding: 32px 0; }
   .content-block .content-wrapper {
     padding: 0 45px; }
     .content-block .content-wrapper p:last-of-type {
@@ -3310,17 +3355,39 @@ header {
 
 .career-details-block {
   padding-top: 95px; }
+  @media (max-width: 1199px) {
+    .career-details-block {
+      padding-top: 80px; } }
+  @media (max-width: 991px) {
+    .career-details-block {
+      padding-top: 65px; } }
+  @media (max-width: 767px) {
+    .career-details-block {
+      padding-top: 48px; } }
   .career-details-block .career-wrapper {
     padding-left: 35px;
     padding-right: 35px; }
     .career-details-block .career-wrapper .careers-box {
       margin-bottom: 138px; }
+      @media (max-width: 1199px) {
+        .career-details-block .career-wrapper .careers-box {
+          margin-bottom: 108px; } }
+      @media (max-width: 991px) {
+        .career-details-block .career-wrapper .careers-box {
+          margin-bottom: 78px; } }
+      @media (max-width: 767px) {
+        .career-details-block .career-wrapper .careers-box {
+          margin-bottom: 40px; } }
       .career-details-block .career-wrapper .careers-box .careers-title {
         font-size: 18px;
         font-weight: 700;
         padding-bottom: 16px;
         margin-bottom: 24px;
         border-bottom: 2px solid #3d1050; }
+        @media (max-width: 767px) {
+          .career-details-block .career-wrapper .careers-box .careers-title {
+            font-size: 16px;
+            line-height: 22px; } }
       .career-details-block .career-wrapper .careers-box .careers-content .careers-area,
       .career-details-block .career-wrapper .careers-box .careers-content .careers-salary,
       .career-details-block .career-wrapper .careers-box .careers-content .careers-job-type {
@@ -3340,16 +3407,43 @@ header {
         font-weight: 700;
         background-color: #00a98f;
         border-color: #00a98f; }
+        @media (max-width: 767px) {
+          .career-details-block .career-wrapper .careers-box .careers-content .btn {
+            font-size: 14px;
+            line-height: 14px; } }
         .career-details-block .career-wrapper .careers-box .careers-content .btn:hover {
           background-color: #3d1050;
           border-color: #3d1050; }
       .career-details-block .career-wrapper .careers-box .careers-content .text-wrapper {
         padding-left: 0; }
+        @media (max-width: 767px) {
+          .career-details-block .career-wrapper .careers-box .careers-content .text-wrapper {
+            padding-left: 10px; } }
   .career-details-block.style-2 {
     background-color: #F5F3F6;
     padding: 115px 0; }
+    @media (max-width: 1199px) {
+      .career-details-block.style-2 {
+        padding: 85px 0 120px 0; } }
+    @media (max-width: 991px) {
+      .career-details-block.style-2 {
+        padding: 65px 0 100px 0; } }
+    @media (max-width: 991px) {
+      .career-details-block.style-2 {
+        padding: 50px 0 80px 0; } }
     .career-details-block.style-2 .section-title {
       margin-bottom: 88px; }
+      @media (max-width: 1199px) {
+        .career-details-block.style-2 .section-title {
+          margin-bottom: 73px; } }
+      @media (max-width: 991px) {
+        .career-details-block.style-2 .section-title {
+          margin-bottom: 58px; } }
+      @media (max-width: 767px) {
+        .career-details-block.style-2 .section-title {
+          font-size: 20px;
+          line-height: 28px;
+          margin-bottom: 40px; } }
     .career-details-block.style-2 .accordion-item {
       -webkit-border-radius: 0;
       -moz-border-radius: 0;
@@ -3364,10 +3458,19 @@ header {
           border-bottom: 2px solid #3d1050;
           cursor: pointer;
           padding: 29px 0; }
+          @media (max-width: 991px) {
+            .career-details-block.style-2 .accordion-item .accordion-header .accordion-button {
+              padding: 24px 0; } }
+          @media (max-width: 767px) {
+            .career-details-block.style-2 .accordion-item .accordion-header .accordion-button {
+              padding: 19px 0; } }
           .career-details-block.style-2 .accordion-item .accordion-header .accordion-button .careers-title {
             color: #3d1050;
             font-size: 18px;
             font-weight: 700; }
+            @media (max-width: 767px) {
+              .career-details-block.style-2 .accordion-item .accordion-header .accordion-button .careers-title {
+                font-size: 16px; } }
           .career-details-block.style-2 .accordion-item .accordion-header .accordion-button::before {
             position: absolute;
             width: 20px;
@@ -3402,6 +3505,12 @@ header {
       .career-details-block.style-2 .accordion-item .accordion-collapse .accordion-body {
         padding: 54px 0 108px 0;
         border-bottom: 2px solid #3d1050; }
+        @media (max-width: 991px) {
+          .career-details-block.style-2 .accordion-item .accordion-collapse .accordion-body {
+            padding: 39px 0 78px 0; } }
+        @media (max-width: 767px) {
+          .career-details-block.style-2 .accordion-item .accordion-collapse .accordion-body {
+            padding: 24px 0 48px 0; } }
         .career-details-block.style-2 .accordion-item .accordion-collapse .accordion-body .careers-content .careers-area,
         .career-details-block.style-2 .accordion-item .accordion-collapse .accordion-body .careers-content .careers-salary,
         .career-details-block.style-2 .accordion-item .accordion-collapse .accordion-body .careers-content .careers-job-type {
@@ -3422,10 +3531,18 @@ header {
           letter-spacing: normal;
           padding: 11px 32px;
           font-weight: 700; }
+          @media (max-width: 767px) {
+            .career-details-block.style-2 .accordion-item .accordion-collapse .accordion-body .careers-content .btn {
+              font-size: 14px;
+              line-height: 14px;
+              padding: 10px 32px; } }
         .career-details-block.style-2 .accordion-item .accordion-collapse .accordion-body .careers-content .text-wrapper {
           padding-top: 23px;
           padding-left: 0;
           margin-left: -5px; }
+          @media (max-width: 767px) {
+            .career-details-block.style-2 .accordion-item .accordion-collapse .accordion-body .careers-content .text-wrapper {
+              padding: 23px 15px 0 15px; } }
           .career-details-block.style-2 .accordion-item .accordion-collapse .accordion-body .careers-content .text-wrapper p {
             font-size: 16px;
             line-height: 23px;
@@ -3437,19 +3554,64 @@ header {
       letter-spacing: normal;
       padding: 11px 34px;
       font-weight: 700; }
+      @media (max-width: 767px) {
+        .career-details-block.style-2 .btn {
+          font-size: 14px;
+          line-height: 14px;
+          padding: 10px 34px; } }
 
 .content-with-logo {
-  padding: 206px 0 182px; }
+  padding: 206px 0 132px; }
+  @media (max-width: 1399px) {
+    .content-with-logo {
+      padding: 176px 0 102px; } }
+  @media (max-width: 1199px) {
+    .content-with-logo {
+      padding: 136px 0 72px; } }
+  @media (max-width: 991px) {
+    .content-with-logo {
+      padding: 86px 0 42px; } }
+  @media (max-width: 767px) {
+    .content-with-logo {
+      padding: 50px 0 20px; } }
+  @media (max-width: 767px) {
+    .content-with-logo .container {
+      padding: 0 30px; } }
+  @media (max-width: 991px) {
+    .content-with-logo .content-wrapper {
+      margin-bottom: 30px; } }
+  @media (max-width: 767px) {
+    .content-with-logo .content-wrapper {
+      margin-bottom: 10px; } }
   .content-with-logo .section-title {
     line-height: 30px;
     color: #00a98f;
     font-weight: 400;
     margin-bottom: 40px; }
+    @media (max-width: 991px) {
+      .content-with-logo .section-title {
+        font-size: 21px;
+        line-height: 28px;
+        margin-bottom: 15px; } }
+    @media (max-width: 767px) {
+      .content-with-logo .section-title {
+        font-size: 16px;
+        line-height: 26px;
+        margin-bottom: 7px; } }
   .content-with-logo p {
     font-size: 40px;
     line-height: 50px;
     font-weight: 700;
     width: 84%; }
+    @media (max-width: 991px) {
+      .content-with-logo p {
+        font-size: 30px;
+        line-height: 39px;
+        width: 100%; } }
+    @media (max-width: 767px) {
+      .content-with-logo p {
+        font-size: 20px;
+        line-height: 28px; } }
   .content-with-logo .logo-wrapper {
     padding: 30px 0; }
     .content-with-logo .logo-wrapper .logo-icon {
@@ -3460,26 +3622,58 @@ header {
 
 .content-with-login {
   padding-top: 88px;
-  padding-bottom: 90px; }
+  padding-bottom: 170px; }
+  @media (max-width: 767px) {
+    .content-with-login {
+      padding-bottom: 130px; } }
   .content-with-login .login-wrapper {
     padding: 0 20px; }
+    @media (max-width: 767px) {
+      .content-with-login .login-wrapper {
+        margin-bottom: 20px;
+        padding: 0 40px; } }
     .content-with-login .login-wrapper .login-box {
       background-color: #fff;
       padding: 24px;
       height: 100%; }
+      @media (max-width: 767px) {
+        .content-with-login .login-wrapper .login-box {
+          padding: 14px; } }
       .content-with-login .login-wrapper .login-box .section-title {
         margin-bottom: 17px; }
+        @media (max-width: 991px) {
+          .content-with-login .login-wrapper .login-box .section-title {
+            font-size: 21px;
+            line-height: 28px; } }
+        @media (max-width: 767px) {
+          .content-with-login .login-wrapper .login-box .section-title {
+            font-size: 16px;
+            line-height: 22px;
+            margin-bottom: 13px; } }
       .content-with-login .login-wrapper .login-box p {
         font-size: 18px;
         line-height: 25px;
         font-weight: 600; }
+        @media (max-width: 991px) {
+          .content-with-login .login-wrapper .login-box p {
+            font-size: 16px;
+            line-height: 23px; } }
+        @media (max-width: 767px) {
+          .content-with-login .login-wrapper .login-box p {
+            font-size: 14px;
+            line-height: 20px; } }
       .content-with-login .login-wrapper .login-box .btn {
         margin-top: 56px;
         font-size: 15px;
         line-height: 15px;
         letter-spacing: normal;
         padding: 11px 49px;
-        font-weight: 400; }
+        font-weight: 700; }
+        @media (max-width: 767px) {
+          .content-with-login .login-wrapper .login-box .btn {
+            font-size: 14px;
+            line-height: 14px;
+            padding: 9px 49px; } }
         .content-with-login .login-wrapper .login-box .btn:hover {
           background-color: #025244;
           border-color: #025244;
@@ -3718,9 +3912,22 @@ header {
     margin-bottom: 16px; }
 
 .image-with-content {
-  padding-bottom: 100px; }
+  padding-bottom: 100px;
+  margin-top: -80px; }
+  @media (max-width: 1199px) {
+    .image-with-content {
+      padding-bottom: 85px; } }
+  @media (max-width: 991px) {
+    .image-with-content {
+      padding-bottom: 70px; } }
+  @media (max-width: 767px) {
+    .image-with-content {
+      padding-bottom: 50px; } }
   .image-with-content .image-content-box {
     height: 100%; }
+    @media (max-width: 991px) {
+      .image-with-content .image-content-box {
+        margin-bottom: 20px; } }
     .image-with-content .image-content-box .image-box {
       height: 380px;
       overflow: hidden; }
@@ -3735,6 +3942,10 @@ header {
       .image-with-content .image-content-box .login-content .section-title {
         font-weight: 600;
         margin-bottom: 9px; }
+        @media (max-width: 767px) {
+          .image-with-content .image-content-box .login-content .section-title {
+            font-size: 20px;
+            line-height: 28px; } }
       .image-with-content .image-content-box .login-content p {
         font-weight: 600;
         margin-bottom: 16px; }
@@ -3752,6 +3963,11 @@ header {
         letter-spacing: normal;
         padding: 7px 18px;
         font-weight: 400; }
+        @media (max-width: 767px) {
+          .image-with-content .image-content-box .login-content .btn {
+            font-size: 14px;
+            line-height: 14px;
+            padding: 9px 18px; } }
 
 .search-banner {
   padding: 120px 0; }
@@ -3845,28 +4061,52 @@ header {
 
 .client-custom-post-block {
   padding: 100px 0 140px 0; }
-  .client-custom-post-block .container {
+  @media (max-width: 1399px) {
+    .client-custom-post-block {
+      padding: 85px 0 120px 0; } }
+  @media (max-width: 1199px) {
+    .client-custom-post-block {
+      padding: 70px 0 100px 0; } }
+  @media (max-width: 991px) {
+    .client-custom-post-block {
+      padding: 55px 0 80px 0; } }
+  @media (max-width: 767px) {
+    .client-custom-post-block {
+      padding: 35px 0 65px 0; } }
+  .client-custom-post-block .container-lg {
     padding: 0 20px; }
-    .client-custom-post-block .container .section-title {
+    @media (max-width: 767px) {
+      .client-custom-post-block .container-lg {
+        padding: 0 30px; } }
+    .client-custom-post-block .container-lg .section-title {
       margin-bottom: 29px; }
-    .client-custom-post-block .container .client-wrapper {
+      @media (max-width: 767px) {
+        .client-custom-post-block .container-lg .section-title {
+          font-size: 16px; } }
+    .client-custom-post-block .container-lg .client-wrapper {
       overflow: hidden;
       margin-bottom: 20px; }
-    .client-custom-post-block .container .client-box {
+    .client-custom-post-block .container-lg .client-box {
       height: 100%; }
-      .client-custom-post-block .container .client-box .client-image {
+      .client-custom-post-block .container-lg .client-box .client-image {
         height: 387px;
         overflow: hidden; }
-        .client-custom-post-block .container .client-box .client-image img {
+        .client-custom-post-block .container-lg .client-box .client-image img {
           display: block;
           height: 100%;
           width: 100%;
           object-fit: cover; }
-      .client-custom-post-block .container .client-box .client-content {
+      .client-custom-post-block .container-lg .client-box .client-content {
         background-color: #fff;
         padding: 44px 55px 35px 55px;
         height: 100%; }
-        .client-custom-post-block .container .client-box .client-content .client-category {
+        @media (max-width: 991px) {
+          .client-custom-post-block .container-lg .client-box .client-content {
+            padding: 34px 38px 33px 38px; } }
+        @media (max-width: 767px) {
+          .client-custom-post-block .container-lg .client-box .client-content {
+            padding: 28px 20px 30px 20px; } }
+        .client-custom-post-block .container-lg .client-box .client-content .client-category {
           font-size: 11px;
           line-height: 11px;
           letter-spacing: 1.1px;
@@ -3874,18 +4114,37 @@ header {
           text-transform: uppercase;
           color: #00a98f;
           margin-bottom: 28px; }
-        .client-custom-post-block .container .client-box .client-content .client-title {
+          @media (max-width: 767px) {
+            .client-custom-post-block .container-lg .client-box .client-content .client-category {
+              margin-bottom: 24px; } }
+        .client-custom-post-block .container-lg .client-box .client-content .client-title {
           font-size: 25px;
           line-height: 33px;
           font-weight: 600;
           margin-bottom: 32px; }
-        .client-custom-post-block .container .client-box .client-content .btn {
+          @media (max-width: 991px) {
+            .client-custom-post-block .container-lg .client-box .client-content .client-title {
+              font-size: 20px;
+              line-height: 28px;
+              margin-bottom: 28px; } }
+          @media (max-width: 767px) {
+            .client-custom-post-block .container-lg .client-box .client-content .client-title {
+              font-size: 16px;
+              line-height: 22px;
+              width: 70%;
+              margin: 0 auto;
+              margin-bottom: 24px; } }
+        .client-custom-post-block .container-lg .client-box .client-content .btn {
           font-size: 15px;
           line-height: 15px;
           letter-spacing: normal;
           padding: 8px 19px;
           font-weight: 400; }
-          .client-custom-post-block .container .client-box .client-content .btn a {
+          @media (max-width: 767px) {
+            .client-custom-post-block .container-lg .client-box .client-content .btn {
+              font-size: 12px;
+              line-height: 12px; } }
+          .client-custom-post-block .container-lg .client-box .client-content .btn a {
             color: #fff;
             text-decoration: none; }
 

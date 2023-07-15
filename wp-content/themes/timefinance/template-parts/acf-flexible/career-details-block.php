@@ -32,7 +32,7 @@ switch ( $select_style ) {
 						$find_out_more_button = get_field( 'find_out_more_button' );
 						if ( get_the_title() || ! empty( $area ) || ! empty( $salary ) || ! empty( $job_type ) || ! empty( $find_out_more_button ) ) {
 							?>
-							<div class="col-11 career-wrapper">
+							<div class="col-md-11 col-sm-8 career-wrapper">
 								<div class="careers-box">
 									<?php
 									if ( get_the_title() ) {
@@ -46,7 +46,7 @@ switch ( $select_style ) {
 										?>
 										<div class="careers-content">
 											<div class="row">
-												<div class="col-5">
+												<div class="col-md-5">
 													<?php
 													if ( ! empty( $area ) ) {
 														?>
@@ -84,7 +84,7 @@ switch ( $select_style ) {
 													}
 													?>
 												</div>
-												<div class="col-7 text-wrapper">
+												<div class="col-md-7 text-wrapper">
 														<?php echo get_the_content(); //phpcs:ignore ?>
 												</div>
 											</div>
@@ -107,12 +107,12 @@ switch ( $select_style ) {
 	case 'style-2':
 		?>
 		<section class="career-details-block <?php echo $select_style; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
-			<div class="container">
+			<div class="container-lg">
 				<?php
 				if ( ! empty( $accordion_title ) ) {
 					?>
 					<div class="row justify-content-center text-center">
-						<div class="col-9">
+						<div class="col col-lg-9">
 							<?php echo '<' . esc_attr( $select_tag ) . ' class="section-title h-3">' . esc_html( $accordion_title ) . '</' . esc_attr( $select_tag ) . '>'; ?>
 						</div>
 					</div>
@@ -120,7 +120,7 @@ switch ( $select_style ) {
 				}
 				?>
 				<div class="row justify-content-center">
-					<div class="col-9 career-wrapper">
+					<div class="col col-lg-9 career-wrapper">
 						<?php
 						$i = 1;
 						?>
@@ -162,7 +162,7 @@ switch ( $select_style ) {
 															<?php
 															if ( ! empty( $area ) || ! empty( $salary ) || ! empty( $job_type ) || ! empty( $find_out_more_button ) ) {
 																?>
-																<div class="col-5">
+																<div class="col-md-5">
 																	<?php
 																	if ( ! empty( $area ) ) {
 																		?>
@@ -204,7 +204,7 @@ switch ( $select_style ) {
 															}
 															if ( get_the_content() ) {
 																?>
-																<div class="col-7 text-wrapper">
+																<div class="col-md-7 text-wrapper">
 																	<?php echo get_the_content(); //phpcs:ignore ?>
 																</div>
 																<?php

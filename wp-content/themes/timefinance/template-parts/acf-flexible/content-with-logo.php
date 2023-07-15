@@ -19,7 +19,7 @@ if ( ! empty( $main_title ) || ! empty( $content ) || have_rows( 'logos' ) ) {
 				<?php
 				if ( ! empty( $main_title ) || ! empty( $content ) ) {
 					?>
-					<div class="col-6">
+					<div class="col-12 col-lg-6 content-wrapper">
 						<?php
 						if ( ! empty( $main_title ) ) {
 							echo '<' . esc_attr( $select_tag ) . ' class="section-title h-4">' . esc_html( $main_title ) . '</' . esc_attr( $select_tag ) . '>';
@@ -33,8 +33,8 @@ if ( ! empty( $main_title ) || ! empty( $content ) || have_rows( 'logos' ) ) {
 				}
 				if ( have_rows( 'logos' ) ) {
 					?>
-					<div class="col-6 logo-wrapper">
-						<div class="row row-cols-1 row-cols-lg-3 text-center align-items-center">
+					<div class="col-12 col-lg-6 logo-wrapper">
+						<div class="row row-cols-2 row-cols-lg-3 row-cols-sm-3 text-center align-items-center">
 							<?php
 							while ( have_rows( 'logos' ) ) {
 								the_row();
