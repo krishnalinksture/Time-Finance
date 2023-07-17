@@ -194,16 +194,6 @@ switch ( $select_style ) {
 																		</div>
 																		<?php
 																	}
-																	if ( $find_out_more_button && ! empty( $find_out_more_button['url'] ) && ! empty( $find_out_more_button['title'] ) ) {
-																		$link_url    = $find_out_more_button['url'];
-																		$link_title  = $find_out_more_button['title'];
-																		$link_target = $find_out_more_button['target'] ? $find_out_more_button['target'] : '_self';
-																		?>
-																		<a href="<?php echo esc_url( $link_url ); ?>" class="btn" target="<?php echo esc_attr( $link_target ); ?>">
-																			<?php echo esc_html( $link_title ); ?>
-																		</a>
-																		<?php
-																	}
 																	?>
 																</div>
 																<?php
@@ -216,6 +206,22 @@ switch ( $select_style ) {
 																<?php
 															}
 															?>
+														</div>
+														<div class="row">
+															<div class="col">
+																<?php
+																if ( $find_out_more_button && ! empty( $find_out_more_button['url'] ) && ! empty( $find_out_more_button['title'] ) ) {
+																	$link_url    = $find_out_more_button['url'];
+																	$link_title  = $find_out_more_button['title'];
+																	$link_target = $find_out_more_button['target'] ? $find_out_more_button['target'] : '_self';
+																	?>
+																	<a href="<?php echo esc_url( $link_url ); ?>" class="btn" target="<?php echo esc_attr( $link_target ); ?>">
+																		<?php echo esc_html( $link_title ); ?>
+																	</a>
+																	<?php
+																}
+																?>
+															</div>
 														</div>
 													</div>
 												</div>
