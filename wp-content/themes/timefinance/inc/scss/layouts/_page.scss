@@ -3161,6 +3161,10 @@
         font-weight: 700;
         width: 94%;
         margin-bottom: 0px;
+
+        @include responsive (mini-desktop, max) {
+            width: 100%;
+        }
     }
 }
 

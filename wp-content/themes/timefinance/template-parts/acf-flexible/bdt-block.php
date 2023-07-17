@@ -19,7 +19,7 @@ if ( ! empty( $main_title ) || ! empty( $content ) ) {
 			if ( ! empty( $main_title ) || ! empty( $content ) ) {
 				?>
 				<div class="row">
-					<div class="col-9">
+					<div class="col-xl-9 col-lg-11">
 						<?php
 						if ( ! empty( $main_title ) ) {
 							echo '<' . esc_attr( $select_tag ) . ' class="section-title h-4">' . esc_html( $main_title ) . '</' . esc_attr( $select_tag ) . '>';

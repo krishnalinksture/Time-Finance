@@ -3262,6 +3262,10 @@ header {
     font-weight: 700;
     width: 94%;
     margin-bottom: 0px; }
+    @media (max-width: 1399px) {
+      .bdt-block p,
+      .bdt-category p {
+        width: 100%; } }
 
 .modal-open section.bdt-filter-block {
   z-index: 99999; }
