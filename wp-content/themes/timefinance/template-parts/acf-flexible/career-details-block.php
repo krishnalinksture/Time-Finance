@@ -72,6 +72,15 @@ switch ( $select_style ) {
 														</div>
 														<?php
 													}
+													?>
+												</div>
+												<div class="col-md-7 text-wrapper">
+														<?php echo get_the_content(); //phpcs:ignore ?>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col">
+													<?php
 													if ( $find_out_more_button && ! empty( $find_out_more_button['url'] ) && ! empty( $find_out_more_button['title'] ) ) {
 														$link_url    = $find_out_more_button['url'];
 														$link_title  = $find_out_more_button['title'];
@@ -83,9 +92,6 @@ switch ( $select_style ) {
 														<?php
 													}
 													?>
-												</div>
-												<div class="col-md-7 text-wrapper">
-														<?php echo get_the_content(); //phpcs:ignore ?>
 												</div>
 											</div>
 										</div>
