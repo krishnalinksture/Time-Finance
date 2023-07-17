@@ -20,7 +20,11 @@ if ( ! empty( $banner_title ) || ! empty( $search_again ) || ! empty( $find_out_
 					<?php
 					$allsearch = new WP_Query( "s=$s&showposts=0" );
 					if ( '' === $allsearch->query['s'] ) {
-						echo esc_html( 'Search Time Finance' );
+						?>
+						<div class="search-blank">
+							<?php echo esc_html( 'Search Time Finance' ); ?>
+						</div>
+						<?php
 					} else {
 						if ( ! empty( $banner_title ) ) {
 							echo '<' . esc_attr( $search_select_tag ) . ' class="section-title h-4">' . esc_html( $banner_title ) . '</' . esc_attr( $search_select_tag ) . '>';
