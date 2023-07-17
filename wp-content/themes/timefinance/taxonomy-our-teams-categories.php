@@ -15,7 +15,7 @@ $our_team_content    = get_field( 'our_team_content', 'option' );
 		if ( ! empty( $our_team_title ) || ! empty( $our_team_content ) ) {
 			?>
 			<div class="row">
-				<div class="col">
+				<div class="col-xl-9 col-lg-11 col-md-12">
 					<?php
 					if ( ! empty( $our_team_title ) ) {
 						echo '<' . esc_attr( $our_team_select_tag ) . ' class="section-title h-4">' . esc_html( $our_team_title ) . '</' . esc_attr( $our_team_select_tag ) . '>';
@@ -107,8 +107,8 @@ $our_team_content    = get_field( 'our_team_content', 'option' );
 					?>
 				</ul>
 			</div>
-			<div class="col-9 our-team-wrapper">
-				<div class="row row-cols-1 row-cols-lg-2">
+			<div class="col col-lg-9 col-md-12 our-team-wrapper">
+				<div class="row row-cols-1 row-cols-md-2">
 					<?php
 					while ( have_posts() ) {
 						the_post();
