@@ -18,7 +18,7 @@ if ( ! empty( $bdt_title ) || ! empty( $bdt_content ) ) {
 			if ( ! empty( $bdt_title ) || ! empty( $bdt_content ) ) {
 				?>
 				<div class="row">
-					<div class="col-9">
+					<div class="col-xl-9 col-lg-11 col-md-12">
 						<?php
 						if ( ! empty( $bdt_title ) ) {
 							echo '<' . esc_attr( $bdt_select_tag ) . ' class="section-title h-4">' . esc_html( $bdt_title ) . '</' . esc_attr( $bdt_select_tag ) . '>';
@@ -116,7 +116,7 @@ if ( ! empty( $bdt_title ) || ! empty( $bdt_content ) ) {
 			<?php
 			if ( have_posts() ) {
 				?>
-				<div class="col-9 bdt-wrapper">
+				<div class="col col-lg-9 col-md-12 bdt-wrapper">
 					<div class="row row-cols-1 row-cols-lg-2">
 						<?php
 						while ( have_posts() ) {
