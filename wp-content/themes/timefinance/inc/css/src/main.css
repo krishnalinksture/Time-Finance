@@ -2062,15 +2062,37 @@ header {
 
 .card-block {
   padding: 110px 0 162px 0; }
+  @media (max-width: 991px) {
+    .card-block {
+      padding: 100px 0 110px; } }
+  @media (max-width: 767px) {
+    .card-block {
+      padding: 35px 0 35px; } }
   .card-block .container {
     padding: 0 20px; }
     .card-block .container .section-title {
       margin-bottom: 25px; }
+      @media (max-width: 767px) {
+        .card-block .container .section-title {
+          font-size: 16px;
+          margin-bottom: 15px; } }
     .card-block .container .card-box {
       position: relative; }
+      @media (max-width: 991px) {
+        .card-block .container .card-box {
+          margin-bottom: 105px; } }
+      @media (max-width: 767px) {
+        .card-block .container .card-box {
+          margin-bottom: 75px; } }
       .card-block .container .card-box .card-image {
         height: 345px;
         overflow: hidden; }
+        @media (max-width: 991px) {
+          .card-block .container .card-box .card-image {
+            height: 330px; } }
+        @media (max-width: 767px) {
+          .card-block .container .card-box .card-image {
+            height: 225px; } }
         .card-block .container .card-box .card-image img {
           display: block;
           width: 100%;
@@ -2098,10 +2120,23 @@ header {
         overflow: hidden;
         max-height: 85px;
         transition: max-height 0.6s; }
+        @media (max-width: 1199px) {
+          .card-block .container .card-box .hover-card {
+            padding: 30px; } }
+        @media (max-width: 767px) {
+          .card-block .container .card-box .hover-card {
+            bottom: -58px;
+            max-height: 58px;
+            padding: 20px; } }
         .card-block .container .card-box .hover-card .card-title {
           font-size: 22px;
           font-weight: 600;
           margin-bottom: 0; }
+          @media (max-width: 767px) {
+            .card-block .container .card-box .hover-card .card-title {
+              font-size: 16px;
+              line-height: 16px;
+              font-weight: 700; } }
         .card-block .container .card-box .hover-card p {
           min-height: 70px;
           margin-top: 15px;
@@ -2115,6 +2150,9 @@ header {
           -ms-transition: 0.8s;
           transition: 0.8s;
           transition-delay: 0.3s; }
+          @media (max-width: 767px) {
+            .card-block .container .card-box .hover-card p {
+              min-height: 50px; } }
         .card-block .container .card-box .hover-card .btn {
           margin-top: 45px;
           opacity: 0;
@@ -2129,6 +2167,11 @@ header {
           transform: translateY(40px);
           transition: 0.8s !important;
           transition-delay: 0.4s !important; }
+          @media (max-width: 767px) {
+            .card-block .container .card-box .hover-card .btn {
+              margin-top: 30px;
+              font-size: 12px;
+              padding: 6px 22px; } }
   .card-block.bg-white .hover-card {
     background-color: #F5F3F6 !important; }
   .card-block.bg-purple .section-title {
@@ -2664,15 +2707,33 @@ header {
   background-color: #3d1050;
   position: relative;
   overflow: hidden; }
+  @media (max-width: 991px) {
+    .press-releases-block,
+    .press-releases-category {
+      padding: 90px 0 60px; } }
+  @media (max-width: 767px) {
+    .press-releases-block,
+    .press-releases-category {
+      padding: 50px 0 40px; } }
   .press-releases-block .container,
   .press-releases-category .container {
     position: relative; }
+    @media (max-width: 767px) {
+      .press-releases-block .container,
+      .press-releases-category .container {
+        padding: 0 30px; } }
   .press-releases-block .section-title,
   .press-releases-category .section-title {
     color: #00a98f;
     line-height: 30px;
     font-weight: 600;
     margin-bottom: 30px; }
+    @media (max-width: 767px) {
+      .press-releases-block .section-title,
+      .press-releases-category .section-title {
+        font-size: 16px;
+        line-height: 26px;
+        margin-bottom: 15px; } }
   .press-releases-block p,
   .press-releases-category p {
     color: #fff;
@@ -2681,6 +2742,15 @@ header {
     font-weight: 700;
     width: 94%;
     margin-bottom: 0; }
+    @media (max-width: 1399px) {
+      .press-releases-block p,
+      .press-releases-category p {
+        width: 100%; } }
+    @media (max-width: 767px) {
+      .press-releases-block p,
+      .press-releases-category p {
+        font-size: 20px;
+        line-height: 28px; } }
 
 .press-release-filter-block {
   background-color: #F5F3F6;
@@ -2729,9 +2799,64 @@ header {
           text-decoration: underline; }
         .press-release-filter-block ul .press-release-cat-list a.btn.btn-link:hover {
           color: #fff; }
+  .press-release-filter-block .dropdown {
+    background-color: #3d1050;
+    padding: 0px 30px 150px; }
+    .press-release-filter-block .dropdown .btn.btn-link {
+      color: #fff;
+      width: 100%;
+      text-align: left;
+      border-bottom: 2px solid #fff;
+      border-radius: 0;
+      padding-right: 20px;
+      position: relative;
+      padding-bottom: 5px; }
+      .press-release-filter-block .dropdown .btn.btn-link:after {
+        content: '';
+        width: 8px;
+        height: 8px;
+        border-right: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        border-left: 0;
+        border-top: 0;
+        position: absolute;
+        top: calc(50% - 8px);
+        right: 0;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg); }
+      .press-release-filter-block .dropdown .btn.btn-link:hover {
+        text-decoration: none; }
+    .press-release-filter-block .dropdown .dropdown-menu {
+      width: calc(100% - 60px);
+      transform: none !important;
+      top: 72px !important;
+      inset: auto !important;
+      padding: 10px; }
+      .press-release-filter-block .dropdown .dropdown-menu .press-release-cat-list {
+        margin-bottom: 5px; }
+        .press-release-filter-block .dropdown .dropdown-menu .press-release-cat-list a {
+          color: #4D4D4D;
+          font-size: 16px;
+          padding: 5px 10px;
+          font-weight: 400;
+          text-decoration: underline;
+          text-decoration-color: #00a98f; }
+        .press-release-filter-block .dropdown .dropdown-menu .press-release-cat-list:last-child {
+          margin-bottom: 0; }
   .press-release-filter-block .press-releases-wrapper {
     padding-left: 50px;
     padding-right: 20px; }
+    @media (max-width: 991px) {
+      .press-release-filter-block .press-releases-wrapper {
+        margin-top: -70px;
+        padding-left: 10px;
+        padding-right: 10px; } }
+    @media (max-width: 767px) {
+      .press-release-filter-block .press-releases-wrapper {
+        margin-top: -70px;
+        padding-left: 40px;
+        padding-right: 40px;
+        position: relative; } }
     .press-release-filter-block .press-releases-wrapper .row .col {
       margin-bottom: 20px;
       overflow: hidden; }
@@ -2766,6 +2891,10 @@ header {
           margin-bottom: 12px;
           color: #3d1050;
           text-decoration: none; }
+          @media (max-width: 767px) {
+            .press-release-filter-block .press-releases-wrapper .press-release-box .press-release-content .press-release-title a {
+              font-size: 20px;
+              line-height: 28px; } }
         .press-release-filter-block .press-releases-wrapper .press-release-box .press-release-content p {
           color: #3d1050;
           font-size: 15px;
@@ -2773,6 +2902,10 @@ header {
           font-weight: 600;
           width: 100%;
           margin-bottom: 0; }
+          @media (max-width: 767px) {
+            .press-release-filter-block .press-releases-wrapper .press-release-box .press-release-content p {
+              font-size: 13px;
+              line-height: 18px; } }
         .press-release-filter-block .press-releases-wrapper .press-release-box .press-release-content .read-more {
           margin-top: 48px;
           font-size: 15px;
@@ -3209,7 +3342,8 @@ header {
             .time-blog-filter-block .time-blog-wrapper .time-blog-box .time-blog-content .time-blog-title a {
               font-size: 16px;
               line-height: 22px;
-              margin-bottom: 8px; } }
+              max-width: 540px;
+              margin: 0 auto 8px; } }
         .time-blog-filter-block .time-blog-wrapper .time-blog-box .time-blog-content p {
           color: #3d1050;
           font-size: 15px;
@@ -3220,7 +3354,8 @@ header {
           @media (max-width: 767px) {
             .time-blog-filter-block .time-blog-wrapper .time-blog-box .time-blog-content p {
               font-size: 13px;
-              line-height: 18px; } }
+              line-height: 18px;
+              max-width: 540px; } }
         .time-blog-filter-block .time-blog-wrapper .time-blog-box .time-blog-content .read-more {
           margin-top: 48px;
           font-size: 15px;

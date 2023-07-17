@@ -1409,20 +1409,42 @@
 //card-block
 .card-block {
     padding: 110px 0 162px 0;
+    @include responsive (ipad-portrait, max) {
+        padding: 100px 0 110px;
+    }
+    @include responsive (mobile-big, max) {
+        padding: 35px 0 35px;
+    }
 
     .container {
         padding: 0 20px;
 
         .section-title {
             margin-bottom: 25px;
+            @include responsive (mobile-big, max) {
+                font-size: 16px;
+                margin-bottom: 15px;
+            }
         }
 
         .card-box {
             position: relative;
+            @include responsive (ipad-portrait, max) {
+                margin-bottom: 105px;
+            }
+            @include responsive (mobile-big, max) {
+                margin-bottom: 75px;
+            }
 
             .card-image {
                 height: 345px;
                 overflow: hidden;
+                @include responsive (ipad-portrait, max) {
+                    height: 330px;
+                }
+                @include responsive (mobile-big, max) {
+                    height: 225px;
+                }
 
                 img {
                     display: block;
@@ -1456,11 +1478,24 @@
                 overflow: hidden;
                 max-height: 85px;
                 transition: max-height 0.6s;
+                @include responsive (laptop, max) {
+                    padding: 30px;
+                }
+                @include responsive (mobile-big, max) {
+                    bottom: -58px; 
+                    max-height: 58px;
+                    padding: 20px;
+                }
 
                 .card-title {
                     font-size: 22px;
                     font-weight: 600;
                     margin-bottom: 0;
+                    @include responsive (mobile-big, max) {
+                        font-size: 16px;
+                        line-height: 16px;
+                        font-weight: 700;
+                    }
                 }
 
                 p {
@@ -1470,6 +1505,9 @@
                     @include translateY(30px);
                     @include transitionAll(0.8s);
                     transition-delay: 0.3s;
+                    @include responsive (mobile-big, max) {
+                        min-height: 50px;
+                    }
                 }
 
                 .btn {
@@ -1483,6 +1521,11 @@
                     @include translateY(40px);
                     transition: 0.8s !important;
                     transition-delay: 0.4s !important;
+                    @include responsive (mobile-big, max) {
+                        margin-top: 30px;
+                        font-size: 12px;
+                        padding: 6px 22px;
+                    }
                 }
             }
         }
@@ -2261,8 +2304,19 @@
     position: relative;
     overflow: hidden;
 
+    @include responsive (ipad-portrait, max) {
+        padding: 90px 0 60px;
+    }
+
+    @include responsive (mobile-big, max) {
+        padding: 50px 0 40px;
+    }
+
     .container {
         position: relative;
+        @include responsive (mobile-big, max) {
+            padding: 0 30px;
+        }
     }
 
     .section-title {
@@ -2270,6 +2324,12 @@
         line-height: 30px;
         font-weight: 600;
         margin-bottom: 30px;
+
+        @include responsive (mobile-big, max) {
+            font-size: 16px;
+            line-height: 26px;
+            margin-bottom: 15px;
+        }
     }
 
     p {
@@ -2279,6 +2339,15 @@
         font-weight: 700;
         width: 94%;
         margin-bottom: 0;
+
+        @include responsive (mini-desktop, max) {
+            width: 100%;
+        }
+
+        @include responsive (mobile-big, max) {
+            font-size: 20px;
+            line-height: 28px;
+        }
     }
 }
 
@@ -2352,9 +2421,77 @@
         }
     }
 
+    .dropdown {
+        background-color: $purple;
+        padding:0px 30px 150px;
+        .btn {
+            &.btn-link {
+                color: $white;
+                width: 100%;
+                text-align: left;
+                border-bottom: 2px solid $white;
+                border-radius: 0;
+                padding-right: 20px;
+                position: relative;
+                padding-bottom: 5px;
+                &:after {
+                    content: '';
+                    width: 8px;
+                    height: 8px;
+                    border-right: 1px solid #fff;
+                    border-bottom: 1px solid #fff;
+                    border-left: 0;
+                    border-top: 0;
+                    position: absolute;
+                    top: calc(50% - 8px);
+                    right: 0;
+                    -webkit-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                }
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+        .dropdown-menu {
+            width: calc(100% - 60px);
+            transform: none !important;
+            top: 72px !important;
+            inset: auto !important;
+            padding: 10px;
+            .press-release-cat-list {
+                margin-bottom: 5px;
+                a {
+                    color: $dark-gray;
+                    font-size: 16px;
+                    padding: 5px 10px;
+                    font-weight: 400;
+                    text-decoration: underline;
+                    text-decoration-color: $green;
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
     .press-releases-wrapper {
         padding-left: 50px;
         padding-right: 20px;
+
+        @include responsive (ipad-portrait, max) {
+            margin-top: -70px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        @include responsive (mobile-big, max) {
+            margin-top: -70px;
+            padding-left: 40px;
+            padding-right: 40px;
+            position: relative;
+        }
 
         .row {
             .col {
@@ -2403,6 +2540,10 @@
                         margin-bottom: 12px;
                         color: $purple;
                         text-decoration: none;
+                        @include responsive (mobile-big, max) {
+                            font-size: 20px;
+                            line-height: 28px;
+                        }
                     }
                 }
 
@@ -2413,6 +2554,11 @@
                     font-weight: 600;
                     width: 100%;
                     margin-bottom: 0;
+
+                    @include responsive (mobile-big, max) {
+                        font-size: 13px;
+                        line-height: 18px;
+                    }
                 }
 
                 .read-more {
@@ -3015,7 +3161,8 @@
                         @include responsive (mobile-big, max) {
                             font-size: 16px;
                             line-height: 22px;
-                            margin-bottom: 8px;
+                            max-width: 540px;
+                            margin: 0 auto 8px;
                         }
                     }
                 }
@@ -3031,6 +3178,7 @@
                     @include responsive (mobile-big, max) {
                         font-size: 13px;
                         line-height: 18px;
+                        max-width: 540px;
                     }
                 }
 
