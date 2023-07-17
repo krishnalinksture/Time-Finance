@@ -653,6 +653,27 @@
             }
         }
     }
+
+    &.bg-purple {
+        .content {
+            .section-title {
+            color: $white;
+            }
+
+            p {
+                color: $white;
+                a {
+                    &:hover {
+                        color: $white;
+                    }
+                }
+            }
+
+            ul {
+                color: $white;
+            }
+        }
+    }
 }
 
 //Trustpilot block
@@ -1836,8 +1857,8 @@
             color: $white;
         }
 
-        .btn {
-            &:hover {
+        .email, .phone-number  {
+            .btn {
                 background-color: transparent;
                 border-color: transparent;
             }
@@ -2979,13 +3000,34 @@
 .calculator-block {
     padding: 150px 0;
 
+    @include responsive (laptop, max) {
+        padding: 120px 0;
+    }
+
+    @include responsive (ipad-portrait, max) {
+        padding: 90px 0;
+    }
+
     .calculator-wrapper {
         padding-left: 45px;
         padding-right: 45px;
 
+        @include responsive (ipad-portrait, max) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
         .content {
             background-color: $purple;
             padding: 96px 0 134px;
+
+            @include responsive (ipad-portrait, max) {
+               padding: 48px 0 35px;
+            }
+
+            @include responsive (mobile-big, max) {
+                padding: 48px 30px 35px;
+             }
 
             .section-title {
                 font-size: 32px;
@@ -3001,6 +3043,15 @@
                 color: $white;
                 margin: 0 auto 83px;
                 width: 60%;
+
+                @include responsive (ipad-portrait, max) {
+                   width: 70%;
+                }
+
+                @include responsive (mobile-big, max) {
+                    width: 100%;
+                    margin: 0 auto 32px;
+                 }
             }
 
             .value-title {
@@ -3015,6 +3066,10 @@
                 @include flex;
                 @include justify-content(center);
 
+                @include responsive (mobile-big, max) {
+                    margin-bottom: 16px;
+                }
+
                 input {
                     font-size: 22px;
                     line-height: 22px;
@@ -3022,7 +3077,12 @@
                     @include borderRadius(50px 0 0 50px);
                     border: none;
                     padding: 17px 55px 17px 35px;
-                    vertical-align: middle
+                    vertical-align: middle;
+
+                    @include responsive (mobile-big, max) {
+                        width: 200px;
+                        padding: 17px 35px 17px 30px;
+                    }
                 }
 
                 .btn {
@@ -3038,6 +3098,10 @@
                     &:hover {
                         background-color: $dark-gray;
                         border-color: $dark-gray;
+                    }
+
+                    @include responsive (mobile-big, max) {
+                        padding: 20px 25px;
                     }
                 }
             }
@@ -3055,6 +3119,10 @@
                 font-weight: 600;
                 color: $white;
                 margin-bottom: 7px;
+
+                @include responsive (mobile-big, max) {
+                    font-size: 60px;
+                }
             }
 
             .approval-title {
@@ -4700,6 +4768,14 @@
             transition: 0.6s;
             &:hover {
                 text-decoration: underline;
+            }
+        }
+    }
+
+    &.bg-white, &.bg-grey {
+        .view-all-case-studies {
+            a {
+                color: $purple;
             }
         }
     }

@@ -18,7 +18,7 @@ if ( ! empty( $main_title ) || ! empty( $content ) || ! empty( $value_title ) ||
 	<section class="calculator-block" id="<?php echo $section_id; //phpcs:ignore ?>">
 		<div class="container">
 			<div class="row justify-content-center text-center">
-				<div class="col calculator-wrapper">
+				<div class="col-md-12 col-sm-9 calculator-wrapper">
 					<div class="content">
 						<?php
 						if ( ! empty( $main_title ) ) {

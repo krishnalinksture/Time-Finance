@@ -1516,6 +1516,14 @@ header {
         margin: 30px 0;
         padding-left: 5.5%;
         padding-right: 5.33%; } }
+  .left-right-content-image.bg-purple .content .section-title {
+    color: #fff; }
+  .left-right-content-image.bg-purple .content p {
+    color: #fff; }
+    .left-right-content-image.bg-purple .content p a:hover {
+      color: #fff; }
+  .left-right-content-image.bg-purple .content ul {
+    color: #fff; }
 
 .trustpilot-block {
   padding: 156px 0 186px 0; }
@@ -2332,7 +2340,7 @@ header {
     background-color: #fff; }
   .office-locations-block.bg-purple .section-title {
     color: #fff; }
-  .office-locations-block.bg-purple .btn:hover {
+  .office-locations-block.bg-purple .email .btn, .office-locations-block.bg-purple .phone-number .btn {
     background-color: transparent;
     border-color: transparent; }
 
@@ -3117,12 +3125,28 @@ header {
 
 .calculator-block {
   padding: 150px 0; }
+  @media (max-width: 1199px) {
+    .calculator-block {
+      padding: 120px 0; } }
+  @media (max-width: 991px) {
+    .calculator-block {
+      padding: 90px 0; } }
   .calculator-block .calculator-wrapper {
     padding-left: 45px;
     padding-right: 45px; }
+    @media (max-width: 991px) {
+      .calculator-block .calculator-wrapper {
+        padding-left: 15px;
+        padding-right: 15px; } }
     .calculator-block .calculator-wrapper .content {
       background-color: #3d1050;
       padding: 96px 0 134px; }
+      @media (max-width: 991px) {
+        .calculator-block .calculator-wrapper .content {
+          padding: 48px 0 35px; } }
+      @media (max-width: 767px) {
+        .calculator-block .calculator-wrapper .content {
+          padding: 48px 30px 35px; } }
       .calculator-block .calculator-wrapper .content .section-title {
         font-size: 32px;
         line-height: 32px;
@@ -3135,6 +3159,13 @@ header {
         color: #fff;
         margin: 0 auto 83px;
         width: 60%; }
+        @media (max-width: 991px) {
+          .calculator-block .calculator-wrapper .content p {
+            width: 70%; } }
+        @media (max-width: 767px) {
+          .calculator-block .calculator-wrapper .content p {
+            width: 100%;
+            margin: 0 auto 32px; } }
       .calculator-block .calculator-wrapper .content .value-title {
         font-size: 18px;
         line-height: 18px;
@@ -3152,6 +3183,9 @@ header {
         -ms-flex-pack: center;
         -webkit-justify-content: center;
         justify-content: center; }
+        @media (max-width: 767px) {
+          .calculator-block .calculator-wrapper .content form {
+            margin-bottom: 16px; } }
         .calculator-block .calculator-wrapper .content form input {
           font-size: 22px;
           line-height: 22px;
@@ -3163,6 +3197,10 @@ header {
           border: none;
           padding: 17px 55px 17px 35px;
           vertical-align: middle; }
+          @media (max-width: 767px) {
+            .calculator-block .calculator-wrapper .content form input {
+              width: 200px;
+              padding: 17px 35px 17px 30px; } }
         .calculator-block .calculator-wrapper .content form .btn {
           -webkit-border-radius: 0 50px 50px 0;
           -moz-border-radius: 0 50px 50px 0;
@@ -3178,6 +3216,9 @@ header {
           .calculator-block .calculator-wrapper .content form .btn:hover {
             background-color: #4D4D4D;
             border-color: #4D4D4D; }
+          @media (max-width: 767px) {
+            .calculator-block .calculator-wrapper .content form .btn {
+              padding: 20px 25px; } }
       .calculator-block .calculator-wrapper .content .result-title {
         font-size: 18px;
         line-height: 18px;
@@ -3189,6 +3230,9 @@ header {
         font-weight: 600;
         color: #fff;
         margin-bottom: 7px; }
+        @media (max-width: 767px) {
+          .calculator-block .calculator-wrapper .content .result {
+            font-size: 60px; } }
       .calculator-block .calculator-wrapper .content .approval-title {
         font-size: 12px;
         line-height: 12px;
@@ -4317,6 +4361,8 @@ header {
       transition: 0.6s; }
       .case-study-block .view-all-case-studies a:hover {
         text-decoration: underline; }
+  .case-study-block.bg-white .view-all-case-studies a, .case-study-block.bg-grey .view-all-case-studies a {
+    color: #3d1050; }
 
 .modal-open header {
   z-index: 999999; }
