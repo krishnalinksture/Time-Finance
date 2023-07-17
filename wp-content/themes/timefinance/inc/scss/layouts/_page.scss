@@ -1485,6 +1485,7 @@
                     bottom: -58px; 
                     max-height: 58px;
                     padding: 20px;
+                    width: 100%;
                 }
 
                 .card-title {
@@ -2361,6 +2362,14 @@
     .filter-post-left {
         position: relative;
         padding-bottom: 210px;
+
+        @include responsive (laptop, max) {
+            padding-bottom: 170px;
+        }
+
+        @include responsive (ipad-portrait, max) {
+            padding-bottom: 150px;
+        }
 
         &:before {
             height: 100%;

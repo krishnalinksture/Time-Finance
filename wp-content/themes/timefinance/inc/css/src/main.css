@@ -2127,7 +2127,8 @@ header {
           .card-block .container .card-box .hover-card {
             bottom: -58px;
             max-height: 58px;
-            padding: 20px; } }
+            padding: 20px;
+            width: 100%; } }
         .card-block .container .card-box .hover-card .card-title {
           font-size: 22px;
           font-weight: 600;
@@ -2761,6 +2762,12 @@ header {
   .press-release-filter-block .filter-post-left {
     position: relative;
     padding-bottom: 210px; }
+    @media (max-width: 1199px) {
+      .press-release-filter-block .filter-post-left {
+        padding-bottom: 170px; } }
+    @media (max-width: 991px) {
+      .press-release-filter-block .filter-post-left {
+        padding-bottom: 150px; } }
     .press-release-filter-block .filter-post-left:before {
       height: 100%;
       content: "";
