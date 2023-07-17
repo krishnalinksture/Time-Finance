@@ -17,7 +17,7 @@ $time_blog_view_all_button = get_field( 'time_blog_view_all_button', 'option' );
 		if ( ! empty( $time_blog_title ) || ! empty( $time_blog_content ) ) {
 			?>
 			<div class="row">
-				<div class="col-9">
+				<div class="col-xl-9 col-lg-11 col-md-12">
 					<?php
 					if ( ! empty( $time_blog_title ) ) {
 						echo '<' . esc_attr( $time_blog_select_tag ) . ' class="section-title h-4">' . esc_html( $time_blog_title ) . '</' . esc_attr( $time_blog_select_tag ) . '>';
@@ -36,7 +36,7 @@ $time_blog_view_all_button = get_field( 'time_blog_view_all_button', 'option' );
 <section class="time-blog-filter-block">
 	<div class="container">
 		<div class="row align-items-start">
-			<div class="col-3 filter-post-left">
+			<div class="col col-lg-3 col-md-7 filter-post-left d-none d-md-block">
 				<div class="cat-filter">
 					<?php echo esc_html( 'FILTER POSTS:' ); ?>
 				</div>
@@ -74,8 +74,8 @@ $time_blog_view_all_button = get_field( 'time_blog_view_all_button', 'option' );
 			<?php
 			if ( have_posts() ) {
 				?>
-				<div class="col-9 time-blog-wrapper">
-					<div class="row row-cols-1 row-cols-lg-2">
+				<div class="col col-lg-9 col-md-12 time-blog-wrapper">
+					<div class="row row-cols-1 row-cols-md-2">
 						<?php
 						while ( have_posts() ) {
 							the_post();
