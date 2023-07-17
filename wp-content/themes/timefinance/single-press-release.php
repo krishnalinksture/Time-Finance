@@ -31,7 +31,7 @@ if ( ! empty( $image ) || ! empty( $all_articles_button ) ) {
 		</div>
 		<div class="container">
 			<div class="row justify-content-center">
-				<div class="col-4 left">
+				<div class="col-lg-4 col-md-12 left">
 					<div class="press-release-detail-content sticky-top">
 						<div class="press-release-date">
 							<?php
@@ -60,11 +60,14 @@ if ( ! empty( $image ) || ! empty( $all_articles_button ) ) {
 						?>
 					</div>
 				</div>
-				<div class="col-8 right">
-					<div class="press-release-date">
+				<div class="col-lg-8 col-md-12 right">
+					<div class="press-release-date d-lg-none">
 						<?php
 						echo get_the_date( 'm F Y', get_the_ID() ) . ' / ' . wp_strip_all_tags( get_the_term_list( get_the_ID(), 'press-release-categories', ' ', ', ', ' ' ) ); //phpcs:ignore
 						?>
+					</div>
+					<div class="press-release-title d-lg-none">
+						<?php echo get_the_title(); //phpcs:ignore ?>
 					</div>
 					<?php
 					$_term = get_queried_object();

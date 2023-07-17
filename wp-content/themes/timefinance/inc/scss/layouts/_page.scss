@@ -1222,6 +1222,9 @@
                         font-weight: 600;
                         width: 45%;
                         margin-left: 10px;
+                        @include responsive (mobile-big, max) {
+                            width: 100%;
+                        }
                     }
                 }
             }
@@ -4897,6 +4900,24 @@
             .right {
                 padding-left: 38px;
                 padding-top: 8px;
+
+                .time-blog-date {
+                    font-size: 12px;
+                    line-height: 15px;
+                    letter-spacing: 1px;
+                    font-weight: 600;
+                    color: $green;
+                    text-transform: uppercase;
+                    margin-bottom: 39px;
+                }
+
+                .time-blog-title {
+                    font-size: 40px;
+                    line-height: 42px;
+                    font-weight: 700;
+                    width: 90%;
+                    margin-bottom: 64px;
+                }
             }
 
             .left {
@@ -5010,6 +5031,24 @@
             .right {
                 padding-left: 38px;
                 padding-top: 8px;
+
+                .case-study-date {
+                    font-size: 12px;
+                    line-height: 15px;
+                    letter-spacing: 1px;
+                    font-weight: 600;
+                    color: $green;
+                    text-transform: uppercase;
+                    margin-bottom: 39px;
+                }
+
+                .case-study-title {
+                    font-size: 40px;
+                    line-height: 42px;
+                    font-weight: 700;
+                    width: 90%;
+                    margin-bottom: 64px;
+                }
             }
 
             .left {
@@ -5123,6 +5162,24 @@
             .right {
                 padding-left: 38px;
                 padding-top: 8px;
+
+                .press-release-date {
+                    font-size: 12px;
+                    line-height: 15px;
+                    letter-spacing: 1px;
+                    font-weight: 600;
+                    color: $green;
+                    text-transform: uppercase;
+                    margin-bottom: 39px;
+                }
+
+                .press-release-title {
+                    font-size: 40px;
+                    line-height: 42px;
+                    font-weight: 700;
+                    width: 90%;
+                    margin-bottom: 64px;
+                }
             }
 
             .left {

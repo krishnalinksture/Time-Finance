@@ -1936,6 +1936,9 @@ header {
             font-weight: 600;
             width: 45%;
             margin-left: 10px; }
+            @media (max-width: 767px) {
+              .image-bulletpoint-groups .container-lg .content-box .bulletpoint-group .bulletpoints li {
+                width: 100%; } }
 
 .video-block {
   padding: 110px 0; }
@@ -4678,6 +4681,20 @@ header {
   .time-blog-detail .container .row .right {
     padding-left: 38px;
     padding-top: 8px; }
+    .time-blog-detail .container .row .right .time-blog-date {
+      font-size: 12px;
+      line-height: 15px;
+      letter-spacing: 1px;
+      font-weight: 600;
+      color: #00a98f;
+      text-transform: uppercase;
+      margin-bottom: 39px; }
+    .time-blog-detail .container .row .right .time-blog-title {
+      font-size: 40px;
+      line-height: 42px;
+      font-weight: 700;
+      width: 90%;
+      margin-bottom: 64px; }
   .time-blog-detail .container .row .left {
     padding-top: 8px; }
   .time-blog-detail .container .row .time-blog-detail-content.sticky-top {
@@ -4755,6 +4772,20 @@ header {
   .case-study-detail .container .row .right {
     padding-left: 38px;
     padding-top: 8px; }
+    .case-study-detail .container .row .right .case-study-date {
+      font-size: 12px;
+      line-height: 15px;
+      letter-spacing: 1px;
+      font-weight: 600;
+      color: #00a98f;
+      text-transform: uppercase;
+      margin-bottom: 39px; }
+    .case-study-detail .container .row .right .case-study-title {
+      font-size: 40px;
+      line-height: 42px;
+      font-weight: 700;
+      width: 90%;
+      margin-bottom: 64px; }
   .case-study-detail .container .row .left {
     padding-top: 8px; }
   .case-study-detail .container .row .case-study-detail-content.sticky-top {
@@ -4832,6 +4863,20 @@ header {
   .press-release-detail .container .row .right {
     padding-left: 38px;
     padding-top: 8px; }
+    .press-release-detail .container .row .right .press-release-date {
+      font-size: 12px;
+      line-height: 15px;
+      letter-spacing: 1px;
+      font-weight: 600;
+      color: #00a98f;
+      text-transform: uppercase;
+      margin-bottom: 39px; }
+    .press-release-detail .container .row .right .press-release-title {
+      font-size: 40px;
+      line-height: 42px;
+      font-weight: 700;
+      width: 90%;
+      margin-bottom: 64px; }
   .press-release-detail .container .row .left {
     padding-top: 8px; }
   .press-release-detail .container .row .press-release-detail-content.sticky-top {
