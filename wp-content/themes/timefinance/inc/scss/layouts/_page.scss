@@ -3313,6 +3313,9 @@
                     padding: 5px 10px;
                     font-weight: 400;
                 }
+                &:last-child {
+                    margin-bottom: 0;
+                }
             }
         }
     }
