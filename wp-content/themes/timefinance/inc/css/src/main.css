@@ -4380,8 +4380,8 @@ header {
     flex-direction: column;
     -webkit-transform: translate(0, -50px);
     transform: translate(0, -50px);
-    height: auto;
-    overflow-y: auto;
+    height: 80%;
+    overflow-y: scroll;
     margin: 130px auto 1.75rem;
     border-radius: 0.3rem;
     -webkit-box-pack: center;
@@ -4393,6 +4393,20 @@ header {
     -moz-transition: 0.3s ease-in-out;
     -ms-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out; }
+    @media (max-width: 1199px) {
+      .modal-open footer .modal .modal-dialog {
+        max-width: 800px; } }
+    @media (max-width: 991px) {
+      .modal-open footer .modal .modal-dialog {
+        max-width: 500px;
+        height: 400px;
+        top: 50%;
+        margin: 0 auto 0;
+        transform: translateY(-50%) !important; } }
+    @media (max-width: 767px) {
+      .modal-open footer .modal .modal-dialog {
+        width: 96%;
+        height: 260px; } }
   .modal-open footer .modal.show .modal-dialog {
     -webkit-transform: none;
     transform: none; }
@@ -4403,6 +4417,11 @@ header {
       width: 600px;
       margin: 0 auto;
       padding: 1rem 1rem; }
+      @media (max-width: 991px) {
+        .modal-open footer .modal .modal-content .modal-header,
+        .modal-open footer .modal .modal-content .modal-body {
+          width: 100%;
+          padding: 2rem 2rem; } }
     .modal-open footer .modal .modal-content .modal-header .prs-logo {
       width: 300px; }
 
@@ -4414,6 +4433,12 @@ footer {
   background-color: #3d1050;
   color: #fff;
   padding: 87px 0; }
+  @media (max-width: 991px) {
+    footer {
+      padding: 50px 0; } }
+  @media (max-width: 767px) {
+    footer .container {
+      padding: 0 30px; } }
   footer .modal {
     z-index: 99999; }
   footer .row + .row {
@@ -4429,6 +4454,9 @@ footer {
     line-height: 33px;
     text-decoration: none;
     margin-bottom: 70px; }
+    @media (max-width: 767px) {
+      footer .footer-link {
+        margin-bottom: 50px; } }
   footer .btn.btn-link {
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     color: #fff;
@@ -4442,6 +4470,9 @@ footer {
     -moz-border-radius: 0;
     -ms-border-radius: 0;
     border-radius: 0; }
+    @media (max-width: 991px) {
+      footer .btn.btn-link {
+        width: 100%; } }
     footer .btn.btn-link::before {
       content: '';
       height: 1px;
@@ -4470,11 +4501,17 @@ footer {
     footer .btn.btn-link:hover {
       color: #fff;
       text-decoration: none; }
+  @media (max-width: 767px) {
+    footer .footer-menu-first {
+      margin-top: 50px; } }
   footer .footer-menu-first .menu {
     list-style: none;
     padding: 0;
     display: block;
     column-count: 2; }
+    @media (max-width: 767px) {
+      footer .footer-menu-first .menu {
+        margin-bottom: 0; } }
     footer .footer-menu-first .menu li {
       margin-bottom: 10px; }
       footer .footer-menu-first .menu li a {
@@ -4491,11 +4528,20 @@ footer {
         transition: 0.5s ease-in-out; }
         footer .footer-menu-first .menu li a:hover {
           border-color: rgba(255, 255, 255, 0.75); }
+  @media (max-width: 767px) {
+    footer .footer-logo {
+      margin-bottom: 30px; } }
   footer .footer-logo .logo {
     width: auto;
     max-height: 67px; }
   footer .footer-address p {
-    line-height: 20px; }
+    line-height: 20px;
+    font-size: 12px; }
+    @media (max-width: 767px) {
+      footer .footer-address p {
+        margin-bottom: 20px; }
+        footer .footer-address p br {
+          display: none; } }
   footer .footer-social {
     margin-top: auto;
     display: -webkit-box;
@@ -4509,19 +4555,39 @@ footer {
     -webkit-align-items: center;
     align-items: center; }
     footer .footer-social a img {
-      max-height: 17px;
+      max-height: 20px;
       margin-right: 16px; }
   footer .footer-privacy {
     opacity: 0.5; }
+    @media (max-width: 767px) {
+      footer .footer-privacy {
+        margin-top: 50px; } }
     footer .footer-privacy p {
       line-height: 20px;
+      font-size: 12px;
       margin-bottom: 23px; }
+      @media (max-width: 767px) {
+        footer .footer-privacy p br {
+          display: none; } }
     footer .footer-privacy ul {
       list-style: none;
       padding: 0;
       margin: 0; }
       footer .footer-privacy ul li {
         margin-bottom: 2px; }
+        @media (max-width: 767px) {
+          footer .footer-privacy ul li {
+            display: inline-block;
+            margin-right: 20px;
+            margin-bottom: 0; }
+            footer .footer-privacy ul li:last-child {
+              margin-right: 0; } }
+        @media screen and (max-width: 374px) {
+          footer .footer-privacy ul li {
+            margin-right: 10px; }
+            footer .footer-privacy ul li:last-child {
+              margin-right: 0; } }
         footer .footer-privacy ul li a {
           color: #fff;
-          text-decoration: none; }
+          text-decoration: none;
+          font-size: 12px; }
