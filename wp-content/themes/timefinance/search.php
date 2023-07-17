@@ -18,23 +18,27 @@ if ( ! empty( $banner_title ) || ! empty( $search_again ) || ! empty( $find_out_
 			<div class="row justify-content-center text-center">
 				<div class="col">
 					<?php
-					if ( ! empty( $banner_title ) ) {
-						echo '<' . esc_attr( $search_select_tag ) . ' class="section-title h-4">' . esc_html( $banner_title ) . '</' . esc_attr( $search_select_tag ) . '>';
-					}
-					if ( is_search() ) {
-						?>
-						<div class="seach-word">
-							<?php echo get_search_query(); ?>
-						</div>
-						<?php
+					$allsearch = new WP_Query( "s=$s&showposts=0" );
+					if ( '' === $allsearch->query['s'] ) {
+						echo esc_html( 'Search Time Finance' );
+					} else {
+						if ( ! empty( $banner_title ) ) {
+							echo '<' . esc_attr( $search_select_tag ) . ' class="section-title h-4">' . esc_html( $banner_title ) . '</' . esc_attr( $search_select_tag ) . '>';
+						}
+						if ( is_search() ) {
+							?>
+							<div class="seach-word">
+								<?php echo get_search_query(); ?>
+							</div>
+							<div class="word-count">
+								<?php
+								echo $allsearch->found_posts . ' Results'; //phpcs:ignore
+								?>
+							</div>
+							<?php
+						}
 					}
 					?>
-					<div class="word-count">
-						<?php
-						$allsearch = new WP_Query( "s=$s&showposts=0" );
-						echo $allsearch->found_posts . ' Results'; //phpcs:ignore
-						?>
-					</div>
 				</div>
 			</div>
 		</div>
