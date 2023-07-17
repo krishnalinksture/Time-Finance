@@ -18,7 +18,7 @@ $resources_form            = ( ! empty( $resources_select_form ) ) ? '[forminato
 		if ( ! empty( $resources_title ) || ! empty( $resources_content ) ) {
 			?>
 			<div class="row">
-				<div class="col-9">
+				<div class="col-xl-9 col-lg-11 col-md-12">
 					<?php
 					if ( ! empty( $resources_title ) ) {
 						echo '<' . esc_attr( $resources_select_tag ) . ' class="section-title h-4">' . esc_html( $resources_title ) . '</' . esc_attr( $resources_select_tag ) . '>';
@@ -113,8 +113,8 @@ $resources_form            = ( ! empty( $resources_select_form ) ) ? '[forminato
 			<?php
 			if ( have_posts() ) {
 				?>
-				<div class="col-9 resources-wrapper">
-					<div class="row row-cols-1 row-cols-lg-2">
+				<div class="col col-lg-9 col-md-12 resources-wrapper">
+					<div class="row row-cols-1 row-cols-md-2">
 						<?php
 						while ( have_posts() ) {
 							the_post();

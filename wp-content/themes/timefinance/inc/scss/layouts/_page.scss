@@ -2891,8 +2891,19 @@
     position: relative;
     overflow: hidden;
 
+    @include responsive (ipad-portrait, max) {
+        padding: 90px 0 60px;
+    }
+
+    @include responsive (mobile-big, max) {
+        padding: 50px 0 40px;
+    }
+
     .container {
         position: relative;
+        @include responsive (mobile-big, max) {
+            padding: 0 30px;
+        }
     }
 
     .section-title {
@@ -2900,6 +2911,11 @@
         line-height: 30px;
         font-weight: 600;
         margin-bottom: 30px;
+        @include responsive (mobile-big, max) {
+            font-size: 16px;
+            line-height: 26px;
+            margin-bottom: 15px;
+        }
     }
 
     p {
@@ -2909,6 +2925,14 @@
         font-weight: 700;
         width: 94%;
         margin-bottom: 0;
+        @include responsive (mini-desktop, max) {
+            width: 100%;
+        }
+
+        @include responsive (mobile-big, max) {
+            font-size: 20px;
+            line-height: 28px;
+        }
     }
 }
 
@@ -2990,9 +3014,77 @@
         }
     }
 
+    .dropdown {
+        background-color: $purple;
+        padding:0px 30px 150px;
+        .btn {
+            &.btn-link {
+                color: $white;
+                width: 100%;
+                text-align: left;
+                border-bottom: 2px solid $white;
+                border-radius: 0;
+                padding-right: 20px;
+                position: relative;
+                padding-bottom: 5px;
+                &:after {
+                    content: '';
+                    width: 8px;
+                    height: 8px;
+                    border-right: 1px solid #fff;
+                    border-bottom: 1px solid #fff;
+                    border-left: 0;
+                    border-top: 0;
+                    position: absolute;
+                    top: calc(50% - 8px);
+                    right: 0;
+                    -webkit-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                }
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+        .dropdown-menu {
+            width: calc(100% - 60px);
+            transform: none !important;
+            top: 72px !important;
+            inset: auto !important;
+            padding: 10px;
+            .resources-cat-list {
+                margin-bottom: 5px;
+                a {
+                    color: $dark-gray;
+                    font-size: 16px;
+                    padding: 5px 10px;
+                    font-weight: 400;
+                    text-decoration: underline;
+                    text-decoration-color: $green;
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
     .resources-wrapper {
         padding-left: 50px;
         padding-right: 20px;
+
+        @include responsive (ipad-portrait, max) {
+            margin-top: -70px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        @include responsive (mobile-big, max) {
+            margin-top: -70px;
+            padding-left: 40px;
+            padding-right: 40px;
+            position: relative;
+        }
 
         .row {
             .col {
@@ -3023,6 +3115,9 @@
                 text-transform: uppercase;
                 color: $green;
                 margin-bottom: 28px;
+                @include responsive (mobile-big, max) {
+                    margin-bottom: 31px;
+                }
             }
 
             .resources-title {
@@ -3030,6 +3125,12 @@
                 line-height: 32px;
                 font-weight: 700;
                 margin-bottom: 58px;
+
+                @include responsive (mobile-big, max) {
+                    font-size: 20px;
+                    line-height: 28px;
+                    margin-bottom: 48px;
+                }
             }
 
             .popup-form {
@@ -3039,6 +3140,12 @@
                     letter-spacing: normal;
                     padding: 8px 20px;
                     font-weight: 400;
+
+                    @include responsive (mobile-big, max) {
+                        font-size: 12px;
+                        line-height: 12px;
+                        padding: 7px 20px;
+                    }
                 }
             }
         }

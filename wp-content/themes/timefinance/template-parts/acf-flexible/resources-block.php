@@ -21,7 +21,7 @@ if ( ! empty( $main_title ) || ! empty( $content ) ) {
 			if ( ! empty( $main_title ) || ! empty( $content ) ) {
 				?>
 				<div class="row">
-					<div class="col-9">
+					<div class="col-xl-9 col-lg-11 col-md-12">
 						<?php
 						if ( ! empty( $main_title ) ) {
 							echo '<' . esc_attr( $select_tag ) . ' class="section-title h-4">' . esc_html( $main_title ) . '</' . esc_attr( $select_tag ) . '>';
@@ -116,8 +116,8 @@ if ( ! empty( $main_title ) || ! empty( $content ) ) {
 					?>
 				</ul>
 			</div>
-			<div class="col-9 resources-wrapper">
-				<div class="row row-cols-1 row-cols-lg-2">
+			<div class="col col-lg-9 col-md-12 resources-wrapper">
+				<div class="row row-cols-1 row-cols-md-2">
 					<?php
 					$args = array(
 						'post_type'   => 'resources',
