@@ -16,7 +16,7 @@ $regulatory_news_view_all_button = get_field( 'regulatory_news_view_all_button',
 		if ( ! empty( $regulatory_news_title ) || ! empty( $regulatory_news_content ) ) {
 			?>
 			<div class="row">
-				<div class="col-9">
+				<div class="col-xl-9 col-lg-11 col-md-12">
 					<?php
 					if ( ! empty( $regulatory_news_title ) ) {
 						echo '<' . esc_attr( $regulatory_news_select_tag ) . ' class="section-title h-4">' . esc_html( $regulatory_news_title ) . '</' . esc_attr( $regulatory_news_select_tag ) . '>';
@@ -111,8 +111,8 @@ $regulatory_news_view_all_button = get_field( 'regulatory_news_view_all_button',
 			<?php
 			if ( have_posts() ) {
 				?>
-				<div class="col-9 regulatory-news-wrapper">
-					<div class="row row-cols-1 row-cols-lg-2">
+				<div class="col col-lg-9 col-md-12 regulatory-news-wrapper">
+					<div class="row row-cols-1 row-cols-md-2">
 						<?php
 						while ( have_posts() ) {
 							the_post();
