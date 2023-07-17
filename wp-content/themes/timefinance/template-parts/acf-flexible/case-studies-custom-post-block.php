@@ -37,7 +37,7 @@ $section_id                   = get_sub_field( 'section_id' ) ? get_sub_field( '
 <section class="case-studies-filter-block">
 	<div class="container">
 		<div class="row align-items-start">
-			<div class="col-3 filter-post-left d-none d-md-block">
+			<div class="col col-lg-3 col-md-7 filter-post-left d-none d-md-block">
 				<div class="cat-filter">
 					<?php echo esc_html( 'FILTER POSTS:' ); ?>
 				</div>

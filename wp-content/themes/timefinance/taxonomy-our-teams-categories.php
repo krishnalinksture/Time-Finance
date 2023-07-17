@@ -34,7 +34,7 @@ $our_team_content    = get_field( 'our_team_content', 'option' );
 <section class="our-team-filter-block">
 	<div class="container">
 		<div class="row align-items-start">
-			<div class="col-3 filter-post-left">
+			<div class="col col-lg-3 col-md-7 filter-post-left d-none d-md-block">
 				<div class="cat-filter">
 					<?php echo esc_html( 'FILTER POSTS:' ); ?>
 				</div>
@@ -49,6 +49,58 @@ $our_team_content    = get_field( 'our_team_content', 'option' );
 						?>
 						<li class="our-team-cat-list">
 							<a href="<?php echo get_category_link( $category->term_id ); //phpcs:ignore ?>"><?php echo $category->name; ?> </a>
+						</li>
+						<?php
+					}
+					if ( $view_all && ! empty( $view_all['url'] ) && ! empty( $view_all['title'] ) ) {
+						?>
+						<li class="our-team-cat-list">
+							<?php
+							$link_url    = $view_all['url'];
+							$link_title  = $view_all['title'];
+							$link_target = $view_all['target'] ? $view_all['target'] : '_self';
+							?>
+							<a href="<?php echo esc_url( $link_url ); ?>" class="btn btn-link" target="<?php echo esc_attr( $link_target ); ?>">
+								<?php echo esc_html( $link_title ); ?>
+							</a>
+						</li>
+						<?php
+					}
+					?>
+				</ul>
+			</div>
+			<div class="dropdown d-md-none">
+				<div class="cat-filter">
+					<?php echo esc_html( 'FILTER POSTS:' ); ?>
+				</div>
+				<button class="btn btn-link dropdown-toggle" type="button" id="dropdownMenuBdt" data-bs-toggle="dropdown" aria-expanded="false">
+					<?php echo esc_html( 'Teams' ); ?>
+				</button>
+				<ul class="dropdown-menu" aria-labelledby="dropdownMenuBdt">
+				<?php
+					$args       = array(
+						'taxonomy' => 'our-teams-categories',
+					);
+					$categories = get_categories( $args );
+
+					foreach ( $categories as $category ) {
+						?>
+						<li class="our-team-cat-list">
+							<a href="<?php echo get_category_link( $category->term_id ); //phpcs:ignore ?>"><?php echo $category->name; ?> </a>
+						</li>
+						<?php
+					}
+					if ( $view_all && ! empty( $view_all['url'] ) && ! empty( $view_all['title'] ) ) {
+						?>
+						<li class="our-team-cat-list">
+							<?php
+							$link_url    = $view_all['url'];
+							$link_title  = $view_all['title'];
+							$link_target = $view_all['target'] ? $view_all['target'] : '_self';
+							?>
+							<a href="<?php echo esc_url( $link_url ); ?>" class="btn btn-link" target="<?php echo esc_attr( $link_target ); ?>">
+								<?php echo esc_html( $link_title ); ?>
+							</a>
 						</li>
 						<?php
 					}

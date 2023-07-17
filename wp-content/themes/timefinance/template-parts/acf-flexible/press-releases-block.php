@@ -41,7 +41,7 @@ if ( ! empty( $main_title ) || ! empty( $content ) ) {
 <section class="press-release-filter-block">
 	<div class="container">
 		<div class="row align-items-start">
-			<div class="col-3 filter-post-left">
+			<div class="col col-lg-3 col-md-7 filter-post-left d-none d-md-block">
 				<div class="cat-filter">
 					<?php echo esc_html( 'FILTER POSTS:' ); ?>
 				</div>
@@ -66,6 +66,44 @@ if ( ! empty( $main_title ) || ! empty( $content ) ) {
 							$link_url    = $press_release_view_all_button['url'];
 							$link_title  = $press_release_view_all_button['title'];
 							$link_target = $press_release_view_all_button['target'] ? $press_release_view_all_button['target'] : '_self';
+							?>
+							<a href="<?php echo esc_url( $link_url ); ?>" class="btn btn-link" target="<?php echo esc_attr( $link_target ); ?>">
+								<?php echo esc_html( $link_title ); ?>
+							</a>
+						</li>
+						<?php
+					}
+					?>
+				</ul>
+			</div>
+			<div class="dropdown d-md-none">
+				<div class="cat-filter">
+					<?php echo esc_html( 'FILTER POSTS:' ); ?>
+				</div>
+				<button class="btn btn-link dropdown-toggle" type="button" id="dropdownMenuBdt" data-bs-toggle="dropdown" aria-expanded="false">
+					<?php echo esc_html( 'Teams' ); ?>
+				</button>
+				<ul class="dropdown-menu" aria-labelledby="dropdownMenuBdt">
+				<?php
+					$args       = array(
+						'taxonomy' => 'press-release-categories',
+					);
+					$categories = get_categories( $args );
+
+					foreach ( $categories as $category ) {
+						?>
+						<li class="press-release-cat-list">
+							<a href="<?php echo get_category_link( $category->term_id ); //phpcs:ignore ?>"><?php echo $category->name; ?> </a>
+						</li>
+						<?php
+					}
+					if ( $view_all && ! empty( $view_all['url'] ) && ! empty( $view_all['title'] ) ) {
+						?>
+						<li class="press-release-cat-list">
+							<?php
+							$link_url    = $view_all['url'];
+							$link_title  = $view_all['title'];
+							$link_target = $view_all['target'] ? $view_all['target'] : '_self';
 							?>
 							<a href="<?php echo esc_url( $link_url ); ?>" class="btn btn-link" target="<?php echo esc_attr( $link_target ); ?>">
 								<?php echo esc_html( $link_title ); ?>
