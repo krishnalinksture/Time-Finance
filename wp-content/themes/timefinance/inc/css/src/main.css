@@ -3829,9 +3829,18 @@ header {
 
 .our-history-block {
   padding: 120px 0; }
+  @media (max-width: 767px) {
+    .our-history-block {
+      padding: 55px 0; } }
   .our-history-block .history-wrapper {
     padding: 35px 35px 0 35px;
     position: relative; }
+    @media (max-width: 1199px) {
+      .our-history-block .history-wrapper {
+        padding: 35px 10px 0 10px; } }
+    @media (max-width: 991px) {
+      .our-history-block .history-wrapper {
+        padding: 35px 0 0 0; } }
     .our-history-block .history-wrapper .separator {
       position: absolute;
       top: 0;
@@ -3855,20 +3864,47 @@ header {
         background-color: #3d1050;
         width: 40px;
         height: 2px; }
+    @media (max-width: 767px) {
+      .our-history-block .history-wrapper .row {
+        position: relative;
+        z-index: 9; } }
     .our-history-block .history-wrapper .row .history-card {
       padding-left: 0;
       padding-right: 16px; }
+      @media (max-width: 767px) {
+        .our-history-block .history-wrapper .row .history-card {
+          padding-left: 30px;
+          padding-right: 30px; } }
     .our-history-block .history-wrapper .row.justify-content-end .history-card {
       padding-left: 18px;
       padding-right: 0; }
+      @media (max-width: 767px) {
+        .our-history-block .history-wrapper .row.justify-content-end .history-card {
+          padding-left: 30px;
+          padding-right: 30px; } }
     .our-history-block .history-wrapper .row + .row {
       margin-top: -90px; }
+      @media (max-width: 767px) {
+        .our-history-block .history-wrapper .row + .row {
+          margin-top: 0; } }
   .our-history-block .section-title {
     font-size: 32px;
     line-height: 42px;
     margin-bottom: 133px; }
+    @media (max-width: 767px) {
+      .our-history-block .section-title {
+        font-size: 20px;
+        line-height: 28px;
+        margin-bottom: 60px; } }
+  @media (max-width: 767px) {
+    .our-history-block .history-card {
+      margin-bottom: 35px; } }
   .our-history-block .history-card .card-content {
     padding: 25px 0 35px; }
+    @media (max-width: 767px) {
+      .our-history-block .history-card .card-content {
+        padding: 28px 15px 42px 15px;
+        background-color: #fff; } }
     .our-history-block .history-card .card-content .card-title {
       text-transform: uppercase;
       font-size: 11px;
@@ -3882,6 +3918,15 @@ header {
       line-height: 33px;
       font-weight: 600;
       width: 70%; }
+      @media (max-width: 991px) {
+        .our-history-block .history-card .card-content .card-text {
+          width: 80%; } }
+      @media (max-width: 767px) {
+        .our-history-block .history-card .card-content .card-text {
+          font-size: 16px;
+          line-height: 22px;
+          margin-top: 19px;
+          width: 100%; } }
 
 .content-block {
   padding: 32px 0; }
@@ -4305,7 +4350,7 @@ header {
           margin-bottom: 78px; } }
       @media (max-width: 767px) {
         .career-details-block .career-wrapper .careers-box {
-          margin-bottom: 40px; } }
+          margin-bottom: 48px; } }
       .career-details-block .career-wrapper .careers-box .careers-title {
         font-size: 18px;
         font-weight: 700;
@@ -4338,7 +4383,8 @@ header {
         @media (max-width: 767px) {
           .career-details-block .career-wrapper .careers-box .careers-content .btn {
             font-size: 14px;
-            line-height: 14px; } }
+            line-height: 14px;
+            margin-top: 16px; } }
         .career-details-block .career-wrapper .careers-box .careers-content .btn:hover {
           background-color: #3d1050;
           border-color: #3d1050; }
@@ -4346,7 +4392,8 @@ header {
         padding-left: 0; }
         @media (max-width: 767px) {
           .career-details-block .career-wrapper .careers-box .careers-content .text-wrapper {
-            padding-left: 10px; } }
+            padding-left: 10px;
+            margin-top: 25px; } }
   .career-details-block.style-2 {
     background-color: #F5F3F6;
     padding: 115px 0; }
@@ -4463,14 +4510,15 @@ header {
             .career-details-block.style-2 .accordion-item .accordion-collapse .accordion-body .careers-content .btn {
               font-size: 14px;
               line-height: 14px;
-              padding: 10px 32px; } }
+              padding: 10px 32px;
+              margin-top: 48px; } }
         .career-details-block.style-2 .accordion-item .accordion-collapse .accordion-body .careers-content .text-wrapper {
           padding-top: 23px;
           padding-left: 0;
           margin-left: -5px; }
           @media (max-width: 767px) {
             .career-details-block.style-2 .accordion-item .accordion-collapse .accordion-body .careers-content .text-wrapper {
-              padding: 23px 15px 0 15px; } }
+              padding: 40px 15px 0 15px; } }
           .career-details-block.style-2 .accordion-item .accordion-collapse .accordion-body .careers-content .text-wrapper p {
             font-size: 16px;
             line-height: 23px;

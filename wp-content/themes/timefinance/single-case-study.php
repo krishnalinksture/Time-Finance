@@ -61,6 +61,11 @@ if ( ! empty( $image ) || ! empty( $all_articles_button ) ) {
 					</div>
 				</div>
 				<div class="col-8 right">
+					<div class="case-study-date">
+						<?php
+						echo get_the_date( 'm F Y', get_the_ID() ) . ' / ' . wp_strip_all_tags( get_the_term_list( get_the_ID(), 'case-study-categories', ' ', ', ', ' ' ) ); //phpcs:ignore
+						?>
+					</div>
 					<?php
 					$_term = get_queried_object();
 					if ( have_rows( 'page_builder', $_term ) ) {

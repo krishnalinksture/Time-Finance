@@ -3760,10 +3760,19 @@
 //Our history block
 .our-history-block {
     padding: 120px 0;
+    @include responsive (mobile-big, max) {
+        padding: 55px 0;
+    }
 
     .history-wrapper {
         padding: 35px 35px 0 35px;
         position: relative;
+        @include responsive (laptop, max) {
+            padding: 35px 10px 0 10px; 
+        }
+        @include responsive (ipad-portrait, max) {
+            padding: 35px 0 0 0; 
+        }
 
         .separator {
             position: absolute;
@@ -3795,20 +3804,35 @@
         }
 
         .row {
+            @include responsive (mobile-big, max) { 
+                position: relative;
+                z-index: 9;
+            }
             .history-card {
                 padding-left: 0;
                 padding-right: 16px;
+                @include responsive (mobile-big, max) { 
+                    padding-left: 30px;
+                    padding-right: 30px;
+                }
             }
 
             &.justify-content-end {
                 .history-card {
                     padding-left: 18px;
                     padding-right: 0;
+                    @include responsive (mobile-big, max) { 
+                        padding-left: 30px;
+                        padding-right: 30px;
+                    }
                 }
             }
 
             +.row {
                 margin-top: -90px;
+                @include responsive (mobile-big, max) { 
+                    margin-top: 0;
+                }
             }
         }
     }
@@ -3816,12 +3840,24 @@
     .section-title {
         font-size: 32px;
         line-height: 42px;
-        margin-bottom: 133px;
+        margin-bottom: 133px; 
+        @include responsive (mobile-big, max) {  
+            font-size: 20px;
+            line-height: 28px;
+            margin-bottom: 60px;
+        }
     }
 
     .history-card {
+        @include responsive (mobile-big, max) { 
+            margin-bottom: 35px;
+        }
         .card-content {
             padding: 25px 0 35px;
+            @include responsive (mobile-big, max) { 
+                padding: 28px 15px 42px 15px;
+                background-color:   $white;
+            }
 
             .card-title {
                 text-transform: uppercase;
@@ -3830,7 +3866,7 @@
                 letter-spacing: 1.1px;
                 font-weight: 700;
                 color: $green;
-                margin-bottom: 28px;
+                margin-bottom: 28px; 
             }
 
             .card-text {
@@ -3838,6 +3874,15 @@
                 line-height: 33px;
                 font-weight: 600;
                 width: 70%;
+                @include responsive (ipad-portrait, max) {
+                    width: 80%;
+                }
+                @include responsive (mobile-big, max) { 
+                    font-size: 16px;
+                    line-height: 22px;
+                    margin-top: 19px;
+                    width: 100%;
+                }
             }
         }
     }
@@ -4389,7 +4434,7 @@
             }
 
             @include responsive (mobile-big, max) {
-                margin-bottom: 40px;
+                margin-bottom: 48px;
             }
 
             .careers-title {
@@ -4434,6 +4479,7 @@
                     @include responsive (mobile-big, max) {
                         font-size: 14px;
                         line-height: 14px;
+                        margin-top: 16px;
                     }
 
                     &:hover {
@@ -4447,6 +4493,7 @@
 
                     @include responsive (mobile-big, max) {
                         padding-left: 10px;
+                        margin-top: 25px;
                     }
                 }
             }
@@ -4608,6 +4655,7 @@
                                 font-size: 14px;
                                 line-height: 14px;
                                 padding: 10px 32px;
+                                margin-top: 48px;
                             }
                         }
 
@@ -4617,7 +4665,7 @@
                             margin-left: -5px;
 
                             @include responsive (mobile-big, max) {
-                                padding: 23px 15px 0 15px;
+                                padding: 40px 15px 0 15px;
                             }
 
                             p {

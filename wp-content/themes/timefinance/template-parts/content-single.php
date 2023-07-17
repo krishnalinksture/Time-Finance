@@ -60,6 +60,14 @@ $image_alt           = ( isset( $image['alt'] ) && ! empty( $image['alt'] ) ) ? 
 				</div>
 			</div>
 			<div class="col-8 right">
+				<div class="time-blog-date d-lg-none">
+					<?php
+					echo get_the_date( 'm F Y', get_the_ID() ) . ' / ' . wp_strip_all_tags( get_the_term_list( get_the_ID(), 'category', ' ', ', ', ' ' ) ); //phpcs:ignore
+					?>
+				</div>
+				<div class="time-blog-title">
+					<?php echo get_the_title(); //phpcs:ignore ?>
+				</div>
 				<?php
 				$_term = get_queried_object();
 				if ( have_rows( 'page_builder', $_term ) ) {
