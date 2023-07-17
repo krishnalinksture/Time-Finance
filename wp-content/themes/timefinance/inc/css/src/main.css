@@ -23,6 +23,9 @@ body {
   box-sizing: border-box;
   color: #3d1050;
   counter-reset: my-sec-counter; }
+  @media (max-width: 1199px) {
+    body {
+      margin-top: 82px; } }
 
 a,
 .link {
