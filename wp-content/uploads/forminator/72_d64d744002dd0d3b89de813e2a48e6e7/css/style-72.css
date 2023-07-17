@@ -34,18 +34,18 @@
 
 
 	.forminator-ui#forminator-module-72.forminator-design--default .forminator-response-message.forminator-error {
-					background-color: #F9E4E8;
-							box-shadow: inset 2px 0 0 0 #E04562;
-			-moz-box-shadow: inset 2px 0 0 0 #E04562;
-			-webkit-box-shadow: inset 2px 0 0 0 #E04562;
+					background-color: #f9e4e8;
+							box-shadow: inset 2px 0 0 0 #e04562;
+			-moz-box-shadow: inset 2px 0 0 0 #e04562;
+			-webkit-box-shadow: inset 2px 0 0 0 #e04562;
 			}
 
 	.forminator-ui#forminator-module-72.forminator-design--default .forminator-response-message.forminator-error:hover,
 	.forminator-ui#forminator-module-72.forminator-design--default .forminator-response-message.forminator-error:focus,
 	.forminator-ui#forminator-module-72.forminator-design--default .forminator-response-message.forminator-error:active {
-					box-shadow: inset 2px 0 0 0 #E04562;
-			-moz-box-shadow: inset 2px 0 0 0 #E04562;
-			-webkit-box-shadow: inset 2px 0 0 0 #E04562;
+					box-shadow: inset 2px 0 0 0 #e04562;
+			-moz-box-shadow: inset 2px 0 0 0 #e04562;
+			-webkit-box-shadow: inset 2px 0 0 0 #e04562;
 			}
 
 	.forminator-ui#forminator-module-72.forminator-design--default .forminator-response-message.forminator-error,
@@ -167,15 +167,15 @@
 
 
 	.forminator-ui#forminator-module-72.forminator-design--default .forminator-error-message {
-					font-size: 12px;
+					font-size: 14px;
 							font-family: inherit;
 							font-weight: 500;
 			}
 
 
 	.forminator-ui#forminator-module-72.forminator-design--default .forminator-error-message {
-					background-color: #F9E4E8;
-							color: #E04562;
+					background-color: #3d1050;
+							color: #00ab8e;
 			}
 
 
@@ -351,13 +351,13 @@
 
 
 	.forminator-ui#forminator-module-72.forminator-design--default .forminator-radio {
-					font-size: 14px;
-											font-family: Roboto;
+					font-size: 16px;
+											font-family: Helvetica;
 										font-weight: normal;			}
 
 
 	.forminator-ui#forminator-module-72.forminator-design--default .forminator-radio {
-					color: #000000;
+					color: #ffffff;
 			}
 
 	.forminator-ui#forminator-module-72.forminator-design--default .forminator-radio .forminator-radio-bullet {
@@ -393,15 +393,15 @@
 	.forminator-ui#forminator-module-72.forminator-design--default .forminator-checkbox,
 	.forminator-ui#forminator-module-72.forminator-design--default .forminator-checkbox__label,
 	.forminator-ui#forminator-module-72.forminator-design--default .forminator-checkbox__label p {
-					font-size: 14px;
-											font-family: Roboto;
+					font-size: 16px;
+											font-family: Helvetica;
 										font-weight: normal;			}
 
 
 	.forminator-ui#forminator-module-72.forminator-design--default .forminator-checkbox,
 	.forminator-ui#forminator-module-72.forminator-design--default .forminator-checkbox__label,
 	.forminator-ui#forminator-module-72.forminator-design--default .forminator-checkbox__label p {
-					color: #000000;
+					color: #ffffff;
 			}
 
 	.forminator-ui#forminator-module-72.forminator-design--default .forminator-checkbox .forminator-checkbox-box {
@@ -883,13 +883,13 @@
 
 
 	.forminator-ui#forminator-module-72.forminator-design--default .forminator-button-submit {
-					font-size: 14px;
-											font-family: Roboto;
+					font-size: 16px;
+											font-family: Helvetica;
 										font-weight: 500;			}
 
 
 	.forminator-ui#forminator-module-72.forminator-design--default .forminator-button-submit {
-					background-color: #17A8E3;
+					background-color: #00ab8e;
 							color: #FFFFFF;
 			}
 
