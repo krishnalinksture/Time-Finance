@@ -3397,7 +3397,8 @@ header {
       .bdt-filter-block .bdt-wrapper {
         margin-top: -70px;
         padding-left: 40px;
-        padding-right: 40px; } }
+        padding-right: 40px;
+        position: relative; } }
     .bdt-filter-block .bdt-wrapper .row .col {
       margin-bottom: 20px;
       overflow: hidden; }
