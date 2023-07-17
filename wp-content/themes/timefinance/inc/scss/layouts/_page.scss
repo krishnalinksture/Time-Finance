@@ -3267,6 +3267,55 @@
             }
         }
     }
+    .dropdown {
+        background-color: $purple;
+        padding:0px 30px 100px;
+        .btn {
+            &.btn-link {
+                color: $white;
+                width: 100%;
+                text-align: left;
+                border-bottom: 2px solid $white;
+                border-radius: 0;
+                padding-right: 20px;
+                position: relative;
+                padding-bottom: 5px;
+                &:after {
+                    content: '';
+                    width: 8px;
+                    height: 8px;
+                    border-right: 1px solid #fff;
+                    border-bottom: 1px solid #fff;
+                    border-left: 0;
+                    border-top: 0;
+                    position: absolute;
+                    top: calc(50% - 8px);
+                    right: 0;
+                    -webkit-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                }
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+        .dropdown-menu {
+            width: calc(100% - 60px);
+            transform: none !important;
+            top: 72px !important;
+            inset: auto !important;
+            padding: 10px;
+            .bdts-cat-list {
+                margin-bottom: 5px;
+                a {
+                    color: $dark-gray;
+                    font-size: 16px;
+                    padding: 5px 10px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
 
     .bdt-wrapper {
         padding-left: 50px;
