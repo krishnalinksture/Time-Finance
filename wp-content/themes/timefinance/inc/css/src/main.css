@@ -4898,7 +4898,7 @@ header {
             padding: 9px 18px; } }
 
 .search-banner {
-  padding: 120px 0; }
+  padding: 145px 0; }
   .search-banner .section-title {
     color: #00a98f;
     font-weight: 400;
@@ -4914,6 +4914,12 @@ header {
     font-size: 15px;
     line-height: 15px;
     margin-bottom: 20px; }
+  .search-banner .search-blank {
+    color: #fff;
+    font-size: 55px;
+    line-height: 63px;
+    font-weight: 700;
+    margin: 24px 0; }
 
 .search-block {
   padding-top: 60px;

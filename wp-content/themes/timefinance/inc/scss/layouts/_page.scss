@@ -5245,7 +5245,7 @@
 
 //Search-banner
 .search-banner {
-    padding: 120px 0;
+    padding: 145px 0;
 
     .section-title {
         color: $green;
@@ -5266,6 +5266,14 @@
         font-size: 15px;
         line-height: 15px;
         margin-bottom: 20px;
+    }
+
+    .search-blank {
+        color: $white;
+        font-size: 55px;
+        line-height: 63px;
+        font-weight: 700;
+        margin: 24px 0;
     }
 }
 
