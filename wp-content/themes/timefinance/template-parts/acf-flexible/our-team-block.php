@@ -19,7 +19,7 @@ $section_id                    = get_sub_field( 'section_id' ) ? get_sub_field( 
 		if ( ! empty( $main_title ) || ! empty( $content ) ) {
 			?>
 			<div class="row">
-				<div class="col-9">
+				<div class="col-xl-9 col-lg-11 col-md-12">
 					<?php
 					if ( ! empty( $main_title ) ) {
 						echo '<' . esc_attr( $select_tag ) . ' class="section-title h-4">' . esc_html( $main_title ) . '</' . esc_attr( $select_tag ) . '>';
@@ -111,7 +111,7 @@ $section_id                    = get_sub_field( 'section_id' ) ? get_sub_field( 
 					?>
 				</ul>
 			</div>
-			<div class="col-9 our-team-wrapper">
+			<div class="col col-lg-9 col-md-12 our-team-wrapper">
 				<div class="row row-cols-1 row-cols-lg-2">
 					<?php
 					$args = array(

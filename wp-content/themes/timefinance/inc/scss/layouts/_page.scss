@@ -1874,8 +1874,19 @@
     position: relative;
     overflow: hidden;
 
+    @include responsive (ipad-portrait, max) {
+        padding: 90px 0 60px;
+    }
+
+    @include responsive (mobile-big, max) {
+        padding: 50px 0 40px;
+    }
+
     .container {
         position: relative;
+        @include responsive (mobile-big, max) {
+            padding: 0 30px;
+        }
     }
 
     .section-title {
@@ -1883,6 +1894,12 @@
         line-height: 30px;
         font-weight: 600;
         margin-bottom: 30px;
+
+        @include responsive (mobile-big, max) {
+            font-size: 16px;
+            line-height: 26px;
+            margin-bottom: 15px;
+        }
     }
 
     p {
@@ -1892,6 +1909,15 @@
         font-weight: 700;
         width: 94%;
         margin-bottom: 0;
+
+        @include responsive (mini-desktop, max) {
+            width: 100%;
+        }
+
+        @include responsive (mobile-big, max) {
+            font-size: 20px;
+            line-height: 28px;
+        }
     }
 }
 
@@ -1905,6 +1931,14 @@
     .filter-post-left {
         position: relative;
         padding-bottom: 270px;
+
+        @include responsive (laptop, max) {
+            padding-bottom: 240px;
+        }
+
+        @include responsive (ipad-portrait, max) {
+            padding-bottom: 150px;
+        }
 
         &:before {
             height: 100%;
@@ -1965,9 +1999,77 @@
         }
     }
 
+    .dropdown {
+        background-color: $purple;
+        padding:0px 30px 150px;
+        .btn {
+            &.btn-link {
+                color: $white;
+                width: 100%;
+                text-align: left;
+                border-bottom: 2px solid $white;
+                border-radius: 0;
+                padding-right: 20px;
+                position: relative;
+                padding-bottom: 5px;
+                &:after {
+                    content: '';
+                    width: 8px;
+                    height: 8px;
+                    border-right: 1px solid #fff;
+                    border-bottom: 1px solid #fff;
+                    border-left: 0;
+                    border-top: 0;
+                    position: absolute;
+                    top: calc(50% - 8px);
+                    right: 0;
+                    -webkit-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                }
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+        .dropdown-menu {
+            width: calc(100% - 60px);
+            transform: none !important;
+            top: 72px !important;
+            inset: auto !important;
+            padding: 10px;
+            .our-team-cat-list {
+                margin-bottom: 5px;
+                a {
+                    color: $dark-gray;
+                    font-size: 16px;
+                    padding: 5px 10px;
+                    font-weight: 400;
+                    text-decoration: underline;
+                    text-decoration-color: $green;
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
     .our-team-wrapper {
         padding-left: 50px;
         padding-right: 20px;
+
+        @include responsive (ipad-portrait, max) {
+            margin-top: -70px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        @include responsive (mobile-big, max) {
+            margin-top: -70px;
+            padding-left: 40px;
+            padding-right: 40px;
+            position: relative;
+        }
 
         .row .col {
             margin-bottom: 20px;
@@ -1983,11 +2085,20 @@
                 padding: 23px;
                 height: 100%;
 
+                @include responsive (mobile-big, max) {
+                    padding: 30px 40px;
+                }
+
                 .our-team-title {
                     font-size: 24px;
                     line-height: 32px;
                     font-weight: 700;
                     margin-bottom: 8px;
+
+                    @include responsive (mobile-big, max) {
+                        font-size: 20px;
+                        line-height: 28px;
+                    }
                 }
 
                 .role {
@@ -1998,6 +2109,10 @@
                     letter-spacing: 2px;
                     text-transform: uppercase;
                     margin-bottom: 43px;
+
+                    @include responsive (mobile-big, max) {
+                        line-height: 11px;
+                    }
                 }
 
                 p {
@@ -2007,6 +2122,11 @@
                     font-weight: 600;
                     width: 100%;
                     margin-bottom: 0;
+
+                    @include responsive (mobile-big, max) {
+                        font-size: 13px;
+                        line-height: 18px;
+                    }
                 }
 
                 a {
@@ -2014,6 +2134,14 @@
                     margin-top: 20px;
                     letter-spacing: normal;
                     text-decoration: underline;
+                    @include responsive (ipad-portrait, max) {
+                        display: table !important;
+                        margin: 20px auto 0;
+                    }
+
+                    @include responsive (mobile-big, max) {
+                        margin: 15px auto 0;
+                    }
 
                     +a {
                         margin-top: 0;
@@ -2024,6 +2152,11 @@
                             &:hover {
                                 color: $purple;
                             }
+                        }
+
+                        @include responsive (mobile-big, max) {
+                            font-size: 15px;
+                            line-height: 22px;
                         }
                     }
                 }
@@ -3269,7 +3402,7 @@
     }
     .dropdown {
         background-color: $purple;
-        padding:0px 30px 100px;
+        padding:0px 30px 150px;
         .btn {
             &.btn-link {
                 color: $white;
@@ -3312,6 +3445,8 @@
                     font-size: 16px;
                     padding: 5px 10px;
                     font-weight: 400;
+                    text-decoration: underline;
+                    text-decoration-color: $green;
                 }
                 &:last-child {
                     margin-bottom: 0;

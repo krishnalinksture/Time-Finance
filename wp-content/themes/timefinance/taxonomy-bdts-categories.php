@@ -117,7 +117,7 @@ if ( ! empty( $bdt_title ) || ! empty( $bdt_content ) ) {
 			if ( have_posts() ) {
 				?>
 				<div class="col col-lg-9 col-md-12 bdt-wrapper">
-					<div class="row row-cols-1 row-cols-lg-2">
+					<div class="row row-cols-1 row-cols-md-2">
 						<?php
 						while ( have_posts() ) {
 							the_post();
