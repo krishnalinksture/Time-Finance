@@ -1337,6 +1337,9 @@
 
     .logo {
         margin: 38px auto;
+        @include responsive (mobile-big, max) {
+            margin: 20px auto;
+        }
 
         img {
             width: 190px;
@@ -1346,6 +1349,9 @@
                 width: 100%;
                 height: auto;
                 max-width: 180px;
+            }
+            @include responsive (mobile-big, max) { 
+                max-width: 140px;
             }
         }
     }
