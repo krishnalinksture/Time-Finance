@@ -532,6 +532,12 @@
 
     .container {
         padding: 50px 35px;
+        @include responsive (ipad-portrait, max) {
+            padding: 50px 10px;
+        }
+        @include responsive (mobile-big, max) {
+            padding: 50px 30px;
+        }
     }
 
     .section-title {
@@ -639,19 +645,22 @@
     @include responsive (ipad-portrait, max) {
         padding-bottom: 30px;
     }
+    @include responsive (mobile-big, max) {
+        padding: 60px 20px;
+    }
 
     .image-box {
         padding-left: 40px;
         padding-right: 0px;
         align-self: stretch;
         @include responsive (ipad-portrait, max) {
-            padding-left: 3.5%;
-            padding-right: 30px;
+            padding-left: 10px;
+            padding-right: 10px;
         }
 
         @include responsive (mobile-big, max) {
-            padding-left: 5.5%;
-            padding-right: 5.33%;
+            padding-left: 10px;
+            padding-right: 10px;
         }
 
         img {
@@ -667,14 +676,14 @@
         padding-right: 40px;
 
         @include responsive (ipad-portrait, max) {
-            padding-left: 3.5%;
-            padding-right: 30px;
+            padding-left: 10px;
+            padding-right: 10px;
             margin: 40px 0;
         }
 
         @include responsive (mobile-big, max) {
-            padding-left: 5.5%;
-            padding-right: 5.33%;
+            padding-left: 10px;
+            padding-right: 10px;
             margin: 30px 0;
         }
 
@@ -714,13 +723,13 @@
             padding-right: 40px;
 
             @include responsive (ipad-portrait, max) {
-                padding-left: 3.5%;
-                padding-right: 3.33%;
+                padding-left: 10px;
+                padding-right: 10px;
             }
 
             @include responsive (mobile-big, max) {
-                padding-left: 5.5%;
-                padding-right: 5.33%;
+                padding-left: 10px;
+                padding-right: 10px;
             }
         }
 
@@ -729,15 +738,15 @@
             padding-right: 7.33%;
 
             @include responsive (ipad-portrait, max) {
-                padding-left: 3.5%;
-                padding-right: 3.33%;
+                padding-left: 10px;
+                padding-right: 10px;
                 margin: 40px 0;
             }
 
             @include responsive (mobile-big, max) {
                 margin: 30px 0;
-                padding-left: 5.5%;
-                padding-right: 5.33%;
+                padding-left: 10px;
+                padding-right: 10px;
             }
         }
     }
@@ -795,7 +804,7 @@
         }
 
         @include responsive (ipad-portrait, max) {
-            padding: 0;
+            padding: 0 10px;
         }
 
         @include responsive (mobile-big, max) {
@@ -901,6 +910,7 @@
 
         @include responsive (ipad-portrait, max) {
             margin-bottom: 50px;
+            padding-left: 10px;
         }
 
         @include responsive (mobile-big, max) {
@@ -953,6 +963,9 @@
         z-index: 1;
 
         @include responsive (ipad-portrait, max) {
+            padding: 0 10px;
+        }
+        @include responsive (mobile-big, max) {
             padding: 0 30px;
         }
 
@@ -960,6 +973,12 @@
             margin-left: 0;
             margin-right: -8vw;
             height: 100%;
+            @include responsive (medium-desktop, max) {
+                margin-right: -5vw;
+            }
+            @include responsive (mini-desktop, max) {
+                margin-right: 0;
+            }
 
             @include responsive (ipad-portrait, max) {
                 margin-right: 0;
@@ -1127,6 +1146,9 @@
             @include responsive (ipad-portrait, max) {
                 width: 90%;
             }
+            @include responsive (mobile-big, max) {
+                width: 100%;
+            }
         }
     }
 }
@@ -1244,7 +1266,7 @@
     }
 
     @include responsive (mobile-big, max) {
-        padding: 60px 0;
+        padding: 60px 20px;
     }
 
     .section-title {
@@ -1282,7 +1304,7 @@
 .centred-content-image-gallery {
     padding: 80px 0 42px 0;
     @include responsive (mobile-big, max) {
-        padding: 50px 0 12px 0;
+        padding:50px 20px 12px 20px;
     }
 
     .section-title {
@@ -1321,8 +1343,9 @@
             height: 155px;
 
             @include responsive (laptop, max) {
-                width: 160px;
-                height: 140px;
+                width: 100%;
+                height: auto;
+                max-width: 180px;
             }
         }
     }
@@ -1425,6 +1448,12 @@
 
     .container {
         padding: 0 20px;
+        @include responsive (ipad-portrait, max) {
+            padding: 0 10px;
+        }
+        @include responsive (mobile-big, max) {
+            padding: 0 30px;
+        }
 
         .section-title {
             margin-bottom: 25px;
@@ -1606,6 +1635,9 @@
     .large-card-image {
         height: 345px;
         overflow: hidden;
+        @include responsive (ipad-portrait, max) {
+            height: 190px;
+        }
 
         img {
             display: block;
@@ -1696,10 +1728,9 @@
 
     @include responsive (ipad-portrait, max) {
         padding: 65px 0 100px 0;
-    }
-
-    @include responsive (ipad-portrait, max) {
-        padding: 50px 0 80px 0;
+    } 
+    @include responsive (mobile-big, max) {
+        padding: 50px 20px 80px 20px;
     }
 
     .section-title {
@@ -1723,7 +1754,7 @@
         padding: 0 25px;
 
         @include responsive (ipad-portrait, max) {
-            padding: 0 15px;
+            padding: 0 0;
         }
 
         @include responsive (mobile-big, max) {
@@ -1852,7 +1883,7 @@
 .latest-news-block {
     padding: 75px 0;
     @include responsive (mobile-big, max) {
-        padding: 40px 0;
+        padding: 40px 20px;
     }
 
     .latest-news {
@@ -3776,10 +3807,7 @@
         position: relative;
         @include responsive (laptop, max) {
             padding: 35px 10px 0 10px; 
-        }
-        @include responsive (ipad-portrait, max) {
-            padding: 35px 0 0 0; 
-        }
+        } 
 
         .separator {
             position: absolute;
@@ -3819,8 +3847,8 @@
                 padding-left: 0;
                 padding-right: 16px;
                 @include responsive (mobile-big, max) { 
-                    padding-left: 30px;
-                    padding-right: 30px;
+                    padding-left: 20px;
+                    padding-right: 20px;
                 }
             }
 
@@ -3829,8 +3857,8 @@
                     padding-left: 18px;
                     padding-right: 0;
                     @include responsive (mobile-big, max) { 
-                        padding-left: 30px;
-                        padding-right: 30px;
+                        padding-left:20px;
+                        padding-right: 20px;
                     }
                 }
             }
@@ -4428,6 +4456,10 @@
     .career-wrapper {
         padding-left: 35px;
         padding-right: 35px;
+        @include responsive (mobile-big, max) {
+            padding-left: 30px;
+            padding-right: 30px; 
+        }
 
         .careers-box {
             margin-bottom: 138px;
@@ -5670,6 +5702,9 @@
             .client-image {
                 height: 387px;
                 overflow: hidden;
+                @include responsive (ipad-portrait, max) {
+                    height: 280px;
+                }
 
                 img {
                     display: block;

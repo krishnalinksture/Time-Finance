@@ -19,7 +19,7 @@ if ( ! empty( $main_title ) || ! empty( $content ) || ! empty( $image_gallary ) 
 			if ( ! empty( $main_title ) || ! empty( $content ) ) {
 				?>
 				<div class="row justify-content-center text-center">
-					<div class="col-sm-11">
+					<div class="col-md-11">
 						<?php
 						if ( ! empty( $main_title ) ) {
 							echo '<' . esc_attr( $select_tag ) . ' class="section-title h-4">' . esc_html( $main_title ) . '</' . esc_attr( $select_tag ) . '>';
@@ -35,7 +35,7 @@ if ( ! empty( $main_title ) || ! empty( $content ) || ! empty( $image_gallary ) 
 			if ( ! empty( $image_gallary ) ) {
 				?>
 				<div class="row justify-content-center">
-					<div class="col-lg-10 col-sm-11">
+					<div class="col-lg-10 col-lg-11">
 						<div class="row row-cols-2 row-cols-lg-4 row-cols-md-3 justify-content-center align-items-center text-center">
 							<?php
 							foreach ( $image_gallary as $image ) {

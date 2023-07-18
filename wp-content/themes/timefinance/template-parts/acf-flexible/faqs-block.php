@@ -27,7 +27,7 @@ if ( ! empty( $main_title ) || have_rows( 'faqs' ) ) {
 			if ( have_rows( 'faqs' ) ) {
 				?>
 				<div class="row justify-content-center text-center">
-					<div class="col col-lg-9 col-md-10">
+					<div class="col col-lg-9 col-lg-10">
 						<?php
 						$i = 1;
 						?>
