@@ -2082,8 +2082,8 @@ header {
       .centred-content-image-gallery .logo {
         margin: 20px auto; } }
     .centred-content-image-gallery .logo img {
-      width: 190px;
-      height: 155px; }
+      width: auto;
+      max-height: 140px; }
       @media (max-width: 1199px) {
         .centred-content-image-gallery .logo img {
           width: 100%;
