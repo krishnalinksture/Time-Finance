@@ -506,6 +506,25 @@ button.mfp-close {
     font-weight: 400;
     text-align: start; }
 
+footer .popup-form .footer-popup-form {
+  padding: 20px; }
+  footer .popup-form .footer-popup-form .forminator-row {
+    margin-bottom: 18px !important; }
+    footer .popup-form .footer-popup-form .forminator-row .forminator-col .forminator-field.forminator-merge-tags {
+      color: #00a98f;
+      font-size: 14px; }
+    footer .popup-form .footer-popup-form .forminator-row .forminator-col .forminator-field .forminator-label {
+      margin-top: 8px !important; }
+    footer .popup-form .footer-popup-form .forminator-row .forminator-col .forminator-field .forminator-input {
+      margin-top: 3px !important;
+      padding: 10px !important;
+      border: 2px solid #d0d0d0 !important; }
+    footer .popup-form .footer-popup-form .forminator-row .forminator-col .forminator-field .forminator-checkbox-box {
+      border-radius: 3px !important; }
+
+.select2-container .forminator-select-dropdown .select2-results .select2-results__options li {
+  padding: 0px 15px !important; }
+
 h1,
 h2,
 h3,
@@ -5511,7 +5530,6 @@ header {
     flex-direction: column;
     -webkit-transform: translate(0, -50px);
     transform: translate(0, -50px);
-    height: 80%;
     overflow-y: scroll;
     margin: 130px auto 1.75rem;
     border-radius: 0.3rem;

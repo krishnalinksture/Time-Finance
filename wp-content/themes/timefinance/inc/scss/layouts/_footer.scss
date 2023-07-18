@@ -11,10 +11,10 @@
             .modal-dialog {
                 max-width: 1140px;
                 -ms-flex-direction: column;
-                flex-direction: column; 
+                flex-direction: column;
                 -webkit-transform: translate(0, -50px);
                 transform: translate(0, -50px);
-                height: 80%; 
+                // height: 80%;
                 overflow-y: scroll;
                 margin: 130px auto 1.75rem;
                 border-radius: 0.3rem;
@@ -51,8 +51,8 @@
                     width: 600px;
                     margin: 0 auto;
                     padding: 1rem 1rem;
-                    @include responsive (ipad-portrait, max) { 
-                        width: 100%; 
+                    @include responsive (ipad-portrait, max) {
+                        width: 100%;
                         padding: 2rem 2rem;
                     }
                 }
@@ -205,7 +205,7 @@ footer {
         }
     }
 
-    .footer-address { 
+    .footer-address {
         p {
             line-height: 20px;
             font-size: 12px;
@@ -264,7 +264,7 @@ footer {
                     }
                 }
                 @media screen and (max-width: 374px) {
-                    margin-right: 10px; 
+                    margin-right: 10px;
                     &:last-child {
                         margin-right: 0;
                     }
@@ -272,7 +272,7 @@ footer {
 
                 a {
                     color: $white;
-                    text-decoration: none; 
+                    text-decoration: none;
                     font-size: 12px;
                 }
             }
