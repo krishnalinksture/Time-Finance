@@ -27,35 +27,39 @@ if ( have_rows( 'content_image' ) ) {
 						?>
 						<div class="col-lg-4 col-md-6 col-sm-8">
 							<div class="image-content-box">
-								<div class="image-box">
-									<?php
-									if ( ! empty( $image ) ) {
-										?>
+								<?php
+								if ( ! empty( $image ) ) {
+									?>
+									<div class="image-box">
 										<img class="image-bulletpoint" width="<?php echo $image['sizes']['timefinance-desktop-width']; ?>" height="<?php echo $image['sizes']['timefinance-desktop-height']; ?>" src="<?php echo $image['url']; ?>" srcset="<?php echo $image['sizes']['timefinance-small-mobile']; ?> 400w, <?php echo $image['sizes']['timefinance-mobile']; ?> 800w, <?php echo $image['sizes']['timefinance-tablet']; ?> 1200w, <?php echo $image['sizes']['timefinance-desktop']; ?> 2000w" sizes="50vw" alt="<?php echo $image_alt; //phpcs:ignore ?>">
-										<?php
-									}
-									?>
-								</div>
-								<div class="login-content">
+									</div>
 									<?php
-									if ( ! empty( $login_title ) ) {
-										echo '<' . esc_attr( $select_tag ) . ' class="section-title h-4">' . esc_html( $login_title ) . '</' . esc_attr( $select_tag ) . '>';
-									}
-									if ( ! empty( $content ) ) {
-										echo $content; //phpcs:ignore
-									}
-									if ( $button && ! empty( $button['url'] ) && ! empty( $button['title'] ) ) {
-										$link_url    = $button['url'];
-										$link_title  = $button['title'];
-										$link_target = $button['target'] ? $button['target'] : '_self';
-										?>
-										<a href="<?php echo esc_url( $link_url ); ?>" class="btn" target="<?php echo esc_attr( $link_target ); ?>">
-											<?php echo esc_html( $link_title ); ?>
-										</a>
-										<?php
-									}
+								}
+								if ( ! empty( $login_title ) || ! empty( $content ) || ! empty( $button ) ) {
 									?>
-								</div>
+									<div class="login-content">
+										<?php
+										if ( ! empty( $login_title ) ) {
+											echo '<' . esc_attr( $select_tag ) . ' class="section-title h-4">' . esc_html( $login_title ) . '</' . esc_attr( $select_tag ) . '>';
+										}
+										if ( ! empty( $content ) ) {
+											echo $content; //phpcs:ignore
+										}
+										if ( $button && ! empty( $button['url'] ) && ! empty( $button['title'] ) ) {
+											$link_url    = $button['url'];
+											$link_title  = $button['title'];
+											$link_target = $button['target'] ? $button['target'] : '_self';
+											?>
+											<a href="<?php echo esc_url( $link_url ); ?>" class="btn" target="<?php echo esc_attr( $link_target ); ?>">
+												<?php echo esc_html( $link_title ); ?>
+											</a>
+											<?php
+										}
+										?>
+									</div>
+									<?php
+								}
+								?>
 							</div>
 						</div>
 						<?php

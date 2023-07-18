@@ -139,7 +139,7 @@ $press_release_view_all_button = get_field( 'press_release_view_all_button', 'op
 										if ( get_the_title() ) {
 											?>
 											<div class="press-release-title">
-												<a href="<?php echo get_the_permalink(); //phpcs:ignore ?>"><?php echo get_the_title(); //phpcs:ignore ?></a>
+												<a href="<?php echo esc_url( get_the_permalink() ); ?>"><?php echo esc_html( get_the_title() ); ?></a>
 											</div>
 											<?php
 										}
@@ -149,7 +149,7 @@ $press_release_view_all_button = get_field( 'press_release_view_all_button', 'op
 										if ( ! empty( $read_more_button ) ) {
 											?>
 											<div class="read-more btn">
-												<a href="<?php echo get_the_permalink(); //phpcs:ignore ?>"><?php echo esc_html( $read_more_button ); ?></a>
+												<a href="<?php echo esc_url( get_the_permalink() ); ?>"><?php echo esc_html( $read_more_button ); ?></a>
 											</div>
 											<?php
 										}

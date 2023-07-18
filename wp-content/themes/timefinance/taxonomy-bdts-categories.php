@@ -146,7 +146,7 @@ if ( ! empty( $bdt_title ) || ! empty( $bdt_content ) ) {
 											if ( ! empty( get_the_title() ) ) {
 												?>
 												<div class="bdts-title">
-													<?php echo get_the_title(); //phpcs:ignore ?>
+													<?php echo esc_html( get_the_title() ); ?>
 												</div>
 												<?php
 											}
@@ -169,7 +169,9 @@ if ( ! empty( $bdt_title ) || ! empty( $bdt_content ) ) {
 												</div>
 												<?php
 											}
-											echo get_the_content(); //phpcs:ignore
+											if ( get_the_content() ) {
+												echo get_the_content(); //phpcs:ignore
+											}
 											if ( ! empty( $phone_number ) || ! empty( $linked_in ) ) {
 												?>
 												<div class="contact">

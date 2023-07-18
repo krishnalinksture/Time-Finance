@@ -54,7 +54,7 @@ $section_id         = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id
 							if ( get_the_title() ) {
 								?>
 								<div class="latest-news-title">
-									<?php echo get_the_title(); //phpcs:ignore ?>
+									<?php echo esc_html( get_the_title() ); ?>
 								</div>
 								<?php
 							}
@@ -64,7 +64,7 @@ $section_id         = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id
 							if ( ! empty( $read_more_button ) ) {
 								?>
 								<div class="read-more btn">
-									<a href="<?php echo get_the_permalink(); //phpcs:ignore ?>"><?php echo esc_html( $read_more_button ); ?></a>
+									<a href="<?php echo esc_url( get_the_permalink() ); ?>"><?php echo esc_html( $read_more_button ); ?></a>
 								</div>
 								<?php
 							}
