@@ -54,7 +54,7 @@ if ( have_posts() ) {
 	<section class="search-block">
 		<div class="container">
 			<div class="row justify-content-center">
-				<div class="col-9 search-wrapper">
+				<div class="col-lg-9 search-wrapper">
 					<div class="search-box">
 						<form id="search-again" method="get" action="<?php echo home_url('/'); //phpcs:ignore ?>" name="search-header" class="search-form-result">
 							<input type="text" name="s" class="form-control" placeholder="Search again..." aria-label="Search again" aria-describedby="basic-addon2" autocomplete="off">
@@ -71,7 +71,7 @@ if ( have_posts() ) {
 			if ( have_posts() ) {
 				?>
 				<div class="row justify-content-center">
-					<div class="col-9 search-wrapper">
+					<div class="col-lg-9 search-wrapper">
 						<?php
 						while ( have_posts() ) {
 							the_post();

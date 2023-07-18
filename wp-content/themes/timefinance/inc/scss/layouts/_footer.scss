@@ -14,7 +14,7 @@
                 flex-direction: column;
                 -webkit-transform: translate(0, -50px);
                 transform: translate(0, -50px);
-                // height: 80%;
+                height: calc(100% - 175px);
                 overflow-y: scroll;
                 margin: 130px auto 1.75rem;
                 border-radius: 0.3rem;
@@ -33,6 +33,11 @@
                 @include responsive (mobile-big, max) {
                     width: 96%;
                     height: 260px;
+                }
+
+                .modal-content {
+                    height: 100%;
+                    overflow-y: auto;
                 }
             }
 
