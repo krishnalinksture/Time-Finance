@@ -445,6 +445,27 @@ footer {
                 font-size: 14px;
                 color: #00AB8E;
                 padding: 0 0 10px 0;
+                a {
+                    color: $green;
+                }
+            }
+
+            .thank-you-button {
+                @include flex;
+                align-items: center;
+                .btn {
+                    background-color: $green;
+                    color: $white;
+                    border-color: $green;
+                    @include borderRadius (5px);
+                    font-weight: 400;
+                    padding: 10px 25px;
+                    font-size: 15px;
+                }
+
+                .or {
+                    margin: 0 10px;
+                }
             }
         }
     }
