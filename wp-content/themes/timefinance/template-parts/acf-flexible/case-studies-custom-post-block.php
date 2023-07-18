@@ -80,7 +80,7 @@ $section_id                   = get_sub_field( 'section_id' ) ? get_sub_field( '
 					<?php echo esc_html( 'Teams' ); ?>
 				</button>
 				<ul class="dropdown-menu" aria-labelledby="dropdownMenuBdt">
-				<?php
+					<?php
 					$args       = array(
 						'taxonomy' => 'case-study-categories',
 					);
@@ -144,7 +144,7 @@ $section_id                   = get_sub_field( 'section_id' ) ? get_sub_field( '
 									if ( get_the_title() ) {
 										?>
 										<div class="case-study-title">
-											<a href="<?php echo get_the_permalink(); //phpcs:ignore ?>"><?php echo get_the_title(); //phpcs:ignore ?></a>
+											<a href="<?php echo esc_url( get_the_permalink() ); ?>"><?php echo esc_html( get_the_title() ); ?></a>
 										</div>
 										<?php
 									}
@@ -154,7 +154,7 @@ $section_id                   = get_sub_field( 'section_id' ) ? get_sub_field( '
 									if ( ! empty( $read_more_button ) ) {
 										?>
 										<div class="read-more btn">
-											<a href="<?php echo get_the_permalink(); //phpcs:ignore ?>"><?php echo esc_html( $read_more_button ); ?></a>
+											<a href="<?php echo esc_url( get_the_permalink() ); ?>"><?php echo esc_html( $read_more_button ); ?></a>
 										</div>
 										<?php
 									}

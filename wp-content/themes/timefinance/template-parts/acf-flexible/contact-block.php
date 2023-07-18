@@ -16,32 +16,36 @@ if ( ! empty( $main_title ) || ! empty( $content ) || ! empty( $select_form ) ) 
 	?>
 	<section class="contact-block bg-purple" id="<?php echo $section_id; //phpcs:ignore ?>">
 		<div class="container">
-			<div class="row">
-				<div class="col-9">
-					<?php
-					if ( ! empty( $main_title ) ) {
-						echo '<' . esc_attr( $select_tag ) . ' class="section-title h-4">' . esc_html( $main_title ) . '</' . esc_attr( $select_tag ) . '>';
-					}
-					if ( ! empty( $content ) ) {
-						echo $content; //phpcs:ignore
-					}
-					?>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col">
-					<?php
-					if ( ! empty( $select_form ) ) {
+			<?php
+			if ( ! empty( $main_title ) || ! empty( $content ) ) {
+				?>
+				<div class="row">
+					<div class="col-9">
+						<?php
+						if ( ! empty( $main_title ) ) {
+							echo '<' . esc_attr( $select_tag ) . ' class="section-title h-4">' . esc_html( $main_title ) . '</' . esc_attr( $select_tag ) . '>';
+						}
+						if ( ! empty( $content ) ) {
+							echo $content; //phpcs:ignore
+						}
 						?>
+					</div>
+				</div>
+				<?php
+			}
+			if ( ! empty( $select_form ) ) {
+				?>
+				<div class="row">
+					<div class="col">
 						<div class="contact-form">
 							<?php echo do_shortcode( $form ); ?>
 							<div class="thankyou-msg-contact"><?php echo esc_html( 'Thank you for your message. A member of our team will be in touch shortly. In the meantime, if youre interested in how we use your data please click ' ); //phpcs:ignore ?><a href="#"><?php echo esc_html( 'here' ); ?></a></div>
 						</div>
-						<?php
-					}
-					?>
+					</div>
 				</div>
-			</div>
+				<?php
+			}
+			?>
 		</div>
 	</section>
 	<?php

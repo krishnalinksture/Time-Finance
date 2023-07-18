@@ -84,7 +84,7 @@ if ( ! empty( $main_title ) || ! empty( $content ) ) {
 					<?php echo esc_html( 'Teams' ); ?>
 				</button>
 				<ul class="dropdown-menu" aria-labelledby="dropdownMenuBdt">
-				<?php
+					<?php
 					$args       = array(
 						'taxonomy' => 'bdts-categories',
 					);
@@ -175,7 +175,7 @@ if ( ! empty( $main_title ) || ! empty( $content ) ) {
 									if ( get_the_content() ) {
 										echo get_the_content(); //phpcs:ignore
 									}
-									if ( ! empty( $location ) || ! empty( $linked_in ) ) {
+									if ( ! empty( $phone_number ) || ! empty( $linked_in ) ) {
 										?>
 										<div class="contact">
 											<?php

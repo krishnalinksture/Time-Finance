@@ -8,10 +8,10 @@
 $main_title            = get_sub_field( 'title' );
 $select_tag            = get_sub_field( 'select_tag' );
 $content               = get_sub_field( 'content' );
-$background_image      = get_sub_field( 'background_image' );
+$right_image           = get_sub_field( 'right_image' );
 $cta_button            = get_sub_field( 'cta_button' );
 $left_image            = get_sub_field( 'left_image' );
-$background_image_alt = ( isset( $background_image['alt'] ) && ! empty( $background_image['alt'] ) ) ? $background_image['alt'] : ( isset( $background_image['title'] ) && ! empty( $background_image['title'] ) ? $background_image['title'] : '' );
+$right_image_alt       = ( isset( $right_image['alt'] ) && ! empty( $right_image['alt'] ) ) ? $right_image['alt'] : ( isset( $right_image['title'] ) && ! empty( $right_image['title'] ) ? $right_image['title'] : '' );
 $left_image_background = ( ! empty( $left_image ) ) ? ' style="background-image:url(' . esc_url( $left_image ) . ');"' : '';
 $section_id            = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'inner-page-hero-' );
 
@@ -19,9 +19,15 @@ if ( ! empty( $main_title ) || ! empty( $content ) || ! empty( $cta_button ) ) {
 	?>
 	<section class="inner-page-hero" id="<?php echo $section_id; //phpcs:ignore ?>">
 		<div class="section-left-image" <?php echo $left_image_background; //phpcs:ignore ?>></div>
-		<div class="section-right-image">
-			<img class="right-image" width="<?php echo $background_image['sizes']['timefinance-desktop-width']; ?>" height="<?php echo $background_image['sizes']['timefinance-desktop-height']; ?>" src="<?php echo $background_image['url']; ?>" srcset="<?php echo $background_image['sizes']['timefinance-small-mobile']; ?> 400w, <?php echo $background_image['sizes']['timefinance-mobile']; ?> 800w, <?php echo $background_image['sizes']['timefinance-tablet']; ?> 1200w, <?php echo $background_image['sizes']['timefinance-desktop']; ?> 2000w" sizes="50vw" alt="<?php echo $background_image_alt; //phpcs:ignore ?>">
-		</div>
+		<?php
+		if ( ! empty( $main_title ) ) {
+			?>
+			<div class="section-right-image">
+				<img class="right-image" width="<?php echo $right_image['sizes']['timefinance-desktop-width']; ?>" height="<?php echo $right_image['sizes']['timefinance-desktop-height']; ?>" src="<?php echo $right_image['url']; ?>" srcset="<?php echo $right_image['sizes']['timefinance-small-mobile']; ?> 400w, <?php echo $right_image['sizes']['timefinance-mobile']; ?> 800w, <?php echo $right_image['sizes']['timefinance-tablet']; ?> 1200w, <?php echo $right_image['sizes']['timefinance-desktop']; ?> 2000w" sizes="50vw" alt="<?php echo $right_image_alt; //phpcs:ignore ?>">
+			</div>
+			<?php
+		}
+		?>
 		<div class="container">
 			<div class="row justify-content-center align-items-center">
 				<div class="col">

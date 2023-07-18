@@ -19,7 +19,7 @@ if ( ! empty( $image ) || ! empty( $all_articles_button ) ) {
 						<?php
 						if ( ! empty( $image ) ) {
 							?>
-							<img class="case-study-images" width="<?php echo $image['sizes']['timefinance-desktop-width']; ?>" height="<?php echo 	$image['sizes']['timefinance-desktop-height']; ?>" src="<?php echo $image['url']; ?>" srcset="<?php echo $image['sizes']['timefinance-small-mobile']; ?> 400w, <?php echo $image['sizes']['timefinance-mobile']; ?> 800w, <?php echo $image['sizes']['timefinance-tablet']; ?> 1200w, <?php echo $image['sizes']['timefinance-desktop']; ?> 2000w" sizes="50vw" alt="<?php echo $image_alt; //phpcs:ignore ?>">
+							<img class="case-study-images" width="<?php echo $image['sizes']['timefinance-desktop-width']; ?>" height="<?php echo $image['sizes']['timefinance-desktop-height']; ?>" src="<?php echo $image['url']; ?>" srcset="<?php echo $image['sizes']['timefinance-small-mobile']; ?> 400w, <?php echo $image['sizes']['timefinance-mobile']; ?> 800w, <?php echo $image['sizes']['timefinance-tablet']; ?> 1200w, <?php echo $image['sizes']['timefinance-desktop']; ?> 2000w" sizes="50vw" alt="<?php echo $image_alt; //phpcs:ignore ?>">
 							<?php
 						} else {
 							the_post_thumbnail(); //phpcs:ignore
@@ -39,7 +39,7 @@ if ( ! empty( $image ) || ! empty( $all_articles_button ) ) {
 							?>
 						</div>
 						<div class="case-study-title d-none d-lg-block">
-							<?php echo get_the_title(); //phpcs:ignore ?>
+							<?php echo esc_html( get_the_title() ); ?>
 						</div>
 						<div class="social-icon">
 							<span class="share-article"><?php echo esc_html__( 'Share this post', 'timefinance' ); ?></span>
@@ -67,7 +67,7 @@ if ( ! empty( $image ) || ! empty( $all_articles_button ) ) {
 						?>
 					</div>
 					<div class="case-study-title d-lg-none">
-						<?php echo get_the_title(); //phpcs:ignore ?>
+						<?php echo esc_html( get_the_title() ); ?>
 					</div>
 					<?php
 					$_term = get_queried_object();

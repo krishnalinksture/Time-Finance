@@ -151,7 +151,7 @@ if ( ! empty( $main_title ) || ! empty( $content ) ) {
 									if ( get_the_title() ) {
 										?>
 										<div class="regulatory-news-title">
-											<a href="<?php echo get_the_permalink(); ?>"><?php echo get_the_title(); //phpcs:ignore ?></a>
+											<a href="<?php echo esc_url( get_the_permalink() ); ?>"><?php echo esc_html( get_the_title() ); ?></a>
 										</div>
 										<?php
 									}

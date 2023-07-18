@@ -142,7 +142,7 @@ $section_id                    = get_sub_field( 'section_id' ) ? get_sub_field( 
 									if ( get_the_title() ) {
 										?>
 										<div class="our-team-title">
-											<?php echo get_the_title(); //phpcs:ignore ?>
+											<?php echo esc_html( get_the_title() ); ?>
 										</div>
 										<?php
 									}

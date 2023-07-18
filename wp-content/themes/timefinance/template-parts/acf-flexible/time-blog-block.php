@@ -148,7 +148,7 @@ if ( ! empty( $main_title ) || ! empty( $content ) ) {
 									if ( get_the_title() ) {
 										?>
 										<div class="time-blog-title">
-											<a href="<?php echo get_the_permalink(); //phpcs:ignore ?>"><?php echo get_the_title(); //phpcs:ignore ?></a>
+											<a href="<?php echo esc_url( get_the_permalink() ); ?>"><?php echo esc_html( get_the_title() ); ?></a>
 										</div>
 										<?php
 									}
@@ -158,7 +158,7 @@ if ( ! empty( $main_title ) || ! empty( $content ) ) {
 									if ( ! empty( $read_more_button ) ) {
 										?>
 										<div class="read-more btn">
-											<a href="<?php echo get_the_permalink(); //phpcs:ignore ?>"><?php echo esc_html( $read_more_button ); ?></a>
+											<a href="<?php echo esc_url( get_the_permalink() ); ?>"><?php echo esc_html( $read_more_button ); ?></a>
 										</div>
 										<?php
 									}

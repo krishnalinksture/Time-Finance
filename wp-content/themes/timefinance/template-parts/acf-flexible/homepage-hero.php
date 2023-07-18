@@ -31,44 +31,46 @@ if ( have_rows( 'slider_content' ) || ! empty( $show_for_more_button ) ) {
 							?>
 							<div class="swiper-slide">
 								<div class="swiper-slide-warp">
-									<div class="row align-content-center">
-										<?php
-										if ( ! empty( $main_title ) || ! empty( $content ) || ! empty( $cta_button ) ) {
-											?>
-											<div class="col-auto slider-container">
-												<?php
-												if ( ! empty( $main_title ) ) {
-													echo '<' . esc_attr( $select_tag ) . ' class="h-2 section-title">' . esc_html( $main_title ) . '</' . esc_attr( $select_tag ) . '>';
-												}
-												if ( ! empty( $content ) ) {
-													echo $content; //phpcs:ignore
-												}
-												if ( $cta_button && ! empty( $cta_button['url'] ) && ! empty( $cta_button['title'] ) ) {
-													$link_url    = $cta_button['url'];
-													$link_title  = $cta_button['title'];
-													$link_target = $cta_button['target'] ? $link['target'] : '_self';
+									<?php
+									if ( ! empty( $main_title ) || ! empty( $content ) || ! empty( $cta_button ) || ! empty( $right_image ) ) {
+										?>
+										<div class="row align-content-center">
+											<?php
+											if ( ! empty( $main_title ) || ! empty( $content ) || ! empty( $cta_button ) ) {
+												?>
+												<div class="col-auto slider-container">
+													<?php
+													if ( ! empty( $main_title ) ) {
+														echo '<' . esc_attr( $select_tag ) . ' class="h-2 section-title">' . esc_html( $main_title ) . '</' . esc_attr( $select_tag ) . '>';
+													}
+													if ( ! empty( $content ) ) {
+														echo $content; //phpcs:ignore
+													}
+													if ( $cta_button && ! empty( $cta_button['url'] ) && ! empty( $cta_button['title'] ) ) {
+														$link_url    = $cta_button['url'];
+														$link_title  = $cta_button['title'];
+														$link_target = $cta_button['target'] ? $link['target'] : '_self';
+														?>
+														<a href="<?php echo esc_url( $link_url ); ?>" class="btn" target="<?php echo esc_attr( $link_target ); ?>">
+															<?php echo esc_html( $link_title ); ?>
+														</a>
+														<?php
+													}
 													?>
-													<a href="<?php echo esc_url( $link_url ); ?>" class="btn" target="<?php echo esc_attr( $link_target ); ?>">
-														<?php echo esc_html( $link_title ); ?>
-													</a>
+												</div>
+												<?php
+												if ( ! empty( $right_image ) ) {
+													?>
+													<div class="col-auto hero-container align-self-stretch">
+														<img class="right-image" width="<?php echo $right_image['sizes']['timefinance-desktop-width']; ?>" height="<?php echo $right_image['sizes']['timefinance-desktop-height']; ?>" src="<?php echo $right_image['url']; ?>" srcset="<?php echo $right_image['sizes']['timefinance-small-mobile']; ?> 400w, <?php echo $right_image['sizes']['timefinance-mobile']; ?> 800w, <?php echo $right_image['sizes']['timefinance-tablet']; ?> 1200w, <?php echo $right_image['sizes']['timefinance-desktop']; ?> 2000w" sizes="50vw" alt="<?php echo $right_image_alt; //phpcs:ignore ?>">
+													</div>
 													<?php
 												}
-												?>
-											</div>
-											<div class="col-auto hero-container align-self-stretch">
-											<?php
-											if ( ! empty( $right_image ) ) {
-												?>
-												<img class="right-image" width="<?php echo $right_image['sizes']['timefinance-desktop-width']; ?>" height="<?php echo 	$right_image['sizes']['timefinance-desktop-height']; ?>" src="<?php echo $right_image['url']; ?>" srcset="<?php echo $right_image['sizes']['timefinance-small-mobile']; ?> 400w, <?php echo $right_image['sizes']['timefinance-mobile']; ?> 800w, <?php echo $right_image['sizes']['timefinance-tablet']; ?> 1200w, <?php echo $right_image['sizes']['timefinance-desktop']; ?> 2000w" sizes="50vw" alt="<?php echo $right_image_alt; //phpcs:ignore ?>">
-												<?php
 											}
 											?>
-											</div>
-											<?php
-										}
-										?>
-									</div>
-									<?php
+										</div>
+										<?php
+									}
 									if ( ! empty( $left_image ) ) {
 										?>
 											<img class="left-image background-overlay" width="<?php echo $left_image['sizes']['timefinance-desktop-width']; ?>" height="<?php echo 	$left_image['sizes']['timefinance-desktop-height']; ?>" src="<?php echo $left_image['url']; ?>" srcset="<?php echo $left_image['sizes']['timefinance-small-mobile']; ?> 400w, <?php echo $left_image['sizes']['timefinance-mobile']; ?> 800w, <?php echo $left_image['sizes']['timefinance-tablet']; ?> 1200w, <?php echo $left_image['sizes']['timefinance-desktop']; ?> 2000w" sizes="50vw" alt="<?php echo $left_image_alt; //phpcs:ignore ?>">

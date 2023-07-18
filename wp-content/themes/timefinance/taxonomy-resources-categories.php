@@ -141,7 +141,7 @@ $resources_form            = ( ! empty( $resources_select_form ) ) ? '[forminato
 										if ( get_the_title() ) {
 											?>
 											<div class="resources-title">
-												<?php echo get_the_title(); //phpcs:ignore ?>
+												<?php echo esc_html( get_the_title() ); ?>
 											</div>
 											<?php
 										}

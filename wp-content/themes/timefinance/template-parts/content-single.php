@@ -16,9 +16,9 @@ $image_alt           = ( isset( $image['alt'] ) && ! empty( $image['alt'] ) ) ? 
 			<div class="col time-blog-detail-wrapper">
 				<div class="image-box">
 					<?php
-					if ( $image ) {
+					if ( ! empty( $image ) ) {
 						?>
-						<img class="time-blog-images" width="<?php echo $image['sizes']['timefinance-desktop-width']; ?>" height="<?php echo 	$image['sizes']['timefinance-desktop-height']; ?>" src="<?php echo $image['url']; ?>" srcset="<?php echo $image['sizes']['timefinance-small-mobile']; ?> 400w, <?php echo $image['sizes']['timefinance-mobile']; ?> 800w, <?php echo $image['sizes']['timefinance-tablet']; ?> 1200w, <?php echo $image['sizes']['timefinance-desktop']; ?> 2000w" sizes="50vw" alt="<?php echo $image_alt; //phpcs:ignore ?>">
+						<img class="time-blog-images" width="<?php echo $image['sizes']['timefinance-desktop-width']; ?>" height="<?php echo $image['sizes']['timefinance-desktop-height']; ?>" src="<?php echo $image['url']; ?>" srcset="<?php echo $image['sizes']['timefinance-small-mobile']; ?> 400w, <?php echo $image['sizes']['timefinance-mobile']; ?> 800w, <?php echo $image['sizes']['timefinance-tablet']; ?> 1200w, <?php echo $image['sizes']['timefinance-desktop']; ?> 2000w" sizes="50vw" alt="<?php echo $image_alt; //phpcs:ignore ?>">
 						<?php
 					} else {
 						the_post_thumbnail(); //phpcs:ignore
@@ -38,12 +38,12 @@ $image_alt           = ( isset( $image['alt'] ) && ! empty( $image['alt'] ) ) ? 
 						?>
 					</div>
 					<div class="time-blog-title d-none d-lg-block">
-						<?php echo get_the_title(); //phpcs:ignore ?>
+						<?php echo esc_html( get_the_title() ); ?>
 					</div>
 					<div class="social-icon">
 						<span class="share-article"><?php echo esc_html__( 'Share this post', 'timefinance' ); ?></span>
-						<a class="social-sharing-icon linkedin-in" href="//linkedin.com/shareArticle?mini=true?url=<?php the_permalink(); ?>" onclick="window.open(this.href,this.title,'width=500,height=500,top=300px,left=300px');  return false;"  rel="nofollow" target="_blank" title="Share Us On LinkedIn"><img src="<?php echo get_template_directory_uri(); // phpcs:ignore?>/inc/assets/linkedin-white.svg"></a>
-						<a class="social-sharing-icon twitter" href="//twitter.com/share?url=<?php the_permalink(); ?>" onclick="window.open(this.href,this.title,'width=500,height=500,top=300px,left=300px');  return false;"  rel="nofollow" target="_blank" title="Share Us On Twitter"><img src="<?php echo get_template_directory_uri(); // phpcs:ignore?>/inc/assets/twitter-white.svg"></a>
+							<a class="social-sharing-icon linkedin-in" href="//linkedin.com/shareArticle?mini=true?url=<?php the_permalink(); ?>" onclick="window.open(this.href,this.title,'width=500,height=500,top=300px,left=300px');  return false;"  rel="nofollow" target="_blank" title="Share Us On LinkedIn"><img src="<?php echo get_template_directory_uri(); // phpcs:ignore?>/inc/assets/linkedin-white.svg"></a>
+							<a class="social-sharing-icon twitter" href="//twitter.com/share?url=<?php the_permalink(); ?>" onclick="window.open(this.href,this.title,'width=500,height=500,top=300px,left=300px');  return false;"  rel="nofollow" target="_blank" title="Share Us On Twitter"><img src="<?php echo get_template_directory_uri(); // phpcs:ignore?>/inc/assets/twitter-white.svg"></a>
 					</div>
 					<?php
 					if ( $all_articles_button && ! empty( $all_articles_button['url'] ) && ! empty( $all_articles_button['title'] ) ) {
@@ -66,7 +66,7 @@ $image_alt           = ( isset( $image['alt'] ) && ! empty( $image['alt'] ) ) ? 
 					?>
 				</div>
 				<div class="time-blog-title d-lg-none">
-					<?php echo get_the_title(); //phpcs:ignore ?>
+					<?php echo esc_html( get_the_title() ); ?>
 				</div>
 				<?php
 				$_term = get_queried_object();

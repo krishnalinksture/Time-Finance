@@ -5,9 +5,9 @@
  * @package TIMEFINANCE
  */
 
-$content    = get_sub_field( 'content' );
-$select_text_align    = get_sub_field( 'select_text_align' );
-$section_id = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'content-block-' );
+$content           = get_sub_field( 'content' );
+$select_text_align = get_sub_field( 'select_text_align' );
+$section_id        = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'content-block-' );
 
 if ( ! empty( $content ) ) {
 	?>

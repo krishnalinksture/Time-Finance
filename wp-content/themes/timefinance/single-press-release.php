@@ -39,7 +39,7 @@ if ( ! empty( $image ) || ! empty( $all_articles_button ) ) {
 							?>
 						</div>
 						<div class="press-release-title d-none d-lg-block">
-							<?php echo get_the_title(); //phpcs:ignore ?>
+							<?php echo esc_html( get_the_title() ); ?>
 						</div>
 						<div class="social-icon">
 							<span class="share-article"><?php echo esc_html__( 'Share this post', 'timefinance' ); ?></span>
@@ -67,7 +67,7 @@ if ( ! empty( $image ) || ! empty( $all_articles_button ) ) {
 						?>
 					</div>
 					<div class="press-release-title d-lg-none">
-						<?php echo get_the_title(); //phpcs:ignore ?>
+						<?php echo esc_html( get_the_title() ); ?>
 					</div>
 					<?php
 					$_term = get_queried_object();

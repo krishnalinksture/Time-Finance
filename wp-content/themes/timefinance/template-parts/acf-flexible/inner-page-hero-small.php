@@ -13,7 +13,7 @@ $cta_button        = get_sub_field( 'cta_button' );
 $background        = ( ! empty( $background_image ) ) ? ' style="background-image:url(' . esc_url( $background_image ) . ');"' : '';
 $section_id        = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'inner-page-hero-small-' );
 
-if ( ! empty( $main_title ) ) {
+if ( ! empty( $main_title ) || ! empty( $cta_button ) ) {
 	?>
 	<section class="inner-page-hero-small <?php echo $select_background; ?>" id="<?php echo $section_id; //phpcs:ignore ?>"<?php echo $background; ?>>
 		<?php

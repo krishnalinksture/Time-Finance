@@ -8,23 +8,23 @@
 ?>
 </main><!-- main content : END -->
 <?php
-$main_title         = get_field( 'title', 'options' );
-$select_tag         = get_field( 'select_tag', 'options' );
-$mail               = get_field( 'mail', 'options' );
-$pop_up_title       = get_field( 'pop_up_title', 'options' );
-$pop_up_form        = get_field( 'pop_up_form', 'options' );
-$trustpilot         = get_field( 'trustpilot', 'options' );
-$form_logo          = get_field( 'form_logo', 'options' );
-$footer_logo        = get_field( 'footer_logo', 'options' );
-$form_subscribtion_data        = get_field( 'form_subscribtion_data', 'options' );
-$footer_address     = get_field( 'footer_address', 'options' );
-$footer_social_icon = get_field( 'footer_social_icon', 'options' );
-$footer_content     = get_field( 'footer_content', 'options' );
-$footer_form        = ( ! empty( $pop_up_form ) ) ? '[forminator_form id="' . $pop_up_form . '"]' : '';
-$form_logo_alt      = ( isset( $form_logo['alt'] ) && ! empty( $form_logo['alt'] ) ) ? $form_logo['alt'] : ( isset( $form_logo['title'] ) && ! empty( $form_logo['title'] ) ? $form_logo['title'] : '' );
-$footer_logo_alt    = ( isset( $footer_logo['alt'] ) && ! empty( $footer_logo['alt'] ) ) ? $footer_logo['alt'] : ( isset( $footer_logo['title'] ) && ! empty( $footer_logo['title'] ) ? $footer_logo['title'] : '' );
+$main_title             = get_field( 'title', 'options' );
+$select_tag             = get_field( 'select_tag', 'options' );
+$mail                   = get_field( 'mail', 'options' );
+$pop_up_title           = get_field( 'pop_up_title', 'options' );
+$pop_up_form            = get_field( 'pop_up_form', 'options' );
+$trustpilot             = get_field( 'trustpilot', 'options' );
+$form_logo              = get_field( 'form_logo', 'options' );
+$footer_logo            = get_field( 'footer_logo', 'options' );
+$form_subscribtion_data = get_field( 'form_subscribtion_data', 'options' );
+$footer_address         = get_field( 'footer_address', 'options' );
+$footer_social_icon     = get_field( 'footer_social_icon', 'options' );
+$footer_content         = get_field( 'footer_content', 'options' );
+$footer_form            = ( ! empty( $pop_up_form ) ) ? '[forminator_form id="' . $pop_up_form . '"]' : '';
+$form_logo_alt          = ( isset( $form_logo['alt'] ) && ! empty( $form_logo['alt'] ) ) ? $form_logo['alt'] : ( isset( $form_logo['title'] ) && ! empty( $form_logo['title'] ) ? $form_logo['title'] : '' );
+$footer_logo_alt        = ( isset( $footer_logo['alt'] ) && ! empty( $footer_logo['alt'] ) ) ? $footer_logo['alt'] : ( isset( $footer_logo['title'] ) && ! empty( $footer_logo['title'] ) ? $footer_logo['title'] : '' );
 
-if ( ! empty( $main_title ) || ! empty( $mail ) || ! empty( $pop_up_title ) || ! empty( $form_logo ) || ! empty( $pop_up_form ) || ! empty( $trustpilot ) || is_active_sidebar( 'footer-column-1' ) || ! empty( $form_logo ) || ! empty( $footer_address ) || have_rows( 'footer_social_icon', 'options' ) || ! empty( $footer_content ) || is_active_sidebar( 'footer-bottom' ) ) {
+if ( ! empty( $main_title ) || ! empty( $mail ) || ! empty( $pop_up_title ) || ! empty( $form_logo ) || ! empty( $pop_up_form ) || ! empty( $trustpilot ) || is_active_sidebar( 'footer-column-1' ) || ! empty( $form_logo ) || ! empty( $footer_address ) || have_rows( 'footer_social_icon' ) || ! empty( $footer_content ) || is_active_sidebar( 'footer-bottom' ) ) {
 	?>
 	<footer>
 		<div class="container">
@@ -74,7 +74,7 @@ if ( ! empty( $main_title ) || ! empty( $mail ) || ! empty( $pop_up_title ) || !
 														</div>
 														<?php
 													}
-													if ( ! empty( $pop_up_form ) ) {
+													if ( ! empty( $pop_up_form ) || ! empty( $form_subscribtion_data ) ) {
 														?>
 														<div class="modal-body">
 															<div class="row justify-content-center">
@@ -87,10 +87,14 @@ if ( ! empty( $main_title ) || ! empty( $mail ) || ! empty( $pop_up_title ) || !
 																		</div>
 																		<?php
 																	}
+																	if ( ! empty( $form_subscribtion_data ) ) {
+																		?>
+																		<div class="form-subscribtion-data">
+																			<?php echo $form_subscribtion_data; //phpcs:ignore ?>
+																		</div>
+																		<?php
+																	}
 																	?>
-																	<div class="form-subscribtion-data">
-																		<?php echo $form_subscribtion_data; //phpcs:ignore ?>
-																	</div>
 																</div>
 															</div>
 														</div>
@@ -130,7 +134,7 @@ if ( ! empty( $main_title ) || ! empty( $mail ) || ! empty( $pop_up_title ) || !
 				</div>
 				<?php
 			}
-			if ( ! empty( $form_logo ) || ! empty( $footer_address ) || have_rows( 'footer_social_icon', 'options' ) || ! empty( $footer_content ) || is_active_sidebar( 'footer-bottom' ) ) {
+			if ( ! empty( $form_logo ) || ! empty( $footer_address ) || have_rows( 'footer_social_icon' ) || ! empty( $footer_content ) || is_active_sidebar( 'footer-bottom' ) ) {
 				?>
 				<div class="row">
 					<?php
@@ -145,12 +149,12 @@ if ( ! empty( $main_title ) || ! empty( $mail ) || ! empty( $pop_up_title ) || !
 						</div>
 						<?php
 					}
-					if ( ! empty( $footer_address ) || have_rows( 'footer_social_icon', 'options' ) || ! empty( $footer_content ) || is_active_sidebar( 'footer-bottom' ) ) {
+					if ( ! empty( $footer_address ) || have_rows( 'footer_social_icon' ) || ! empty( $footer_content ) || is_active_sidebar( 'footer-bottom' ) ) {
 						?>
 						<div class="col-xl-5 col-md-6">
 							<div class="row">
 								<?php
-								if ( ! empty( $footer_address ) || have_rows( 'footer_social_icon', 'options' ) ) {
+								if ( ! empty( $footer_address ) || have_rows( 'footer_social_icon' ) ) {
 									?>
 									<div class="col-md-6 d-flex flex-column footer-address">
 										<?php echo $footer_address; //phpcs:ignore
@@ -186,7 +190,9 @@ if ( ! empty( $main_title ) || ! empty( $mail ) || ! empty( $pop_up_title ) || !
 									?>
 									<div class="col-md-6 footer-privacy">
 										<?php
-										echo $footer_content; //phpcs:ignore
+										if ( ! empty( $footer_content ) ) {
+											echo $footer_content; //phpcs:ignore
+										}
 										if ( is_active_sidebar( 'footer-bottom' ) ) {
 											?>
 											<div class="footer-bottom-menu">
