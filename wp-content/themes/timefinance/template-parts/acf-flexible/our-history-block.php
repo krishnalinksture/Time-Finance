@@ -28,7 +28,7 @@ if ( ! empty( $main_title ) || have_rows( 'history_content' ) ) {
 			if ( have_rows( 'history_content' ) ) {
 				?>
 				<div class="row justify-content-center">
-					<div class="col-11 history-wrapper">
+					<div class="col-12 col-xl-11 history-wrapper">
 						<div class="separator"></div>
 						<?php
 						while ( have_rows( 'history_content' ) ) {
