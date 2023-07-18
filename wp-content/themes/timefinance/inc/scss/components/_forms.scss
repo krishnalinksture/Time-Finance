@@ -335,6 +335,9 @@
     .modal-dialog {
         max-width: 740px;
         margin-top: 200px;
+		@include responsive (ipad-portrait, max) {
+			max-width: 700px;
+		}
 		.modal-content {
 			.modal-header {
 				border: none;
@@ -409,7 +412,7 @@
                                     @media only screen and (max-width: 782px) {
                                         width: auto !important;
                                     }
-                
+
                                     @include responsive (mobile-big, max) {
                                         font-size: 14px !important;
                                         line-height: 14px;
@@ -458,6 +461,9 @@
 
                 .modal-body {
                     padding: 30px 45px;
+					@include responsive (mobile-big,max) {
+						padding: 20px 30px;
+					}
                     .bdt-popup-form {
                         .forminator-custom-form {
                             margin-bottom: 0 !important;
@@ -509,6 +515,7 @@
                                         line-height: 33px;
                                         @include responsive (mobile-big, max) {
                                             font-size: 15px !important;
+											height: 150px;
                                         }
                                     }
 
@@ -523,7 +530,7 @@
                                         @media only screen and (max-width: 782px) {
                                             width: auto !important;
                                         }
-                    
+
                                         @include responsive (mobile-big, max) {
                                             font-size: 14px !important;
                                             line-height: 14px;

@@ -475,6 +475,9 @@ button.mfp-close {
 .popup-form .modal-dialog {
   max-width: 740px;
   margin-top: 200px; }
+  @media (max-width: 991px) {
+    .popup-form .modal-dialog {
+      max-width: 700px; } }
   .popup-form .modal-dialog .modal-content .modal-header {
     border: none; }
     .popup-form .modal-dialog .modal-content .modal-header .modal-title {
@@ -562,6 +565,9 @@ button.mfp-close {
 
 .bdt-filter-block .popup-form .modal-dialog .modal-content .modal-body {
   padding: 30px 45px; }
+  @media (max-width: 767px) {
+    .bdt-filter-block .popup-form .modal-dialog .modal-content .modal-body {
+      padding: 20px 30px; } }
   .bdt-filter-block .popup-form .modal-dialog .modal-content .modal-body .bdt-popup-form .forminator-custom-form {
     margin-bottom: 0 !important; }
     .bdt-filter-block .popup-form .modal-dialog .modal-content .modal-body .bdt-popup-form .forminator-custom-form .forminator-row {
@@ -604,7 +610,8 @@ button.mfp-close {
         line-height: 33px; }
         @media (max-width: 767px) {
           .bdt-filter-block .popup-form .modal-dialog .modal-content .modal-body .bdt-popup-form .forminator-custom-form .forminator-row .forminator-field .forminator-textarea {
-            font-size: 15px !important; } }
+            font-size: 15px !important;
+            height: 150px; } }
       .bdt-filter-block .popup-form .modal-dialog .modal-content .modal-body .bdt-popup-form .forminator-custom-form .forminator-row .forminator-field .forminator-button-submit {
         padding: 13px 24px;
         font-family: "Nunito Sans", sans-serif !important;
