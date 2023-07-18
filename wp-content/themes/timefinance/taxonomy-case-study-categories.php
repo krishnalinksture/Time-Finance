@@ -90,13 +90,13 @@ if ( ! empty( $case_studies_title ) || ! empty( $case_studies_content ) ) {
 						</li>
 						<?php
 					}
-					if ( $view_all && ! empty( $view_all['url'] ) && ! empty( $view_all['title'] ) ) {
+					if ( $case_studies_view_all_button && ! empty( $case_studies_view_all_button['url'] ) && ! empty( $case_studies_view_all_button['title'] ) ) {
 						?>
 						<li class="case-study-cat-list">
 							<?php
-							$link_url    = $view_all['url'];
-							$link_title  = $view_all['title'];
-							$link_target = $view_all['target'] ? $view_all['target'] : '_self';
+							$link_url    = $case_studies_view_all_button['url'];
+							$link_title  = $case_studies_view_all_button['title'];
+							$link_target = $case_studies_view_all_button['target'] ? $case_studies_view_all_button['target'] : '_self';
 							?>
 							<a href="<?php echo esc_url( $link_url ); ?>" class="btn btn-link" target="<?php echo esc_attr( $link_target ); ?>">
 								<?php echo esc_html( $link_title ); ?>

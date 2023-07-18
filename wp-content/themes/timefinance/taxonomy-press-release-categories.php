@@ -91,13 +91,13 @@ $press_release_view_all_button = get_field( 'press_release_view_all_button', 'op
 						</li>
 						<?php
 					}
-					if ( $view_all && ! empty( $view_all['url'] ) && ! empty( $view_all['title'] ) ) {
+					if ( $press_release_view_all_button && ! empty( $press_release_view_all_button['url'] ) && ! empty( $press_release_view_all_button['title'] ) ) {
 						?>
 						<li class="press-release-cat-list">
 							<?php
-							$link_url    = $view_all['url'];
-							$link_title  = $view_all['title'];
-							$link_target = $view_all['target'] ? $view_all['target'] : '_self';
+							$link_url    = $press_release_view_all_button['url'];
+							$link_title  = $press_release_view_all_button['title'];
+							$link_target = $press_release_view_all_button['target'] ? $press_release_view_all_button['target'] : '_self';
 							?>
 							<a href="<?php echo esc_url( $link_url ); ?>" class="btn btn-link" target="<?php echo esc_attr( $link_target ); ?>">
 								<?php echo esc_html( $link_title ); ?>

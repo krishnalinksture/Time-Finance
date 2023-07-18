@@ -92,13 +92,13 @@ $time_blog_view_all_button = get_field( 'time_blog_view_all_button', 'option' );
 						</li>
 						<?php
 					}
-					if ( $view_all && ! empty( $view_all['url'] ) && ! empty( $view_all['title'] ) ) {
+					if ( $time_blog_view_all_button && ! empty( $time_blog_view_all_button['url'] ) && ! empty( $time_blog_view_all_button['title'] ) ) {
 						?>
 						<li class="time-blog-cat-list">
 							<?php
-							$link_url    = $view_all['url'];
-							$link_title  = $view_all['title'];
-							$link_target = $view_all['target'] ? $view_all['target'] : '_self';
+							$link_url    = $time_blog_view_all_button['url'];
+							$link_title  = $time_blog_view_all_button['title'];
+							$link_target = $time_blog_view_all_button['target'] ? $time_blog_view_all_button['target'] : '_self';
 							?>
 							<a href="<?php echo esc_url( $link_url ); ?>" class="btn btn-link" target="<?php echo esc_attr( $link_target ); ?>">
 								<?php echo esc_html( $link_title ); ?>

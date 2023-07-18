@@ -93,13 +93,13 @@ $resources_form            = ( ! empty( $resources_select_form ) ) ? '[forminato
 						</li>
 						<?php
 					}
-					if ( $view_all && ! empty( $view_all['url'] ) && ! empty( $view_all['title'] ) ) {
+					if ( $resources_view_all_button && ! empty( $resources_view_all_button['url'] ) && ! empty( $resources_view_all_button['title'] ) ) {
 						?>
 						<li class="resources-cat-list">
 							<?php
-							$link_url    = $view_all['url'];
-							$link_title  = $view_all['title'];
-							$link_target = $view_all['target'] ? $view_all['target'] : '_self';
+							$link_url    = $resources_view_all_button['url'];
+							$link_title  = $resources_view_all_button['title'];
+							$link_target = $resources_view_all_button['target'] ? $resources_view_all_button['target'] : '_self';
 							?>
 							<a href="<?php echo esc_url( $link_url ); ?>" class="btn btn-link" target="<?php echo esc_attr( $link_target ); ?>">
 								<?php echo esc_html( $link_title ); ?>
