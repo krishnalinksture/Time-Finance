@@ -80,7 +80,7 @@ $resources_form            = ( ! empty( $resources_select_form ) ) ? '[forminato
 					<?php echo esc_html( 'Teams' ); ?>
 				</button>
 				<ul class="dropdown-menu" aria-labelledby="dropdownMenuBdt">
-				<?php
+					<?php
 					$args       = array(
 						'taxonomy' => 'resources-categories',
 					);

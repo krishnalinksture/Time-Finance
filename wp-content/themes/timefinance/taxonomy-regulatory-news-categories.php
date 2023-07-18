@@ -53,13 +53,13 @@ $regulatory_news_view_all_button = get_field( 'regulatory_news_view_all_button',
 						</li>
 						<?php
 					}
-					if ( $view_all_button && ! empty( $view_all_button['url'] ) && ! empty( $view_all_button['title'] ) ) {
+					if ( $regulatory_news_view_all_button && ! empty( $regulatory_news_view_all_button['url'] ) && ! empty( $regulatory_news_view_all_button['title'] ) ) {
 						?>
 						<li class="regulatory-news-cat-list">
 							<?php
-							$link_url    = $view_all_button['url'];
-							$link_title  = $view_all_button['title'];
-							$link_target = $view_all_button['target'] ? $view_all_button['target'] : '_self';
+							$link_url    = $regulatory_news_view_all_button['url'];
+							$link_title  = $regulatory_news_view_all_button['title'];
+							$link_target = $regulatory_news_view_all_button['target'] ? $regulatory_news_view_all_button['target'] : '_self';
 							?>
 							<a href="<?php echo esc_url( $link_url ); ?>" class="btn btn-link" target="<?php echo esc_attr( $link_target ); ?>">
 								<?php echo esc_html( $link_title ); ?>
@@ -91,13 +91,13 @@ $regulatory_news_view_all_button = get_field( 'regulatory_news_view_all_button',
 						</li>
 						<?php
 					}
-					if ( $view_all_button && ! empty( $view_all_button['url'] ) && ! empty( $view_all_button['title'] ) ) {
+					if ( $regulatory_news_view_all_button && ! empty( $regulatory_news_view_all_button['url'] ) && ! empty( $regulatory_news_view_all_button['title'] ) ) {
 						?>
 						<li class="regulatory-news-cat-list">
 							<?php
-							$link_url    = $view_all_button['url'];
-							$link_title  = $view_all_button['title'];
-							$link_target = $view_all_button['target'] ? $view_all_button['target'] : '_self';
+							$link_url    = $regulatory_news_view_all_button['url'];
+							$link_title  = $regulatory_news_view_all_button['title'];
+							$link_target = $regulatory_news_view_all_button['target'] ? $regulatory_news_view_all_button['target'] : '_self';
 							?>
 							<a href="<?php echo esc_url( $link_url ); ?>" class="btn btn-link" target="<?php echo esc_attr( $link_target ); ?>">
 								<?php echo esc_html( $link_title ); ?>

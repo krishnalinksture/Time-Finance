@@ -138,7 +138,9 @@ if ( ! empty( $main_title ) || ! empty( $mail ) || ! empty( $pop_up_title ) || !
 						?>
 						<div class="col-xl-7 col-md-6 d-flex align-items-end">
 							<div class="footer-logo">
-								<img class="logo" width="<?php echo $form_logo['sizes']['timefinance-desktop-width']; ?>" height="<?php echo $form_logo['sizes']['timefinance-desktop-height']; ?>" src="<?php echo $form_logo['url']; ?>" srcset="<?php echo $form_logo['sizes']['timefinance-small-mobile']; ?> 400w, <?php echo $form_logo['sizes']['timefinance-mobile']; ?> 800w, <?php echo $form_logo['sizes']['timefinance-tablet']; ?> 1200w, <?php echo $form_logo['sizes']['timefinance-desktop']; ?> 2000w" sizes="50vw" alt="<?php echo $form_logo_alt; //phpcs:ignore ?>">
+								<a class="main-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+									<img class="logo" width="<?php echo $form_logo['sizes']['timefinance-desktop-width']; ?>" height="<?php echo $form_logo['sizes']['timefinance-desktop-height']; ?>" src="<?php echo $form_logo['url']; ?>" srcset="<?php echo $form_logo['sizes']['timefinance-small-mobile']; ?> 400w, <?php echo $form_logo['sizes']['timefinance-mobile']; ?> 800w, <?php echo $form_logo['sizes']['timefinance-tablet']; ?> 1200w, <?php echo $form_logo['sizes']['timefinance-desktop']; ?> 2000w" sizes="50vw" alt="<?php echo $form_logo_alt; //phpcs:ignore ?>">
+								</a>
 							</div>
 						</div>
 						<?php
