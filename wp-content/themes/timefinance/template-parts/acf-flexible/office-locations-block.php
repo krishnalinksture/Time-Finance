@@ -27,7 +27,7 @@ if ( ! empty( $main_title ) || have_rows( 'location_cards' ) ) {
 			}
 			if ( have_rows( 'location_cards' ) ) {
 				?>
-				<div class="row row-cols-1 row-cols-xl-4 row-cols-lg-3 row-cols-md-2 justify-content-center">
+				<div class="row row-cols-1 row-cols-xl-4 row-cols-lg-3 row-cols-md-2">
 					<?php
 					while ( have_rows( 'location_cards' ) ) {
 						the_row();
