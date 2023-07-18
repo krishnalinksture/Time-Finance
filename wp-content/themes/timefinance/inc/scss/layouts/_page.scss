@@ -4877,6 +4877,10 @@
             width: 100%;
             display: inline-block;
 
+            @include responsive (mobile-big, max) {
+                height: 230px;
+            }
+
             img {
                 height: 100%;
                 width: 100%;
@@ -4886,6 +4890,10 @@
     }
 
     .container {
+        @include responsive (mobile-big, max) {
+            padding: 0 40px;
+        }
+
         .row {
             background-color: $white;
             margin: 0;
@@ -4893,13 +4901,30 @@
             margin-top: -150px;
             position: relative;
 
+            @include responsive (ipad-portrait, max) {
+                padding: 5% 4%;
+            }
+
             .left {
                 padding-left: 15px;
+
+                @include responsive (mobile-big, max) {
+                    padding-left: 0;
+                }
             }
 
             .right {
                 padding-left: 38px;
                 padding-top: 8px;
+
+                @include responsive (ipad-portrait, max) {
+                    padding-left: 15px;
+                 }
+ 
+                 @include responsive (mobile-big, max) {
+                     padding-left: 0;
+                     padding-top: 0;
+                 }
 
                 .time-blog-date {
                     font-size: 12px;
@@ -4917,6 +4942,11 @@
                     font-weight: 700;
                     width: 90%;
                     margin-bottom: 64px;
+
+                    @include responsive (ipad-portrait, max) {
+                        margin-bottom: 16px;
+                        width: 100%;
+                    }
                 }
             }
 
@@ -4950,6 +4980,12 @@
                 .social-icon {
                     padding: 0 15px;
 
+                    @include responsive (ipad-portrait, max) {
+                        padding: 0;
+                        padding-top: 24px;
+                        border-top: 2px solid $purple;
+                    }
+
                     span {
                         font-size: 16px;
                         line-height: 16px;
@@ -4975,6 +5011,11 @@
                     letter-spacing: normal;
                     padding: 7px 22px;
                     font-weight: 400;
+
+                    @include responsive (ipad-portrait,max) {
+                        margin-top: 38px;
+                        margin-bottom: 20px;
+                    }
 
                     &::before {
                         width: 48px;
@@ -5007,6 +5048,9 @@
             height: 450px;
             width: 100%;
             display: inline-block;
+            @include responsive (mobile-big, max) {
+                height: 230px;
+            }
 
             img {
                 height: 100%;
@@ -5017,6 +5061,11 @@
     }
 
     .container {
+
+        @include responsive (mobile-big, max) {
+            padding: 0 40px;
+        }
+
         .row {
             background-color: $white;
             margin: 0;
@@ -5024,13 +5073,30 @@
             margin-top: -150px;
             position: relative;
 
+            @include responsive (ipad-portrait, max) {
+                padding: 5% 4%;
+            }
+
             .left {
                 padding-left: 15px;
+
+                @include responsive (mobile-big, max) {
+                    padding-left: 0;
+                }
             }
 
             .right {
                 padding-left: 38px;
                 padding-top: 8px;
+
+                @include responsive (ipad-portrait, max) {
+                   padding-left: 15px;
+                }
+
+                @include responsive (mobile-big, max) {
+                    padding-left: 0;
+                    padding-top: 0;
+                }
 
                 .case-study-date {
                     font-size: 12px;
@@ -5048,6 +5114,11 @@
                     font-weight: 700;
                     width: 90%;
                     margin-bottom: 64px;
+
+                    @include responsive (ipad-portrait, max) {
+                        margin-bottom: 16px;
+                        width: 100%;
+                     }
                 }
             }
 
@@ -5081,6 +5152,12 @@
                 .social-icon {
                     padding: 0 15px;
 
+                    @include responsive (ipad-portrait, max) {
+                        padding: 0;
+                        padding-top: 24px;
+                        border-top: 2px solid $purple;
+                    }
+
                     span {
                         font-size: 16px;
                         line-height: 16px;
@@ -5106,6 +5183,11 @@
                     letter-spacing: normal;
                     padding: 7px 22px;
                     font-weight: 400;
+
+                    @include responsive (ipad-portrait,max) {
+                        margin-top: 38px;
+                        margin-bottom: 20px;
+                    }
 
                     &::before {
                         width: 48px;
@@ -5139,6 +5221,10 @@
             width: 100%;
             display: inline-block;
 
+            @include responsive (mobile-big, max) {
+                height: 230px;
+            }
+
             img {
                 height: 100%;
                 width: 100%;
@@ -5148,6 +5234,11 @@
     }
 
     .container {
+
+        @include responsive (mobile-big, max) {
+            padding: 0 40px;
+        }
+
         .row {
             background-color: $white;
             margin: 0;
@@ -5155,13 +5246,30 @@
             margin-top: -150px;
             position: relative;
 
+            @include responsive (ipad-portrait, max) {
+                padding: 5% 4%;
+            }
+
             .left {
                 padding-left: 15px;
+
+                @include responsive (mobile-big, max) {
+                    padding-left: 0;
+                }
             }
 
             .right {
                 padding-left: 38px;
                 padding-top: 8px;
+
+                @include responsive (ipad-portrait, max) {
+                    padding-left: 15px;
+                 }
+ 
+                 @include responsive (mobile-big, max) {
+                     padding-left: 0;
+                     padding-top: 0;
+                 }
 
                 .press-release-date {
                     font-size: 12px;
@@ -5179,6 +5287,11 @@
                     font-weight: 700;
                     width: 90%;
                     margin-bottom: 64px;
+
+                    @include responsive (ipad-portrait, max) {
+                        margin-bottom: 16px;
+                        width: 100%;
+                     }
                 }
             }
 
@@ -5213,6 +5326,12 @@
                 .social-icon {
                     padding: 0 15px;
 
+                    @include responsive (ipad-portrait, max) {
+                        padding: 0;
+                        padding-top: 24px;
+                        border-top: 2px solid $purple;
+                    }
+
                     span {
                         font-size: 16px;
                         line-height: 16px;
@@ -5238,6 +5357,11 @@
                     letter-spacing: normal;
                     padding: 7px 22px;
                     font-weight: 400;
+
+                    @include responsive (ipad-portrait,max) {
+                        margin-top: 38px;
+                        margin-bottom: 20px;
+                    }
 
                     &::before {
                         width: 48px;

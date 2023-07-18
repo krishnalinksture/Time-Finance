@@ -4665,10 +4665,17 @@ header {
     height: 450px;
     width: 100%;
     display: inline-block; }
+    @media (max-width: 767px) {
+      .time-blog-detail .time-blog-detail-wrapper .image-box {
+        height: 230px; } }
     .time-blog-detail .time-blog-detail-wrapper .image-box img {
       height: 100%;
       width: 100%;
       object-fit: cover; }
+
+@media (max-width: 767px) {
+  .time-blog-detail .container {
+    padding: 0 40px; } }
 
 .time-blog-detail .container .row {
   background-color: #fff;
@@ -4676,11 +4683,24 @@ header {
   padding: 7% 6%;
   margin-top: -150px;
   position: relative; }
+  @media (max-width: 991px) {
+    .time-blog-detail .container .row {
+      padding: 5% 4%; } }
   .time-blog-detail .container .row .left {
     padding-left: 15px; }
+    @media (max-width: 767px) {
+      .time-blog-detail .container .row .left {
+        padding-left: 0; } }
   .time-blog-detail .container .row .right {
     padding-left: 38px;
     padding-top: 8px; }
+    @media (max-width: 991px) {
+      .time-blog-detail .container .row .right {
+        padding-left: 15px; } }
+    @media (max-width: 767px) {
+      .time-blog-detail .container .row .right {
+        padding-left: 0;
+        padding-top: 0; } }
     .time-blog-detail .container .row .right .time-blog-date {
       font-size: 12px;
       line-height: 15px;
@@ -4695,6 +4715,10 @@ header {
       font-weight: 700;
       width: 90%;
       margin-bottom: 64px; }
+      @media (max-width: 991px) {
+        .time-blog-detail .container .row .right .time-blog-title {
+          margin-bottom: 16px;
+          width: 100%; } }
   .time-blog-detail .container .row .left {
     padding-top: 8px; }
   .time-blog-detail .container .row .time-blog-detail-content.sticky-top {
@@ -4715,6 +4739,11 @@ header {
     margin-bottom: 64px; }
   .time-blog-detail .container .row .time-blog-detail-content .social-icon {
     padding: 0 15px; }
+    @media (max-width: 991px) {
+      .time-blog-detail .container .row .time-blog-detail-content .social-icon {
+        padding: 0;
+        padding-top: 24px;
+        border-top: 2px solid #3d1050; } }
     .time-blog-detail .container .row .time-blog-detail-content .social-icon span {
       font-size: 16px;
       line-height: 16px;
@@ -4736,6 +4765,10 @@ header {
     letter-spacing: normal;
     padding: 7px 22px;
     font-weight: 400; }
+    @media (max-width: 991px) {
+      .time-blog-detail .container .row .time-blog-detail-content .btn {
+        margin-top: 38px;
+        margin-bottom: 20px; } }
     .time-blog-detail .container .row .time-blog-detail-content .btn::before {
       width: 48px;
       height: 16px;
@@ -4756,10 +4789,17 @@ header {
     height: 450px;
     width: 100%;
     display: inline-block; }
+    @media (max-width: 767px) {
+      .case-study-detail .case-study-detail-wrapper .image-box {
+        height: 230px; } }
     .case-study-detail .case-study-detail-wrapper .image-box img {
       height: 100%;
       width: 100%;
       object-fit: cover; }
+
+@media (max-width: 767px) {
+  .case-study-detail .container {
+    padding: 0 40px; } }
 
 .case-study-detail .container .row {
   background-color: #fff;
@@ -4767,11 +4807,24 @@ header {
   padding: 7% 6%;
   margin-top: -150px;
   position: relative; }
+  @media (max-width: 991px) {
+    .case-study-detail .container .row {
+      padding: 5% 4%; } }
   .case-study-detail .container .row .left {
     padding-left: 15px; }
+    @media (max-width: 767px) {
+      .case-study-detail .container .row .left {
+        padding-left: 0; } }
   .case-study-detail .container .row .right {
     padding-left: 38px;
     padding-top: 8px; }
+    @media (max-width: 991px) {
+      .case-study-detail .container .row .right {
+        padding-left: 15px; } }
+    @media (max-width: 767px) {
+      .case-study-detail .container .row .right {
+        padding-left: 0;
+        padding-top: 0; } }
     .case-study-detail .container .row .right .case-study-date {
       font-size: 12px;
       line-height: 15px;
@@ -4786,6 +4839,10 @@ header {
       font-weight: 700;
       width: 90%;
       margin-bottom: 64px; }
+      @media (max-width: 991px) {
+        .case-study-detail .container .row .right .case-study-title {
+          margin-bottom: 16px;
+          width: 100%; } }
   .case-study-detail .container .row .left {
     padding-top: 8px; }
   .case-study-detail .container .row .case-study-detail-content.sticky-top {
@@ -4806,6 +4863,11 @@ header {
     margin-bottom: 64px; }
   .case-study-detail .container .row .case-study-detail-content .social-icon {
     padding: 0 15px; }
+    @media (max-width: 991px) {
+      .case-study-detail .container .row .case-study-detail-content .social-icon {
+        padding: 0;
+        padding-top: 24px;
+        border-top: 2px solid #3d1050; } }
     .case-study-detail .container .row .case-study-detail-content .social-icon span {
       font-size: 16px;
       line-height: 16px;
@@ -4827,6 +4889,10 @@ header {
     letter-spacing: normal;
     padding: 7px 22px;
     font-weight: 400; }
+    @media (max-width: 991px) {
+      .case-study-detail .container .row .case-study-detail-content .btn {
+        margin-top: 38px;
+        margin-bottom: 20px; } }
     .case-study-detail .container .row .case-study-detail-content .btn::before {
       width: 48px;
       height: 16px;
@@ -4847,10 +4913,17 @@ header {
     height: 450px;
     width: 100%;
     display: inline-block; }
+    @media (max-width: 767px) {
+      .press-release-detail .press-release-detail-wrapper .image-box {
+        height: 230px; } }
     .press-release-detail .press-release-detail-wrapper .image-box img {
       height: 100%;
       width: 100%;
       object-fit: cover; }
+
+@media (max-width: 767px) {
+  .press-release-detail .container {
+    padding: 0 40px; } }
 
 .press-release-detail .container .row {
   background-color: #fff;
@@ -4858,11 +4931,24 @@ header {
   padding: 7% 6%;
   margin-top: -150px;
   position: relative; }
+  @media (max-width: 991px) {
+    .press-release-detail .container .row {
+      padding: 5% 4%; } }
   .press-release-detail .container .row .left {
     padding-left: 15px; }
+    @media (max-width: 767px) {
+      .press-release-detail .container .row .left {
+        padding-left: 0; } }
   .press-release-detail .container .row .right {
     padding-left: 38px;
     padding-top: 8px; }
+    @media (max-width: 991px) {
+      .press-release-detail .container .row .right {
+        padding-left: 15px; } }
+    @media (max-width: 767px) {
+      .press-release-detail .container .row .right {
+        padding-left: 0;
+        padding-top: 0; } }
     .press-release-detail .container .row .right .press-release-date {
       font-size: 12px;
       line-height: 15px;
@@ -4877,6 +4963,10 @@ header {
       font-weight: 700;
       width: 90%;
       margin-bottom: 64px; }
+      @media (max-width: 991px) {
+        .press-release-detail .container .row .right .press-release-title {
+          margin-bottom: 16px;
+          width: 100%; } }
   .press-release-detail .container .row .left {
     padding-top: 8px; }
   .press-release-detail .container .row .press-release-detail-content.sticky-top {
@@ -4898,6 +4988,11 @@ header {
     margin-bottom: 64px; }
   .press-release-detail .container .row .press-release-detail-content .social-icon {
     padding: 0 15px; }
+    @media (max-width: 991px) {
+      .press-release-detail .container .row .press-release-detail-content .social-icon {
+        padding: 0;
+        padding-top: 24px;
+        border-top: 2px solid #3d1050; } }
     .press-release-detail .container .row .press-release-detail-content .social-icon span {
       font-size: 16px;
       line-height: 16px;
@@ -4919,6 +5014,10 @@ header {
     letter-spacing: normal;
     padding: 7px 22px;
     font-weight: 400; }
+    @media (max-width: 991px) {
+      .press-release-detail .container .row .press-release-detail-content .btn {
+        margin-top: 38px;
+        margin-bottom: 20px; } }
     .press-release-detail .container .row .press-release-detail-content .btn::before {
       width: 48px;
       height: 16px;

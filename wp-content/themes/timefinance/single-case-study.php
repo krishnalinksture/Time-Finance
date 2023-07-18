@@ -31,14 +31,14 @@ if ( ! empty( $image ) || ! empty( $all_articles_button ) ) {
 		</div>
 		<div class="container">
 			<div class="row justify-content-center">
-				<div class="col-lg-4 col-md-12 left">
+				<div class="col-lg-4 col-md-12 order-1 order-lg-0 left">
 					<div class="case-study-detail-content sticky-top">
-						<div class="case-study-date">
+						<div class="case-study-date d-none d-lg-block">
 							<?php
 							echo get_the_date( 'm F Y', get_the_ID() ) . ' / ' . wp_strip_all_tags( get_the_term_list( get_the_ID(), 'case-study-categories', ' ', ', ', ' ' ) ); //phpcs:ignore
 							?>
 						</div>
-						<div class="case-study-title">
+						<div class="case-study-title d-none d-lg-block">
 							<?php echo get_the_title(); //phpcs:ignore ?>
 						</div>
 						<div class="social-icon">

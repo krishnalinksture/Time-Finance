@@ -30,14 +30,14 @@ $image_alt           = ( isset( $image['alt'] ) && ! empty( $image['alt'] ) ) ? 
 	</div>
 	<div class="container">
 		<div class="row justify-content-center">
-			<div class="col-lg-4 col-md-12 left">
+			<div class="col-lg-4 col-md-12 order-1 order-lg-0 left">
 				<div class="time-blog-detail-content sticky-top">
-					<div class="time-blog-date">
+					<div class="time-blog-date d-none d-lg-block">
 						<?php
 						echo get_the_date( 'm F Y', get_the_ID() ) . ' / ' . wp_strip_all_tags( get_the_term_list( get_the_ID(), 'category', ' ', ', ', ' ' ) ); //phpcs:ignore
 						?>
 					</div>
-					<div class="time-blog-title">
+					<div class="time-blog-title d-none d-lg-block">
 						<?php echo get_the_title(); //phpcs:ignore ?>
 					</div>
 					<div class="social-icon">
