@@ -39,7 +39,7 @@ if ( ! empty( $main_title ) || ! empty( $content ) || ! empty( $select_form ) ) 
 					<div class="col">
 						<div class="contact-form">
 							<?php echo do_shortcode( $form ); ?>
-							<div class="thankyou-msg-contact"><?php echo esc_html( 'Thank you for your message. A member of our team will be in touch shortly. In the meantime, if youre interested in how we use your data please click ' ); //phpcs:ignore ?><a href="#"><?php echo esc_html( 'here' ); ?></a></div>
+							<div class="thankyou-msg-contact"><?php echo esc_html( 'Thank you for your message. A member of our team will be in touch shortly. In the meantime, if you’re interested in how we use your data please click ' ); //phpcs:ignore ?><a href="#"><?php echo esc_html( 'here' ); ?></a></div>
 						</div>
 					</div>
 				</div>
