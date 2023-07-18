@@ -655,6 +655,10 @@ footer .popup-form .footer-popup-form {
       border: 2px solid #d0d0d0 !important; }
     footer .popup-form .footer-popup-form .forminator-row .forminator-col .forminator-field .forminator-checkbox-box {
       border-radius: 3px !important; }
+    footer .popup-form .footer-popup-form .forminator-row .forminator-col .forminator-field .forminator-button-submit {
+      font-size: 15px !important;
+      font-weight: 400 !important;
+      padding: 10px 24px; }
 
 footer .popup-form .form-subscribtion-data h2 {
   font-size: 22px;
@@ -2853,12 +2857,10 @@ header {
       .our-team-filter-block .dropdown .dropdown-menu .our-team-cat-list {
         margin-bottom: 5px; }
         .our-team-filter-block .dropdown .dropdown-menu .our-team-cat-list a {
-          color: #4D4D4D;
+          color: #212529;
           font-size: 16px;
           padding: 5px 10px;
-          font-weight: 400;
-          text-decoration: underline;
-          text-decoration-color: #00a98f; }
+          font-weight: 400; }
         .our-team-filter-block .dropdown .dropdown-menu .our-team-cat-list:last-child {
           margin-bottom: 0; }
   .our-team-filter-block .our-team-wrapper {
@@ -3080,12 +3082,10 @@ header {
       .press-release-filter-block .dropdown .dropdown-menu .press-release-cat-list {
         margin-bottom: 5px; }
         .press-release-filter-block .dropdown .dropdown-menu .press-release-cat-list a {
-          color: #4D4D4D;
+          color: #212529;
           font-size: 16px;
           padding: 5px 10px;
-          font-weight: 400;
-          text-decoration: underline;
-          text-decoration-color: #00a98f; }
+          font-weight: 400; }
         .press-release-filter-block .dropdown .dropdown-menu .press-release-cat-list:last-child {
           margin-bottom: 0; }
   .press-release-filter-block .press-releases-wrapper {
@@ -3314,12 +3314,10 @@ header {
       .regulatory-news-filter-block .dropdown .dropdown-menu .regulatory-news-cat-list {
         margin-bottom: 5px; }
         .regulatory-news-filter-block .dropdown .dropdown-menu .regulatory-news-cat-list a {
-          color: #4D4D4D;
+          color: #212529;
           font-size: 16px;
           padding: 5px 10px;
-          font-weight: 400;
-          text-decoration: underline;
-          text-decoration-color: #00a98f; }
+          font-weight: 400; }
         .regulatory-news-filter-block .dropdown .dropdown-menu .regulatory-news-cat-list:last-child {
           margin-bottom: 0; }
   .regulatory-news-filter-block .regulatory-news-wrapper {
@@ -3531,12 +3529,10 @@ header {
       .resources-filter-block .dropdown .dropdown-menu .resources-cat-list {
         margin-bottom: 5px; }
         .resources-filter-block .dropdown .dropdown-menu .resources-cat-list a {
-          color: #4D4D4D;
+          color: #212529;
           font-size: 16px;
           padding: 5px 10px;
-          font-weight: 400;
-          text-decoration: underline;
-          text-decoration-color: #00a98f; }
+          font-weight: 400; }
         .resources-filter-block .dropdown .dropdown-menu .resources-cat-list:last-child {
           margin-bottom: 0; }
   .resources-filter-block .resources-wrapper {
@@ -3732,12 +3728,10 @@ header {
       .time-blog-filter-block .dropdown .dropdown-menu .time-blog-cat-list {
         margin-bottom: 5px; }
         .time-blog-filter-block .dropdown .dropdown-menu .time-blog-cat-list a {
-          color: #4D4D4D;
+          color: #212529;
           font-size: 16px;
           padding: 5px 10px;
-          font-weight: 400;
-          text-decoration: underline;
-          text-decoration-color: #00a98f; }
+          font-weight: 400; }
         .time-blog-filter-block .dropdown .dropdown-menu .time-blog-cat-list:last-child {
           margin-bottom: 0; }
   .time-blog-filter-block .time-blog-wrapper {
@@ -3965,12 +3959,10 @@ header {
       .case-studies-filter-block .dropdown .dropdown-menu .case-study-cat-list {
         margin-bottom: 5px; }
         .case-studies-filter-block .dropdown .dropdown-menu .case-study-cat-list a {
-          color: #4D4D4D;
+          color: #212529;
           font-size: 16px;
           padding: 5px 10px;
-          font-weight: 400;
-          text-decoration: underline;
-          text-decoration-color: #00a98f; }
+          font-weight: 400; }
         .case-studies-filter-block .dropdown .dropdown-menu .case-study-cat-list:last-child {
           margin-bottom: 0; }
   .case-studies-filter-block .case-studies-wrapper {
@@ -4423,12 +4415,10 @@ header {
       .bdt-filter-block .dropdown .dropdown-menu .bdts-cat-list {
         margin-bottom: 5px; }
         .bdt-filter-block .dropdown .dropdown-menu .bdts-cat-list a {
-          color: #4D4D4D;
+          color: #212529;
           font-size: 16px;
           padding: 5px 10px;
-          font-weight: 400;
-          text-decoration: underline;
-          text-decoration-color: #00a98f; }
+          font-weight: 400; }
         .bdt-filter-block .dropdown .dropdown-menu .bdts-cat-list:last-child {
           margin-bottom: 0; }
   .bdt-filter-block .bdt-wrapper {
@@ -5567,17 +5557,33 @@ header {
 
 .contact-block {
   padding: 125px 0 48px 0; }
+  @media (max-width: 767px) {
+    .contact-block {
+      padding: 50px 0 50px 0; } }
+  @media (max-width: 767px) {
+    .contact-block .container {
+      padding: 0 30px; } }
   .contact-block .section-title {
     color: #00a98f;
     line-height: 30px;
     font-weight: 600;
     margin-bottom: 30px; }
+    @media (max-width: 767px) {
+      .contact-block .section-title {
+        font-size: 16px;
+        line-height: 26px;
+        margin-bottom: 15px; } }
   .contact-block p {
     color: #fff;
     font-size: 40px;
     line-height: 50px;
     font-weight: 700;
     margin-bottom: 96px; }
+    @media (max-width: 767px) {
+      .contact-block p {
+        font-size: 20px;
+        line-height: 28px;
+        margin-bottom: 48px; } }
 
 .page-governance-statement .content-block h2 + h3 {
   margin-top: 0;

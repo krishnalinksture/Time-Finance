@@ -2218,12 +2218,10 @@
             .our-team-cat-list {
                 margin-bottom: 5px;
                 a {
-                    color: $dark-gray;
+                    color: $medium-black;
                     font-size: 16px;
                     padding: 5px 10px;
-                    font-weight: 400;
-                    text-decoration: underline;
-                    text-decoration-color: $green;
+                    font-weight: 400
                 }
                 &:last-child {
                     margin-bottom: 0;
@@ -2517,12 +2515,10 @@
             .press-release-cat-list {
                 margin-bottom: 5px;
                 a {
-                    color: $dark-gray;
+                    color: $medium-black;
                     font-size: 16px;
                     padding: 5px 10px;
                     font-weight: 400;
-                    text-decoration: underline;
-                    text-decoration-color: $green;
                 }
                 &:last-child {
                     margin-bottom: 0;
@@ -2820,12 +2816,10 @@
             .regulatory-news-cat-list {
                 margin-bottom: 5px;
                 a {
-                    color: $dark-gray;
+                    color: $medium-black;
                     font-size: 16px;
                     padding: 5px 10px;
                     font-weight: 400;
-                    text-decoration: underline;
-                    text-decoration-color: $green;
                 }
                 &:last-child {
                     margin-bottom: 0;
@@ -3101,12 +3095,10 @@
             .resources-cat-list {
                 margin-bottom: 5px;
                 a {
-                    color: $dark-gray;
+                    color: $medium-black;
                     font-size: 16px;
                     padding: 5px 10px;
                     font-weight: 400;
-                    text-decoration: underline;
-                    text-decoration-color: $green;
                 }
                 &:last-child {
                     margin-bottom: 0;
@@ -3365,12 +3357,10 @@
             .time-blog-cat-list {
                 margin-bottom: 5px;
                 a {
-                    color: $dark-gray;
+                    color: $medium-black;
                     font-size: 16px;
                     padding: 5px 10px;
                     font-weight: 400;
-                    text-decoration: underline;
-                    text-decoration-color: $green;
                 }
                 &:last-child {
                     margin-bottom: 0;
@@ -3668,12 +3658,10 @@
             .case-study-cat-list {
                 margin-bottom: 5px;
                 a {
-                    color: $dark-gray;
+                    color: $medium-black;
                     font-size: 16px;
                     padding: 5px 10px;
                     font-weight: 400;
-                    text-decoration: underline;
-                    text-decoration-color: $green;
                 }
                 &:last-child {
                     margin-bottom: 0;
@@ -4257,12 +4245,10 @@
             .bdts-cat-list {
                 margin-bottom: 5px;
                 a {
-                    color: $dark-gray;
+                    color: $medium-black;
                     font-size: 16px;
                     padding: 5px 10px;
                     font-weight: 400;
-                    text-decoration: underline;
-                    text-decoration-color: $green;
                 }
                 &:last-child {
                     margin-bottom: 0;
@@ -5857,11 +5843,26 @@
 .contact-block {
     padding: 125px 0 48px 0;
 
+    @include responsive (mobile-big, max) {
+        padding: 50px 0 50px 0;
+    }
+
+    .container {
+        @include responsive (mobile-big, max) {
+            padding: 0 30px;
+        }
+    }
+
     .section-title {
         color: $green;
         line-height: 30px;
         font-weight: 600;
         margin-bottom: 30px;
+        @include responsive (mobile-big, max) {
+            font-size: 16px;
+            line-height: 26px;
+            margin-bottom: 15px;
+        }
     }
 
     p {
@@ -5870,6 +5871,11 @@
         line-height: 50px;
         font-weight: 700;
         margin-bottom: 96px;
+        @include responsive (mobile-big, max) {
+            font-size: 20px;
+            line-height: 28px;
+            margin-bottom: 48px;
+        }
     }
 }
 
