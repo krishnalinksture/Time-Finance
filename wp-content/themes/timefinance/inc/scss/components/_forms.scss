@@ -430,6 +430,23 @@ footer {
                 }
             }
         }
+
+        .form-subscribtion-data {
+            h2 {
+                font-size: 22px;
+                line-height: 28px;
+                margin: 0 0 12px 0;
+                color: $green;
+            }
+
+            p {
+                line-height: 150%;
+                font-family: Helvetica;
+                font-size: 14px;
+                color: #00AB8E;
+                padding: 0 0 10px 0;
+            }
+        }
     }
 }
 
