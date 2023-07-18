@@ -1439,6 +1439,12 @@
                     border-color: $white;
                     color: $purple;
                 }
+
+                +.btn {
+                    @media only screen and (max-width: 395px) {
+                        margin-top: 20px;
+                    }
+                }
             }
         }
     }
@@ -5031,6 +5037,10 @@
                         img {
                             height: 16px;
                         }
+
+                        &:hover {
+                            @include translateY(-5px);
+                        }
                     }
                 }
 
@@ -5202,6 +5212,10 @@
 
                         img {
                             height: 16px;
+                        }
+
+                        &:hover {
+                            @include translateY(-5px);
                         }
                     }
                 }
@@ -5376,6 +5390,10 @@
 
                         img {
                             height: 16px;
+                        }
+
+                        &:hover {
+                            @include translateY(-5px);
                         }
                     }
                 }
@@ -5778,6 +5796,10 @@
     }
 
     &.bg-purple {
+        .section-title {
+            color: $white;
+        }
+
         .btn {
             background-color: $green;
             color: $white;

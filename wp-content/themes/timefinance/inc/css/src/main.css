@@ -2292,6 +2292,9 @@ header {
       background-color: #fff;
       border-color: #fff;
       color: #3d1050; }
+    @media only screen and (max-width: 395px) {
+      .cta-block .container .apply-send-button .btn + .btn {
+        margin-top: 20px; } }
 
 .card-block {
   padding: 110px 0 162px 0; }
@@ -4981,6 +4984,11 @@ header {
       padding: 4px 8px; }
       .time-blog-detail .container .row .time-blog-detail-content .social-icon a img {
         height: 16px; }
+      .time-blog-detail .container .row .time-blog-detail-content .social-icon a:hover {
+        -webkit-transform: translateY(-5px);
+        -moz-transform: translateY(-5px);
+        -ms-transform: translateY(-5px);
+        transform: translateY(-5px); }
   .time-blog-detail .container .row .time-blog-detail-content .btn {
     margin-top: 48px;
     font-size: 15px;
@@ -5105,6 +5113,11 @@ header {
       padding: 4px 8px; }
       .case-study-detail .container .row .case-study-detail-content .social-icon a img {
         height: 16px; }
+      .case-study-detail .container .row .case-study-detail-content .social-icon a:hover {
+        -webkit-transform: translateY(-5px);
+        -moz-transform: translateY(-5px);
+        -ms-transform: translateY(-5px);
+        transform: translateY(-5px); }
   .case-study-detail .container .row .case-study-detail-content .btn {
     margin-top: 48px;
     font-size: 15px;
@@ -5230,6 +5243,11 @@ header {
       padding: 4px 8px; }
       .press-release-detail .container .row .press-release-detail-content .social-icon a img {
         height: 16px; }
+      .press-release-detail .container .row .press-release-detail-content .social-icon a:hover {
+        -webkit-transform: translateY(-5px);
+        -moz-transform: translateY(-5px);
+        -ms-transform: translateY(-5px);
+        transform: translateY(-5px); }
   .press-release-detail .container .row .press-release-detail-content .btn {
     margin-top: 48px;
     font-size: 15px;
@@ -5515,6 +5533,8 @@ header {
           .client-custom-post-block .container-lg .client-box .client-content .btn a {
             color: #fff;
             text-decoration: none; }
+  .client-custom-post-block.bg-purple .section-title {
+    color: #fff; }
   .client-custom-post-block.bg-purple .btn {
     background-color: #00a98f;
     color: #fff;
