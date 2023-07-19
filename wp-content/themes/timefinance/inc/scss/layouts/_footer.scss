@@ -246,6 +246,11 @@ footer {
             line-height: 20px;
             font-size: 12px;
             margin-bottom: 23px;
+
+            a {
+                color: $white;
+            }
+            
             @include responsive (mobile-big, max) {
                 br {
                     display: none;
