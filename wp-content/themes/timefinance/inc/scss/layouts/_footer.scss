@@ -24,7 +24,7 @@
                 }
                 @include responsive (ipad-portrait, max) {
                     max-width: 500px;
-                    height: 400px;
+                    height: 500px;
                     top: 50%; 
                     margin:0 auto 0;
                     transform: translateY(-50%) !important;
