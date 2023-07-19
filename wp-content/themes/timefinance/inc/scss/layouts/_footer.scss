@@ -258,6 +258,7 @@ footer {
 
             a {
                 color: $white;
+                text-decoration: none;
             }
             
             @include responsive (mobile-big, max) {

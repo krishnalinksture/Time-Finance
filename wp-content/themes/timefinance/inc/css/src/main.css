@@ -240,7 +240,7 @@ button.mfp-close {
       padding: 60px 85px !important; } }
   @media (max-width: 767px) {
     .cta-form .forminator-custom-form {
-      padding: 50px 50px !important; } }
+      padding: 50px 20px !important; } }
   .cta-form .forminator-custom-form .forminator-row {
     margin-bottom: 24px !important; }
     .cta-form .forminator-custom-form .forminator-row.forminator-row-last {
@@ -472,6 +472,9 @@ button.mfp-close {
   @media (max-width: 767px) {
     .contact-form .thankyou-msg-contact {
       padding: 60px 80px; } }
+  @media (max-width: 575px) {
+    .contact-form .thankyou-msg-contact {
+      padding: 40px 30px; } }
 
 .popup-form .modal-dialog {
   max-width: 740px;
@@ -701,6 +704,9 @@ footer .popup-form .form-subscribtion-data .thank-you-button {
   display: -webkit-flex;
   display: flex;
   align-items: center; }
+  @media only screen and (max-width: 440px) {
+    footer .popup-form .form-subscribtion-data .thank-you-button {
+      display: inline-block; } }
   footer .popup-form .form-subscribtion-data .thank-you-button .btn {
     background-color: #00a98f;
     color: #fff;
@@ -714,6 +720,11 @@ footer .popup-form .form-subscribtion-data .thank-you-button {
     font-size: 15px; }
   footer .popup-form .form-subscribtion-data .thank-you-button .or {
     margin: 0 15px; }
+    @media only screen and (max-width: 440px) {
+      footer .popup-form .form-subscribtion-data .thank-you-button .or {
+        margin: 10px 15px;
+        display: block;
+        text-align: center; } }
 
 .select2-container .forminator-select-dropdown .select2-results .select2-results__options li {
   padding: 0px 15px !important; }
@@ -3513,7 +3524,8 @@ header {
   z-index: 99999; }
   .modal-open section.resources-filter-block::before {
     opacity: 0.5;
-    display: block; }
+    display: block;
+    z-index: 9; }
 
 .resources-filter-block {
   background-color: #F5F3F6;
@@ -4411,7 +4423,8 @@ header {
   z-index: 99999; }
   .modal-open section.bdt-filter-block::before {
     opacity: 0.5;
-    display: block; }
+    display: block;
+    z-index: 9; }
 
 .bdt-filter-block {
   background-color: #F5F3F6;
@@ -6093,7 +6106,8 @@ footer {
       font-size: 12px;
       margin-bottom: 23px; }
       footer .footer-privacy p a {
-        color: #fff; }
+        color: #fff;
+        text-decoration: none; }
       @media (max-width: 767px) {
         footer .footer-privacy p br {
           display: none; } }
