@@ -76,7 +76,10 @@ $time_blog_view_all_button = get_field( 'time_blog_view_all_button', 'option' );
 					<?php echo esc_html( 'FILTER POSTS:' ); ?>
 				</div>
 				<button class="btn btn-link dropdown-toggle" type="button" id="dropdownMenuBdt" data-bs-toggle="dropdown" aria-expanded="false">
-					<?php echo esc_html( 'Teams' ); ?>
+					<?php
+					$category = get_queried_object();
+					echo $category->name; //phpcs:ignore
+					?>
 				</button>
 				<ul class="dropdown-menu" aria-labelledby="dropdownMenuBdt">
 				<?php

@@ -77,7 +77,7 @@ $section_id                   = get_sub_field( 'section_id' ) ? get_sub_field( '
 					<?php echo esc_html( 'FILTER POSTS:' ); ?>
 				</div>
 				<button class="btn btn-link dropdown-toggle" type="button" id="dropdownMenuBdt" data-bs-toggle="dropdown" aria-expanded="false">
-					<?php echo esc_html( 'Teams' ); ?>
+					<?php echo esc_html( 'View All' ); ?>
 				</button>
 				<ul class="dropdown-menu" aria-labelledby="dropdownMenuBdt">
 					<?php
