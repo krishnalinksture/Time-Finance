@@ -14,7 +14,7 @@ $section_id            = get_sub_field( 'section_id' ) ? get_sub_field( 'section
 
 <section class="case-study-block <?php echo $background_color; ?>" id="<?php echo $section_id; //phpcs:ignore ?>" <?php echo $background; ?>>
 	<div class="container">
-		<div class="swiper case-study" data-slider-options='{ "slidesPerView": 1, "simulateTouch": false, "loop": true, "autoplay": { "delay": 8000 },"pagination": { "el": ".swiper-pagination-case-study", "clickable": true } }'>
+		<div class="swiper case-study" data-slider-options='{ "slidesPerView": 1, "simulateTouch": false, "loop": true, "speed": 800, "autoplay": { "delay": 8000 },"pagination": { "el": ".swiper-pagination-case-study", "clickable": true } }'>
 			<div class="swiper-wrapper">
 				<?php
 				$args = array(

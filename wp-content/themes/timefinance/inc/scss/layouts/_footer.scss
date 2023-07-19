@@ -26,13 +26,13 @@
                 @include responsive (ipad-portrait, max) {
                     max-width: 500px;
                     height: 400px;
-                    top: 50%;
+                    top: 50%; 
                     margin:0 auto 0;
                     transform: translateY(-50%) !important;
                 }
                 @include responsive (mobile-big, max) {
                     width: 96%;
-                    height: 260px;
+                    height: 260px; 
                 }
 
                 .modal-content {

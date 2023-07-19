@@ -4138,8 +4138,16 @@
     }
 }
 
-.modal-open section.bdt-filter-block {
-    z-index: 99999;
+.modal-open {
+    section {
+        &.bdt-filter-block {
+            z-index: 99999;
+            &::before {
+                opacity: 0.5;
+                display: block;
+            }
+        }
+    }
 }
 
 .bdt-filter-block {
@@ -4148,6 +4156,17 @@
     z-index: 1;
     overflow: hidden;
     padding-bottom: 80px;
+    &::before {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        content: "";
+        left: 0;
+        top: 0;
+        background-color: $black;
+        opacity: 0;
+        display: none;
+    }
 
     .filter-post-left {
         position: relative;

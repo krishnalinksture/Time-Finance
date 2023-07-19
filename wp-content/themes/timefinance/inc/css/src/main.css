@@ -1038,7 +1038,7 @@ header {
       left: 0;
       width: 100%;
       z-index: 9;
-      height: 100vh !important;
+      height: 100% !important;
       overflow-y: auto;
       background-color: #3d1050;
       display: block !important;
@@ -4337,6 +4337,9 @@ header {
 
 .modal-open section.bdt-filter-block {
   z-index: 99999; }
+  .modal-open section.bdt-filter-block::before {
+    opacity: 0.5;
+    display: block; }
 
 .bdt-filter-block {
   background-color: #F5F3F6;
@@ -4344,6 +4347,16 @@ header {
   z-index: 1;
   overflow: hidden;
   padding-bottom: 80px; }
+  .bdt-filter-block::before {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    content: "";
+    left: 0;
+    top: 0;
+    background-color: #080808;
+    opacity: 0;
+    display: none; }
   .bdt-filter-block .filter-post-left {
     position: relative;
     padding-bottom: 165px; }
