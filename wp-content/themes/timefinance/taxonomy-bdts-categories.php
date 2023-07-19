@@ -42,7 +42,7 @@ if ( ! empty( $bdt_title ) || ! empty( $bdt_content ) ) {
 		<div class="row align-items-start">
 			<div class="col col-lg-3 col-md-7 filter-post-left d-none d-md-block">
 				<div class="cat-filter">
-					<?php echo esc_html( 'FILTER POSTS:' ); ?>
+					<?php echo esc_html( 'FILTER TEAMS:' ); ?>
 				</div>
 				<ul>
 					<?php
