@@ -75,15 +75,17 @@ $press_release_view_all_button = get_field( 'press_release_view_all_button', 'op
 					<?php echo esc_html( 'FILTER POSTS:' ); ?>
 				</div>
 				<button class="btn btn-link dropdown-toggle" type="button" id="dropdownMenuBdt" data-bs-toggle="dropdown" aria-expanded="false">
-					<?php echo esc_html( 'Teams' ); ?>
+					<?php
+					$category = get_queried_object();
+					echo $category->name; //phpcs:ignore
+					?>
 				</button>
 				<ul class="dropdown-menu" aria-labelledby="dropdownMenuBdt">
-				<?php
+					<?php
 					$args       = array(
 						'taxonomy' => 'press-release-categories',
 					);
 					$categories = get_categories( $args );
-
 					foreach ( $categories as $category ) {
 						?>
 						<li class="press-release-cat-list">

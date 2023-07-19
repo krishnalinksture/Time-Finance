@@ -8,6 +8,7 @@
 $our_team_title      = get_field( 'our_team_title', 'option' );
 $our_team_select_tag = get_field( 'our_team_select_tag', 'option' );
 $our_team_content    = get_field( 'our_team_content', 'option' );
+$our_team_all_button                      = get_field( 'our_team_all_button', 'option' );
 ?>
 <section class="our-teams-category">
 	<div class="container">
@@ -52,13 +53,13 @@ $our_team_content    = get_field( 'our_team_content', 'option' );
 						</li>
 						<?php
 					}
-					if ( $view_all && ! empty( $view_all['url'] ) && ! empty( $view_all['title'] ) ) {
+					if ( $our_team_all_button && ! empty( $our_team_all_button['url'] ) && ! empty( $our_team_all_button['title'] ) ) {
 						?>
 						<li class="our-team-cat-list">
 							<?php
-							$link_url    = $view_all['url'];
-							$link_title  = $view_all['title'];
-							$link_target = $view_all['target'] ? $view_all['target'] : '_self';
+							$link_url    = $our_team_all_button['url'];
+							$link_title  = $our_team_all_button['title'];
+							$link_target = $our_team_all_button['target'] ? $our_team_all_button['target'] : '_self';
 							?>
 							<a href="<?php echo esc_url( $link_url ); ?>" class="btn btn-link" target="<?php echo esc_attr( $link_target ); ?>">
 								<?php echo esc_html( $link_title ); ?>
@@ -74,7 +75,10 @@ $our_team_content    = get_field( 'our_team_content', 'option' );
 					<?php echo esc_html( 'FILTER POSTS:' ); ?>
 				</div>
 				<button class="btn btn-link dropdown-toggle" type="button" id="dropdownMenuBdt" data-bs-toggle="dropdown" aria-expanded="false">
-					<?php echo esc_html( 'Teams' ); ?>
+					<?php
+					$category = get_queried_object();
+					echo $category->name; //phpcs:ignore
+					?>
 				</button>
 				<ul class="dropdown-menu" aria-labelledby="dropdownMenuBdt">
 				<?php
@@ -90,13 +94,13 @@ $our_team_content    = get_field( 'our_team_content', 'option' );
 						</li>
 						<?php
 					}
-					if ( $view_all && ! empty( $view_all['url'] ) && ! empty( $view_all['title'] ) ) {
+					if ( $our_team_all_button && ! empty( $our_team_all_button['url'] ) && ! empty( $our_team_all_button['title'] ) ) {
 						?>
 						<li class="our-team-cat-list">
 							<?php
-							$link_url    = $view_all['url'];
-							$link_title  = $view_all['title'];
-							$link_target = $view_all['target'] ? $view_all['target'] : '_self';
+							$link_url    = $our_team_all_button['url'];
+							$link_title  = $our_team_all_button['title'];
+							$link_target = $our_team_all_button['target'] ? $our_team_all_button['target'] : '_self';
 							?>
 							<a href="<?php echo esc_url( $link_url ); ?>" class="btn btn-link" target="<?php echo esc_attr( $link_target ); ?>">
 								<?php echo esc_html( $link_title ); ?>
