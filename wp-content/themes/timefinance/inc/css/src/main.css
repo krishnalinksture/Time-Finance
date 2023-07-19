@@ -3534,7 +3534,7 @@ header {
   .resources-filter-block .filter-post-left {
     position: relative;
     padding-bottom: 140px;
-    z-index: 1; }
+    z-index: -1; }
     .resources-filter-block .filter-post-left:before {
       height: 100%;
       content: "";
