@@ -1116,7 +1116,7 @@
             width: 80%;
 
             @include responsive (mobile-big, max) {
-                width: 100%;
+                width: 60%;
             }
         }
     }
@@ -1144,10 +1144,10 @@
             width: 70%;
 
             @include responsive (ipad-portrait, max) {
-                width: 90%;
+                width: 95%;
             }
             @include responsive (mobile-big, max) {
-                width: 100%;
+                width: 80%;
             }
         }
     }
@@ -1787,6 +1787,7 @@
                     border-bottom: 2px solid $purple;
                     cursor: pointer;
                     padding: 29px 0;
+                    @include borderRadius(0);
 
                     @include responsive (ipad-portrait, max) {
                         padding: 24px 0;
@@ -4022,6 +4023,10 @@
                     padding: 17px 55px 17px 35px;
                     vertical-align: middle;
 
+                    &:focus {
+                        outline: none;
+                    }
+
                     @include responsive (mobile-big, max) {
                         width: 200px;
                         padding: 17px 35px 17px 30px;
@@ -4585,6 +4590,7 @@
                     border-bottom: 2px solid $purple;
                     cursor: pointer;
                     padding: 29px 0;
+                    @include borderRadius(0);
 
                     @include responsive (ipad-portrait, max) {
                         padding: 24px 0;

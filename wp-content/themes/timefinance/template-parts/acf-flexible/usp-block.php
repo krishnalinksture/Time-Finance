@@ -90,7 +90,7 @@ switch ( $select_style ) {
 					}
 					if ( have_rows( 'icon_content' ) ) {
 						?>
-						<div class="row row-cols-2 row-cols-md-3 justify-content-center text-center">
+						<div class="row row-cols-1 row-cols-md-3 justify-content-center text-center">
 							<?php
 							while ( have_rows( 'icon_content' ) ) {
 								the_row();

@@ -18,7 +18,7 @@ $image_alt               = ( isset( $image['alt'] ) && ! empty( $image['alt'] ) 
 
 if ( ! empty( $image ) || ! empty( $main_title ) || ! empty( $content ) || ! empty( $cta_button ) ) {
 	?>
-	<section class="left-right-content-image <?php echo $select_background_color; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
+	<section class="left-right-content-image pb-0 <?php echo $select_background_color; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
 		<div class="container">
 			<div class="row justify-content-center align-items-center<?php echo $reverse; //phpcs:ignore ?>">
 				<?php

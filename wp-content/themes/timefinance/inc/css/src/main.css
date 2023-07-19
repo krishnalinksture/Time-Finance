@@ -2055,7 +2055,7 @@ header {
     width: 80%; }
     @media (max-width: 767px) {
       .usp-block.style-2 p {
-        width: 100%; } }
+        width: 60%; } }
   .usp-block.bg-green .section-title {
     color: #fff;
     font-size: 50px;
@@ -2072,10 +2072,10 @@ header {
     width: 70%; }
     @media (max-width: 991px) {
       .usp-block.bg-green p {
-        width: 90%; } }
+        width: 95%; } }
     @media (max-width: 767px) {
       .usp-block.bg-green p {
-        width: 100%; } }
+        width: 80%; } }
 
 .image-bulletpoint-groups {
   padding: 140px 0;
@@ -2553,7 +2553,11 @@ header {
           background-color: #F5F3F6;
           border-bottom: 2px solid #3d1050;
           cursor: pointer;
-          padding: 29px 0; }
+          padding: 29px 0;
+          -webkit-border-radius: 0;
+          -moz-border-radius: 0;
+          -ms-border-radius: 0;
+          border-radius: 0; }
           @media (max-width: 991px) {
             .faq-block .accordion .accordion-item .accordion-header .accordion-button {
               padding: 24px 0; } }
@@ -4236,6 +4240,8 @@ header {
           border: none;
           padding: 17px 55px 17px 35px;
           vertical-align: middle; }
+          .calculator-block .calculator-wrapper .content form input:focus {
+            outline: none; }
           @media (max-width: 767px) {
             .calculator-block .calculator-wrapper .content form input {
               width: 200px;
@@ -4661,7 +4667,11 @@ header {
           background-color: #F5F3F6;
           border-bottom: 2px solid #3d1050;
           cursor: pointer;
-          padding: 29px 0; }
+          padding: 29px 0;
+          -webkit-border-radius: 0;
+          -moz-border-radius: 0;
+          -ms-border-radius: 0;
+          border-radius: 0; }
           @media (max-width: 991px) {
             .career-details-block.style-2 .accordion-item .accordion-header .accordion-button {
               padding: 24px 0; } }
