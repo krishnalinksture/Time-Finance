@@ -77,7 +77,7 @@ if ( ! empty( $bdt_title ) || ! empty( $bdt_content ) ) {
 			</div>
 			<div class="dropdown d-md-none">
 				<div class="cat-filter">
-					<?php echo esc_html( 'FILTER POSTS:' ); ?>
+					<?php echo esc_html( 'FILTER TEAMS:' ); ?>
 				</div>
 				<button class="btn btn-link dropdown-toggle" type="button" id="dropdownMenuBdt" data-bs-toggle="dropdown" aria-expanded="false">
 					<?php
