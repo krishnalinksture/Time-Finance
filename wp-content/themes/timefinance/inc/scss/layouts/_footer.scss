@@ -15,7 +15,6 @@
                 -webkit-transform: translate(0, -50px);
                 transform: translate(0, -50px);
                 height: calc(100% - 175px);
-                overflow-y: scroll;
                 margin: 130px auto 1.75rem;
                 border-radius: 0.3rem;
                 @include justify-content(center);
@@ -32,7 +31,7 @@
                 }
                 @include responsive (mobile-big, max) {
                     width: 96%;
-                    height: 260px; 
+                    height: 480px; 
                 }
 
                 .modal-content {
@@ -62,9 +61,12 @@
                     }
                 }
 
-                .modal-header {
+                .modal-header { 
                     .prs-logo {
                         width: 300px;
+                        @include responsive (mobile-big, max) {
+                            width: 180px;
+                        }
                     }
                 }
             }
@@ -92,6 +94,9 @@ footer {
 
     .modal {
         z-index: 99999;
+        @include responsive (ipad-portrait, max) {
+            z-index: 999999;
+        }
     }
 
     .row {

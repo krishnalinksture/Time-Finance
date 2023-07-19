@@ -166,6 +166,7 @@
             .select2-results__options {
                 max-height: 100% !important;
                 font-family: $primary-font !important;
+                box-shadow: 0 2px 10px -6px rgba(0,0,0,.5) !important;
                 li {
                     padding: 9px 5px !important;
                 }
@@ -334,11 +335,28 @@
 .popup-form {
     .modal-dialog {
         max-width: 740px;
-        margin-top: 200px;
+        margin-top: 40px;
+        transform: translateY(-50%) !important;
+        top: 50%;
 		@include responsive (ipad-portrait, max) {
 			max-width: 700px;
 		}
+        @include responsive (mobile-big, max) {
+            height: 400px;
+            overflow: hidden;
+        }
+        @media (max-height: 400px) {
+            height: 250px;
+        }
 		.modal-content {
+            @include responsive (mobile-big, max) {
+                overflow: scroll;
+                height: 100%;
+            }
+            @media (max-height: 400px) {
+                overflow: scroll;
+                height: 100%;
+            }
 			.modal-header {
 				border: none;
 				.modal-title {

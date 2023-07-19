@@ -285,6 +285,12 @@ header {
                 letter-spacing: 0;
                 margin: 50px 8px 0 0;
 
+                &:hover {
+                    background-color: $dark-green;
+                    border-color: $dark-green;
+                    color: $white;
+                }
+
                 @include responsive(laptop, max) {
                     display: inline-block !important;
                 }
