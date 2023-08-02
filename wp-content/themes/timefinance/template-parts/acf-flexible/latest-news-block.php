@@ -12,7 +12,7 @@ $select_title_align = get_sub_field( 'select_title_align' );
 $section_id         = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'latest-news-block-' );
 
 ?>
-<section class="latest-news-block pt-0" id="<?php echo $section_id; //phpcs:ignore ?>">
+<section class="latest-news-block" id="<?php echo $section_id; //phpcs:ignore ?>">
 	<div class="container">
 		<?php
 		if ( ! empty( $main_title ) ) {

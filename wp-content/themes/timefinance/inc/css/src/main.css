@@ -1900,8 +1900,15 @@ header {
         .trustpilot-block .content p {
           font-size: 20px;
           line-height: 28px; } }
+    .trustpilot-block .content .btn {
+      margin-top: 30px; }
+      @media (max-width: 767px) {
+        .trustpilot-block .content .btn {
+          font-size: 14px;
+          line-height: 14px;
+          padding: 10px 15px; } }
     .trustpilot-block .content .trustpilot-widget {
-      margin-top: 37px;
+      margin-top: 30px;
       text-align: left;
       width: 260px;
       display: -webkit-box;
@@ -2329,6 +2336,17 @@ header {
     color: #fff; }
     @media (max-width: 767px) {
       .cta-block .container .subtitle {
+        font-size: 23px;
+        line-height: 32px; } }
+  .cta-block .container .number {
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 700;
+    color: #fff; }
+    .cta-block .container .number a {
+      color: #fff; }
+    @media (max-width: 767px) {
+      .cta-block .container .number {
         font-size: 23px;
         line-height: 32px; } }
   .cta-block .container .apply-send-button {
