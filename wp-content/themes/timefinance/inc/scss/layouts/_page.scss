@@ -6011,46 +6011,44 @@
     }
 }
 
-//Page governance statement
-.page-governance-statement {
-    .content-block {
-        h2 {
-            +h3 {
-                margin-top: 0;
-                margin-bottom: 16px;
-            }
-        }
-
-        p {
+//Page governance statement 
+.content-block {
+    h2 {
+        +h3 {
+            margin-top: 0;
             margin-bottom: 16px;
         }
+    }
 
-        h3 {
-            margin-top: 54px;
+    p {
+        margin-bottom: 16px;
+    }
+
+    h3 {
+        margin-top: 54px;
+    }
+
+    ol {
+        padding-left: 40px;
+
+        li {
+            font-size: 16px;
+            line-height: 1.5;
         }
+    }
 
-        ol {
-            padding-left: 40px;
-
-            li {
-                font-size: 16px;
-                line-height: 1.5;
-            }
-        }
-
-        table {
-            tbody {
-                tr {
-                    td {
-                        padding-bottom: 16px;
-                        border-bottom: 1px solid grey;
-                        border-right: 1px solid grey;
-                    }
+    table {
+        tbody {
+            tr {
+                td {
+                    padding-bottom: 16px;
+                    border-bottom: 1px solid grey;
+                    border-right: 1px solid grey;
                 }
             }
         }
     }
-}
+} 
 
 //Page shareholder information
 .page-shareholder-information {

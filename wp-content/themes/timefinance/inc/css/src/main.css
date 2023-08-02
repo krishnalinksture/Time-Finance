@@ -5725,23 +5725,23 @@ header {
         line-height: 28px;
         margin-bottom: 48px; } }
 
-.page-governance-statement .content-block h2 + h3 {
+.content-block h2 + h3 {
   margin-top: 0;
   margin-bottom: 16px; }
 
-.page-governance-statement .content-block p {
+.content-block p {
   margin-bottom: 16px; }
 
-.page-governance-statement .content-block h3 {
+.content-block h3 {
   margin-top: 54px; }
 
-.page-governance-statement .content-block ol {
+.content-block ol {
   padding-left: 40px; }
-  .page-governance-statement .content-block ol li {
+  .content-block ol li {
     font-size: 16px;
     line-height: 1.5; }
 
-.page-governance-statement .content-block table tbody tr td {
+.content-block table tbody tr td {
   padding-bottom: 16px;
   border-bottom: 1px solid grey;
   border-right: 1px solid grey; }
