@@ -25,13 +25,13 @@
                 @include responsive (ipad-portrait, max) {
                     max-width: 500px;
                     height: 500px;
-                    top: 50%; 
+                    top: 50%;
                     margin:0 auto 0;
                     transform: translateY(-50%) !important;
                 }
                 @include responsive (mobile-big, max) {
                     width: 96%;
-                    height: 480px; 
+                    height: 480px;
                 }
                 @media (max-height: 400px) {
                     height: 250px;
@@ -68,7 +68,7 @@
                     }
                 }
 
-                .modal-header { 
+                .modal-header {
                     .prs-logo {
                         width: 300px;
                         @include responsive (mobile-big, max) {
@@ -215,7 +215,7 @@ footer {
         }
         .logo {
             width: auto;
-            max-height: 67px;
+            height: 67px;
         }
     }
 
@@ -260,7 +260,7 @@ footer {
                 color: $white;
                 text-decoration: none;
             }
-            
+
             @include responsive (mobile-big, max) {
                 br {
                     display: none;

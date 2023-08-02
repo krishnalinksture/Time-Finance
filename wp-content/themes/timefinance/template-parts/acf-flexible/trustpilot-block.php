@@ -10,12 +10,13 @@ $main_title              = get_sub_field( 'title' );
 $select_tag              = get_sub_field( 'select_tag' );
 $content                 = get_sub_field( 'content' );
 $trustpilot              = get_sub_field( 'trustpilot' );
+$cta_button              = get_sub_field( 'cta_button' );
 $select_background_color = get_sub_field( 'select_background_color' );
 $section_id              = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'trustpilot-block-' );
 
 switch ( $select_style ) {
 	case 'style-1':
-		if ( ! empty( $main_title ) || ! empty( $content ) || ! empty( $trustpilot ) ) {
+		if ( ! empty( $main_title ) || ! empty( $content ) || ! empty( $trustpilot ) || ! empty( $cta_button ) ) {
 			?>
 			<section class="trustpilot-block <?php echo $select_background_color . ' ' . $select_style; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
 				<div class="container">
@@ -30,6 +31,16 @@ switch ( $select_style ) {
 							}
 							if ( ! empty( $trustpilot ) ) {
 								echo $trustpilot; //phpcs:ignore
+							}
+							if ( $cta_button && ! empty( $cta_button['url'] ) && ! empty( $cta_button['title'] ) ) {
+								$link_url    = $cta_button['url'];
+								$link_title  = $cta_button['title'];
+								$link_target = $cta_button['target'] ? $link['target'] : '_self';
+								?>
+								<a href="<?php echo esc_url( $link_url ); ?>" class="btn btn-green" target="<?php echo esc_attr( $link_target ); ?>">
+									<?php echo esc_html( $link_title ); ?>
+								</a>
+								<?php
 							}
 							?>
 						</div>

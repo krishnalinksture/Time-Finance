@@ -9,6 +9,7 @@ $background_image = get_sub_field( 'background_image' );
 $main_title       = get_sub_field( 'title' );
 $select_tag       = get_sub_field( 'select_tag' );
 $subtitle         = get_sub_field( 'subtitle' );
+$number           = get_sub_field( 'number' );
 $send_message     = get_sub_field( 'send_message' );
 $select_form      = get_sub_field( 'select_form' );
 $apply_now        = get_sub_field( 'apply_now' );
@@ -17,7 +18,7 @@ $form             = ( ! empty( $select_form ) ) ? '[forminator_form id="' . $sel
 $background       = ( ! empty( $background_image ) ) ? ' style="background-image:url(' . esc_url( $background_image ) . ');"' : '';
 $section_id       = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'cta-block-' );
 
-if ( ! empty( $main_title ) || ! empty( $subtitle ) || ! empty( $apply_now ) || ! empty( $send_message ) ) {
+if ( ! empty( $main_title ) || ! empty( $subtitle ) || ! empty( $number ) || ! empty( $apply_now ) || ! empty( $send_message ) ) {
 	?>
 	<section class="cta-block <?php echo $select_class; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
 		<div class="container">
@@ -26,6 +27,13 @@ if ( ! empty( $main_title ) || ! empty( $subtitle ) || ! empty( $apply_now ) || 
 					<?php
 					if ( ! empty( $main_title ) ) {
 						echo '<' . esc_attr( $select_tag ) . ' class="section-title h-4">' . esc_html( $main_title ) . '</' . esc_attr( $select_tag ) . '>';
+					}
+					if ( ! empty( $number ) ) {
+						?>
+						<div class="number">
+							<?php echo esc_html( $number ); ?>
+						</div>
+						<?php
 					}
 					if ( ! empty( $subtitle ) ) {
 						?>

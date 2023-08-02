@@ -661,25 +661,20 @@ button.mfp-close {
     font-weight: 400;
     text-align: start; }
 
+footer .popup-form .modal .modal-body {
+  width: 100% !important; }
+  footer .popup-form .modal .modal-body .row {
+    height: 100%; }
+    footer .popup-form .modal .modal-body .row > div {
+      height: 100%; }
+
 footer .popup-form .footer-popup-form {
-  padding: 20px; }
-  footer .popup-form .footer-popup-form .forminator-row {
-    margin-bottom: 18px !important; }
-    footer .popup-form .footer-popup-form .forminator-row .forminator-col .forminator-field.forminator-merge-tags {
-      color: #00a98f;
-      font-size: 14px; }
-    footer .popup-form .footer-popup-form .forminator-row .forminator-col .forminator-field .forminator-label {
-      margin-top: 8px !important; }
-    footer .popup-form .footer-popup-form .forminator-row .forminator-col .forminator-field .forminator-input {
-      margin-top: 3px !important;
-      padding: 10px !important;
-      border: 2px solid #d0d0d0 !important; }
-    footer .popup-form .footer-popup-form .forminator-row .forminator-col .forminator-field .forminator-checkbox-box {
-      border-radius: 3px !important; }
-    footer .popup-form .footer-popup-form .forminator-row .forminator-col .forminator-field .forminator-button-submit {
-      font-size: 15px !important;
-      font-weight: 400 !important;
-      padding: 10px 24px; }
+  height: 100%; }
+  footer .popup-form .footer-popup-form > p {
+    height: 100%; }
+  footer .popup-form .footer-popup-form iframe {
+    width: 100%;
+    height: 100%; }
 
 footer .popup-form .form-subscribtion-data h2 {
   font-size: 22px;
@@ -3545,8 +3540,7 @@ header {
     display: none; }
   .resources-filter-block .filter-post-left {
     position: relative;
-    padding-bottom: 140px;
-    z-index: -1; }
+    padding-bottom: 140px; }
     .resources-filter-block .filter-post-left:before {
       height: 100%;
       content: "";
@@ -4444,8 +4438,7 @@ header {
     display: none; }
   .bdt-filter-block .filter-post-left {
     position: relative;
-    padding-bottom: 165px;
-    z-index: -1; }
+    padding-bottom: 165px; }
     @media (max-width: 991px) {
       .bdt-filter-block .filter-post-left {
         padding-bottom: 150px; } }
@@ -6072,7 +6065,7 @@ footer {
       margin-bottom: 30px; } }
   footer .footer-logo .logo {
     width: auto;
-    max-height: 67px; }
+    height: 67px; }
   footer .footer-address p {
     line-height: 20px;
     font-size: 12px; }

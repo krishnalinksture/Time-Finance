@@ -11,14 +11,14 @@
     }
     @include responsive (mobile-big, max) {
         height:auto;
-        background-color:$gray !important; 
+        background-color:$gray !important;
         .row {
             margin-left: 0;
             margin-right: 0;
         }
     }
     @media only screen and (max-height:550px) and (min-height: 300px)  {
-        height: auto; 
+        height: auto;
     }
 
     .section-title {
@@ -51,7 +51,7 @@
 		padding-left: 15px;
         opacity: 0;
         @include translateX(-65px);
-        @include transitionAll(0.3s ease-in-out); 
+        @include transitionAll(0.3s ease-in-out);
         @include responsive (mobile-big, max) {
             margin-bottom: 0px;
         }
@@ -61,7 +61,7 @@
         margin-top: 3rem;
         opacity: 0;
         @include translateX(-65px);
-        @include transitionAll(0.4s ease-in-out !important); 
+        @include transitionAll(0.4s ease-in-out !important);
         @include responsive (mobile-big, max) {
             margin-top: 20px;
         }
@@ -105,14 +105,14 @@
             padding: 0 calc(50% - 580px);
             @include flex;
             @include responsive (laptop, max) {
-                height: calc(100vh - 82px);    
+                height: calc(100vh - 82px);
             }
             @include responsive (mobile-big, max) {
                 height: 100%;
                 padding-top: 320px;
-            } 
+            }
             @media only screen and (max-height: 550px) and (min-height: 300px)  {
-                height: auto; 
+                height: auto;
             }
 
             .slider-container {
@@ -123,7 +123,7 @@
                 color: $white;
                 @include responsive (laptop, max) {
                     padding: 0 30px 100px;
-                } 
+                }
                 @include responsive (mobile-big, max) {
                     width: 100%;
                     max-width: 100%;
@@ -139,7 +139,7 @@
                 top: 0;
                 right: 0;
                 z-index: 2;
-                overflow: hidden; 
+                overflow: hidden;
                 @include responsive (mobile-big, max) {
                     width: 100%;
                     height: 350px;
@@ -240,7 +240,7 @@
             float: left;
             bottom: 0;
             @include responsive (mobile-big, max) {
-                width: 100% !important; 
+                width: 100% !important;
                 display: flex;
             }
 
@@ -790,7 +790,7 @@
     }
 
     @include responsive (mobile-big, max) {
-        padding: 56px 0 56px 0; 
+        padding: 56px 0 56px 0;
     }
 
     .content {
@@ -810,12 +810,12 @@
         @include responsive (mobile-big, max) {
             padding: 0 30px;
         }
-        
+
         .section-title {
             color: $green;
             font-weight: 600;
             margin-bottom: 35px;
-            
+
             @include responsive (ipad-portrait, max) {
                 font-size: 21px;
                 line-height: 30px;
@@ -867,19 +867,19 @@
         @include responsive (mini-desktop, max) {
             padding: 110px 0 0 0;
         }
-    
+
         @include responsive (laptop, max) {
             padding: 90px 0 0 0;
         }
-    
+
         @include responsive (ipad-portrait, max) {
             padding: 70px 0 0 0;
         }
-    
+
         @include responsive (mobile-big, max) {
-            padding: 50px 20px 0 20px; 
+            padding: 50px 20px 0 20px;
         }
-    
+
 
         .content {
             padding: 0 10px;
@@ -894,7 +894,7 @@
                 @include responsive (ipad-portrait, max) {
                     margin-bottom: 22px;
                 }
-    
+
                 @include responsive (mobile-big, max) {
                     margin-bottom: 15px;
                 }
@@ -1202,7 +1202,7 @@
             @include responsive (laptop, max) {
                 padding: 70px 6.3% 45px;
             }
-            
+
             @include responsive (ipad-portrait, max) {
                 padding: 40px 3% 40px;
             }
@@ -1316,7 +1316,7 @@
 
 //Centred content image gallery
 .centred-content-image-gallery {
-    padding: 80px 0 42px 0; 
+    padding: 80px 0 42px 0;
     position: relative;
     @include responsive (mobile-big, max) {
         padding:50px 20px 12px 20px;
@@ -1377,7 +1377,7 @@
                 height: auto;
                 max-width: 180px;
             }
-            @include responsive (mobile-big, max) { 
+            @include responsive (mobile-big, max) {
                 max-width: 140px;
             }
         }
@@ -1401,7 +1401,7 @@
         position: relative;
 
     }
-    
+
     .container {
         padding: 0 20px;
         @include responsive (mobile-big, max) {
@@ -1574,7 +1574,7 @@
                     padding: 30px;
                 }
                 @include responsive (mobile-big, max) {
-                    bottom: -58px; 
+                    bottom: -58px;
                     max-height: 58px;
                     padding: 20px;
                     width: 100%;
@@ -1784,7 +1784,7 @@
 
     @include responsive (ipad-portrait, max) {
         padding: 65px 0 100px 0;
-    } 
+    }
     @include responsive (mobile-big, max) {
         padding: 50px 20px 80px 20px;
     }
@@ -3064,7 +3064,6 @@
     .filter-post-left {
         position: relative;
         padding-bottom: 140px;
-        z-index: -1;
 
         &:before {
             height: 100%;
@@ -3873,8 +3872,8 @@
         padding: 35px 35px 0 35px;
         position: relative;
         @include responsive (laptop, max) {
-            padding: 35px 10px 0 10px; 
-        } 
+            padding: 35px 10px 0 10px;
+        }
 
         .separator {
             position: absolute;
@@ -3906,14 +3905,14 @@
         }
 
         .row {
-            @include responsive (mobile-big, max) { 
+            @include responsive (mobile-big, max) {
                 position: relative;
                 z-index: 9;
             }
             .history-card {
                 padding-left: 0;
                 padding-right: 16px;
-                @include responsive (mobile-big, max) { 
+                @include responsive (mobile-big, max) {
                     padding-left: 20px;
                     padding-right: 20px;
                 }
@@ -3923,7 +3922,7 @@
                 .history-card {
                     padding-left: 18px;
                     padding-right: 0;
-                    @include responsive (mobile-big, max) { 
+                    @include responsive (mobile-big, max) {
                         padding-left:20px;
                         padding-right: 20px;
                     }
@@ -3932,7 +3931,7 @@
 
             +.row {
                 margin-top: -90px;
-                @include responsive (mobile-big, max) { 
+                @include responsive (mobile-big, max) {
                     margin-top: 0;
                 }
             }
@@ -3942,8 +3941,8 @@
     .section-title {
         font-size: 32px;
         line-height: 42px;
-        margin-bottom: 133px; 
-        @include responsive (mobile-big, max) {  
+        margin-bottom: 133px;
+        @include responsive (mobile-big, max) {
             font-size: 20px;
             line-height: 28px;
             margin-bottom: 60px;
@@ -3951,12 +3950,12 @@
     }
 
     .history-card {
-        @include responsive (mobile-big, max) { 
+        @include responsive (mobile-big, max) {
             margin-bottom: 35px;
         }
         .card-content {
             padding: 25px 0 35px;
-            @include responsive (mobile-big, max) { 
+            @include responsive (mobile-big, max) {
                 padding: 28px 15px 42px 15px;
                 background-color:   $white;
             }
@@ -3968,7 +3967,7 @@
                 letter-spacing: 1.1px;
                 font-weight: 700;
                 color: $green;
-                margin-bottom: 28px; 
+                margin-bottom: 28px;
             }
 
             .card-text {
@@ -3979,7 +3978,7 @@
                 @include responsive (ipad-portrait, max) {
                     width: 100%;
                 }
-                @include responsive (mobile-big, max) { 
+                @include responsive (mobile-big, max) {
                     font-size: 16px;
                     line-height: 22px;
                     margin-top: 19px;
@@ -4236,7 +4235,6 @@
     .filter-post-left {
         position: relative;
         padding-bottom: 165px;
-        z-index: -1;
 
         @include responsive (ipad-portrait, max) {
             padding-bottom: 150px;
@@ -4548,7 +4546,7 @@
         padding-right: 35px;
         @include responsive (mobile-big, max) {
             padding-left: 30px;
-            padding-right: 30px; 
+            padding-right: 30px;
         }
 
         .careers-box {
@@ -4557,7 +4555,7 @@
             @include responsive (laptop, max) {
                margin-bottom: 108px;
             }
-        
+
             @include responsive (ipad-portrait, max) {
                 margin-bottom: 78px;
             }
@@ -4636,11 +4634,11 @@
         @include responsive (laptop, max) {
             padding: 85px 0 120px 0;
         }
-    
+
         @include responsive (ipad-portrait, max) {
             padding: 65px 0 100px 0;
         }
-    
+
         @include responsive (ipad-portrait, max) {
             padding: 50px 0 80px 0;
         }
@@ -4650,11 +4648,11 @@
             @include responsive (laptop, max) {
                 margin-bottom: 73px;
             }
-    
+
             @include responsive (ipad-portrait, max) {
                 margin-bottom: 58px;
             }
-    
+
             @include responsive (mobile-big, max) {
                 font-size: 20px;
                 line-height: 28px;
@@ -5047,7 +5045,7 @@
                 @include responsive (ipad-portrait, max) {
                     padding-left: 15px;
                  }
- 
+
                  @include responsive (mobile-big, max) {
                      padding-left: 0;
                      padding-top: 0;
@@ -5400,7 +5398,7 @@
                 @include responsive (ipad-portrait, max) {
                     padding-left: 15px;
                  }
- 
+
                  @include responsive (mobile-big, max) {
                      padding-left: 0;
                      padding-top: 0;
@@ -6120,11 +6118,11 @@
         margin-right: 90px;
         @include responsive (mini-desktop, max) {
             margin-left: -110px;
-            margin-right: 0;  
+            margin-right: 0;
         }
         @include responsive (ipad-portrait, max) {
             margin-left: 0;
-            margin-right: 0;  
+            margin-right: 0;
         }
 
         .swiper-slide {
@@ -6165,7 +6163,7 @@
                     -o-object-fit: cover;
                     object-fit: cover;
                     @include responsive (mobile-big, max) {
-                        height: 100%;  
+                        height: 100%;
                         position: absolute;
                         top: 0;
                         left: 0;
