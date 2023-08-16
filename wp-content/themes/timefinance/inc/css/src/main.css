@@ -5975,6 +5975,10 @@ header {
   .trustpilot-block.style-1 .content p {
     font-size: 32px;
     line-height: 45px; }
+    @media (max-width: 767px) {
+      .trustpilot-block.style-1 .content p {
+        font-size: 20px;
+        line-height: 28px; } }
 
 .page-asset-finance .large-card-block {
   padding-bottom: 0; }
