@@ -1990,6 +1990,10 @@ header {
           line-height: 28px; } }
     .featured-content-image .content .btn {
       margin-top: 30px; }
+      .featured-content-image .content .btn.btn-green:hover {
+        background-color: #025244;
+        border-color: #025244;
+        color: #fff; }
       @media (max-width: 767px) {
         .featured-content-image .content .btn {
           font-size: 14px;
@@ -2716,8 +2720,13 @@ header {
     .latest-news-block {
       padding: 40px 20px; } }
   @media (max-width: 991px) {
-    .latest-news-block .latest-news {
-      margin-bottom: 20px; } }
+    .latest-news-block .col {
+      margin-bottom: 30px; }
+      .latest-news-block .col:last-child {
+        margin-bottom: 0; } }
+  .latest-news-block .latest-news {
+    position: relative;
+    height: 100%; }
   .latest-news-block .latest-news-image {
     height: 380px;
     overflow: hidden; }
@@ -2726,7 +2735,10 @@ header {
       width: 100%;
       object-fit: cover; }
   .latest-news-block .latest-news-content-box {
-    padding: 25px 0; }
+    padding: 25px 0 65px; }
+    @media (max-width: 767px) {
+      .latest-news-block .latest-news-content-box {
+        padding: 25px 0 25px; } }
     .latest-news-block .latest-news-content-box .latest-news-title {
       font-size: 25px;
       line-height: 33px;
@@ -2739,20 +2751,24 @@ header {
     .latest-news-block .latest-news-content-box p {
       font-size: 16px;
       line-height: 23px;
-      font-weight: 600;
-      min-height: 95px; }
+      font-weight: 600; }
     .latest-news-block .latest-news-content-box .btn {
       margin-top: 15px;
       font-size: 15px;
       line-height: 15px;
       letter-spacing: normal;
       padding: 8px 18px;
-      font-weight: 400; }
+      font-weight: 400;
+      position: absolute;
+      bottom: 0;
+      left: 0; }
       @media (max-width: 767px) {
         .latest-news-block .latest-news-content-box .btn {
           font-size: 14px;
           line-height: 14px;
-          padding: 10px 30px; } }
+          padding: 10px 30px;
+          position: relative;
+          margin-top: 30px; } }
       .latest-news-block .latest-news-content-box .btn a {
         color: #fff;
         text-decoration: none; }
@@ -5905,6 +5921,35 @@ header {
     color: #3d1050; }
   .case-study-block.bg-white .case-study-right {
     background-color: #F5F3F6; }
+
+.trustpilot-block.style-1 {
+  padding: 156px 0 156px 0; }
+  @media (max-width: 1199px) {
+    .trustpilot-block.style-1 {
+      padding: 90px 0 90px; } }
+  @media (max-width: 991px) {
+    .trustpilot-block.style-1 {
+      padding: 70px 0 70px; } }
+  @media (max-width: 767px) {
+    .trustpilot-block.style-1 {
+      padding: 50px 20px; } }
+  .trustpilot-block.style-1 .justify-content-start {
+    justify-content: center !important; }
+  .trustpilot-block.style-1 .content p {
+    font-size: 32px;
+    line-height: 45px; }
+
+.page-asset-finance .large-card-block {
+  padding-bottom: 0; }
+  @media (max-width: 1199px) {
+    .page-asset-finance .large-card-block {
+      padding-bottom: 0; } }
+  @media (max-width: 991px) {
+    .page-asset-finance .large-card-block {
+      padding-bottom: 0; } }
+  @media (max-width: 767px) {
+    .page-asset-finance .large-card-block {
+      padding-bottom: 0; } }
 
 .modal-open header {
   z-index: 999999; }

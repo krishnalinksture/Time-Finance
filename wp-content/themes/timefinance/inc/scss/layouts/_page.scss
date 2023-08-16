@@ -966,6 +966,13 @@
 
         .btn {
             margin-top: 30px;
+            &.btn-green {
+                &:hover {
+                    background-color: $dark-green;
+                    border-color: $dark-green;
+                    color: $white;
+                }
+            } 
             @include responsive(mobile-big, max) {
                 font-size: 14px;
                 line-height: 14px;
@@ -1963,11 +1970,19 @@
     @include responsive (mobile-big, max) {
         padding: 40px 20px;
     }
+    .col {
+        @include responsive (ipad-portrait, max) {
+            margin-bottom: 30px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        } 
+    }
+    
 
     .latest-news {
-        @include responsive (ipad-portrait, max) {
-            margin-bottom: 20px;
-        }
+        position: relative;
+        height: 100%; 
     }
 
     .latest-news-image {
@@ -1982,7 +1997,10 @@
     }
 
     .latest-news-content-box {
-        padding: 25px 0;
+        padding: 25px 0 65px;
+        @include responsive (mobile-big, max) {
+            padding: 25px 0 25px;
+        }
 
         .latest-news-title {
             font-size: 25px;
@@ -1998,8 +2016,7 @@
         p {
             font-size: 16px;
             line-height: 23px;
-            font-weight: 600;
-            min-height: 95px;
+            font-weight: 600; 
         }
 
         .btn {
@@ -2009,11 +2026,16 @@
             letter-spacing: normal;
             padding: 8px 18px;
             font-weight: 400;
+            position: absolute;
+            bottom: 0;
+            left: 0;
 
             @include responsive (mobile-big, max) {
                 font-size: 14px;
                 line-height: 14px;
                 padding: 10px 30px;
+                position: relative;
+                margin-top: 30px;
             }
 
             a {
@@ -6293,6 +6315,45 @@
     &.bg-white {
         .case-study-right {
             background-color: $gray;
+        }
+    }
+}
+
+// page asset finance 
+    .trustpilot-block {
+        &.style-1 {
+            padding: 156px 0 156px 0;
+            @include responsive (laptop, max) {
+                padding: 90px 0 90px;
+            }
+            @include responsive (ipad-portrait, max) {
+                padding:70px 0 70px;
+            }
+            @include responsive (mobile-big, max) {
+                padding: 50px 20px;
+            }
+            .justify-content-start {
+                justify-content: center !important;
+            }
+            .content {
+                p {
+                    font-size: 32px;
+                    line-height: 45px;
+                }
+            }
+        }
+    }
+    .page-asset-finance {
+    .large-card-block {
+        padding-bottom: 0;
+        @include responsive (laptop, max) {
+            padding-bottom: 0;
+        }
+        @include responsive (ipad-portrait, max) {
+            padding-bottom: 0;
+        }
+        @include responsive (mobile-big, max) {
+            padding-bottom: 0;
         }
     }
 }
