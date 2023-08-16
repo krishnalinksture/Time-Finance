@@ -120,7 +120,7 @@ if ( ! empty( $main_title ) || ! empty( $content ) ) {
 					$args = array(
 						'post_type'   => 'bdts',
 						'post_status' => 'publish',
-						'orderby'     => 'post_date',
+						'order'     => 'ASC',
 					);
 					$loop = new WP_Query( $args );
 					while ( $loop->have_posts() ) {

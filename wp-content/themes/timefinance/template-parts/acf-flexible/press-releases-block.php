@@ -141,24 +141,37 @@ if ( ! empty( $main_title ) || ! empty( $content ) ) {
 								<div class="press-release-content">
 									<div class="press-release-date">
 										<?php
-										echo get_the_date( 'm F Y', get_the_ID() ) . ' / ' . wp_strip_all_tags( get_the_term_list( get_the_ID(), 'press-release-categories', ' ', ', ', ' ' ) ); //phpcs:ignore
+										$category_name = wp_strip_all_tags( get_the_term_list( get_the_ID(), 'press-release-categories', ' ', ', ', ' ' ) );
+										if ( $category_name ) {
+											echo get_the_date( 'm F Y', get_the_ID() ) . ' / ' . $category_name; //phpcs:ignore
+										} else {
+											echo get_the_date( 'm F Y', get_the_ID() ); //phpcs:ignore
+										}
 										?>
 									</div>
 									<?php
-									if ( get_the_post_thumbnail() ) {
+									if ( get_the_title() ) {
 										?>
 										<div class="press-release-title">
 											<a href="<?php echo esc_url( get_the_permalink() ); ?>"><?php echo esc_html( get_the_title() ); ?></a>
 										</div>
 										<?php
 									}
-									if ( get_the_content() ) {
-										echo get_the_content(); //phpcs:ignore
+									if ( get_the_excerpt() ) {
+										?>
+										<p><?php echo get_the_excerpt(); //phpcs:ignore ?></p>
+										<?php
 									}
 									if ( ! empty( $read_more_button ) ) {
 										?>
 										<div class="read-more btn">
 											<a href="<?php echo esc_url( get_the_permalink() ); ?>"><?php echo esc_html( $read_more_button ); ?></a>
+										</div>
+										<?php
+									} else {
+										?>
+										<div class="read-more btn">
+											<a href="<?php echo esc_url( get_the_permalink() ); ?>"><?php echo esc_html( 'Read More' ); ?></a>
 										</div>
 										<?php
 									}

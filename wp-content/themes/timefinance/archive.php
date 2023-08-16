@@ -147,13 +147,21 @@ $time_blog_view_all_button = get_field( 'time_blog_view_all_button', 'option' );
 											</div>
 											<?php
 										}
-										if ( get_the_content() ) {
-											echo get_the_content(); //phpcs:ignore
+										if ( get_the_excerpt() ) {
+										?>
+											<p><?php echo get_the_excerpt(); //phpcs:ignore ?></p>
+										<?php
 										}
 										if ( ! empty( $read_more_button ) ) {
 											?>
 											<div class="read-more btn">
 												<a href="<?php echo esc_url( get_the_permalink() ); ?>"><?php echo esc_html( $read_more_button ); ?></a>
+											</div>
+											<?php
+										} else {
+											?>
+											<div class="read-more btn">
+												<a href="<?php echo esc_url( get_the_permalink() ); ?>"><?php echo esc_html( 'Read More' ); ?></a>
 											</div>
 											<?php
 										}

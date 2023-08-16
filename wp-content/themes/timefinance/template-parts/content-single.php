@@ -6,7 +6,7 @@
  */
 
 $image               = get_field( 'image' );
-$all_articles_button = get_field( 'all_articles_button' );
+$all_articles_button = get_field( 'all_articles_button', 'options' );
 $image_alt           = ( isset( $image['alt'] ) && ! empty( $image['alt'] ) ) ? $image['alt'] : ( isset( $image['title'] ) && ! empty( $image['title'] ) ? $image['title'] : '' );
 
 ?>
@@ -34,7 +34,12 @@ $image_alt           = ( isset( $image['alt'] ) && ! empty( $image['alt'] ) ) ? 
 				<div class="time-blog-detail-content sticky-top">
 					<div class="time-blog-date d-none d-lg-block">
 						<?php
-						echo get_the_date( 'm F Y', get_the_ID() ) . ' / ' . wp_strip_all_tags( get_the_term_list( get_the_ID(), 'category', ' ', ', ', ' ' ) ); //phpcs:ignore
+						$category_name = wp_strip_all_tags( get_the_term_list( get_the_ID(), 'category', ' ', ', ', ' ' ) );
+						if ( $category_name ) {
+							echo get_the_date( 'm F Y', get_the_ID() ) . ' / ' . $category_name; //phpcs:ignore
+						} else {
+							echo get_the_date( 'm F Y', get_the_ID() ); //phpcs:ignore
+						}
 						?>
 					</div>
 					<div class="time-blog-title d-none d-lg-block">
@@ -62,7 +67,12 @@ $image_alt           = ( isset( $image['alt'] ) && ! empty( $image['alt'] ) ) ? 
 			<div class="col-lg-8 col-md-12 right">
 				<div class="time-blog-date d-lg-none">
 					<?php
-					echo get_the_date( 'm F Y', get_the_ID() ) . ' / ' . wp_strip_all_tags( get_the_term_list( get_the_ID(), 'category', ' ', ', ', ' ' ) ); //phpcs:ignore
+					$category_name = wp_strip_all_tags( get_the_term_list( get_the_ID(), 'category', ' ', ', ', ' ' ) );
+					if ( $category_name ) {
+						echo get_the_date( 'm F Y', get_the_ID() ) . ' / ' . $category_name; //phpcs:ignore
+					} else {
+						echo get_the_date( 'm F Y', get_the_ID() ); //phpcs:ignore
+					}
 					?>
 				</div>
 				<div class="time-blog-title d-lg-none">
@@ -75,10 +85,13 @@ $image_alt           = ( isset( $image['alt'] ) && ! empty( $image['alt'] ) ) ? 
 						the_row();
 						if ( get_row_layout() === 'content_block' ) {
 							$content = get_sub_field( 'content' );
-							echo $content; //phpcs:ignore
+							if ( $content ) {
+								echo $content; //phpcs:ignore
+							}
 						}
 					}
 				}
+				echo get_the_content(); //phpcs:ignore
 				?>
 			</div>
 		</div>

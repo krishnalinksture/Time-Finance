@@ -178,3 +178,26 @@ function timefinance_add_page_slug_body_class( $classes ) { //phpcs:ignore
 	return $classes;
 }
 add_filter( 'body_class', 'timefinance_add_page_slug_body_class' );
+
+
+add_filter( 'register_taxonomy_args', 'my_register_taxonomy_args', 10, 2 );
+function my_register_taxonomy_args( $args, $taxonomy ) { //phpcs:ignore
+	$args['rewrite'] = '';
+	if ( 'press-release-categories' === $taxonomy ) {
+		$args['rewrite']         = (array) $args['rewrite'];
+		$args['rewrite']['slug'] = 'press-releases/category';
+	}
+	if ( 'category' === $taxonomy ) {
+		$args['rewrite']         = (array) $args['rewrite'];
+		$args['rewrite']['slug'] = 'time-blog/category';
+	}
+	if ( 'case-study-categories' === $taxonomy ) {
+		$args['rewrite']         = (array) $args['rewrite'];
+		$args['rewrite']['slug'] = 'clients/category';
+	}
+	if ( 'regulatory-news-categories' === $taxonomy ) {
+		$args['rewrite']         = (array) $args['rewrite'];
+		$args['rewrite']['slug'] = 'regulatorynews';
+	}
+	return $args;
+}

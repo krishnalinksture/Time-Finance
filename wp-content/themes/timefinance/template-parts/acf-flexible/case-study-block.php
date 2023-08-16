@@ -19,6 +19,7 @@ $section_id            = get_sub_field( 'section_id' ) ? get_sub_field( 'section
 				<?php
 				$args = array(
 					'post_type' => 'case-study',
+					'posts_per_page' => 5,
 				);
 				$loop = new WP_Query( $args );
 				while ( $loop->have_posts() ) {

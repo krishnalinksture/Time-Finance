@@ -159,6 +159,12 @@ if ( ! empty( $main_title ) || ! empty( $content ) ) {
 										?>
 										<a class="read-more btn" href="<?php echo $upload_file['url']; //phpcs:ignore ?>"><?php echo esc_html( $read_more ); ?></a>
 										<?php
+									} else {
+										$pdf_name = get_the_content();
+										$pdf_url  = 'http://timefinance.embryodigitalwebsitedevelopment.co.uk/wp-content/uploads/2023/08/' . $pdf_name;
+										?>
+										<a class="read-more btn" href="<?php echo $pdf_url; ?>"><?php echo esc_html( 'Read More' ); //phpcs:ignore ?></a>
+										<?php
 									}
 									?>
 								</div>

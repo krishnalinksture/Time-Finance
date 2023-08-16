@@ -137,7 +137,12 @@ $section_id                   = get_sub_field( 'section_id' ) ? get_sub_field( '
 								<div class="case-study-content">
 									<div class="case-study-date">
 										<?php
-										echo get_the_date( 'm F Y', get_the_ID() ) . ' / ' . wp_strip_all_tags( get_the_term_list( get_the_ID(), 'case-study-categories', ' ', ', ', ' ' ) ); //phpcs:ignore
+										$category_name = wp_strip_all_tags( get_the_term_list( get_the_ID(), 'case-study-categories', ' ', ', ', ' ' ) );
+										if ( $category_name ) {
+											echo get_the_date( 'm F Y', get_the_ID() ) . ' / ' . $category_name; //phpcs:ignore
+										} else {
+											echo get_the_date( 'm F Y', get_the_ID() ); //phpcs:ignore
+										}
 										?>
 									</div>
 									<?php
@@ -148,13 +153,21 @@ $section_id                   = get_sub_field( 'section_id' ) ? get_sub_field( '
 										</div>
 										<?php
 									}
-									if ( get_the_content() ) {
-										echo get_the_content(); //phpcs:ignore
+									if ( get_the_excerpt() ) {
+										?>
+										<p><?php echo get_the_excerpt(); //phpcs:ignore ?></p>
+										<?php
 									}
 									if ( ! empty( $read_more_button ) ) {
 										?>
 										<div class="read-more btn">
 											<a href="<?php echo esc_url( get_the_permalink() ); ?>"><?php echo esc_html( $read_more_button ); ?></a>
+										</div>
+										<?php
+									} else {
+										?>
+										<div class="read-more btn">
+											<a href="<?php echo esc_url( get_the_permalink() ); ?>"><?php echo esc_html( 'Read More' ); ?></a>
 										</div>
 										<?php
 									}
