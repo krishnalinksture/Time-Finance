@@ -206,9 +206,11 @@ if ( ! class_exists( 'Timefinance_Menu_Walker' ) ) {
 
 			$attributes = '';
 			foreach ( $atts as $attr => $value ) {
-				if ( is_scalar( $value ) && '' !== $value && false !== $value ) {
-					$value       = ( 'href' === $attr ) ? esc_url( $value ) : esc_attr( $value );
-					$attributes .= ' ' . $attr . '="' . $value . '"';
+				if ( ! $args->walker->has_children ) {
+					if ( is_scalar( $value ) && '' !== $value && false !== $value ) {
+						$value       = ( 'href' === $attr ) ? esc_url( $value ) : esc_attr( $value );
+						$attributes .= ' ' . $attr . '="' . $value . '"';
+					}
 				}
 			}
 
