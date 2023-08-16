@@ -1732,7 +1732,7 @@ header {
     top: 0;
     left: 0;
     background: #4AA690;
-    opacity: 0.3; }
+    opacity: 0; }
   .inner-page-hero-small .section-title {
     font-weight: 800;
     color: #fff; }
@@ -1845,6 +1845,19 @@ header {
       color: #fff; }
   .left-right-content-image.bg-purple .content ul {
     color: #fff; }
+
+.page-home .trustpilot-block.style-1 .content p {
+  font-size: 40px;
+  line-height: 50px;
+  font-weight: 700; }
+  @media (max-width: 991px) {
+    .page-home .trustpilot-block.style-1 .content p {
+      font-size: 30px;
+      line-height: 39px; } }
+  @media (max-width: 767px) {
+    .page-home .trustpilot-block.style-1 .content p {
+      font-size: 20px;
+      line-height: 28px; } }
 
 .trustpilot-block {
   padding: 156px 0 156px 0; }
@@ -2537,7 +2550,13 @@ header {
     margin-bottom: 30px; }
   .large-card-block .large-card-box {
     height: 100%;
-    overflow: hidden; }
+    overflow: hidden;
+    background-color: #fff;
+    position: relative;
+    padding-bottom: 60px; }
+    @media (max-width: 767px) {
+      .large-card-block .large-card-box {
+        padding-bottom: 0; } }
   .large-card-block .large-card-image {
     height: 345px;
     overflow: hidden; }
@@ -2550,9 +2569,7 @@ header {
       height: 100%;
       object-fit: cover; }
   .large-card-block .large-card-content {
-    padding: 32px 15%;
-    background-color: #fff;
-    height: 100%; }
+    padding: 32px 15%; }
     @media (max-width: 1199px) {
       .large-card-block .large-card-content {
         padding: 32px 15%; } }
@@ -2580,12 +2597,26 @@ header {
       line-height: 15px;
       letter-spacing: normal;
       padding: 8px 15px;
-      font-weight: 400; }
+      font-weight: 400;
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      transform: translateX(-50%); }
       @media (max-width: 767px) {
         .large-card-block .large-card-content .btn {
           font-size: 12px;
           line-height: 12px;
-          margin-top: 20px; } }
+          margin-top: 20px;
+          position: relative;
+          bottom: 0;
+          left: 0;
+          -webkit-transform: translateX(0);
+          -moz-transform: translateX(0);
+          -ms-transform: translateX(0);
+          transform: translateX(0); } }
   .large-card-block.bg-white .large-card-content {
     background-color: #F5F3F6; }
   .large-card-block.bg-purple .section-title {

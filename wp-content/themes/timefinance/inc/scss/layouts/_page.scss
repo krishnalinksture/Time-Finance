@@ -607,7 +607,7 @@
         top: 0;
         left: 0;
         background: #4AA690;
-        opacity: 0.3;
+        opacity: 0;
     }
 
     .section-title {
@@ -774,6 +774,29 @@
 }
 
 //Trustpilot block
+.page-home {
+    .trustpilot-block {
+        &.style-1 {
+            .content {
+                p {
+                    font-size: 40px;
+                    line-height: 50px;
+                    font-weight: 700;
+        
+                    @include responsive (ipad-portrait, max) {
+                        font-size: 30px;
+                        line-height: 39px;
+                    }
+        
+                    @include responsive (mobile-big, max) {
+                        font-size: 20px;
+                        line-height: 28px;
+                    }
+                }
+            }
+        }
+    }
+}
 .trustpilot-block {
     padding: 156px 0 156px 0;
 
@@ -1714,6 +1737,12 @@
     .large-card-box {
         height: 100%;
         overflow: hidden;
+        background-color: $white; 
+        position: relative;
+        padding-bottom: 60px;
+        @include responsive (mobile-big, max) {
+            padding-bottom: 0;
+        }
     }
 
     .large-card-image {
@@ -1732,9 +1761,7 @@
     }
 
     .large-card-content {
-        padding: 32px 15%;
-        background-color: $white;
-        height: 100%;
+        padding: 32px 15%; 
 
         @include responsive (laptop, max) {
             padding: 32px 15%;
@@ -1770,11 +1797,20 @@
             letter-spacing: normal;
             padding: 8px 15px;
             font-weight: 400;
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            @include translateX(-50%);
+
 
             @include responsive (mobile-big, max) {
                 font-size: 12px;
                 line-height: 12px;
                 margin-top: 20px;
+                position: relative;
+                bottom: 0;
+                left: 0;
+                @include translateX(0);
             }
         }
     }
