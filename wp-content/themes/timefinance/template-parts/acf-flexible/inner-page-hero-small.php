@@ -35,7 +35,7 @@ if ( ! empty( $main_title ) || ! empty( $cta_button ) ) {
 						$link_title  = $cta_button['title'];
 						$link_target = $cta_button['target'] ? $link['target'] : '_self';
 						?>
-						<a href="<?php echo esc_url( $link_url ); ?>" class="btn btn-link" target="<?php echo esc_attr( $link_target ); ?>">
+						<a href="<?php echo esc_url( $link_url ); ?>" class="btn" target="<?php echo esc_attr( $link_target ); ?>">
 							<?php echo esc_html( $link_title ); ?>
 						</a>
 						<?php
