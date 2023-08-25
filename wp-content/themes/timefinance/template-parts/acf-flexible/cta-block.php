@@ -38,7 +38,7 @@ if ( ! empty( $main_title ) || ! empty( $subtitle ) || ! empty( $number ) || ! e
 					if ( ! empty( $subtitle ) ) {
 						?>
 						<div class="subtitle">
-							<?php echo esc_html( $subtitle ); ?>
+							<a href="mailto:<?php echo $subtitle; //phpcs:ignore ?>"><?php echo esc_html( $subtitle ); ?></a>
 						</div>
 						<?php
 					}
