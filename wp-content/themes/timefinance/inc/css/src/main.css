@@ -297,13 +297,13 @@ button.mfp-close {
         border: none;
         font-family: "Nunito Sans", sans-serif !important;
         padding: 10px 0 10px 0;
-        height: 235px;
+        height: 90px;
+        min-height: 90px !important;
         resize: none;
-        line-height: 33px; }
+        line-height: 28px; }
         @media (max-width: 767px) {
           .cta-form .forminator-custom-form .forminator-row .forminator-col .forminator-field .forminator-textarea {
-            font-size: 15px !important;
-            height: 165px; } }
+            font-size: 15px !important; } }
       .cta-form .forminator-custom-form .forminator-row .forminator-col .forminator-field .forminator-button-submit {
         padding: 15px 41px;
         margin-bottom: 15px;
@@ -1270,8 +1270,7 @@ header {
     @media (max-width: 767px) {
       .homepage-hero ul {
         margin-bottom: 0px; } }
-  .homepage-hero .btn {
-    margin-top: 3rem;
+  .homepage-hero .hero-btn {
     opacity: 0;
     -webkit-transform: translateX(-65px);
     -moz-transform: translateX(-65px);
@@ -1281,6 +1280,8 @@ header {
     -moz-transition: 0.3s ease-in-out !important;
     -ms-transition: 0.3s ease-in-out !important;
     transition: 0.3s ease-in-out !important; }
+  .homepage-hero .btn {
+    margin-top: 3rem; }
     @media (max-width: 767px) {
       .homepage-hero .btn {
         margin-top: 20px; } }
@@ -1411,9 +1412,11 @@ header {
     -moz-transform: translateX(0);
     -ms-transform: translateX(0);
     transform: translateX(0); }
-  .homepage-hero .swiper-slide.swiper-slide-active .btn {
+  .homepage-hero .swiper-slide.swiper-slide-active .hero-btn {
     opacity: 1;
     will-change: opacity, transform;
+    -webkit-transition-delay: 0.35s !important;
+    transition-delay: 0.35s !important;
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
     -ms-transform: translateX(0);
@@ -2310,10 +2313,10 @@ header {
           max-width: 140px; } }
 
 .page-asset-based-lending .cta-block {
-  padding: 60px 0; }
+  padding: 60px 0 0; }
   @media (max-width: 1199px) {
     .page-asset-based-lending .cta-block {
-      padding: 30px 0; } }
+      padding: 30px 0 0; } }
 
 .cta-block.overlap-25 {
   margin-top: -95px;
@@ -2355,6 +2358,10 @@ header {
     line-height: 50px;
     font-weight: 700;
     color: #fff; }
+    .cta-block .container .subtitle a {
+      color: #fff; }
+      .cta-block .container .subtitle a:hover {
+        text-decoration: none; }
     @media (max-width: 767px) {
       .cta-block .container .subtitle {
         font-size: 23px;
@@ -5797,6 +5804,20 @@ header {
   border-bottom: 1px solid grey;
   border-right: 1px solid grey; }
 
+.page-financials-calendar-presentations-and-research .content-block h4 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 400;
+  margin-bottom: 16px; }
+
+.page-financials-calendar-presentations-and-research .content-block p {
+  margin-bottom: 16px; }
+
+.page-financials-calendar-presentations-and-research .content-block table tbody tr td {
+  padding-bottom: 0;
+  border-bottom: 0;
+  border-right: 0; }
+
 .page-shareholder-information .content-block h4 {
   font-size: 24px;
   line-height: 32px;
@@ -5808,7 +5829,10 @@ header {
 
 .page-shareholder-information .content-block table tbody tr td {
   font-size: 16px;
-  line-height: 1.5; }
+  line-height: 1.5;
+  padding-bottom: 0;
+  border-bottom: 0;
+  border-right: 0; }
 
 .page-company-information .content-block h4 {
   font-size: 24px;
