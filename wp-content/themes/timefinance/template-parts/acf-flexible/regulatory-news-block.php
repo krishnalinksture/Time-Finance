@@ -144,7 +144,7 @@ if ( ! empty( $main_title ) || ! empty( $content ) ) {
 									if ( get_the_date() ) {
 										?>
 										<div class="regulatory-news-date">
-											<?php echo get_the_date( 'm F Y', get_the_ID() ); ?>
+											<?php echo get_the_date( 'd M Y', get_the_ID() ); ?>
 										</div>
 										<?php
 									}

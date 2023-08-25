@@ -134,7 +134,7 @@ $press_release_view_all_button = get_field( 'press_release_view_all_button', 'op
 									<div class="press-release-content">
 										<div class="press-release-date">
 											<?php
-											echo get_the_date( 'm F Y', get_the_ID() ) . ' / ' . wp_strip_all_tags( get_the_term_list( get_the_ID(), 'press-release-categories', ' ', ', ', ' ' ) ); //phpcs:ignore
+											echo get_the_date( 'd M Y', get_the_ID() ) . ' / ' . wp_strip_all_tags( get_the_term_list( get_the_ID(), 'press-release-categories', ' ', ', ', ' ' ) ); //phpcs:ignore
 											?>
 										</div>
 										<?php

@@ -143,9 +143,9 @@ if ( ! empty( $main_title ) || ! empty( $content ) ) {
 										<?php
 										$category_name = wp_strip_all_tags( get_the_term_list( get_the_ID(), 'press-release-categories', ' ', ', ', ' ' ) );
 										if ( $category_name ) {
-											echo get_the_date( 'm F Y', get_the_ID() ) . ' / ' . $category_name; //phpcs:ignore
+											echo get_the_date( 'd M Y', get_the_ID() ) . ' / ' . $category_name; //phpcs:ignore
 										} else {
-											echo get_the_date( 'm F Y', get_the_ID() ); //phpcs:ignore
+											echo get_the_date( 'd M Y', get_the_ID() ); //phpcs:ignore
 										}
 										?>
 									</div>
