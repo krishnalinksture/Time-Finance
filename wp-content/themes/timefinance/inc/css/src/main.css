@@ -2321,9 +2321,6 @@ header {
 .cta-block.overlap-25 {
   margin-top: -95px;
   position: relative; }
-  @media (max-width: 767px) {
-    .cta-block.overlap-25 {
-      margin-top: -170px; } }
 
 .cta-block.overlap-50 {
   margin-top: -205px;
@@ -2560,6 +2557,8 @@ header {
         margin-bottom: 20px; } }
   .large-card-block .col-md {
     margin-bottom: 30px; }
+  .large-card-block .box-link {
+    text-decoration: none; }
   .large-card-block .large-card-box {
     height: 100%;
     overflow: hidden;
@@ -2584,7 +2583,7 @@ header {
     padding: 32px 15%; }
     @media (max-width: 1199px) {
       .large-card-block .large-card-content {
-        padding: 32px 15%; } }
+        padding: 32px 12%; } }
     @media (max-width: 767px) {
       .large-card-block .large-card-content {
         padding: 25px 15%; } }
@@ -2592,13 +2591,15 @@ header {
       font-size: 25px;
       line-height: 33px;
       font-weight: 600;
-      margin-bottom: 10px; }
+      margin-bottom: 10px;
+      color: #3d1050; }
       @media (max-width: 767px) {
         .large-card-block .large-card-content .large-card-title {
           font-size: 16px;
           line-height: 22px; } }
     .large-card-block .large-card-content p {
-      font-weight: 600; }
+      font-weight: 600;
+      color: #3d1050; }
       @media (max-width: 767px) {
         .large-card-block .large-card-content p {
           font-size: 13px;
