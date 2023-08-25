@@ -40,7 +40,7 @@ if ( ! empty( $main_title ) || have_rows( 'large_card' ) ) {
 						if ( ! empty( $image ) || ! empty( $card_title ) || ! empty( $content ) || ! empty( $cta_button ) ) {
 							?>
 							<div class="col-md">
-								<a href="<?php echo $box_link['url']; ?>">
+								<a class="box-link" href="<?php echo esc_url( $box_link['url'] ); ?>">
 									<div class="large-card-box">
 										<?php
 										if ( ! empty( $image ) ) {
@@ -65,7 +65,13 @@ if ( ! empty( $main_title ) || have_rows( 'large_card' ) ) {
 													echo $content; //phpcs:ignore
 												}
 												if ( $cta_button ) {
+													?>
+													<button class="btn">
+													<?php
 													echo esc_html( $cta_button );
+													?>
+													</button>
+													<?php
 												}
 												?>
 											</div>
