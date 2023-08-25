@@ -1277,10 +1277,10 @@ header {
     -moz-transform: translateX(-65px);
     -ms-transform: translateX(-65px);
     transform: translateX(-65px);
-    -webkit-transition: 0.4s ease-in-out !important;
-    -moz-transition: 0.4s ease-in-out !important;
-    -ms-transition: 0.4s ease-in-out !important;
-    transition: 0.4s ease-in-out !important; }
+    -webkit-transition: 0.3s ease-in-out !important;
+    -moz-transition: 0.3s ease-in-out !important;
+    -ms-transition: 0.3s ease-in-out !important;
+    transition: 0.3s ease-in-out !important; }
     @media (max-width: 767px) {
       .homepage-hero .btn {
         margin-top: 20px; } }
@@ -1414,8 +1414,6 @@ header {
   .homepage-hero .swiper-slide.swiper-slide-active .btn {
     opacity: 1;
     will-change: opacity, transform;
-    -webkit-transition-delay: 0.35s !important;
-    transition-delay: 0.35s !important;
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
     -ms-transform: translateX(0);

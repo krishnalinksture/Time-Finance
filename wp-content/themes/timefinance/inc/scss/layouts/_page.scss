@@ -61,7 +61,7 @@
         margin-top: 3rem;
         opacity: 0;
         @include translateX(-65px);
-        @include transitionAll(0.4s ease-in-out !important);
+        @include transitionAll(0.3s ease-in-out !important);
         @include responsive (mobile-big, max) {
             margin-top: 20px;
         }
@@ -198,9 +198,7 @@
 
             .btn {
                 opacity: 1;
-                will-change: opacity, transform;
-                -webkit-transition-delay: 0.35s !important;
-                transition-delay: 0.35s !important;
+                will-change: opacity, transform; 
                 @include translateX(0);
             }
         }
