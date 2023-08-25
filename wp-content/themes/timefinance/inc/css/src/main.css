@@ -2359,9 +2359,10 @@ header {
     font-weight: 700;
     color: #fff; }
     .cta-block .container .subtitle a {
-      color: #fff; }
+      color: #fff;
+      text-decoration: none; }
       .cta-block .container .subtitle a:hover {
-        text-decoration: none; }
+        text-decoration: underline; }
     @media (max-width: 767px) {
       .cta-block .container .subtitle {
         font-size: 23px;
