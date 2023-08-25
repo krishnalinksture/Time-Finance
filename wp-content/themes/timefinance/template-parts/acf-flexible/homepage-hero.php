@@ -51,9 +51,11 @@ if ( have_rows( 'slider_content' ) || ! empty( $show_for_more_button ) ) {
 														$link_title  = $cta_button['title'];
 														$link_target = $cta_button['target'] ? $link['target'] : '_self';
 														?>
-														<a href="<?php echo esc_url( $link_url ); ?>" class="btn" target="<?php echo esc_attr( $link_target ); ?>">
-															<?php echo esc_html( $link_title ); ?>
-														</a>
+														<div class="hero-btn">
+															<a href="<?php echo esc_url( $link_url ); ?>" class="btn" target="<?php echo esc_attr( $link_target ); ?>">
+																<?php echo esc_html( $link_title ); ?>
+															</a>
+														</div>
 														<?php
 													}
 													?>
