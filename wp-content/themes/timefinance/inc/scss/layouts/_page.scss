@@ -24,6 +24,7 @@
     .section-title {
         margin-top: 40px;
         opacity: 0;
+        font-weight: 800;
         margin-bottom: 0;
         @include translateX(-65px);
         @include transitionAll(0.3s ease-in-out);
@@ -990,6 +991,8 @@
 
         .btn {
             margin-top: 30px;
+            padding: 12px 32px;
+            line-height: 12px;
             &.btn-green {
                 &:hover {
                     background-color: $dark-green;
@@ -1670,7 +1673,7 @@
                     margin-top: 45px;
                     opacity: 0;
                     font-size: 15px;
-                    line-height: 15px;
+                    line-height: 14px;
                     letter-spacing: normal;
                     padding: 8px 22px;
                     font-weight: 400;
@@ -2074,7 +2077,7 @@
         .btn {
             margin-top: 15px;
             font-size: 15px;
-            line-height: 15px;
+            line-height: 14px;
             letter-spacing: normal;
             padding: 8px 18px;
             font-weight: 400;
@@ -6441,6 +6444,14 @@
         }
         @include responsive (mobile-big, max) {
             padding-bottom: 0;
+        }
+    }
+}
+
+.page-corporate-governance, .page-advisors {
+    .content-block {
+        h4 {
+            font-weight: 400;
         }
     }
 }

@@ -156,9 +156,9 @@ button.mfp-close {
   font-family: "Nunito Sans", sans-serif;
   font-size: 16px;
   font-weight: 700;
-  line-height: 22px;
+  line-height: 16px;
   letter-spacing: 0.3px;
-  padding: 12px 32px;
+  padding: 10px 32px;
   position: relative;
   text-decoration: none;
   text-align: center;
@@ -439,9 +439,9 @@ button.mfp-close {
           height: 185px;
           font-size: 15px !important; } }
     .contact-form .forminator-custom-form .forminator-row .forminator-field .forminator-button-submit {
-      padding: 13px 24px;
+      padding: 12px 24px;
       font-family: "Nunito Sans", sans-serif !important;
-      line-height: 15px;
+      line-height: 16px;
       margin-top: 10px;
       letter-spacing: normal;
       -webkit-border-radius: 50px;
@@ -1224,6 +1224,7 @@ header {
   .homepage-hero .section-title {
     margin-top: 40px;
     opacity: 0;
+    font-weight: 800;
     margin-bottom: 0;
     -webkit-transform: translateX(-65px);
     -moz-transform: translateX(-65px);
@@ -2003,7 +2004,9 @@ header {
           font-size: 20px;
           line-height: 28px; } }
     .featured-content-image .content .btn {
-      margin-top: 30px; }
+      margin-top: 30px;
+      padding: 12px 32px;
+      line-height: 12px; }
       .featured-content-image .content .btn.btn-green:hover {
         background-color: #025244;
         border-color: #025244;
@@ -2509,7 +2512,7 @@ header {
           margin-top: 45px;
           opacity: 0;
           font-size: 15px;
-          line-height: 15px;
+          line-height: 14px;
           letter-spacing: normal;
           padding: 8px 22px;
           font-weight: 400;
@@ -2799,7 +2802,7 @@ header {
     .latest-news-block .latest-news-content-box .btn {
       margin-top: 15px;
       font-size: 15px;
-      line-height: 15px;
+      line-height: 14px;
       letter-spacing: normal;
       padding: 8px 18px;
       font-weight: 400;
@@ -6016,6 +6019,9 @@ header {
     .page-asset-finance .large-card-block {
       padding-bottom: 0; } }
 
+.page-corporate-governance .content-block h4, .page-advisors .content-block h4 {
+  font-weight: 400; }
+
 .modal-open header {
   z-index: 999999; }
 
@@ -6116,6 +6122,7 @@ footer {
     font-size: 25px;
     line-height: 33px;
     text-decoration: none;
+    font-weight: 600;
     margin-bottom: 70px; }
     @media (max-width: 767px) {
       footer .footer-link {
