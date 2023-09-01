@@ -7,6 +7,7 @@
 
 $select_style            = get_sub_field( 'select_style' );
 $main_title              = get_sub_field( 'title' );
+$subtitle              = get_sub_field( 'subtitle' );
 $select_tag              = get_sub_field( 'select_tag' );
 $content                 = get_sub_field( 'content' );
 $trustpilot              = get_sub_field( 'trustpilot' );
@@ -74,7 +75,7 @@ switch ( $select_style ) {
 		}
 		break;
 	case 'style-3':
-		if ( ! empty( $main_title ) || ! empty( $content ) ) {
+		if ( ! empty( $main_title ) || ! empty( $content ) || ! empty( $subtitle ) ) {
 			?>
 			<section class="trustpilot-block <?php echo $select_background_color . ' ' . $select_style . ' ' . $padding_settings; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
 				<div class="container-lg">
