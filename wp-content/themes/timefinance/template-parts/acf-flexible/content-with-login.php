@@ -6,12 +6,13 @@
  */
 
 $content_login           = get_sub_field( 'content_login' );
+$padding_settings        = get_sub_field( 'padding_settings' );
 $select_background_color = get_sub_field( 'select_background_color' );
 $section_id              = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'content-with-login-' );
 
 if ( have_rows( 'content_login' ) ) {
 	?>
-	<section class="content-with-login <?php echo $select_background_color; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
+	<section class="content-with-login <?php echo $select_background_color . ' ' . $padding_settings; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
 		<div class="container-lg">
 			<div class="row row-cols-1 row-cols-md-2">
 				<?php

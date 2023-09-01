@@ -7,12 +7,13 @@
 
 $content           = get_sub_field( 'content' );
 $select_text_align = get_sub_field( 'select_text_align' );
-$seprator = get_sub_field( 'seprator' );
+$seprator          = get_sub_field( 'seprator' );
+$padding_settings  = get_sub_field( 'padding_settings' );
 $section_id        = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'content-block-' );
 
 if ( ! empty( $content ) ) {
 	?>
-	<section class="content-block" id="<?php echo $section_id; //phpcs:ignore ?>">
+	<section class="content-block <?php echo $padding_settings; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
 		<div class="container">
 			<?php
 			if ( 1 == $seprator ) {

@@ -5,15 +5,16 @@
  * @package TIMEFINANCE
  */
 
-$main_title = get_sub_field( 'title' );
-$select_tag = get_sub_field( 'select_tag' );
-$content    = get_sub_field( 'content' );
-$logos      = get_sub_field( 'logos' );
-$section_id = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'content-with-logo-' );
+$main_title       = get_sub_field( 'title' );
+$select_tag       = get_sub_field( 'select_tag' );
+$content          = get_sub_field( 'content' );
+$logos            = get_sub_field( 'logos' );
+$padding_settings = get_sub_field( 'padding_settings' );
+$section_id       = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'content-with-logo-' );
 
 if ( ! empty( $main_title ) || ! empty( $content ) || have_rows( 'logos' ) ) {
 	?>
-	<section class="content-with-logo" id="<?php echo $section_id; //phpcs:ignore ?>">
+	<section class="content-with-logo <?php echo $padding_settings; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
 		<div class="container">
 			<div class="row">
 				<?php

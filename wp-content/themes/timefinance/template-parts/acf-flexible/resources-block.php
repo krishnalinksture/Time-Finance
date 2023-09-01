@@ -9,13 +9,14 @@ $main_title                = get_sub_field( 'title' );
 $select_tag                = get_sub_field( 'select_tag' );
 $content                   = get_sub_field( 'content' );
 $select_form               = get_sub_field( 'select_form' );
+$padding_settings          = get_sub_field( 'padding_settings' );
 $form                      = ( ! empty( $select_form ) ) ? '[forminator_form id="' . $select_form . '"]' : '';
 $resources_view_all_button = get_field( 'resources_view_all_button', 'option' );
 $section_id                = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'resources-block-' );
 
 if ( ! empty( $main_title ) || ! empty( $content ) ) {
 	?>
-	<section class="resources-block" id="<?php echo $section_id; //phpcs:ignore ?>">
+	<section class="resources-block <?php echo $padding_settings; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
 		<div class="container">
 			<?php
 			if ( ! empty( $main_title ) || ! empty( $content ) ) {

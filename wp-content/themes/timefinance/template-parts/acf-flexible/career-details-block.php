@@ -8,13 +8,14 @@
 $select_style         = get_sub_field( 'select_style' );
 $accordion_title      = get_sub_field( 'title' );
 $select_tag           = get_sub_field( 'select_tag' );
+$padding_settings     = get_sub_field( 'padding_settings' );
 $all_vacancies_button = get_sub_field( 'all_vacancies_button' );
 $section_id           = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'career-details-block-' );
 
 switch ( $select_style ) {
 	case 'style-1':
 		?>
-		<section class="career-details-block <?php echo $select_style; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
+		<section class="career-details-block <?php echo $select_style . ' ' . $padding_settings; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
 			<div class="container">
 				<div class="row row-cols-1 justify-content-center">
 					<?php
@@ -120,7 +121,7 @@ switch ( $select_style ) {
 		break;
 	case 'style-2':
 		?>
-		<section class="career-details-block <?php echo $select_style; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
+		<section class="career-details-block <?php echo $select_style . ' ' . $padding_settings;; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
 			<div class="container-lg">
 				<?php
 				if ( ! empty( $accordion_title ) ) {

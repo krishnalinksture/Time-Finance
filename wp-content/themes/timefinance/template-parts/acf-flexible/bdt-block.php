@@ -5,15 +5,17 @@
  * @package TIMEFINANCE
  */
 
-$main_title = get_sub_field( 'title' );
-$select_tag = get_sub_field( 'select_tag' );
-$content    = get_sub_field( 'content' );
-$view_all   = get_sub_field( 'view_all' );
-$section_id = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'bdt-block-' );
+$main_title       = get_sub_field( 'title' );
+$select_tag       = get_sub_field( 'select_tag' );
+$content          = get_sub_field( 'content' );
+$padding_settings = get_sub_field( 'padding_settings' );
+$view_all         = get_sub_field( 'view_all' );
+$padding_settings = get_sub_field( 'padding_settings' );
+$section_id       = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'bdt-block-' );
 
 if ( ! empty( $main_title ) || ! empty( $content ) ) {
 	?>
-	<section class="bdt-block" id="<?php echo $section_id; //phpcs:ignore ?>">
+	<section class="bdt-block <?php echo $padding_settings; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
 		<div class="container">
 			<?php
 			if ( ! empty( $main_title ) || ! empty( $content ) ) {

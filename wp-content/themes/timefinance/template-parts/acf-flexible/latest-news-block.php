@@ -9,10 +9,11 @@ $main_title         = get_sub_field( 'title' );
 $select_tag         = get_sub_field( 'select_tag' );
 $select_post        = get_sub_field( 'select_post' );
 $select_title_align = get_sub_field( 'select_title_align' );
+$padding_settings   = get_sub_field( 'padding_settings' );
 $section_id         = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'latest-news-block-' );
 
 ?>
-<section class="latest-news-block" id="<?php echo $section_id; //phpcs:ignore ?>">
+<section class="latest-news-block <?php echo $padding_settings; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
 	<div class="container">
 		<?php
 		if ( ! empty( $main_title ) ) {

@@ -5,13 +5,14 @@
  * @package TIMEFINANCE
  */
 
-$main_title  = get_sub_field( 'title' );
-$select_tag  = get_sub_field( 'select_tag' );
-$select_post = get_sub_field( 'select_post' );
-$section_id  = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'client-custom-post-block-' );
+$main_title       = get_sub_field( 'title' );
+$select_tag       = get_sub_field( 'select_tag' );
+$select_post      = get_sub_field( 'select_post' );
+$padding_settings = get_sub_field( 'padding_settings' );
+$section_id       = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'client-custom-post-block-' );
 
 ?>
-<section class="client-custom-post-block bg-grey" id="<?php echo $section_id; //phpcs:ignore ?>">
+<section class="client-custom-post-block bg-grey <?php echo $padding_settings; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
 	<div class="container-lg">
 		<?php
 		if ( ! empty( $main_title ) ) {

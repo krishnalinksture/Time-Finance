@@ -10,6 +10,7 @@ $select_tag            = get_sub_field( 'select_tag' );
 $content               = get_sub_field( 'content' );
 $right_image           = get_sub_field( 'right_image' );
 $cta_button            = get_sub_field( 'cta_button' );
+$padding_settings      = get_sub_field( 'padding_settings' );
 $left_image            = get_sub_field( 'left_image' );
 $right_image_alt       = ( isset( $right_image['alt'] ) && ! empty( $right_image['alt'] ) ) ? $right_image['alt'] : ( isset( $right_image['title'] ) && ! empty( $right_image['title'] ) ? $right_image['title'] : '' );
 $left_image_background = ( ! empty( $left_image ) ) ? ' style="background-image:url(' . esc_url( $left_image ) . ');"' : '';
@@ -17,7 +18,7 @@ $section_id            = get_sub_field( 'section_id' ) ? get_sub_field( 'section
 
 if ( ! empty( $main_title ) || ! empty( $content ) || ! empty( $cta_button ) ) {
 	?>
-	<section class="inner-page-hero" id="<?php echo $section_id; //phpcs:ignore ?>">
+	<section class="inner-page-hero <?php echo $padding_settings; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
 		<div class="section-left-image" <?php echo $left_image_background; //phpcs:ignore ?>></div>
 		<?php
 		if ( ! empty( $main_title ) ) {

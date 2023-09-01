@@ -12,13 +12,14 @@ $select_tag              = get_sub_field( 'select_tag' );
 $content                 = get_sub_field( 'content' );
 $cta_button              = get_sub_field( 'cta_button' );
 $image_position          = get_sub_field( 'select_image_position' );
+$padding_settings        = get_sub_field( 'padding_settings' );
 $reverse                 = ( 'right' === $image_position ) ? ' flex-sm-row-reverse ' : '';
 $section_id              = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'left-right-content-image-' );
 $image_alt               = ( isset( $image['alt'] ) && ! empty( $image['alt'] ) ) ? $image['alt'] : ( isset( $image['title'] ) && ! empty( $image['title'] ) ? $image['title'] : '' );
 
 if ( ! empty( $image ) || ! empty( $main_title ) || ! empty( $content ) || ! empty( $cta_button ) ) {
 	?>
-	<section class="left-right-content-image <?php echo $select_background_color; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
+	<section class="left-right-content-image <?php echo $select_background_color . ' ' . $padding_settings; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
 		<div class="container">
 			<div class="row justify-content-center align-items-center<?php echo $reverse; //phpcs:ignore ?>">
 				<?php

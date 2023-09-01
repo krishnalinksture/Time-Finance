@@ -5,12 +5,13 @@
  * @package TIMEFINANCE
  */
 
-$content_image = get_sub_field( 'content_image' );
-$section_id    = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'image-with-content-' );
+$content_image    = get_sub_field( 'content_image' );
+$padding_settings = get_sub_field( 'padding_settings' );
+$section_id       = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'image-with-content-' );
 
 if ( have_rows( 'content_image' ) ) {
 	?>
-	<section class="image-with-content" id="<?php echo $section_id; //phpcs:ignore ?>">
+	<section class="image-with-content <?php echo $padding_settings; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
 		<div class="container">
 			<div class="row justify-content-center">
 				<?php

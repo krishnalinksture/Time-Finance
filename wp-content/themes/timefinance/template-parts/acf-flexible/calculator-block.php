@@ -5,17 +5,18 @@
  * @package TIMEFINANCE
  */
 
-$main_title     = get_sub_field( 'title' );
-$select_tag     = get_sub_field( 'select_tag' );
-$content        = get_sub_field( 'content' );
-$value_title    = get_sub_field( 'value_title' );
-$result_title   = get_sub_field( 'result_title' );
-$approval_title = get_sub_field( 'approval_title' );
-$section_id     = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'calculator-block-' );
+$main_title       = get_sub_field( 'title' );
+$select_tag       = get_sub_field( 'select_tag' );
+$content          = get_sub_field( 'content' );
+$value_title      = get_sub_field( 'value_title' );
+$result_title     = get_sub_field( 'result_title' );
+$padding_settings = get_sub_field( 'padding_settings' );
+$approval_title   = get_sub_field( 'approval_title' );
+$section_id       = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'calculator-block-' );
 
 if ( ! empty( $main_title ) || ! empty( $content ) || ! empty( $value_title ) || ! empty( $result_title ) || ! empty( $approval_title ) ) {
 	?>
-	<section class="calculator-block" id="<?php echo $section_id; //phpcs:ignore ?>">
+	<section class="calculator-block <?php echo $padding_settings; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
 		<div class="container">
 			<div class="row justify-content-center text-center">
 				<div class="col-md-12 col-sm-9 calculator-wrapper">

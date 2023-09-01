@@ -9,11 +9,12 @@ $large_card       = get_sub_field( 'large_card' );
 $main_title       = get_sub_field( 'title' );
 $select_tag       = get_sub_field( 'select_tag' );
 $background_color = get_sub_field( 'background_color' );
+$padding_settings = get_sub_field( 'padding_settings' );
 $section_id       = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'large-card-block-' );
 
 if ( ! empty( $main_title ) || have_rows( 'large_card' ) ) {
 	?>
-	<section class="large-card-block <?php echo $background_color; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
+	<section class="large-card-block <?php echo $background_color . ' ' . $padding_settings; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
 		<div class="container">
 			<?php
 			if ( ! empty( $main_title ) ) {

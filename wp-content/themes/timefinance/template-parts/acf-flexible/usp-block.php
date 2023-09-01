@@ -11,13 +11,14 @@ $select_style                   = get_sub_field( 'select_style' );
 $main_title                     = get_sub_field( 'title' );
 $select_tag                     = get_sub_field( 'select_tag' );
 $icon_content                   = get_sub_field( 'icon_content' );
+$padding_settings               = get_sub_field( 'padding_settings' );
 $section_id                     = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'usp-block-' );
 
 switch ( $select_style ) {
 	case 'style-1':
 		if ( ! empty( $main_title ) || have_rows( 'icon_content' ) ) {
 			?>
-			<section class="usp-block <?php echo $select_style . ' ' . $default_style_background_color; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
+			<section class="usp-block <?php echo $select_style . ' ' . $default_style_background_color . ' ' . $padding_settings; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
 				<div class="container">
 					<?php
 					if ( ! empty( $main_title ) ) {
@@ -76,7 +77,7 @@ switch ( $select_style ) {
 	case 'style-2':
 		if ( ! empty( $main_title ) || have_rows( 'icon_content' ) ) {
 			?>
-			<section class="usp-block <?php echo $select_style . ' ' . $style_2_background_color; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
+			<section class="usp-block <?php echo $select_style . ' ' . $style_2_background_color . ' ' . $padding_settings; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
 				<div class="container">
 					<?php
 					if ( ! empty( $main_title ) ) {

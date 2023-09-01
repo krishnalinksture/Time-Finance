@@ -8,17 +8,18 @@
 $background_color      = get_sub_field( 'background_color' );
 $background_image      = get_sub_field( 'background_image' );
 $view_all_case_studies = get_sub_field( 'view_all_case_studies' );
+$padding_settings      = get_sub_field( 'padding_settings' );
 $background            = ( ! empty( $background_image ) ) ? ' style="background-image:url(' . esc_url( $background_image ) . ');"' : '';
 $section_id            = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'case-study-block-' );
 ?>
 
-<section class="case-study-block <?php echo $background_color; ?>" id="<?php echo $section_id; //phpcs:ignore ?>" <?php echo $background; ?>>
+<section class="case-study-block <?php echo $background_color . ' ' . $padding_settings; ?>" id="<?php echo $section_id; //phpcs:ignore ?>" <?php echo $background; ?>>
 	<div class="container">
 		<div class="swiper case-study" data-slider-options='{ "slidesPerView": 1, "simulateTouch": false, "loop": true, "speed": 800, "autoplay": { "delay": 8000 },"pagination": { "el": ".swiper-pagination-case-study", "clickable": true } }'>
 			<div class="swiper-wrapper">
 				<?php
 				$args = array(
-					'post_type' => 'case-study',
+					'post_type'      => 'case-study',
 					'posts_per_page' => 5,
 				);
 				$loop = new WP_Query( $args );
