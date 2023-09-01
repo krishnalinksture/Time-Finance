@@ -937,6 +937,10 @@
     &.style-3 {
         h3 {
             margin-bottom: 30px;
+            @include responsive (mobile-big, max) {
+                font-size: 20px;
+                line-height: 28px;
+            }
         }
         .content {
             p {
@@ -6482,7 +6486,7 @@
 }
 
 // page loans 
-.large-card-block {
+.large-card-block, .page-business-loans {
     .faq-block {
         padding-bottom: 400px;
         @include responsive (laptop, max) {
@@ -6497,6 +6501,7 @@
     }
 }
 
+// page corporate governance, page advisors 
 .page-corporate-governance, .page-advisors {
     .content-block {
         h4 {
