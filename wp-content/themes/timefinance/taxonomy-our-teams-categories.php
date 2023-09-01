@@ -127,7 +127,7 @@ $our_team_all_button                      = get_field( 'our_team_all_button', 'o
 									if ( get_the_post_thumbnail() ) {
 										?>
 										<div class="our-team-image">
-											<?php the_post_thumbnail(); ?>
+											<a href="<?php echo esc_url( get_the_permalink() ); ?>"><?php the_post_thumbnail(); ?></a>
 										</div>
 										<?php
 									}

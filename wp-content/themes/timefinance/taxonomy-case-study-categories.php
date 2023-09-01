@@ -126,7 +126,7 @@ if ( ! empty( $case_studies_title ) || ! empty( $case_studies_content ) ) {
 									if ( get_the_post_thumbnail() ) {
 										?>
 										<div class="case-study-image">
-											<?php the_post_thumbnail(); ?>
+											<a href="<?php echo esc_url( get_the_permalink() ); ?>"><?php the_post_thumbnail(); ?></a>
 										</div>
 										<?php
 									}
@@ -146,9 +146,9 @@ if ( ! empty( $case_studies_title ) || ! empty( $case_studies_content ) ) {
 											<?php
 										}
 										if ( get_the_excerpt() ) {
-										?>
+											?>
 											<p><?php echo get_the_excerpt(); //phpcs:ignore ?></p>
-										<?php
+											<?php
 										}
 										if ( ! empty( $read_more_button ) ) {
 											?>

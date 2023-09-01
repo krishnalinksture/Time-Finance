@@ -7,11 +7,12 @@
 
 $slider_content       = get_sub_field( 'slider_content' );
 $show_for_more_button = get_sub_field( 'show_for_more_button' );
+$padding_settings     = get_sub_field( 'padding_settings' );
 $section_id           = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'homepage-hero-' );
 
 if ( have_rows( 'slider_content' ) || ! empty( $show_for_more_button ) ) {
 	?>
-	<section class="homepage-hero bg-purple" id="<?php echo $section_id; //phpcs:ignore ?>" data-pause="false" data-ride="carousel">
+	<section class="homepage-hero bg-purple <?php echo $padding_settings; ?>" id="<?php echo $section_id; //phpcs:ignore ?>" data-pause="false" data-ride="carousel">
 		<div class="container-fluid">
 			<div class="swiper homepage-hero-slider" data-slider-options='{ "slidesPerView": 1, "simulateTouch":false, "speed": 0, "loop": true, "direction": "horizontal", "pagination": { "el": ".swiper-pagination-homepage-hero", "clickable": true }, "autoplay": { "delay": 6000,"stopOnLastSlide": true, "disableOnInteraction": false }, "effect": "fade" }' data-slider-number-pagination="1" data-slider-md-direction="horizontal">
 				<div class="swiper-wrapper">

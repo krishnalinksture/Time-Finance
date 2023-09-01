@@ -133,7 +133,7 @@ if ( ! empty( $main_title ) || ! empty( $content ) ) {
 								if ( get_the_post_thumbnail() ) {
 									?>
 									<div class="time-blog-image">
-										<?php the_post_thumbnail(); ?>
+										<a href="<?php echo esc_url( get_the_permalink() ); ?>"><?php the_post_thumbnail(); ?></a>
 									</div>
 									<?php
 								}

@@ -129,7 +129,7 @@ $section_id                   = get_sub_field( 'section_id' ) ? get_sub_field( '
 								if ( get_the_post_thumbnail() ) {
 									?>
 									<div class="case-study-image">
-										<?php the_post_thumbnail(); ?>
+										<a href="<?php echo esc_url( get_the_permalink() ); ?>"><?php the_post_thumbnail(); ?></a>
 									</div>
 									<?php
 								}

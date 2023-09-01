@@ -126,7 +126,7 @@ $press_release_view_all_button = get_field( 'press_release_view_all_button', 'op
 									if ( get_the_post_thumbnail() ) {
 										?>
 										<div class="press-release-image">
-											<?php the_post_thumbnail(); ?>
+											<a href="<?php echo esc_url( get_the_permalink() ); ?>"><?php the_post_thumbnail(); ?></a>
 										</div>
 										<?php
 									}
@@ -146,9 +146,9 @@ $press_release_view_all_button = get_field( 'press_release_view_all_button', 'op
 											<?php
 										}
 										if ( get_the_excerpt() ) {
-										?>
+											?>
 											<p><?php echo get_the_excerpt(); //phpcs:ignore ?></p>
-										<?php
+											<?php
 										}
 										if ( ! empty( $read_more_button ) ) {
 											?>

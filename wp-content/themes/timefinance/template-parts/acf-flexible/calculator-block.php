@@ -37,7 +37,7 @@ if ( ! empty( $main_title ) || ! empty( $content ) || ! empty( $value_title ) ||
 						?>
 						<form>
 							<input type="text" id="amount_value" name="amount_value" value="10,000">
-							<button class="btn submit"><?php echo esc_html( 'submit' ); ?></button>
+							<button class="btn submit"><?php echo esc_html( 'Calculate' ); ?></button>
 						</form>
 						<?php
 						if ( ! empty( $result_title ) ) {
