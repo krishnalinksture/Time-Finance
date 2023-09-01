@@ -934,6 +934,18 @@
             }
         }
     }
+    &.style-3 {
+        h3 {
+            margin-bottom: 30px;
+        }
+        .content {
+            p {
+                font-size: 15px;
+                line-height: 22px;
+                font-weight: 600;
+            }
+        }
+    }
 }
 
 //Featured content image
