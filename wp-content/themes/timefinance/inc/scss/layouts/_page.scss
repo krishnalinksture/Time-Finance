@@ -895,7 +895,7 @@
     }
 
     &.style-2 {
-        padding: 125px 0 0 0;
+        padding: 125px 0;
 
         @include responsive (mini-desktop, max) {
             padding: 110px 0 0 0;
@@ -6153,6 +6153,9 @@
                         padding-bottom: 0;
                         border-bottom: 0;
                         border-right:0;
+                        p {
+                            margin-bottom: 15px !important;
+                        }
                     }
                 }
             }

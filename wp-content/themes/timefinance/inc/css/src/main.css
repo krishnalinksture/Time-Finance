@@ -1943,7 +1943,7 @@ header {
   .trustpilot-block.bg-purple p {
     color: #fff; }
   .trustpilot-block.style-2 {
-    padding: 125px 0 0 0; }
+    padding: 125px 0; }
     @media (max-width: 1399px) {
       .trustpilot-block.style-2 {
         padding: 110px 0 0 0; } }
@@ -5833,6 +5833,8 @@ header {
   padding-bottom: 0;
   border-bottom: 0;
   border-right: 0; }
+  .page-financials-calendar-presentations-and-research .content-block table tbody tr td p {
+    margin-bottom: 15px !important; }
 
 .page-shareholder-information .content-block h4 {
   font-size: 24px;
