@@ -6413,7 +6413,7 @@
     }
 }
 
-// page asset finance 
+// page asset finance  
     .trustpilot-block {
         &.style-1 {
             padding: 156px 0 156px 0;
@@ -6443,16 +6443,44 @@
         }
     }
     .page-asset-finance {
-    .large-card-block {
-        padding-bottom: 0;
-        @include responsive (laptop, max) {
+        .faq-block {
+            padding-bottom: 400px;
+            @include responsive (laptop, max) {
+                padding-bottom: 350px;
+            }
+            @include responsive (ipad-portrait, max) {
+                padding-bottom: 300px;
+            }
+            @include responsive (mobile-big, max) {
+                padding-bottom: 250px;
+            }
+        }
+        .large-card-block {
             padding-bottom: 0;
+            @include responsive (laptop, max) {
+                padding-bottom: 0;
+            }
+            @include responsive (ipad-portrait, max) {
+                padding-bottom: 0;
+            }
+            @include responsive (mobile-big, max) {
+                padding-bottom: 0;
+            }
+        }
+}
+
+// page loans 
+.large-card-block {
+    .faq-block {
+        padding-bottom: 400px;
+        @include responsive (laptop, max) {
+            padding-bottom: 350px;
         }
         @include responsive (ipad-portrait, max) {
-            padding-bottom: 0;
+            padding-bottom: 300px;
         }
         @include responsive (mobile-big, max) {
-            padding-bottom: 0;
+            padding-bottom: 250px;
         }
     }
 }
@@ -6463,4 +6491,4 @@
             font-weight: 400;
         }
     }
-}
+} 

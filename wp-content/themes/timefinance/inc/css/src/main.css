@@ -6020,6 +6020,18 @@ header {
         font-size: 20px;
         line-height: 28px; } }
 
+.page-asset-finance .faq-block {
+  padding-bottom: 400px; }
+  @media (max-width: 1199px) {
+    .page-asset-finance .faq-block {
+      padding-bottom: 350px; } }
+  @media (max-width: 991px) {
+    .page-asset-finance .faq-block {
+      padding-bottom: 300px; } }
+  @media (max-width: 767px) {
+    .page-asset-finance .faq-block {
+      padding-bottom: 250px; } }
+
 .page-asset-finance .large-card-block {
   padding-bottom: 0; }
   @media (max-width: 1199px) {
@@ -6031,6 +6043,18 @@ header {
   @media (max-width: 767px) {
     .page-asset-finance .large-card-block {
       padding-bottom: 0; } }
+
+.large-card-block .faq-block {
+  padding-bottom: 400px; }
+  @media (max-width: 1199px) {
+    .large-card-block .faq-block {
+      padding-bottom: 350px; } }
+  @media (max-width: 991px) {
+    .large-card-block .faq-block {
+      padding-bottom: 300px; } }
+  @media (max-width: 767px) {
+    .large-card-block .faq-block {
+      padding-bottom: 250px; } }
 
 .page-corporate-governance .content-block h4, .page-advisors .content-block h4 {
   font-weight: 400; }
