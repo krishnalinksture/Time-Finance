@@ -5,14 +5,15 @@
  * @package TIMEFINANCE
  */
 
-$faqs       = get_sub_field( 'faqs' );
-$main_title = get_sub_field( 'title' );
-$select_tag = get_sub_field( 'select_tag' );
-$section_id = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'faq-block-' );
+$faqs             = get_sub_field( 'faqs' );
+$main_title       = get_sub_field( 'title' );
+$padding_settings = get_sub_field( 'padding_settings' );
+$select_tag       = get_sub_field( 'select_tag' );
+$section_id       = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'faq-block-' );
 
 if ( ! empty( $main_title ) || have_rows( 'faqs' ) ) {
 	?>
-	<section class="faq-block" id="<?php echo $section_id; //phpcs:ignore ?>">
+	<section class="faq-block <?php echo $padding_settings; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
 		<div class="container">
 			<?php
 			if ( ! empty( $main_title ) ) {

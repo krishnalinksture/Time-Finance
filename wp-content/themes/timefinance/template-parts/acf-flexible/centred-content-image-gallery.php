@@ -5,15 +5,16 @@
  * @package TIMEFINANCE
  */
 
-$image_gallary = get_sub_field( 'image_gallary' );
-$main_title    = get_sub_field( 'title' );
-$select_tag    = get_sub_field( 'select_tag' );
-$content       = get_sub_field( 'content' );
-$section_id    = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'centred-content-image-gallery-' );
+$image_gallary    = get_sub_field( 'image_gallary' );
+$main_title       = get_sub_field( 'title' );
+$select_tag       = get_sub_field( 'select_tag' );
+$content          = get_sub_field( 'content' );
+$padding_settings = get_sub_field( 'padding_settings' );
+$section_id       = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'centred-content-image-gallery-' );
 
 if ( ! empty( $main_title ) || ! empty( $content ) || ! empty( $image_gallary ) ) {
 	?>
-	<section class="centred-content-image-gallery" id="<?php echo $section_id; //phpcs:ignore ?>">
+	<section class="centred-content-image-gallery <?php echo $padding_settings; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
 		<div class="container">
 			<?php
 			if ( ! empty( $main_title ) || ! empty( $content ) ) {

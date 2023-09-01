@@ -10,12 +10,13 @@ $main_title        = get_sub_field( 'title' );
 $select_tag        = get_sub_field( 'select_tag' );
 $background_image  = get_sub_field( 'background_image' );
 $cta_button        = get_sub_field( 'cta_button' );
+$padding_settings  = get_sub_field( 'padding_settings' );
 $background        = ( ! empty( $background_image ) ) ? ' style="background-image:url(' . esc_url( $background_image ) . ');"' : '';
 $section_id        = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'inner-page-hero-small-' );
 
 if ( ! empty( $main_title ) || ! empty( $cta_button ) ) {
 	?>
-	<section class="inner-page-hero-small <?php echo $select_background; ?>" id="<?php echo $section_id; //phpcs:ignore ?>"<?php echo $background; ?>>
+	<section class="inner-page-hero-small <?php echo $select_background . ' ' . $padding_settings; ?>" id="<?php echo $section_id; //phpcs:ignore ?>"<?php echo $background; ?>>
 		<?php
 		if ( 'image' === $select_background ) {
 			?>

@@ -13,6 +13,7 @@ $number           = get_sub_field( 'number' );
 $send_message     = get_sub_field( 'send_message' );
 $select_form      = get_sub_field( 'select_form' );
 $apply_now        = get_sub_field( 'apply_now' );
+$padding_settings = get_sub_field( 'padding_settings' );
 $select_class     = get_sub_field( 'select_class' );
 $form             = ( ! empty( $select_form ) ) ? '[forminator_form id="' . $select_form . '"]' : '';
 $background       = ( ! empty( $background_image ) ) ? ' style="background-image:url(' . esc_url( $background_image ) . ');"' : '';
@@ -20,7 +21,7 @@ $section_id       = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' 
 
 if ( ! empty( $main_title ) || ! empty( $subtitle ) || ! empty( $number ) || ! empty( $apply_now ) || ! empty( $send_message ) ) {
 	?>
-	<section class="cta-block <?php echo $select_class; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
+	<section class="cta-block <?php echo $select_class . ' ' . $padding_settings; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col image" <?php echo $background; //phpcs:ignore ?>>

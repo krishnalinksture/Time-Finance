@@ -9,11 +9,12 @@ $location_cards   = get_sub_field( 'location_cards' );
 $main_title       = get_sub_field( 'main_title' );
 $select_tag       = get_sub_field( 'select_tag' );
 $background_color = get_sub_field( 'background_color' );
+$padding_settings = get_sub_field( 'padding_settings' );
 $section_id       = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'office-locations-block-' );
 
 if ( ! empty( $main_title ) || have_rows( 'location_cards' ) ) {
 	?>
-	<section class="office-locations-block <?php echo $background_color; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
+	<section class="office-locations-block <?php echo $background_color . ' ' . $padding_settings; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
 		<div class="container-fluid">
 			<?php
 			if ( ! empty( $main_title ) ) {

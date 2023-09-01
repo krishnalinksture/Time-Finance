@@ -8,12 +8,13 @@
 $main_title                = get_sub_field( 'title' );
 $select_tag                = get_sub_field( 'select_tag' );
 $content                   = get_sub_field( 'content' );
+$padding_settings          = get_sub_field( 'padding_settings' );
 $time_blog_view_all_button = get_field( 'time_blog_view_all_button', 'option' );
 $section_id                = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'time-blog-block-' );
 
 if ( ! empty( $main_title ) || ! empty( $content ) ) {
 	?>
-	<section class="time-blog-block" id="<?php echo $section_id; //phpcs:ignore ?>">
+	<section class="time-blog-block <?php echo $padding_settings; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
 		<div class="container">
 			<?php
 			if ( ! empty( $main_title ) || ! empty( $content ) ) {

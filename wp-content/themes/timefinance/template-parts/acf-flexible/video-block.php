@@ -11,10 +11,11 @@ $select_video_type = get_sub_field( 'select_video_type' );
 $youtube           = get_sub_field( 'youtube' );
 $mp4               = get_sub_field( 'mp4' );
 $ogg               = get_sub_field( 'ogg' );
+$padding_settings  = get_sub_field( 'padding_settings' );
 $section_id        = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'video-block-' );
 
 ?>
-<section class="video-block" id="<?php echo $section_id; //phpcs:ignore ?>">
+<section class="video-block <?php echo $padding_settings; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
 	<div class="container">
 		<?php
 		if ( ! empty( $main_title ) ) {

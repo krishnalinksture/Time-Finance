@@ -10,13 +10,14 @@ $image                   = get_sub_field( 'image' );
 $bulletpoint_group       = get_sub_field( 'bulletpoint_group' );
 $content                 = get_sub_field( 'content' );
 $image_position          = get_sub_field( 'image_position' );
+$padding_settings        = get_sub_field( 'padding_settings' );
 $reverse                 = ( 'right' === $image_position ) ? ' flex-sm-row-reverse ' : '';
 $section_id              = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'image-bulletpoint-groups-' );
 $image_alt               = ( isset( $image['alt'] ) && ! empty( $image['alt'] ) ) ? $image['alt'] : ( isset( $image['title'] ) && ! empty( $image['title'] ) ? $image['title'] : '' );
 
 if ( ! empty( $image ) || ! empty( $content ) || have_rows( 'bulletpoint_group' ) ) {
 	?>
-	<section class="image-bulletpoint-groups" id="<?php echo $section_id; //phpcs:ignore ?>">
+	<section class="image-bulletpoint-groups <?php echo $padding_settings; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
 		<div class="container-lg">
 			<div class="row<?php echo $reverse; //phpcs:ignore ?>">
 				<?php

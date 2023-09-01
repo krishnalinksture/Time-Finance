@@ -8,12 +8,13 @@
 $main_title                    = get_sub_field( 'title' );
 $select_tag                    = get_sub_field( 'select_tag' );
 $content                       = get_sub_field( 'content' );
+$padding_settings              = get_sub_field( 'padding_settings' );
 $press_release_view_all_button = get_field( 'press_release_view_all_button', 'option' );
 $section_id                    = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'press-releases-block-' );
 
 if ( ! empty( $main_title ) || ! empty( $content ) ) {
 	?>
-	<section class="press-releases-block" id="<?php echo $section_id; //phpcs:ignore ?>">
+	<section class="press-releases-block <?php echo $padding_settings; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
 		<div class="container">
 			<?php
 			if ( ! empty( $main_title ) || ! empty( $content ) ) {

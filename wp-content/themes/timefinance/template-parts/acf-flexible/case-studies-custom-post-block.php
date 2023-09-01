@@ -8,11 +8,12 @@
 $main_title                   = get_sub_field( 'title' );
 $select_tag                   = get_sub_field( 'select_tag' );
 $content                      = get_sub_field( 'content' );
+$padding_settings             = get_sub_field( 'padding_settings' );
 $case_studies_view_all_button = get_field( 'case_studies_view_all_button', 'option' );
 $section_id                   = get_sub_field( 'section_id' ) ? get_sub_field( 'section_id' ) : uniqid( 'case-studies-custom-post-block-' );
 
 ?>
-<section class="case-studies-custom-post-block" id="<?php echo $section_id; //phpcs:ignore ?>">
+<section class="case-studies-custom-post-block <?php echo $padding_settings; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
 	<div class="container">
 		<?php
 		if ( ! empty( $main_title ) || ! empty( $content ) ) {
