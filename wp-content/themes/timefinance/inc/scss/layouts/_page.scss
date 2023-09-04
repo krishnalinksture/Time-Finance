@@ -6485,7 +6485,7 @@
         }
 }
 
-// page loans 
+// large card block
 .large-card-block, .page-business-loans {
     .faq-block {
         padding-bottom: 400px;
@@ -6497,6 +6497,19 @@
         }
         @include responsive (mobile-big, max) {
             padding-bottom: 250px;
+        }
+    }
+}
+
+// page loans 
+.page-loans {
+    .large-card-block {
+        padding-bottom: 270px;
+        @include responsive (laptop, max) {
+            padding-bottom: 200px;
+        } 
+        @include responsive (mobile-big, max) {
+            padding-bottom: 160px;
         }
     }
 }

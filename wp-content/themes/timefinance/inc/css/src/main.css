@@ -6071,6 +6071,15 @@ header {
     .large-card-block .faq-block, .page-business-loans .faq-block {
       padding-bottom: 250px; } }
 
+.page-loans .large-card-block {
+  padding-bottom: 270px; }
+  @media (max-width: 1199px) {
+    .page-loans .large-card-block {
+      padding-bottom: 200px; } }
+  @media (max-width: 767px) {
+    .page-loans .large-card-block {
+      padding-bottom: 160px; } }
+
 .page-corporate-governance .content-block h4, .page-advisors .content-block h4 {
   font-weight: 400; }
 
