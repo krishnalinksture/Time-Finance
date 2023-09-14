@@ -30,6 +30,9 @@ window.Scrollanimate = () => {
 		'common': {
 			init: function () {
 
+
+
+
 				let swiperObjs = [];
 				let lastScroll = 0;
 				var sliderBreakPoint = 991;
@@ -121,12 +124,14 @@ window.Scrollanimate = () => {
 
 				// Thankyou Message.
 				$(".cta-form .thankyou-msg-cta").css("display", "none");
-				$(".cta-form .forminator-button-submit").on("click", function () {
-
+				$(".send-message-form .forminator-button-submit").on("click", function () {
 					var cta_popup = $('.cta-form').find('.forminator-custom-form').find('.forminator-is_filled');
 					if (cta_popup.length > 0) {
 						$(".cta-form .thankyou-msg-cta").css("display", "block");
 						$(".cta-form .forminator-custom-form").css("display", "none");
+						$('html, body').animate({
+							scrollTop: 0,
+						}, 9999999999);
 					}
 				});
 
@@ -211,6 +216,9 @@ window.Scrollanimate = () => {
 					if (resourse_popup.length > 0) {
 						$(".resources-filter-block .resource-popup-form .thankyou-msg").css("display", "block");
 						$(".resources-filter-block .resource-popup-form .forminator-custom-form").css("display", "none");
+						$('html, body').animate({
+							scrollTop: 0,
+						}, 9999999999);
 					}
 				});
 
@@ -222,6 +230,9 @@ window.Scrollanimate = () => {
 					if (bdt_popup.length > 0) {
 						$(".bdt-filter-block .bdt-popup-form .thankyou-msg-bdt").css("display", "block");
 						$(".bdt-filter-block .bdt-popup-form .forminator-custom-form").css("display", "none");
+						$('html, body').animate({
+							scrollTop: 0,
+						}, 9999999999);
 					}
 				});
 
@@ -233,6 +244,9 @@ window.Scrollanimate = () => {
 					if (contact_popup.length > 0) {
 						$(".contact-block .contact-form .thankyou-msg-contact").css("display", "block");
 						$(".contact-block .contact-form .forminator-custom-form").css("display", "none");
+						$('html, body').animate({
+							scrollTop: 0,
+						}, 9999999999);
 					}
 				});
 

@@ -32,7 +32,7 @@ if ( ! empty( $main_title ) || ! empty( $subtitle ) || ! empty( $number ) || ! e
 					if ( ! empty( $number ) ) {
 						?>
 						<div class="number">
-							<?php echo esc_html( $number ); ?>
+							<a href="tel:<?php echo esc_url( $number ); ?>"><?php echo esc_html( $number ); ?></a>
 						</div>
 						<?php
 					}
@@ -81,7 +81,7 @@ if ( ! empty( $select_form ) ) {
 				<div class="col">
 					<div class="cta-form">
 						<?php echo do_shortcode( $form ); ?>
-						<div class="thankyou-msg-cta"><?php echo esc_html( 'Thank you for your message. A member of our team will be in touch shortly. In the meantime, if youre interested in how we use your data please click ' ); //phpcs:ignore ?><a href="#"><?php echo esc_html( 'here' ); ?></a></div>
+						<div class="thankyou-msg-cta"><?php echo esc_html( "Thank you for your message. A member of our team will be in touch shortly. In the meantime, if you're interested in how we use your data please click " ); //phpcs:ignore ?><a href="<?php echo home_url(); ?>/privacy-policy/"><?php echo esc_html( 'here' ); ?></a></div>
 					</div>
 				</div>
 			</div>

@@ -15,6 +15,37 @@ if ( ! function_exists( 'timefinance_press_release_custom_post_type' ) ) {
 	 * Create Press Release Custom Post Type
 	 */
 	function timefinance_press_release_custom_post_type() {
+		
+		/**
+		* Categories
+		*/
+		$labels = array(
+			'name'              => _x( 'Categories', 'taxonomy general name', 'timefinance' ),
+			'singular_name'     => _x( 'Category', 'taxonomy singular name', 'timefinance' ),
+			'search_items'      => __( 'Search Categories', 'timefinance' ),
+			'all_items'         => __( 'All Categories', 'timefinance' ),
+			'parent_item'       => __( 'Parent Category', 'timefinance' ),
+			'parent_item_colon' => __( 'Parent Category:', 'timefinance' ),
+			'edit_item'         => __( 'Edit Category', 'timefinance' ),
+			'update_item'       => __( 'Update Category', 'timefinance' ),
+			'add_new_item'      => __( 'Add New Category', 'timefinance' ),
+			'new_item_name'     => __( 'New Category Name', 'timefinance' ),
+			'menu_name'         => __( 'Categories', 'timefinance' ),
+		);
+
+		$args = array(
+			'labels'            => $labels,
+			'public'            => true,
+			'show_ui'           => true,
+			'hierarchical'      => true,
+			'show_admin_column' => true,
+			'show_in_nav_menus' => true,
+			'show_in_rest'      => true,
+			'rewrite' 			=> array('slug' => 'press-releases'),
+		);
+
+		// Registering your Custom Taxonomy.
+		register_taxonomy( 'press-release-categories', array( 'press-release' ), $args );
 
 		// Set UI labels for Custom Post Type.
 		$labels = array(
@@ -53,6 +84,7 @@ if ( ! function_exists( 'timefinance_press_release_custom_post_type' ) ) {
 			'publicly_queryable'  => true,
 			'capability_type'     => 'post',
 			'show_in_rest'        => true,
+			'rewrite' 			  => array('slug' => 'press-releases'),
 
 		);
 
@@ -179,6 +211,37 @@ if ( ! function_exists( 'timefinance_case_study_custom_post_type' ) ) {
 	 * Create Case Study Custom Post Type
 	 */
 	function timefinance_case_study_custom_post_type() {
+		
+		/**
+		* Categories
+		*/
+		$labels = array(
+			'name'              => _x( 'Categories', 'taxonomy general name', 'timefinance' ),
+			'singular_name'     => _x( 'Category', 'taxonomy singular name', 'timefinance' ),
+			'search_items'      => __( 'Search Categories', 'timefinance' ),
+			'all_items'         => __( 'All Categories', 'timefinance' ),
+			'parent_item'       => __( 'Parent Category', 'timefinance' ),
+			'parent_item_colon' => __( 'Parent Category:', 'timefinance' ),
+			'edit_item'         => __( 'Edit Category', 'timefinance' ),
+			'update_item'       => __( 'Update Category', 'timefinance' ),
+			'add_new_item'      => __( 'Add New Category', 'timefinance' ),
+			'new_item_name'     => __( 'New Category Name', 'timefinance' ),
+			'menu_name'         => __( 'Categories', 'timefinance' ),
+		);
+
+		$args = array(
+			'labels'            => $labels,
+			'public'            => true,
+			'show_ui'           => true,
+			'hierarchical'      => true,
+			'show_admin_column' => true,
+			'show_in_nav_menus' => true,
+			'show_in_rest'      => true,
+			'rewrite' 			  => array('slug' => 'clients'),
+		);
+
+		// Registering your Custom Taxonomy.
+		register_taxonomy( 'case-study-categories', array( 'case-study' ), $args );
 
 		// Set UI labels for Custom Post Type.
 		$labels = array(
@@ -217,41 +280,14 @@ if ( ! function_exists( 'timefinance_case_study_custom_post_type' ) ) {
 			'publicly_queryable'  => true,
 			'capability_type'     => 'post',
 			'show_in_rest'        => true,
+			'rewrite' 			  => array('slug' => 'clients'),
 
 		);
 
 		// Registering your Custom Post Type.
 		register_post_type( 'case-study', $args );
 
-		/**
-		* Categories
-		*/
-		$labels = array(
-			'name'              => _x( 'Categories', 'taxonomy general name', 'timefinance' ),
-			'singular_name'     => _x( 'Category', 'taxonomy singular name', 'timefinance' ),
-			'search_items'      => __( 'Search Categories', 'timefinance' ),
-			'all_items'         => __( 'All Categories', 'timefinance' ),
-			'parent_item'       => __( 'Parent Category', 'timefinance' ),
-			'parent_item_colon' => __( 'Parent Category:', 'timefinance' ),
-			'edit_item'         => __( 'Edit Category', 'timefinance' ),
-			'update_item'       => __( 'Update Category', 'timefinance' ),
-			'add_new_item'      => __( 'Add New Category', 'timefinance' ),
-			'new_item_name'     => __( 'New Category Name', 'timefinance' ),
-			'menu_name'         => __( 'Categories', 'timefinance' ),
-		);
-
-		$args = array(
-			'labels'            => $labels,
-			'public'            => true,
-			'show_ui'           => true,
-			'hierarchical'      => true,
-			'show_admin_column' => true,
-			'show_in_nav_menus' => true,
-			'show_in_rest'      => true,
-		);
-
-		// Registering your Custom Taxonomy.
-		register_taxonomy( 'case-study-categories', array( 'case-study' ), $args );
+		
 	}
 }
 add_action( 'init', 'timefinance_case_study_custom_post_type' ); //phpcs:ignore

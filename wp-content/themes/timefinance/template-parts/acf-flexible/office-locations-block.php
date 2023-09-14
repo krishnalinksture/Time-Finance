@@ -37,6 +37,7 @@ if ( ! empty( $main_title ) || have_rows( 'location_cards' ) ) {
 						$email          = get_sub_field( 'email' );
 						$phone_number   = get_sub_field( 'phone_number' );
 						$address        = get_sub_field( 'address' );
+						$map_link       = get_sub_field( 'map_link' );
 						$map_image_alt  = ( isset( $map_image['alt'] ) && ! empty( $map_image['alt'] ) ) ? $map_image['alt'] : ( isset( $map_image['title'] ) && ! empty( $map_image['title'] ) ? $map_image['title'] : '' );
 						if ( ! empty( $map_image ) || ! empty( $location_title ) || ! empty( $email ) || ! empty( $phone_number ) || ! empty( $address ) ) {
 							?>
@@ -45,7 +46,12 @@ if ( ! empty( $main_title ) || have_rows( 'location_cards' ) ) {
 								if ( ! empty( $map_image ) ) {
 									?>
 									<div class="location-card-image">
-										<img width="<?php echo $map_image['sizes']['timefinance-desktop-width']; ?>" height="<?php echo $map_image['sizes']['timefinance-desktop-height']; ?>" src="<?php echo $map_image['url']; ?>" srcset="<?php echo $map_image['sizes']['timefinance-small-mobile']; ?> 400w, <?php echo $map_image['sizes']['timefinance-mobile']; ?> 800w, <?php echo $map_image['sizes']['timefinance-tablet']; ?> 1200w, <?php echo $map_image['sizes']['timefinance-desktop']; ?> 2000w" sizes="50vw" alt="<?php echo $map_image_alt; //phpcs:ignore ?>">
+										<?php
+										$link_url    = $map_link['url'];
+										$link_title  = $map_link['title'];
+										$link_target = $map_link['target'] ? $map_link['target'] : '_self';
+										?>
+										<a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><img width="<?php echo $map_image['sizes']['timefinance-desktop-width']; ?>" height="<?php echo $map_image['sizes']['timefinance-desktop-height']; ?>" src="<?php echo $map_image['url']; ?>" srcset="<?php echo $map_image['sizes']['timefinance-small-mobile']; ?> 400w, <?php echo $map_image['sizes']['timefinance-mobile']; ?> 800w, <?php echo $map_image['sizes']['timefinance-tablet']; ?> 1200w, <?php echo $map_image['sizes']['timefinance-desktop']; ?> 2000w" sizes="50vw" alt="<?php echo $map_image_alt; //phpcs:ignore ?>"></a>
 									</div>
 									<?php
 								}
