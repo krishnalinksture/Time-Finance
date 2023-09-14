@@ -6083,6 +6083,18 @@ header {
 .page-corporate-governance .content-block h4, .page-advisors .content-block h4 {
   font-weight: 400; }
 
+.page-intermediaries .large-card-block.bg-grey.no-pb-0 {
+  margin-top: 110px; }
+  @media (max-width: 1199px) {
+    .page-intermediaries .large-card-block.bg-grey.no-pb-0 {
+      margin-top: 90px; } }
+  @media (max-width: 991px) {
+    .page-intermediaries .large-card-block.bg-grey.no-pb-0 {
+      margin-top: 70px; } }
+  @media (max-width: 767px) {
+    .page-intermediaries .large-card-block.bg-grey.no-pb-0 {
+      margin-top: 30px; } }
+
 .modal-open header {
   z-index: 999999; }
 
