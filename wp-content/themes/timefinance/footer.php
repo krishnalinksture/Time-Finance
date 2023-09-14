@@ -204,18 +204,18 @@ wp_footer();
 			<?php
 			if ( ! empty( $gdpr_text ) ) {
 				?>
-				<div class="col-md-8 col-sm-9 text-center text-sm-start cookie-policy-text">
+				<div class="col text-center text-sm-start cookie-policy-text">
 					<?php echo $gdpr_text; //phpcs:ignore ?>
 				</div>
 				<?php
 			}
 			?>
-			<div class="col-md-4 col-sm-3 text-center text-sm-end">
-				<a class="btn cookie-policy-button" href="javascript:void(0);">
-					<?php echo esc_html( $accept_button ); ?>
-				</a>
+			<div class="col-auto text-center text-sm-end">
 				<a class="decline-button" href="javascript:void(0);">
 					<?php echo esc_html( $decline ); ?>
+				</a>
+				<a class="btn cookie-policy-button" href="javascript:void(0);">
+					<?php echo esc_html( $accept_button ); ?>
 				</a>
 			</div>
 		</div>
