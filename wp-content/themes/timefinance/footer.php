@@ -214,9 +214,7 @@ wp_footer();
 				<a class="btn cookie-policy-button" href="javascript:void(0);">
 					<?php echo esc_html( $accept_button ); ?>
 				</a>
-			</div>
-			<div class="col-md-4 col-sm-3 text-center text-sm-end">
-				<a class="btn btn-gold decline-button" href="javascript:void(0);">
+				<a class="decline-button" href="javascript:void(0);">
 					<?php echo esc_html( $decline ); ?>
 				</a>
 			</div>
