@@ -79,7 +79,7 @@ switch ( $select_style ) {
 			?>
 			<section class="trustpilot-block <?php echo $select_background_color . ' ' . $select_style . ' ' . $padding_settings; ?>" id="<?php echo $section_id; //phpcs:ignore ?>">
 				<div class="container-lg">
-					<div class="row justify-content-start">
+					<div class="row justify-content-center">
 						<div class="col-lg-9 content">
 							<?php
 							if ( ! empty( $main_title ) ) {
