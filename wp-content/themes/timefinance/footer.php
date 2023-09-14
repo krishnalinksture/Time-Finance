@@ -20,6 +20,9 @@ $footer_address         = get_field( 'footer_address', 'options' );
 $footer_social_icon     = get_field( 'footer_social_icon', 'options' );
 $footer_content         = get_field( 'footer_content', 'options' );
 $popup_form_embed       = get_field( 'popup_form_embed', 'options' );
+$gdpr_text              = get_field( 'gdpr_text', 'options' );
+$accept_button          = get_field( 'accept_button', 'options' );
+$decline                = get_field( 'decline', 'options' );
 $footer_form            = ( ! empty( $pop_up_form ) ) ? '[forminator_form id="' . $pop_up_form . '"]' : '';
 $footer_logo_alt        = ( isset( $footer_logo['alt'] ) && ! empty( $footer_logo['alt'] ) ) ? $footer_logo['alt'] : ( isset( $footer_logo['title'] ) && ! empty( $footer_logo['title'] ) ? $footer_logo['title'] : '' );
 
@@ -195,6 +198,30 @@ if ( ! empty( $main_title ) || ! empty( $mail ) || ! empty( $popup_form_embed ) 
 }
 wp_footer();
 ?>
-
+<div class="cookie-policy-wrapper">
+	<div class="container">
+		<div class="row align-items-center">
+			<?php
+			if ( ! empty( $gdpr_text ) ) {
+				?>
+				<div class="col-md-8 col-sm-9 text-center text-sm-start cookie-policy-text">
+					<?php echo $gdpr_text; //phpcs:ignore ?>
+				</div>
+				<?php
+			}
+			?>
+			<div class="col-md-4 col-sm-3 text-center text-sm-end">
+				<a class="btn cookie-policy-button" href="javascript:void(0);">
+					<?php echo esc_html( $accept_button ); ?>
+				</a>
+			</div>
+			<div class="col-md-4 col-sm-3 text-center text-sm-end">
+				<a class="btn btn-gold decline-button" href="javascript:void(0);">
+					<?php echo esc_html( $decline ); ?>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
 </body>
 </html>
