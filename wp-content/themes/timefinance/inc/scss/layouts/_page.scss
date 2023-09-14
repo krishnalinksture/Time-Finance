@@ -6522,3 +6522,24 @@
         }
     }
 }
+
+.page-intermediaries {
+    .large-card-block {
+        &.bg-grey {
+            &.no-pb-0 {
+                margin-top: 110px;
+                @include responsive (laptop, max) {
+                    margin-top:90px;
+                }
+            
+                @include responsive (ipad-portrait, max) {
+                    margin-top: 70px;
+                }
+            
+                @include responsive (mobile-big, max) {
+                    margin-top: 30px;
+                }
+            }
+        }
+    } 
+}
