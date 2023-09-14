@@ -4347,7 +4347,8 @@ header {
   .content-block .seprator .content-wrapper {
     padding: 15px 0 0;
     border: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1); }
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center; }
   .content-block .content-wrapper {
     padding: 0 45px; }
     .content-block .content-wrapper p:last-of-type {
@@ -5285,6 +5286,21 @@ header {
         .case-study-detail .container .row .right .case-study-title {
           margin-bottom: 16px;
           width: 100%; } }
+    .case-study-detail .container .row .right .fr-video {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      padding-top: 56.25%;
+      display: inline-block;
+      margin-bottom: 30px; }
+      .case-study-detail .container .row .right .fr-video iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%; }
   .case-study-detail .container .row .left {
     padding-top: 8px; }
   .case-study-detail .container .row .case-study-detail-content.sticky-top {
@@ -6110,19 +6126,41 @@ header {
   transition: transform ease-out .5s,-webkit-transform ease-out .5s;
   -webkit-transform: translateY(100%);
   transform: translateY(100%);
-  pointer-events: none; }
+  pointer-events: none;
+  padding: 15px 15px; }
   .cookie-policy-wrapper.show {
     -webkit-transform: translateY(0);
     transform: translateY(0);
     pointer-events: all; }
-  .cookie-policy-wrapper .row {
-    min-height: 65px; }
   .cookie-policy-wrapper .cookie-policy-text {
     color: #fff;
     font-size: 12px;
     line-height: 20px; }
+    .cookie-policy-wrapper .cookie-policy-text a {
+      color: #fff; }
+    @media (max-width: 767px) {
+      .cookie-policy-wrapper .cookie-policy-text {
+        flex: auto;
+        width: 100%;
+        text-align: center !important;
+        margin-bottom: 10px; } }
+  @media (max-width: 767px) {
+    .cookie-policy-wrapper .col-auto {
+      width: 100%;
+      text-align: center !important; } }
   .cookie-policy-wrapper .decline-button {
-    color: #fff; }
+    color: #fff;
+    font-size: 13px;
+    text-decoration: none; }
+  .cookie-policy-wrapper .btn.cookie-policy-button {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0;
+    padding: 7px 26px; }
+    .cookie-policy-wrapper .btn.cookie-policy-button:hover {
+      background-color: #080808;
+      border-color: #080808; }
 
 .modal-open header {
   z-index: 999999; }

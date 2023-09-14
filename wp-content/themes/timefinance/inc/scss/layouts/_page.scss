@@ -4113,6 +4113,7 @@
             padding:15px 0 0;
             border: 0;
             border-top: 1px solid rgba(0,0,0,.1);
+            text-align: center;
         }
     }
     .content-wrapper {
@@ -5372,6 +5373,23 @@
                         width: 100%;
                      }
                 }
+                .fr-video {
+                    position: relative;
+                    overflow: hidden;
+                    width: 100%;
+                    padding-top: 56.25%;
+                    display: inline-block;
+                    margin-bottom: 30px;
+                    iframe {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        bottom: 0;
+                        right: 0;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
             }
 
             .left {
@@ -5399,7 +5417,7 @@
                     font-weight: 700;
                     width: 90%;
                     margin-bottom: 64px;
-                }
+                } 
 
                 .social-icon {
                     padding: 0 15px;
@@ -6562,20 +6580,48 @@
     -webkit-transform: translateY(100%);
     transform: translateY(100%);
     pointer-events: none; 
+    padding: 15px 15px;
     &.show {
         -webkit-transform: translateY(0);
         transform: translateY(0);
         pointer-events: all;
-    }
-    .row {
-        min-height: 65px;
-    }
+    } 
     .cookie-policy-text {
         color: $white;
         font-size: 12px;
         line-height: 20px;
+        a {
+            color: $white;
+        }
+        @include responsive (mobile-big, max) {
+            flex: auto;
+            width: 100%;
+            text-align: center !important;
+            margin-bottom: 10px;
+        }
+    }
+    .col-auto {
+        @include responsive (mobile-big, max) {
+            width: 100%;
+            text-align: center !important;
+        }
     }
     .decline-button {
         color: $white;
+        font-size: 13px;
+        text-decoration: none;
+    }
+    .btn {
+        &.cookie-policy-button {
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 16px;
+            letter-spacing: 0;
+            padding: 7px 26px;
+            &:hover {
+                background-color: $black;
+                border-color: $black;
+            }
+        }
     }
 }
