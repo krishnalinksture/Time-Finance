@@ -43,15 +43,18 @@ if ( ! empty( $main_title ) || have_rows( 'location_cards' ) ) {
 							?>
 							<div class="col location-card">
 								<?php
-								if ( ! empty( $map_image ) ) {
+								if ( ! empty( $map_image ) || ! empty( $map_link ) ) {
 									?>
 									<div class="location-card-image">
 										<?php
-										$link_url    = $map_link['url'];
-										$link_title  = $map_link['title'];
-										$link_target = $map_link['target'] ? $map_link['target'] : '_self';
+										if ( $map_link && ! empty( $map_link['url'] ) && ! empty( $map_link['title'] ) ) {
+											$link_url    = $map_link['url'];
+											$link_target = $map_link['target'] ? $map_link['target'] : '_self';
+											?>
+											<a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><img width="<?php echo $map_image['sizes']['timefinance-desktop-width']; ?>" height="<?php echo $map_image['sizes']['timefinance-desktop-height']; ?>" src="<?php echo $map_image['url']; ?>" srcset="<?php echo $map_image['sizes']['timefinance-small-mobile']; ?> 400w, <?php echo $map_image['sizes']['timefinance-mobile']; ?> 800w, <?php echo $map_image['sizes']['timefinance-tablet']; ?> 1200w, <?php echo $map_image['sizes']['timefinance-desktop']; ?> 2000w" sizes="50vw" alt="<?php echo $map_image_alt; //phpcs:ignore ?>"></a>
+											<?php
+										}
 										?>
-										<a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><img width="<?php echo $map_image['sizes']['timefinance-desktop-width']; ?>" height="<?php echo $map_image['sizes']['timefinance-desktop-height']; ?>" src="<?php echo $map_image['url']; ?>" srcset="<?php echo $map_image['sizes']['timefinance-small-mobile']; ?> 400w, <?php echo $map_image['sizes']['timefinance-mobile']; ?> 800w, <?php echo $map_image['sizes']['timefinance-tablet']; ?> 1200w, <?php echo $map_image['sizes']['timefinance-desktop']; ?> 2000w" sizes="50vw" alt="<?php echo $map_image_alt; //phpcs:ignore ?>"></a>
 									</div>
 									<?php
 								}
