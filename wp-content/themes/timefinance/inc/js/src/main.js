@@ -272,9 +272,11 @@ window.Scrollanimate = () => {
 
 				if ( typeof getCookie( gdpr_cookie_name ) != 'undefined' && getCookie( gdpr_cookie_name ) ) {
 					div_wrap.addClass( 'banner-visited' );
+					div_wrap.removeClass( 'show' );
 					div_wrap.remove();
 				}else{
 					div_wrap.removeClass( 'banner-visited' );
+					div_wrap.addClass( 'show' );
 				}
 				$( '.cookie-policy-button' ).on( 'click', function() {
 					div_wrap.remove();

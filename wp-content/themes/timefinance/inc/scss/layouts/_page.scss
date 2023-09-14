@@ -2135,6 +2135,9 @@
         overflow: hidden;
 
         .location-card-image {
+            a {
+                width: 100%;
+            }
             img {
                 width: 100%;
             }
@@ -6542,4 +6545,37 @@
             }
         }
     } 
+}
+
+// cookie-policy
+.cookie-policy-wrapper {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0; 
+    background-color: $green;;
+    z-index: 10001;
+    -webkit-transition: -webkit-transform ease-out .5s;
+    transition: -webkit-transform ease-out .5s;
+    transition: transform ease-out .5s;
+    transition: transform ease-out .5s,-webkit-transform ease-out .5s;
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    pointer-events: none; 
+    &.show {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        pointer-events: all;
+    }
+    .row {
+        min-height: 65px;
+    }
+    .cookie-policy-text {
+        color: $white;
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .decline-button {
+        color: $white;
+    }
 }
